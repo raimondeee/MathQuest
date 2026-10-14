@@ -1,0 +1,1281 @@
+{
+  "id": "statistics",
+  "title": "Statistics Safari",
+  "topics": [
+    {
+      "id": "statistical-questions",
+      "title": "Question Quest: Statistical Questions",
+      "ccss": "6.SP.A.1",
+      "lesson": "**A statistical question expects answers that vary.**\n\n- ✅ \"How many pets do kids in my class have?\" (lots of different answers)\n- ❌ \"How many pets do I have?\" (one answer)\n\nTip: ask *many people* or measure *many times*!",
+      "examples": [
+        {
+          "prompt": "Is \"How old is Andrew?\" statistical?",
+          "steps": [
+            "Only one answer exists.",
+            "No variability → not statistical."
+          ],
+          "answer": "No"
+        },
+        {
+          "prompt": "Is \"How old are the students at Andrew's school?\" statistical?",
+          "steps": [
+            "Many students, many ages.",
+            "The answers vary → statistical."
+          ],
+          "answer": "Yes"
+        },
+        {
+          "prompt": "Fix \"What is my test score?\"",
+          "steps": [
+            "Ask about many people.",
+            "\"What were the test scores of my class?\""
+          ],
+          "answer": "What were the test scores of the students in my class?"
+        }
+      ]
+    },
+    {
+      "id": "distributions",
+      "title": "Data Shapes: Center, Spread & Shape",
+      "ccss": "6.SP.A.2",
+      "lesson": "**Every data set has a distribution.**\n\n- **Center**: where the middle is (median, mean)\n- **Spread**: how far apart values are (range, IQR)\n- **Shape**: symmetric, skewed left/right, peaks, clusters, gaps",
+      "examples": [
+        {
+          "prompt": "Dot plot: 1: 1 dot; 2: 3 dots; 3: 5 dots; 4: 3 dots; 5: 1 dot. Shape?",
+          "steps": [
+            "Tallest in the middle.",
+            "Both sides match."
+          ],
+          "answer": "Symmetric"
+        },
+        {
+          "prompt": "Same dot plot: range?",
+          "steps": [
+            "5 − 1"
+          ],
+          "answer": "4"
+        },
+        {
+          "prompt": "Dot plot: 1: 5 dots; 2: 3 dots; 3: 1 dot; 6: 1 dot. Shape?",
+          "steps": [
+            "Pile on the left.",
+            "Tail stretches right."
+          ],
+          "answer": "Skewed right"
+        }
+      ]
+    },
+    {
+      "id": "measures-center",
+      "title": "Center Stage: Mean, Median, Mode & Range",
+      "ccss": "6.SP.A.3",
+      "lesson": "**Measure of center = one number summary. Measure of variation = how spread out.**\n\n- Mean: add all, divide by how many\n- Median: middle value when in order (average the two middles if even)\n- Mode: most frequent\n- Range: max − min",
+      "examples": [
+        {
+          "prompt": "Mean of 2, 4, 9",
+          "steps": [
+            "2 + 4 + 9 = 15",
+            "15 ÷ 3 = 5"
+          ],
+          "answer": "5"
+        },
+        {
+          "prompt": "Median of 7, 3, 9, 5",
+          "steps": [
+            "Order: 3, 5, 7, 9",
+            "(5 + 7) ÷ 2 = 6"
+          ],
+          "answer": "6"
+        },
+        {
+          "prompt": "Mode and range of 4, 6, 6, 10",
+          "steps": [
+            "6 appears twice → mode 6",
+            "10 − 4 = 6"
+          ],
+          "answer": "Mode 6, range 6"
+        }
+      ]
+    },
+    {
+      "id": "data-displays",
+      "title": "Picture Power: Dot Plots, Histograms & Box Plots",
+      "ccss": "6.SP.B.4",
+      "lesson": "**Show data on a number line!**\n\n- Dot plot: one dot per value\n- Histogram: bars for ranges of values (intervals)\n- Box plot: min, Q1, median, Q3, max\n- Q1 = median of the lower half, Q3 = median of the upper half (leave out the middle number if the count is odd)",
+      "examples": [
+        {
+          "prompt": "Histogram of 3, 8, 12, 14, 19: bar for 10–19?",
+          "steps": [
+            "12, 14, 19"
+          ],
+          "answer": "3"
+        },
+        {
+          "prompt": "Five-number summary of 1, 3, 4, 6, 8, 9, 11",
+          "steps": [
+            "Median 6",
+            "Lower half 1, 3, 4 → Q1 3",
+            "Upper half 8, 9, 11 → Q3 9"
+          ],
+          "answer": "1, 3, 6, 9, 11"
+        },
+        {
+          "prompt": "IQR from box with Q1 = 3, Q3 = 9",
+          "steps": [
+            "9 − 3"
+          ],
+          "answer": "6"
+        }
+      ]
+    },
+    {
+      "id": "summarizing-data",
+      "title": "Data Detective: Summarizing & Choosing Measures",
+      "ccss": "6.SP.B.5",
+      "lesson": "**Describe data like a pro.**\n\n- Say how many observations and what was measured.\n- MAD = average distance from the mean.\n- IQR = Q3 − Q1.\n- Outliers or skew? Use **median & IQR**. Symmetric? **Mean & MAD** work great.",
+      "examples": [
+        {
+          "prompt": "MAD of 2, 4, 6, 8",
+          "steps": [
+            "Mean = 5",
+            "Distances 3, 1, 1, 3",
+            "Sum 8 ÷ 4 = 2"
+          ],
+          "answer": "2"
+        },
+        {
+          "prompt": "Best center for 3, 4, 4, 5, 50?",
+          "steps": [
+            "50 is an outlier",
+            "Mean = 13.2 (not typical)",
+            "Median = 4"
+          ],
+          "answer": "Median"
+        },
+        {
+          "prompt": "IQR of 1, 2, 4, 6, 7, 9",
+          "steps": [
+            "Lower half 1, 2, 4 → Q1 2",
+            "Upper half 6, 7, 9 → Q3 7",
+            "7 − 2 = 5"
+          ],
+          "answer": "5"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "stat-001",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #1: Which question is a statistical question about pets?",
+      "choices": [
+        "How many pets do the students in Andrew's class have?",
+        "How many pets does Andrew have?",
+        "How many pets does Andrew's teacher have?",
+        "Is Andrew's answer to 'how many pets' an even number?"
+      ],
+      "answer": 0,
+      "explanation": "A statistical question expects answers that VARY across many people. Asking a whole class does that; asking about one person gives just one answer.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-002",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #2: Which question is a statistical question about books?",
+      "choices": [
+        "How many books did Andrew read last month?",
+        "How many books did Andrew's teacher read last month?",
+        "How many books did the students in Andrew's class read last month?",
+        "Is Andrew's answer to 'how many books' an even number?"
+      ],
+      "answer": 2,
+      "explanation": "A statistical question expects answers that VARY across many people. Asking a whole class does that; asking about one person gives just one answer.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-003",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #3: Which question is a statistical question about siblings?",
+      "choices": [
+        "How many siblings does Andrew have?",
+        "How many siblings do the students in Andrew's class have?",
+        "How many siblings does Andrew's teacher have?",
+        "Is Andrew's answer to 'how many siblings' an even number?"
+      ],
+      "answer": 1,
+      "explanation": "A statistical question expects answers that VARY across many people. Asking a whole class does that; asking about one person gives just one answer.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-004",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #4: Which question is a statistical question about hours of sleep?",
+      "choices": [
+        "How many hours of sleep does Andrew get on a school night?",
+        "How many hours of sleep does Andrew's teacher get on a school night?",
+        "Is Andrew's answer to 'how many hours of sleep' an even number?",
+        "How many hours of sleep do the students in Andrew's class get on a school night?"
+      ],
+      "answer": 3,
+      "explanation": "A statistical question expects answers that VARY across many people. Asking a whole class does that; asking about one person gives just one answer.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-005",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #5: Which question is a statistical question about minutes?",
+      "choices": [
+        "How many minutes does Andrew spend on homework each night?",
+        "How many minutes does Andrew's teacher spend on homework each night?",
+        "Is Andrew's answer to 'how many minutes' an even number?",
+        "How many minutes do the students in Andrew's class spend on homework each night?"
+      ],
+      "answer": 3,
+      "explanation": "A statistical question expects answers that VARY across many people. Asking a whole class does that; asking about one person gives just one answer.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-006",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #6: Which question is a statistical question about pairs of shoes?",
+      "choices": [
+        "How many pairs of shoes does Andrew own?",
+        "How many pairs of shoes do the students in Andrew's class own?",
+        "How many pairs of shoes does Andrew's teacher own?",
+        "Is Andrew's answer to 'how many pairs of shoes' an even number?"
+      ],
+      "answer": 1,
+      "explanation": "A statistical question expects answers that VARY across many people. Asking a whole class does that; asking about one person gives just one answer.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-007",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #7: Which question is a statistical question about apps?",
+      "choices": [
+        "How many apps does Andrew have on his tablet?",
+        "How many apps does Andrew's teacher have on their tablet?",
+        "How many apps do the students in Andrew's class have on their tablets?",
+        "Is Andrew's answer to 'how many apps' an even number?"
+      ],
+      "answer": 2,
+      "explanation": "A statistical question expects answers that VARY across many people. Asking a whole class does that; asking about one person gives just one answer.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-008",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #8: Three of these are statistical questions. Which one is NOT?",
+      "choices": [
+        "How many minutes does Andrew spend on homework each night?",
+        "How many minutes do sixth graders at Andrew's school spend on homework each night?",
+        "How many minutes do kids on Andrew's soccer team spend on homework each night?",
+        "How many minutes do the people in Andrew's neighborhood spend on homework each night?"
+      ],
+      "answer": 0,
+      "explanation": "The question about only Andrew has a single answer, so there is no variability — it is not statistical.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-009",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #9: Three of these are statistical questions. Which one is NOT?",
+      "choices": [
+        "How many pairs of shoes does Andrew own?",
+        "How many pairs of shoes do sixth graders at Andrew's school own?",
+        "How many pairs of shoes do kids on Andrew's soccer team own?",
+        "How many pairs of shoes do the people in Andrew's neighborhood own?"
+      ],
+      "answer": 0,
+      "explanation": "The question about only Andrew has a single answer, so there is no variability — it is not statistical.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-010",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #10: Three of these are statistical questions. Which one is NOT?",
+      "choices": [
+        "How many apps do sixth graders at Andrew's school have on their tablets?",
+        "How many apps do kids on Andrew's soccer team have on their tablets?",
+        "How many apps does Andrew have on his tablet?",
+        "How many apps do the people in Andrew's neighborhood have on their tablets?"
+      ],
+      "answer": 2,
+      "explanation": "The question about only Andrew has a single answer, so there is no variability — it is not statistical.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-011",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #11: Three of these are statistical questions. Which one is NOT?",
+      "choices": [
+        "How many glasses of water do sixth graders at Andrew's school drink each day?",
+        "How many glasses of water does Andrew drink each day?",
+        "How many glasses of water do kids on Andrew's soccer team drink each day?",
+        "How many glasses of water do the people in Andrew's neighborhood drink each day?"
+      ],
+      "answer": 1,
+      "explanation": "The question about only Andrew has a single answer, so there is no variability — it is not statistical.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-012",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #12: Three of these are statistical questions. Which one is NOT?",
+      "choices": [
+        "How many goals do sixth graders at Andrew's school score each soccer season?",
+        "How many goals do kids on Andrew's soccer team score each soccer season?",
+        "How many goals do the people in Andrew's neighborhood score each soccer season?",
+        "How many goals did Andrew score this soccer season?"
+      ],
+      "answer": 3,
+      "explanation": "The question about only Andrew has a single answer, so there is no variability — it is not statistical.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-013",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #13: Three of these are statistical questions. Which one is NOT?",
+      "choices": [
+        "How many miles do sixth graders at Andrew's school live from school?",
+        "How many miles do kids on Andrew's soccer team live from school?",
+        "How many miles do the people in Andrew's neighborhood live from school?",
+        "How many miles does Andrew live from school?"
+      ],
+      "answer": 3,
+      "explanation": "The question about only Andrew has a single answer, so there is no variability — it is not statistical.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-014",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #14: Three of these are statistical questions. Which one is NOT?",
+      "choices": [
+        "How many video games do sixth graders at Andrew's school own?",
+        "How many video games does Andrew own?",
+        "How many video games do kids on Andrew's soccer team own?",
+        "How many video games do the people in Andrew's neighborhood own?"
+      ],
+      "answer": 1,
+      "explanation": "The question about only Andrew has a single answer, so there is no variability — it is not statistical.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-015",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Survey #15: Three of these are statistical questions. Which one is NOT?",
+      "choices": [
+        "How many states have sixth graders at Andrew's school visited?",
+        "How many states have kids on Andrew's soccer team visited?",
+        "How many states has Andrew visited?",
+        "How many states have the people in Andrew's neighborhood visited?"
+      ],
+      "answer": 2,
+      "explanation": "The question about only Andrew has a single answer, so there is no variability — it is not statistical.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-016",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Which change turns \"How tall is Andrew?\" into a statistical question?",
+      "choices": [
+        "How tall are the students in Andrew's grade?",
+        "How tall is Andrew exactly?",
+        "How tall is Andrew in inches?",
+        "Ask the question twice to the same person."
+      ],
+      "answer": 0,
+      "explanation": "To be statistical, the question must collect many answers that can vary — ask lots of people or many days.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-017",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Which change turns \"What is Andrew's favorite color?\" into a statistical question?",
+      "choices": [
+        "What are the favorite colors of students in Andrew's class?",
+        "What is Andrew's favorite color exactly?",
+        "What is Andrew's favorite color, in your best guess?",
+        "Ask the question twice to the same person."
+      ],
+      "answer": 0,
+      "explanation": "To be statistical, the question must collect many answers that can vary — ask lots of people or many days.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-018",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Which change turns \"How long did Andrew read yesterday?\" into a statistical question?",
+      "choices": [
+        "How long did Andrew read yesterday exactly?",
+        "How long did Andrew read yesterday, in your best guess?",
+        "How long did each student in Andrew's class read yesterday?",
+        "Ask the question twice to the same person."
+      ],
+      "answer": 2,
+      "explanation": "To be statistical, the question must collect many answers that can vary — ask lots of people or many days.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-019",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Which change turns \"What was the temperature at noon today?\" into a statistical question?",
+      "choices": [
+        "What was the temperature at noon today exactly?",
+        "What was the noon temperature each day this month?",
+        "What was the temperature at noon today, in your best guess?",
+        "Ask the question twice to the same person."
+      ],
+      "answer": 1,
+      "explanation": "To be statistical, the question must collect many answers that can vary — ask lots of people or many days.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-020",
+      "topicId": "statistical-questions",
+      "type": "mc",
+      "prompt": "Which change turns \"How many letters are in Andrew's name?\" into a statistical question?",
+      "choices": [
+        "How many letters are in Andrew's name exactly?",
+        "How many letters are in Andrew's name, in your best guess?",
+        "Ask the question twice to the same person.",
+        "How many letters are in the first names of students in Andrew's class?"
+      ],
+      "answer": 3,
+      "explanation": "To be statistical, the question must collect many answers that can vary — ask lots of people or many days.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-021",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #1 of quiz scores: 1: 2 dots; 2: 4 dots; 3: 5 dots; 4: 3 dots; 6: 1 dot. What is the range of the data?",
+      "answer": 5,
+      "explanation": "Range = highest − lowest = 6 − 1 = 5. Range measures spread!",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-022",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #2 of quiz scores: 10: 1 dot; 11: 3 dots; 12: 6 dots; 13: 2 dots; 15: 2 dots. What is the range of the data?",
+      "answer": 5,
+      "explanation": "Range = highest − lowest = 15 − 10 = 5. Range measures spread!",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-023",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #3 of quiz scores: 0: 4 dots; 1: 6 dots; 2: 3 dots; 5: 1 dot; 7: 1 dot. What is the range of the data?",
+      "answer": 7,
+      "explanation": "Range = highest − lowest = 7 − 0 = 7. Range measures spread!",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-024",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #4 of quiz scores: 20: 2 dots; 22: 3 dots; 23: 5 dots; 25: 4 dots; 30: 1 dot. What is the range of the data?",
+      "answer": 10,
+      "explanation": "Range = highest − lowest = 30 − 20 = 10. Range measures spread!",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-025",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #5 of quiz scores: 3: 1 dot; 4: 2 dots; 5: 6 dots; 6: 2 dots; 9: 1 dot. What is the range of the data?",
+      "answer": 6,
+      "explanation": "Range = highest − lowest = 9 − 3 = 6. Range measures spread!",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-026",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #6 of quiz scores: 14: 3 dots; 15: 3 dots; 16: 2 dots; 18: 2 dots; 21: 1 dot. What is the range of the data?",
+      "answer": 7,
+      "explanation": "Range = highest − lowest = 21 − 14 = 7. Range measures spread!",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-027",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #7 of quiz scores: 7: 2 dots; 8: 5 dots; 9: 4 dots; 12: 3 dots; 13: 1 dot. What is the range of the data?",
+      "answer": 6,
+      "explanation": "Range = highest − lowest = 13 − 7 = 6. Range measures spread!",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-028",
+      "topicId": "distributions",
+      "type": "mc",
+      "prompt": "Dot plot #8 of the number of hot lunches bought per week: 1: 1 dot; 2: 3 dots; 3: 6 dots; 4: 3 dots; 5: 1 dot. What best describes its shape?",
+      "choices": [
+        "skewed right (tail on the right)",
+        "skewed left (tail on the left)",
+        "uniform (flat)",
+        "symmetric"
+      ],
+      "answer": 3,
+      "explanation": "Look where the dots pile up and where the tail stretches. Here the shape is symmetric.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-029",
+      "topicId": "distributions",
+      "type": "mc",
+      "prompt": "Dot plot #9 of the number of hot lunches bought per week: 1: 6 dots; 2: 4 dots; 3: 2 dots; 4: 1 dot; 5: 1 dot. What best describes its shape?",
+      "choices": [
+        "symmetric",
+        "skewed right (tail on the right)",
+        "skewed left (tail on the left)",
+        "uniform (flat)"
+      ],
+      "answer": 1,
+      "explanation": "Look where the dots pile up and where the tail stretches. Here the shape is skewed right (tail on the right).",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-030",
+      "topicId": "distributions",
+      "type": "mc",
+      "prompt": "Dot plot #10 of the number of hot lunches bought per week: 1: 1 dot; 2: 1 dot; 3: 2 dots; 4: 4 dots; 5: 6 dots. What best describes its shape?",
+      "choices": [
+        "symmetric",
+        "skewed right (tail on the right)",
+        "skewed left (tail on the left)",
+        "uniform (flat)"
+      ],
+      "answer": 2,
+      "explanation": "Look where the dots pile up and where the tail stretches. Here the shape is skewed left (tail on the left).",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-031",
+      "topicId": "distributions",
+      "type": "mc",
+      "prompt": "Dot plot #11 of the number of hot lunches bought per week: 2: 2 dots; 3: 4 dots; 4: 7 dots; 5: 4 dots; 6: 2 dots. What best describes its shape?",
+      "choices": [
+        "symmetric",
+        "skewed right (tail on the right)",
+        "skewed left (tail on the left)",
+        "uniform (flat)"
+      ],
+      "answer": 0,
+      "explanation": "Look where the dots pile up and where the tail stretches. Here the shape is symmetric.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-032",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #12 of minutes of recess: 4: 2 dots; 5: 7 dots; 6: 3 dots; 8: 1 dot. At which value is the peak (the tallest stack)?",
+      "answer": 5,
+      "explanation": "The tallest stack has 7 dots at 5. The peak shows where data clusters.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-033",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #13 of minutes of recess: 11: 1 dot; 12: 2 dots; 13: 3 dots; 14: 8 dots; 15: 2 dots. At which value is the peak (the tallest stack)?",
+      "answer": 14,
+      "explanation": "The tallest stack has 8 dots at 14. The peak shows where data clusters.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-034",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #14 of minutes of recess: 30: 3 dots; 35: 9 dots; 40: 4 dots; 45: 2 dots. At which value is the peak (the tallest stack)?",
+      "answer": 35,
+      "explanation": "The tallest stack has 9 dots at 35. The peak shows where data clusters.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-035",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #15 of minutes of recess: 0: 5 dots; 1: 2 dots; 2: 2 dots; 3: 1 dot. At which value is the peak (the tallest stack)?",
+      "answer": 0,
+      "explanation": "The tallest stack has 5 dots at 0. The peak shows where data clusters.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-036",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #16 of books read: 2: 3 dots; 3: 4 dots; 4: 2 dots; 6: 2 dots. What is the median?",
+      "answer": 3,
+      "explanation": "There are 11 dots. Listed in order: 2, 2, 2, 3, 3, 3, 3, 4, 4, 6, 6. The middle value is 3.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-037",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #17 of books read: 10: 1 dot; 12: 4 dots; 13: 3 dots; 15: 2 dots; 16: 2 dots. What is the median?",
+      "answer": 13,
+      "explanation": "There are 12 dots. Listed in order: 10, 12, 12, 12, 12, 13, 13, 13, 15, 15, 16, 16. The middle value is 13.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-038",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #18 of books read: 5: 2 dots; 6: 2 dots; 7: 5 dots; 9: 3 dots; 10: 1 dot. What is the median?",
+      "answer": 7,
+      "explanation": "There are 13 dots. Listed in order: 5, 5, 6, 6, 7, 7, 7, 7, 7, 9, 9, 9, 10. The middle value is 7.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-039",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #19 of books read: 1: 4 dots; 2: 3 dots; 3: 3 dots; 8: 2 dots. What is the median?",
+      "answer": 2,
+      "explanation": "There are 12 dots. Listed in order: 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 8, 8. The middle value is 2.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-040",
+      "topicId": "distributions",
+      "type": "numeric",
+      "prompt": "Dot plot #20 of books read: 20: 3 dots; 21: 2 dots; 24: 4 dots; 25: 1 dot; 27: 1 dot. What is the median?",
+      "answer": 24,
+      "explanation": "There are 11 dots. Listed in order: 20, 20, 20, 21, 21, 24, 24, 24, 24, 25, 27. The middle value is 24.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-041",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the mean of these test scores: 4, 6, 8, 10.",
+      "answer": 7,
+      "explanation": "Add: 28. Divide by 4: 28 ÷ 4 = 7.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-042",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the mean of these test scores: 3, 5, 7, 9, 11.",
+      "answer": 7,
+      "explanation": "Add: 35. Divide by 5: 35 ÷ 5 = 7.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-043",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the mean of these test scores: 12, 15, 9, 8, 6.",
+      "answer": 10,
+      "explanation": "Add: 50. Divide by 5: 50 ÷ 5 = 10.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-044",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the mean of these test scores: 20, 30, 25, 25.",
+      "answer": 25,
+      "explanation": "Add: 100. Divide by 4: 100 ÷ 4 = 25.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-045",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the mean of these test scores: 2, 9, 4, 7, 8.",
+      "answer": 6,
+      "explanation": "Add: 30. Divide by 5: 30 ÷ 5 = 6.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-046",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "What is the mode of 3, 5, 5, 7, 9?",
+      "answer": 5,
+      "explanation": "5 appears most often (2 times).",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-047",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "What is the mode of 10, 12, 12, 12, 15, 18?",
+      "answer": 12,
+      "explanation": "12 appears most often (3 times).",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-048",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the median of 8, 3, 6, 10.",
+      "answer": 7,
+      "explanation": "Order: 3, 6, 8, 10. Even count, so average the two middle numbers: 7.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-049",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the median of 15, 11, 20, 14, 13, 17.",
+      "answer": 14.5,
+      "explanation": "Order: 11, 13, 14, 15, 17, 20. Even count, so average the two middle numbers: 14.5.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-050",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the median of 2, 9, 5, 4.",
+      "answer": 4.5,
+      "explanation": "Order: 2, 4, 5, 9. Even count, so average the two middle numbers: 4.5.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-051",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the median of 21, 25, 30, 22.",
+      "answer": 23.5,
+      "explanation": "Order: 21, 22, 25, 30. Even count, so average the two middle numbers: 23.5.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-052",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the mean of 7, 10, 8, 9 pages read. Round to the nearest hundredth if needed.",
+      "answer": 8.5,
+      "explanation": "Sum 34 ÷ 4 = 8.5.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-053",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the mean of 5, 8, 6, 9, 4 pages read. Round to the nearest hundredth if needed.",
+      "answer": 6.4,
+      "explanation": "Sum 32 ÷ 5 = 6.4.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-054",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Find the mean of 11, 14, 12, 16 pages read. Round to the nearest hundredth if needed.",
+      "answer": 13.25,
+      "explanation": "Sum 53 ÷ 4 = 13.25.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-055",
+      "topicId": "measures-center",
+      "type": "mc",
+      "prompt": "What is the range of 45, 52, 38, 61, 49 jumping jacks?",
+      "choices": [
+        "23",
+        "49",
+        "61",
+        "38"
+      ],
+      "answer": 0,
+      "explanation": "Range = 61 − 38 = 23.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-056",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Andrew's scores are 80, 90, 85. What must his next score be so his mean is exactly 86?",
+      "answer": 89,
+      "explanation": "He needs a total of 86 × 4 = 344. He has 255. 344 − 255 = 89.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-057",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Andrew's scores are 6, 8, 7, 9. What must his next score be so his mean is exactly 8?",
+      "answer": 10,
+      "explanation": "He needs a total of 8 × 5 = 40. He has 30. 40 − 30 = 10.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-058",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "Andrew's scores are 12, 15, 10, 14. What must his next score be so his mean is exactly 13?",
+      "answer": 14,
+      "explanation": "He needs a total of 13 × 5 = 65. He has 51. 65 − 51 = 14.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-059",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "The data 10, 12, 14 gets a new value, 24. By how much does the mean change? (Use a negative number if it goes down.)",
+      "answer": 3,
+      "explanation": "Old mean 12, new mean 15; change = 3.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-060",
+      "topicId": "measures-center",
+      "type": "numeric",
+      "prompt": "The data 5, 5, 6, 8 gets a new value, 1. By how much does the mean change? (Use a negative number if it goes down.)",
+      "answer": -1,
+      "explanation": "Old mean 6, new mean 5; change = -1.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-061",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "Ages at a party: 3, 7, 12, 15, 18, 22, 24, 29. A histogram has a bar for 10–19. How tall is that bar (how many values)?",
+      "answer": 3,
+      "explanation": "Values from 10 to 19: 12, 15, 18 → 3.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-062",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "Ages at a party: 41, 45, 52, 58, 60, 63, 67, 71, 74. A histogram has a bar for 60–69. How tall is that bar (how many values)?",
+      "answer": 3,
+      "explanation": "Values from 60 to 69: 60, 63, 67 → 3.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-063",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "Ages at a party: 5, 8, 11, 13, 16, 17, 19, 21. A histogram has a bar for 10–14. How tall is that bar (how many values)?",
+      "answer": 2,
+      "explanation": "Values from 10 to 14: 11, 13 → 2.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-064",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "Ages at a party: 22, 25, 31, 33, 36, 38, 44, 47. A histogram has a bar for 30–39. How tall is that bar (how many values)?",
+      "answer": 4,
+      "explanation": "Values from 30 to 39: 31, 33, 36, 38 → 4.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-065",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "A dot plot of pets per family shows 1: 3 dots; 2: 4 dots; 3: 2 dots; 4: 1 dot. How many families have MORE than 2 pets?",
+      "answer": 3,
+      "explanation": "Count dots above 2: 3.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-066",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "A dot plot of pets per family shows 5: 2 dots; 6: 5 dots; 7: 3 dots; 8: 2 dots. How many families have MORE than 6 pets?",
+      "answer": 5,
+      "explanation": "Count dots above 6: 5.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-067",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "A dot plot of pets per family shows 0: 1 dot; 1: 2 dots; 2: 6 dots; 3: 3 dots. How many families have MORE than 1 pets?",
+      "answer": 9,
+      "explanation": "Count dots above 1: 9.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-068",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "A box plot shows: minimum 10, Q1 14, median 18, Q3 25, maximum 30. What is the interquartile range (IQR)?",
+      "answer": 11,
+      "explanation": "IQR = Q3 − Q1 = 25 − 14 = 11. It's the width of the box!",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-069",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "A box plot shows: minimum 3, Q1 6, median 8, Q3 11, maximum 15. What is the interquartile range (IQR)?",
+      "answer": 5,
+      "explanation": "IQR = Q3 − Q1 = 11 − 6 = 5. It's the width of the box!",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-070",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "A box plot shows: minimum 40, Q1 52, median 60, Q3 64, maximum 80. What is the interquartile range (IQR)?",
+      "answer": 12,
+      "explanation": "IQR = Q3 − Q1 = 64 − 52 = 12. It's the width of the box!",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-071",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "A box plot shows: minimum 22, Q1 25, median 31, Q3 35, maximum 41. What is the interquartile range (IQR)?",
+      "answer": 10,
+      "explanation": "IQR = Q3 − Q1 = 35 − 25 = 10. It's the width of the box!",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-072",
+      "topicId": "data-displays",
+      "type": "mc",
+      "prompt": "A box plot of race times (seconds) has whiskers from 2 to 20 and a box from 5 to 12 with a line at 9. What is the median?",
+      "choices": [
+        "5",
+        "12",
+        "9",
+        "11"
+      ],
+      "answer": 2,
+      "explanation": "The line inside the box marks the median.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-073",
+      "topicId": "data-displays",
+      "type": "mc",
+      "prompt": "A box plot of race times (seconds) has whiskers from 30 to 50 and a box from 34 to 45 with a line at 37. What is the median?",
+      "choices": [
+        "34",
+        "37",
+        "45",
+        "40"
+      ],
+      "answer": 1,
+      "explanation": "The line inside the box marks the median.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-074",
+      "topicId": "data-displays",
+      "type": "mc",
+      "prompt": "In a box plot with Q1 = 4, median = 6, and Q3 = 9, about what percent of the data is above 9?",
+      "choices": [
+        "50%",
+        "75%",
+        "10%",
+        "25%"
+      ],
+      "answer": 3,
+      "explanation": "Each of the 4 sections of a box plot holds about 25% of the data. Above Q3 is the top 25%.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-075",
+      "topicId": "data-displays",
+      "type": "mc",
+      "prompt": "In a box plot with Q1 = 55, median = 62, and Q3 = 70, about what percent of the data is above 70?",
+      "choices": [
+        "50%",
+        "75%",
+        "10%",
+        "25%"
+      ],
+      "answer": 3,
+      "explanation": "Each of the 4 sections of a box plot holds about 25% of the data. Above Q3 is the top 25%.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-076",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "To draw a box plot of 3, 5, 7, 8, 10, 12, 14, find the Q1.",
+      "answer": 5,
+      "explanation": "Median 8. Lower half median Q1 = 5, upper half median Q3 = 12.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-077",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "To draw a box plot of 11, 13, 15, 16, 18, 20, 21, 24, find the Q3.",
+      "answer": 20.5,
+      "explanation": "Median 17. Lower half median Q1 = 14, upper half median Q3 = 20.5.",
+      "difficulty": 3,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-078",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "To draw a box plot of 2, 4, 4, 6, 9, 10, 13, 15, 17, find the IQR.",
+      "answer": 10,
+      "explanation": "Median 9. Lower half median Q1 = 4, upper half median Q3 = 14. IQR = 10.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-079",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "To draw a box plot of 30, 32, 35, 38, 40, 45, find the Q1.",
+      "answer": 32,
+      "explanation": "Median 36.5. Lower half median Q1 = 32, upper half median Q3 = 40.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-080",
+      "topicId": "data-displays",
+      "type": "numeric",
+      "prompt": "To draw a box plot of 6, 7, 9, 11, 12, 14, 15, 18, 20, 22, find the Q3.",
+      "answer": 18,
+      "explanation": "Median 13. Lower half median Q1 = 9, upper half median Q3 = 18.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-081",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Data on cats at shelters: 4, 6, 7, 9, 9, 11. How many observations are in this data set?",
+      "answer": 6,
+      "explanation": "Count the values: 6.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-082",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Data on kids per class: 12, 15, 15, 18, 20, 21, 23, 25, 30. How many observations are in this data set?",
+      "answer": 9,
+      "explanation": "Count the values: 9.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-083",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Data on goals per game: 2, 3, 3, 5. How many observations are in this data set?",
+      "answer": 4,
+      "explanation": "Count the values: 4.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-084",
+      "topicId": "summarizing-data",
+      "type": "mc",
+      "prompt": "Five friends earned $5, $6, $5, $7, and $90. Which measure of center best describes a typical amount?",
+      "choices": [
+        "mean",
+        "median",
+        "mode",
+        "range"
+      ],
+      "answer": 1,
+      "explanation": "The $90 is an outlier that pulls the mean way up; the median stays typical.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-085",
+      "topicId": "summarizing-data",
+      "type": "mc",
+      "prompt": "Test scores were 78, 80, 82, 81, 79 with no outliers. Which measure of center works well and uses every value?",
+      "choices": [
+        "median",
+        "mode",
+        "mean",
+        "range"
+      ],
+      "answer": 2,
+      "explanation": "With no outliers and a symmetric shape, the mean is a great summary.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-086",
+      "topicId": "summarizing-data",
+      "type": "mc",
+      "prompt": "Shoe sizes in a class are mostly 6, with some 5s and 7s. The store wants the size sold MOST often. Which measure?",
+      "choices": [
+        "mode",
+        "mean",
+        "median",
+        "range"
+      ],
+      "answer": 0,
+      "explanation": "The mode is the most common value.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-087",
+      "topicId": "summarizing-data",
+      "type": "mc",
+      "prompt": "House prices: $200k, $210k, $220k, $230k, $1,500k. Which measure of spread is LEAST affected by the $1,500k house?",
+      "choices": [
+        "IQR",
+        "mean",
+        "median",
+        "mode"
+      ],
+      "answer": 0,
+      "explanation": "IQR uses only the middle half of the data, so outliers don't stretch it like the range.",
+      "difficulty": 1
+    },
+    {
+      "id": "stat-088",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the mean absolute deviation (MAD) of 2, 4, 6, 8.",
+      "answer": 2,
+      "explanation": "Mean = 5. Distances: 3, 1, 1, 3. Average distance = 2.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-089",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the mean absolute deviation (MAD) of 3, 5, 7, 9, 11.",
+      "answer": 2.4,
+      "explanation": "Mean = 7. Distances: 4, 2, 0, 2, 4. Average distance = 2.4.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-090",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the mean absolute deviation (MAD) of 10, 12, 14, 16, 18.",
+      "answer": 2.4,
+      "explanation": "Mean = 14. Distances: 4, 2, 0, 2, 4. Average distance = 2.4.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-091",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the mean absolute deviation (MAD) of 1, 1, 5, 9, 9.",
+      "answer": 3.2,
+      "explanation": "Mean = 5. Distances: 4, 4, 0, 4, 4. Average distance = 3.2.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-092",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the mean absolute deviation (MAD) of 6, 8, 10, 12, 14, 16.",
+      "answer": 3,
+      "explanation": "Mean = 11. Distances: 5, 3, 1, 1, 3, 5. Average distance = 3.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-093",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the IQR of 1, 3, 5, 7, 9, 11 minutes.",
+      "answer": 6,
+      "explanation": "Q1 = 3, Q3 = 9. IQR = 6.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-094",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the IQR of 4, 8, 10, 12, 15, 18, 20 minutes.",
+      "answer": 10,
+      "explanation": "Q1 = 8, Q3 = 18. IQR = 10.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-095",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the IQR of 20, 22, 25, 26, 30, 34, 35, 40 minutes.",
+      "answer": 11,
+      "explanation": "Q1 = 23.5, Q3 = 34.5. IQR = 11.",
+      "difficulty": 2
+    },
+    {
+      "id": "stat-096",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the MAD of 2, 5, 6, 9, 13. Round to the nearest hundredth.",
+      "answer": 3.2,
+      "explanation": "Mean = 7. Distances: 5, 2, 1, 2, 6. Average = 3.2 ≈ 3.2.",
+      "difficulty": 3,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-097",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the MAD of 4, 4, 7, 10, 12, 5. Round to the nearest hundredth.",
+      "answer": 2.67,
+      "explanation": "Mean = 7. Distances: 3, 3, 0, 3, 5, 2. Average = 2.67 ≈ 2.67.",
+      "difficulty": 3,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-098",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Find the MAD of 8, 10, 15, 11. Round to the nearest hundredth.",
+      "answer": 2,
+      "explanation": "Mean = 11. Distances: 3, 1, 4, 0. Average = 2 ≈ 2.0.",
+      "difficulty": 3
+    },
+    {
+      "id": "stat-099",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Data: 12, 14, 15, 15, 16, 58. How much greater is the mean than the median? Round to the nearest hundredth.",
+      "answer": 6.67,
+      "explanation": "Mean = 21.67, median = 15. Difference ≈ 6.67. The outlier 58 pulls the mean up, so the median describes this data better.",
+      "difficulty": 3,
+      "tolerance": 0.01
+    },
+    {
+      "id": "stat-100",
+      "topicId": "summarizing-data",
+      "type": "numeric",
+      "prompt": "Data: 3, 4, 4, 5, 6, 40. How much greater is the mean than the median? Round to the nearest hundredth.",
+      "answer": 5.83,
+      "explanation": "Mean = 10.33, median = 4.5. Difference ≈ 5.83. The outlier 40 pulls the mean up, so the median describes this data better.",
+      "difficulty": 3,
+      "tolerance": 0.01
+    }
+  ]
+}

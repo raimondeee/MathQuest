@@ -1,0 +1,1482 @@
+{
+  "id": "expressions",
+  "title": "Expressions & Equations",
+  "masteryThreshold": 0.6,
+  "topics": [
+    {
+      "id": "exp-exponents",
+      "title": "Power Up: Exponents",
+      "ccss": [
+        "6.EE.A.1"
+      ],
+      "lesson": "## Power Up! ⚡\nAn **exponent** tells how many times to use the **base** as a factor.\n\n- 2³ = 2 × 2 × 2 = **8**\n- 5² = 5 × 5 = **25**\n\n⚠️ 2³ is *not* 2 × 3!",
+      "examples": [
+        {
+          "prompt": "Evaluate 3⁴.",
+          "steps": [
+            "3⁴ = 3 × 3 × 3 × 3",
+            "3 × 3 = 9, 9 × 3 = 27, 27 × 3 = 81"
+          ],
+          "answer": "81"
+        },
+        {
+          "prompt": "Write 7 × 7 × 7 using an exponent.",
+          "steps": [
+            "7 is used as a factor 3 times",
+            "So the exponent is 3"
+          ],
+          "answer": "7³"
+        },
+        {
+          "prompt": "Evaluate (1/2)³.",
+          "steps": [
+            "(1/2) × (1/2) × (1/2)",
+            "Tops: 1 × 1 × 1 = 1; bottoms: 2 × 2 × 2 = 8"
+          ],
+          "answer": "1/8"
+        }
+      ]
+    },
+    {
+      "id": "exp-writing",
+      "title": "Words to Expressions",
+      "ccss": [
+        "6.EE.A.2a",
+        "6.EE.A.2b"
+      ],
+      "lesson": "## Translate Words into Math 🗣️➡️🔢\n- **sum / more than** → +\n- **difference / less than** → −\n- **product / times** → ×\n- **quotient / divided by** → ÷\n\n\"5 less than n\" is **n − 5** (careful with the order!). A **term** is a part separated by + or −; a **coefficient** is the number in front of a variable.",
+      "examples": [
+        {
+          "prompt": "Write \"8 more than n\".",
+          "steps": [
+            "\"more than\" means add",
+            "n + 8"
+          ],
+          "answer": "n + 8"
+        },
+        {
+          "prompt": "Write \"3 less than twice a number x\".",
+          "steps": [
+            "Twice x is 2x",
+            "3 less than that: subtract 3"
+          ],
+          "answer": "2x - 3"
+        },
+        {
+          "prompt": "How many terms are in 4a + 7b + 2, and what is the coefficient of b?",
+          "steps": [
+            "Terms: 4a, 7b, 2 → 3 terms",
+            "The number in front of b is 7"
+          ],
+          "answer": "3 terms; coefficient 7"
+        }
+      ]
+    },
+    {
+      "id": "exp-evaluating",
+      "title": "Evaluate & Order of Operations",
+      "ccss": [
+        "6.EE.A.2c"
+      ],
+      "lesson": "## Order of Operations 🧭\n1. **P**arentheses\n2. **E**xponents\n3. **M**ultiply / **D**ivide (left to right)\n4. **A**dd / **S**ubtract (left to right)\n\nTo **evaluate** an expression, replace the variable with its value, then follow the order!",
+      "examples": [
+        {
+          "prompt": "Evaluate 6 + 4 × 3.",
+          "steps": [
+            "Multiply first: 4 × 3 = 12",
+            "Add: 6 + 12 = 18"
+          ],
+          "answer": "18"
+        },
+        {
+          "prompt": "Evaluate (2 + 5) × 3 − 1.",
+          "steps": [
+            "Parentheses: 2 + 5 = 7",
+            "Multiply: 7 × 3 = 21",
+            "Subtract: 21 − 1 = 20"
+          ],
+          "answer": "20"
+        },
+        {
+          "prompt": "Evaluate 2x² + 3 when x = 4.",
+          "steps": [
+            "x² = 4² = 16",
+            "2 × 16 = 32",
+            "32 + 3 = 35"
+          ],
+          "answer": "35"
+        }
+      ]
+    },
+    {
+      "id": "exp-equivalent",
+      "title": "Equivalent Expressions & Properties",
+      "ccss": [
+        "6.EE.A.3",
+        "6.EE.A.4"
+      ],
+      "lesson": "## Same Value, Different Look 🪞\n**Equivalent expressions** are equal for every value of the variable.\n\n- **Distributive property:** 3(x + 2) = 3x + 6\n- **Combine like terms:** 4y + 2y = 6y\n- y + y + y = 3y",
+      "examples": [
+        {
+          "prompt": "Rewrite 4(x + 5).",
+          "steps": [
+            "Multiply 4 × x = 4x",
+            "Multiply 4 × 5 = 20"
+          ],
+          "answer": "4x + 20"
+        },
+        {
+          "prompt": "Simplify 3n + 5n + 2.",
+          "steps": [
+            "3n and 5n are like terms: 8n",
+            "2 stays"
+          ],
+          "answer": "8n + 2"
+        },
+        {
+          "prompt": "Simplify 2(3x + 1) + x.",
+          "steps": [
+            "Distribute: 6x + 2",
+            "Add x: 6x + x = 7x"
+          ],
+          "answer": "7x + 2"
+        }
+      ]
+    },
+    {
+      "id": "exp-equations",
+      "title": "Solve One-Step Equations",
+      "ccss": [
+        "6.EE.B.5",
+        "6.EE.B.6",
+        "6.EE.B.7"
+      ],
+      "lesson": "## Balance the Scale ⚖️\nAn equation is like a balanced scale. Do the **opposite operation** to both sides:\n\n- x + 7 = 12 → subtract 7 → x = 5\n- 4x = 28 → divide by 4 → x = 7\n- x ÷ 3 = 6 → multiply by 3 → x = 18\n\nCheck your answer by plugging it back in!",
+      "examples": [
+        {
+          "prompt": "Solve x + 9 = 15.",
+          "steps": [
+            "Subtract 9 from both sides",
+            "x = 15 − 9 = 6"
+          ],
+          "answer": "6"
+        },
+        {
+          "prompt": "Solve 6x = 42.",
+          "steps": [
+            "Divide both sides by 6",
+            "x = 42 ÷ 6 = 7"
+          ],
+          "answer": "7"
+        },
+        {
+          "prompt": "Solve (3/4)x = 12.",
+          "steps": [
+            "Multiply both sides by 4/3",
+            "x = 12 × 4/3 = 16"
+          ],
+          "answer": "16"
+        },
+        {
+          "prompt": "Solve x − 2.5 = 4.75.",
+          "steps": [
+            "Add 2.5 to both sides",
+            "x = 4.75 + 2.5 = 7.25"
+          ],
+          "answer": "7.25"
+        }
+      ]
+    },
+    {
+      "id": "exp-inequalities",
+      "title": "Inequalities",
+      "ccss": [
+        "6.EE.B.5",
+        "6.EE.B.8"
+      ],
+      "lesson": "## More or Less? 🐊\n- **>** greater than   - **<** less than\n- **≥** at least (greater than *or equal*)   - **≤** at most (less than *or equal*)\n\nAn inequality like x > 3 has **infinitely many** solutions: 4, 5, 3.5, 100…",
+      "examples": [
+        {
+          "prompt": "Write \"x is at least 10\".",
+          "steps": [
+            "\"at least\" means 10 or more",
+            "Use ≥"
+          ],
+          "answer": "x ≥ 10"
+        },
+        {
+          "prompt": "Is 6 a solution of x < 6?",
+          "steps": [
+            "6 < 6 is false (6 equals 6)"
+          ],
+          "answer": "No"
+        },
+        {
+          "prompt": "You must be older than 12 to join. Write an inequality for age a.",
+          "steps": [
+            "\"older than\" means greater than, not equal",
+            "a > 12"
+          ],
+          "answer": "a > 12"
+        }
+      ]
+    },
+    {
+      "id": "exp-variables",
+      "title": "Dependent & Independent Variables",
+      "ccss": [
+        "6.EE.C.9"
+      ],
+      "lesson": "## Inputs and Outputs 🔁\nThe **independent variable** is the input you choose (like hours worked). The **dependent variable** depends on it (like money earned).\n\nWe can show the relationship with an **equation** (y = 5x), a **table**, or a **graph**.",
+      "examples": [
+        {
+          "prompt": "Andrew earns $8 per hour. Write an equation for money m after h hours.",
+          "steps": [
+            "Each hour adds $8",
+            "m = 8h"
+          ],
+          "answer": "m = 8h"
+        },
+        {
+          "prompt": "For y = 3x + 1, find y when x = 4.",
+          "steps": [
+            "3 × 4 = 12",
+            "12 + 1 = 13"
+          ],
+          "answer": "13"
+        },
+        {
+          "prompt": "A table has (1, 4), (2, 8), (3, 12). What is the rule?",
+          "steps": [
+            "y is always 4 times x",
+            "y = 4x"
+          ],
+          "answer": "y = 4x"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "exp-001",
+      "topicId": "exp-exponents",
+      "type": "numeric",
+      "prompt": "What is 3²?",
+      "answer": 9,
+      "explanation": "3² means 3 × 3 = 9. Nice work!",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-002",
+      "topicId": "exp-exponents",
+      "type": "numeric",
+      "prompt": "Evaluate 9².",
+      "answer": 81,
+      "explanation": "Multiply 9 by itself 2 times: 9 × 9 = 81.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-003",
+      "topicId": "exp-exponents",
+      "type": "numeric",
+      "prompt": "Evaluate 7² + 5³.",
+      "answer": 174,
+      "explanation": "7² = 49 and 5³ = 125, so 49 + 125 = 174.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-004",
+      "topicId": "exp-exponents",
+      "type": "numeric",
+      "prompt": "What is 6³?",
+      "answer": 216,
+      "explanation": "6³ means 6 × 6 × 6 = 216. Nice work!",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-005",
+      "topicId": "exp-exponents",
+      "type": "mc",
+      "prompt": "Which expression means the same as 5³?",
+      "choices": [
+        "5 + 5 + 5",
+        "5 × 5 × 5",
+        "5 × 3",
+        "3 × 3 × 3 × 3 × 3"
+      ],
+      "answer": 1,
+      "explanation": "The exponent 3 tells how many times to use 5 as a factor: 5 × 5 × 5.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-006",
+      "topicId": "exp-exponents",
+      "type": "numeric",
+      "prompt": "What is 3³?",
+      "answer": 27,
+      "explanation": "3³ means 3 × 3 × 3 = 27. Nice work!",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-007",
+      "topicId": "exp-exponents",
+      "type": "mc",
+      "prompt": "Which expression means the same as 2⁵?",
+      "choices": [
+        "2 × 5",
+        "5 × 5",
+        "2 + 2 + 2 + 2 + 2",
+        "2 × 2 × 2 × 2 × 2"
+      ],
+      "answer": 3,
+      "explanation": "The exponent 5 tells how many times to use 2 as a factor: 2 × 2 × 2 × 2 × 2.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-008",
+      "topicId": "exp-exponents",
+      "type": "mc",
+      "prompt": "What is (3/5)³?",
+      "choices": [
+        "1 4/5",
+        "27/125",
+        "5 2/5",
+        "3/125"
+      ],
+      "answer": 1,
+      "explanation": "Multiply the fraction by itself 3 times: top 3³ = 27, bottom 5³ = 125, so the answer is 27/125.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-009",
+      "topicId": "exp-exponents",
+      "type": "mc",
+      "prompt": "Which expression means the same as 3⁵?",
+      "choices": [
+        "3 × 3 × 3 × 3 × 3",
+        "3 × 5",
+        "3 + 3 + 3 + 3 + 3",
+        "5 × 5 × 5"
+      ],
+      "answer": 0,
+      "explanation": "The exponent 5 tells how many times to use 3 as a factor: 3 × 3 × 3 × 3 × 3.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-010",
+      "topicId": "exp-exponents",
+      "type": "numeric",
+      "prompt": "What is 5²?",
+      "answer": 25,
+      "explanation": "5² means 5 × 5 = 25. Nice work!",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-011",
+      "topicId": "exp-exponents",
+      "type": "numeric",
+      "prompt": "Evaluate 5³.",
+      "answer": 125,
+      "explanation": "Multiply 5 by itself 3 times: 5 × 5 × 5 = 125.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-012",
+      "topicId": "exp-exponents",
+      "type": "numeric",
+      "prompt": "Evaluate 8² + 2³.",
+      "answer": 72,
+      "explanation": "8² = 64 and 2³ = 8, so 64 + 8 = 72.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-013",
+      "topicId": "exp-exponents",
+      "type": "numeric",
+      "prompt": "What is 6²?",
+      "answer": 36,
+      "explanation": "6² means 6 × 6 = 36. Nice work!",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-014",
+      "topicId": "exp-exponents",
+      "type": "numeric",
+      "prompt": "Evaluate 6⁴.",
+      "answer": 1296,
+      "explanation": "Multiply 6 by itself 4 times: 6 × 6 × 6 × 6 = 1296.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-015",
+      "topicId": "exp-exponents",
+      "type": "mc",
+      "prompt": "Which expression means the same as 2³?",
+      "choices": [
+        "2 + 2 + 2",
+        "2 × 2 × 2",
+        "2 × 3",
+        "3 × 3"
+      ],
+      "answer": 1,
+      "explanation": "The exponent 3 tells how many times to use 2 as a factor: 2 × 2 × 2.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-016",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"the sum of n and 14\"?",
+      "choices": [
+        "n + 14",
+        "n ÷ 14",
+        "14n",
+        "n - 14"
+      ],
+      "answer": 0,
+      "explanation": "\"the sum of n and 14\" is written as n + 14. Order matters for subtraction and division!",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-017",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"12 less than 9 times a number n\"?",
+      "choices": [
+        "12n - 9",
+        "9n - 12",
+        "9(n - 12)",
+        "12 - 9n"
+      ],
+      "answer": 1,
+      "explanation": "\"9 times a number n\" is 9n. \"12 less than\" that means subtract 12 from it: 9n - 12.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-018",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"5 times the sum of n and 10\"?",
+      "choices": [
+        "5 + n + 10",
+        "5(n + 10)",
+        "n + 50",
+        "5n + 10"
+      ],
+      "answer": 1,
+      "explanation": "\"The sum of n and 10\" goes in parentheses first: (n + 10). Then multiply by 5: 5(n + 10).",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-019",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"6 less than n\"?",
+      "choices": [
+        "n + 6",
+        "6n",
+        "n - 6",
+        "6 - n"
+      ],
+      "answer": 2,
+      "explanation": "\"6 less than n\" is written as n - 6. Order matters for subtraction and division!",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-020",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"3 less than 10 times a number n\"?",
+      "choices": [
+        "3 - 10n",
+        "10(n - 3)",
+        "3n - 10",
+        "10n - 3"
+      ],
+      "answer": 3,
+      "explanation": "\"10 times a number n\" is 10n. \"3 less than\" that means subtract 3 from it: 10n - 3.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-021",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"n decreased by 10\"?",
+      "choices": [
+        "n ÷ 10",
+        "10 - n",
+        "n + 10",
+        "n - 10"
+      ],
+      "answer": 3,
+      "explanation": "\"n decreased by 10\" is written as n - 10. Order matters for subtraction and division!",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-022",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"7 times the sum of n and 4\"?",
+      "choices": [
+        "7n + 4",
+        "n + 28",
+        "7 + n + 4",
+        "7(n + 4)"
+      ],
+      "answer": 3,
+      "explanation": "\"The sum of n and 4\" goes in parentheses first: (n + 4). Then multiply by 7: 7(n + 4).",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-023",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"15 less than 7 times a number n\"?",
+      "choices": [
+        "15 - 7n",
+        "7n - 15",
+        "15n - 7",
+        "7(n - 15)"
+      ],
+      "answer": 1,
+      "explanation": "\"7 times a number n\" is 7n. \"15 less than\" that means subtract 15 from it: 7n - 15.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-024",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"8 more than n\"?",
+      "choices": [
+        "n + 8",
+        "8 - n",
+        "8n",
+        "n - 8"
+      ],
+      "answer": 0,
+      "explanation": "\"8 more than n\" is written as n + 8. Order matters for subtraction and division!",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-025",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"4 times the sum of n and 5\"?",
+      "choices": [
+        "4n + 5",
+        "4 + n + 5",
+        "4(n + 5)",
+        "n + 20"
+      ],
+      "answer": 2,
+      "explanation": "\"The sum of n and 5\" goes in parentheses first: (n + 5). Then multiply by 4: 4(n + 5).",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-026",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"12 more than n\"?",
+      "choices": [
+        "n + 12",
+        "n - 12",
+        "12 - n",
+        "12n"
+      ],
+      "answer": 0,
+      "explanation": "\"12 more than n\" is written as n + 12. Order matters for subtraction and division!",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-027",
+      "topicId": "exp-writing",
+      "type": "numeric",
+      "prompt": "How many terms are in the expression 4x + 7y + 5?",
+      "answer": 3,
+      "explanation": "Terms are separated by + or − signs: 4x, 7y, and 5. That's 3 terms.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-028",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Andrew saves $2 each week. He already has $6. Which expression shows how much he has after w weeks?",
+      "choices": [
+        "2(w + 6)",
+        "2w + 6",
+        "6w + 2",
+        "8w"
+      ],
+      "answer": 1,
+      "explanation": "He adds $2 per week, so that's 2w, plus the $6 he started with: 2w + 6.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-029",
+      "topicId": "exp-writing",
+      "type": "mc",
+      "prompt": "Which expression shows \"9 times the sum of n and 6\"?",
+      "choices": [
+        "9 + n + 6",
+        "n + 54",
+        "9(n + 6)",
+        "9n + 6"
+      ],
+      "answer": 2,
+      "explanation": "\"The sum of n and 6\" goes in parentheses first: (n + 6). Then multiply by 9: 9(n + 6).",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-030",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: 9 + 6 × 5",
+      "answer": 39,
+      "explanation": "Multiply first: 6 × 5 = 30. Then add: 9 + 30 = 39.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-031",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: (4 + 6) × 2 − 9",
+      "answer": 11,
+      "explanation": "Parentheses first: 4 + 6 = 10. Multiply: 10 × 2 = 20. Subtract: 20 − 9 = 11.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-032",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate 3x² − y when x = 3 and y = 13.",
+      "answer": 14,
+      "explanation": "x² = 9. Then 3 × 9 = 27. Subtract y: 27 − 13 = 14.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-033",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: 8 + 5 × 2",
+      "answer": 18,
+      "explanation": "Multiply first: 5 × 2 = 10. Then add: 8 + 10 = 18.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-034",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: (7 + 7) × 5 − 7",
+      "answer": 63,
+      "explanation": "Parentheses first: 7 + 7 = 14. Multiply: 14 × 5 = 70. Subtract: 70 − 7 = 63.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-035",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate 3x + 9 when x = 7.",
+      "answer": 30,
+      "explanation": "Replace x with 7: 3 × 7 + 9 = 21 + 9 = 30.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-036",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: 2 + 6 × 4",
+      "answer": 26,
+      "explanation": "Multiply first: 6 × 4 = 24. Then add: 2 + 24 = 26.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-037",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: 24 + 5² × 2 − 30 ÷ 5",
+      "answer": 68,
+      "explanation": "Exponent first: 5² = 25. Then multiply and divide left to right: 25 × 2 = 50 and 30 ÷ 5 = 6. Finally 24 + 50 − 6 = 68.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-038",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate 3x + 8 when x = 8.",
+      "answer": 32,
+      "explanation": "Replace x with 8: 3 × 8 + 8 = 24 + 8 = 32.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-039",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: 2 + 3 × 2",
+      "answer": 8,
+      "explanation": "Multiply first: 3 × 2 = 6. Then add: 2 + 6 = 8.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-040",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: 10 + 4² × 4 − 20 ÷ 4",
+      "answer": 69,
+      "explanation": "Exponent first: 4² = 16. Then multiply and divide left to right: 16 × 4 = 64 and 20 ÷ 4 = 5. Finally 10 + 64 − 5 = 69.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-041",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: 13 + 6 × 8",
+      "answer": 61,
+      "explanation": "Multiply first: 6 × 8 = 48. Then add: 13 + 48 = 61.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-042",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: (3 + 2) × 3 − 6",
+      "answer": 9,
+      "explanation": "Parentheses first: 3 + 2 = 5. Multiply: 5 × 3 = 15. Subtract: 15 − 6 = 9.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-043",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: 27 + 3² × 3 − 36 ÷ 6",
+      "answer": 48,
+      "explanation": "Exponent first: 3² = 9. Then multiply and divide left to right: 9 × 3 = 27 and 36 ÷ 6 = 6. Finally 27 + 27 − 6 = 48.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-044",
+      "topicId": "exp-evaluating",
+      "type": "numeric",
+      "prompt": "Evaluate: 2 + 8 × 9",
+      "answer": 74,
+      "explanation": "Multiply first: 8 × 9 = 72. Then add: 2 + 72 = 74.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-045",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Simplify by combining like terms: 4x + 9x + 10",
+      "choices": [
+        "13x + 10",
+        "4x + 19",
+        "36x + 10",
+        "23x"
+      ],
+      "answer": 0,
+      "explanation": "4x and 9x are like terms: 4x + 9x = 13x. The 10 has no x, so it stays: 13x + 10.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-046",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Which expression is equivalent to p + p + p + p?",
+      "choices": [
+        "4 + p",
+        "4p",
+        "p⁴",
+        "p + 4"
+      ],
+      "answer": 1,
+      "explanation": "Adding p to itself 4 times is the same as 4 × p = 4p.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-047",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Simplify by combining like terms: 2x + 4x + 12",
+      "choices": [
+        "6x + 12",
+        "18x",
+        "8x + 12",
+        "2x + 16"
+      ],
+      "answer": 0,
+      "explanation": "2x and 4x are like terms: 2x + 4x = 6x. The 12 has no x, so it stays: 6x + 12.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-048",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Which expression is equivalent to 5(4x + 3) + 3x?",
+      "choices": [
+        "20x + 18",
+        "23x + 3",
+        "23x + 15",
+        "7x + 15"
+      ],
+      "answer": 2,
+      "explanation": "Distribute: 5(4x + 3) = 20x + 15. Then combine x terms: 20x + 3x = 23x. Result: 23x + 15.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-049",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Simplify by combining like terms: 4x + 5x + 3",
+      "choices": [
+        "4x + 8",
+        "20x + 3",
+        "12x",
+        "9x + 3"
+      ],
+      "answer": 3,
+      "explanation": "4x and 5x are like terms: 4x + 5x = 9x. The 3 has no x, so it stays: 9x + 3.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-050",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Use the distributive property: 4(x + 8) = ?",
+      "choices": [
+        "x + 32",
+        "4x + 32",
+        "4x + 8",
+        "12x"
+      ],
+      "answer": 1,
+      "explanation": "Multiply 4 by each term inside: 4 × x = 4x and 4 × 8 = 32. So 4x + 32.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-051",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Simplify by combining like terms: 8x + 7x + 7",
+      "choices": [
+        "8x + 14",
+        "22x",
+        "56x + 7",
+        "15x + 7"
+      ],
+      "answer": 3,
+      "explanation": "8x and 7x are like terms: 8x + 7x = 15x. The 7 has no x, so it stays: 15x + 7.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-052",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Which expression is equivalent to 5(5x + 4) + 6x?",
+      "choices": [
+        "31x + 20",
+        "25x + 26",
+        "11x + 20",
+        "31x + 4"
+      ],
+      "answer": 0,
+      "explanation": "Distribute: 5(5x + 4) = 25x + 20. Then combine x terms: 25x + 6x = 31x. Result: 31x + 20.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-053",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Use the distributive property: 5(x + 8) = ?",
+      "choices": [
+        "5x + 40",
+        "x + 40",
+        "13x",
+        "5x + 8"
+      ],
+      "answer": 0,
+      "explanation": "Multiply 5 by each term inside: 5 × x = 5x and 5 × 8 = 40. So 5x + 40.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-054",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Simplify by combining like terms: 8x + 3x + 4",
+      "choices": [
+        "8x + 7",
+        "24x + 4",
+        "15x",
+        "11x + 4"
+      ],
+      "answer": 3,
+      "explanation": "8x and 3x are like terms: 8x + 3x = 11x. The 4 has no x, so it stays: 11x + 4.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-055",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Simplify by combining like terms: 9x + 5x + 12",
+      "choices": [
+        "9x + 17",
+        "45x + 12",
+        "14x + 12",
+        "26x"
+      ],
+      "answer": 2,
+      "explanation": "9x and 5x are like terms: 9x + 5x = 14x. The 12 has no x, so it stays: 14x + 12.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-056",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Use the distributive property: 3(x + 6) = ?",
+      "choices": [
+        "3x + 6",
+        "x + 18",
+        "9x",
+        "3x + 18"
+      ],
+      "answer": 3,
+      "explanation": "Multiply 3 by each term inside: 3 × x = 3x and 3 × 6 = 18. So 3x + 18.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-057",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Which expression is equivalent to 4(3x + 1) + 5x?",
+      "choices": [
+        "17x + 1",
+        "17x + 4",
+        "8x + 4",
+        "12x + 9"
+      ],
+      "answer": 1,
+      "explanation": "Distribute: 4(3x + 1) = 12x + 4. Then combine x terms: 12x + 5x = 17x. Result: 17x + 4.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-058",
+      "topicId": "exp-equivalent",
+      "type": "mc",
+      "prompt": "Simplify by combining like terms: 7x + 5x + 2",
+      "choices": [
+        "14x",
+        "35x + 2",
+        "12x + 2",
+        "7x + 7"
+      ],
+      "answer": 2,
+      "explanation": "7x and 5x are like terms: 7x + 5x = 12x. The 2 has no x, so it stays: 12x + 2.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-059",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x − 28 = 3",
+      "answer": 31,
+      "explanation": "Add 28 to both sides: x = 3 + 28 = 31.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-060",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x + 12.75 = 20.25",
+      "answer": 7.5,
+      "tolerance": 0.005,
+      "explanation": "Subtract 12.75 from both sides: x = 20.25 − 12.75 = 7.5.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-061",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x + 12 = 24",
+      "answer": 12,
+      "explanation": "Subtract 12 from both sides: x = 24 − 12 = 12.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-062",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x ÷ 9 = 15",
+      "answer": 135,
+      "explanation": "Multiply both sides by 9: x = 15 × 9 = 135.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-063",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x + 2.75 = 6",
+      "answer": 3.25,
+      "tolerance": 0.005,
+      "explanation": "Subtract 2.75 from both sides: x = 6 − 2.75 = 3.25.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-064",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x − 10 = 40",
+      "answer": 50,
+      "explanation": "Add 10 to both sides: x = 40 + 10 = 50.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-065",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: 4x = 28",
+      "answer": 7,
+      "explanation": "Divide both sides by 4: x = 28 ÷ 4 = 7.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-066",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x + 29 = 46",
+      "answer": 17,
+      "explanation": "Subtract 29 from both sides: x = 46 − 29 = 17.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-067",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x ÷ 4 = 5",
+      "answer": 20,
+      "explanation": "Multiply both sides by 4: x = 5 × 4 = 20.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-068",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x + 6.5 = 21",
+      "answer": 14.5,
+      "tolerance": 0.005,
+      "explanation": "Subtract 6.5 from both sides: x = 21 − 6.5 = 14.5.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-069",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: 6x = 18",
+      "answer": 3,
+      "explanation": "Divide both sides by 6: x = 18 ÷ 6 = 3.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-070",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x − 15 = 3",
+      "answer": 18,
+      "explanation": "Add 15 to both sides: x = 3 + 15 = 18.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-071",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x ÷ 6 = 15",
+      "answer": 90,
+      "explanation": "Multiply both sides by 6: x = 15 × 6 = 90.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-072",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: (3/4)x = 6",
+      "answer": 8,
+      "explanation": "Multiply both sides by 4/3 (the reciprocal): x = 6 × 4/3 = 8.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-073",
+      "topicId": "exp-equations",
+      "type": "numeric",
+      "prompt": "Solve: x + 2 = 9",
+      "answer": 7,
+      "explanation": "Subtract 2 from both sides: x = 9 − 2 = 7.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-074",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "Which value of x is a solution of x < 34?",
+      "choices": [
+        "34",
+        "33",
+        "35",
+        "37"
+      ],
+      "answer": 1,
+      "explanation": "Test it: 33 < 34 is true. 34 itself does not work because the symbol is <, not ≤.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-075",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "Which value of x is a solution of x < 37?",
+      "choices": [
+        "37",
+        "34",
+        "38",
+        "40"
+      ],
+      "answer": 1,
+      "explanation": "Test it: 34 < 37 is true. 37 itself does not work because the symbol is <, not ≤.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-076",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "Which inequality means \"x is less than 8\"?",
+      "choices": [
+        "x < 8",
+        "x ≥ 8",
+        "x ≤ 8",
+        "x > 8"
+      ],
+      "answer": 0,
+      "explanation": "\"Less than\" uses the symbol <, so the answer is x < 8.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-077",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "A roller coaster says riders must be at least 18 inches tall. Which inequality shows the allowed heights h?",
+      "choices": [
+        "h < 18",
+        "h > 18",
+        "h ≥ 18",
+        "h ≤ 18"
+      ],
+      "answer": 2,
+      "explanation": "Look for the key words and match them to a symbol. The answer is h ≥ 18.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-078",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "Which value of x is a solution of x ≥ 12?",
+      "choices": [
+        "10",
+        "7",
+        "11",
+        "12"
+      ],
+      "answer": 3,
+      "explanation": "Test it: 12 ≥ 12 is true. Remember, ≥ and ≤ include the number itself!",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-079",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "Which inequality means \"x is at least 19\"?",
+      "choices": [
+        "x > 19",
+        "x ≥ 19",
+        "x < 19",
+        "x ≤ 19"
+      ],
+      "answer": 1,
+      "explanation": "\"At least\" uses the symbol ≥, so the answer is x ≥ 19.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-080",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "To win the class reading prize you need more than 19 books. Which inequality shows the books b a winner read?",
+      "choices": [
+        "b ≥ 19",
+        "b < 19",
+        "b ≤ 19",
+        "b > 19"
+      ],
+      "answer": 3,
+      "explanation": "Look for the key words and match them to a symbol. The answer is b > 19.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-081",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "Which inequality means \"x is greater than 7\"?",
+      "choices": [
+        "x < 7",
+        "x > 7",
+        "x ≥ 7",
+        "x ≤ 7"
+      ],
+      "answer": 1,
+      "explanation": "\"Greater than\" uses the symbol >, so the answer is x > 7.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-082",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "Which value of x is a solution of x ≤ 15?",
+      "choices": [
+        "15",
+        "20",
+        "17",
+        "16"
+      ],
+      "answer": 0,
+      "explanation": "Test it: 15 ≤ 15 is true. Remember, ≥ and ≤ include the number itself!",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-083",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "An elevator can hold at most 40 people. Which inequality shows the number of people n allowed?",
+      "choices": [
+        "n ≤ 40",
+        "n > 40",
+        "n < 40",
+        "n ≥ 40"
+      ],
+      "answer": 0,
+      "explanation": "Look for the key words and match them to a symbol. The answer is n ≤ 40.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-084",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "Which inequality means \"x is at least 18\"?",
+      "choices": [
+        "x > 18",
+        "x ≤ 18",
+        "x < 18",
+        "x ≥ 18"
+      ],
+      "answer": 3,
+      "explanation": "\"At least\" uses the symbol ≥, so the answer is x ≥ 18.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-085",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "Which value of x is a solution of x ≥ 19?",
+      "choices": [
+        "18",
+        "17",
+        "14",
+        "19"
+      ],
+      "answer": 3,
+      "explanation": "Test it: 19 ≥ 19 is true. Remember, ≥ and ≤ include the number itself!",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-086",
+      "topicId": "exp-inequalities",
+      "type": "mc",
+      "prompt": "Which inequality means \"x is at most 17\"?",
+      "choices": [
+        "x ≥ 17",
+        "x < 17",
+        "x > 17",
+        "x ≤ 17"
+      ],
+      "answer": 3,
+      "explanation": "\"At most\" uses the symbol ≤, so the answer is x ≤ 17.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-087",
+      "topicId": "exp-variables",
+      "type": "mc",
+      "prompt": "The table shows pairs (x, y): (1, 7), (2, 9), (3, 11), (4, 13). Which equation fits the table?",
+      "choices": [
+        "y = 7x",
+        "y = x + 7",
+        "y = 5x + 2",
+        "y = 2x + 5"
+      ],
+      "answer": 3,
+      "explanation": "Every time x goes up 1, y goes up 2, so multiply x by 2. When x = 1, 2 + 5 = 7, so add 5: y = 2x + 5.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-088",
+      "topicId": "exp-variables",
+      "type": "mc",
+      "prompt": "A plant grows 19 mm each week. Which is the dependent variable?",
+      "choices": [
+        "number of weeks",
+        "the plant's height",
+        "19 mm",
+        "the pot size"
+      ],
+      "answer": 1,
+      "explanation": "The independent variable is the input you change; the dependent variable depends on it. Here the answer is \"the plant's height\".",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-089",
+      "topicId": "exp-variables",
+      "type": "mc",
+      "prompt": "The table shows pairs (x, y): (1, 3), (2, 5), (3, 7), (4, 9). Which equation fits the table?",
+      "choices": [
+        "y = 2x + 1",
+        "y = 3x",
+        "y = 1x + 2",
+        "y = x + 3"
+      ],
+      "answer": 0,
+      "explanation": "Every time x goes up 1, y goes up 2, so multiply x by 2. When x = 1, 2 + 1 = 3, so add 1: y = 2x + 1.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-090",
+      "topicId": "exp-variables",
+      "type": "numeric",
+      "prompt": "The rule is y = 7x. What is y when x = 7?",
+      "answer": 49,
+      "explanation": "Substitute: y = 7 × 7 = 49.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-091",
+      "topicId": "exp-variables",
+      "type": "mc",
+      "prompt": "The table shows pairs (x, y): (1, 9), (2, 14), (3, 19), (4, 24). Which equation fits the table?",
+      "choices": [
+        "y = 4x + 5",
+        "y = 9x",
+        "y = 5x + 4",
+        "y = x + 9"
+      ],
+      "answer": 2,
+      "explanation": "Every time x goes up 1, y goes up 5, so multiply x by 5. When x = 1, 5 + 4 = 9, so add 4: y = 5x + 4.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-092",
+      "topicId": "exp-variables",
+      "type": "numeric",
+      "prompt": "A game card shop charges $7 to join plus $8 per pack. Total cost c = 8p + 7. What is c when p = 5 packs?",
+      "answer": 47,
+      "explanation": "c = 8 × 5 + 7 = 40 + 7 = 47.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-093",
+      "topicId": "exp-variables",
+      "type": "numeric",
+      "prompt": "The rule is y = 5x. What is y when x = 7?",
+      "answer": 35,
+      "explanation": "Substitute: y = 5 × 7 = 35.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-094",
+      "topicId": "exp-variables",
+      "type": "mc",
+      "prompt": "The table shows pairs (x, y): (1, 9), (2, 13), (3, 17), (4, 21). Which equation fits the table?",
+      "choices": [
+        "y = 4x + 5",
+        "y = 9x",
+        "y = 5x + 4",
+        "y = x + 9"
+      ],
+      "answer": 0,
+      "explanation": "Every time x goes up 1, y goes up 4, so multiply x by 4. When x = 1, 4 + 5 = 9, so add 5: y = 4x + 5.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-095",
+      "topicId": "exp-variables",
+      "type": "mc",
+      "prompt": "The table shows pairs (x, y): (1, 14), (2, 20), (3, 26), (4, 32). Which equation fits the table?",
+      "choices": [
+        "y = 6x + 8",
+        "y = x + 14",
+        "y = 8x + 6",
+        "y = 14x"
+      ],
+      "answer": 0,
+      "explanation": "Every time x goes up 1, y goes up 6, so multiply x by 6. When x = 1, 6 + 8 = 14, so add 8: y = 6x + 8.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-096",
+      "topicId": "exp-variables",
+      "type": "numeric",
+      "prompt": "The rule is y = 4x. What is y when x = 12?",
+      "answer": 48,
+      "explanation": "Substitute: y = 4 × 12 = 48.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-097",
+      "topicId": "exp-variables",
+      "type": "numeric",
+      "prompt": "A game card shop charges $29 to join plus $4 per pack. Total cost c = 4p + 29. What is c when p = 5 packs?",
+      "answer": 49,
+      "explanation": "c = 4 × 5 + 29 = 20 + 29 = 49.",
+      "difficulty": 3
+    },
+    {
+      "id": "exp-098",
+      "topicId": "exp-variables",
+      "type": "mc",
+      "prompt": "The table shows pairs (x, y): (1, 6), (2, 11), (3, 16), (4, 21). Which equation fits the table?",
+      "choices": [
+        "y = 1x + 5",
+        "y = 6x",
+        "y = x + 6",
+        "y = 5x + 1"
+      ],
+      "answer": 3,
+      "explanation": "Every time x goes up 1, y goes up 5, so multiply x by 5. When x = 1, 5 + 1 = 6, so add 1: y = 5x + 1.",
+      "difficulty": 2
+    },
+    {
+      "id": "exp-099",
+      "topicId": "exp-variables",
+      "type": "numeric",
+      "prompt": "The rule is y = 8x. What is y when x = 4?",
+      "answer": 32,
+      "explanation": "Substitute: y = 8 × 4 = 32.",
+      "difficulty": 1
+    },
+    {
+      "id": "exp-100",
+      "topicId": "exp-variables",
+      "type": "mc",
+      "prompt": "A taxi charges $18 per mile. Which is the dependent variable?",
+      "choices": [
+        "$18",
+        "total cost of the ride",
+        "the taxi driver",
+        "number of miles"
+      ],
+      "answer": 1,
+      "explanation": "The independent variable is the input you change; the dependent variable depends on it. Here the answer is \"total cost of the ride\".",
+      "difficulty": 3
+    }
+  ]
+}

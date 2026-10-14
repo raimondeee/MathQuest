@@ -1,0 +1,1316 @@
+{
+  "id": "ratios",
+  "title": "Ratios & Proportional Relationships",
+  "masteryThreshold": 0.71,
+  "topics": [
+    {
+      "id": "rat-language",
+      "title": "Ratio Language",
+      "ccss": [
+        "6.RP.A.1"
+      ],
+      "lesson": "## What's a Ratio? 🍎:🍊\nA **ratio** compares two amounts. 3 apples to 5 oranges can be written **3:5**, **3 to 5**, or **3/5**.\n\nOrder matters! \"Apples to oranges\" puts apples first. Ratios can compare **part to part** or **part to whole**.",
+      "examples": [
+        {
+          "prompt": "A team has 4 guards and 6 forwards. Ratio of guards to forwards?",
+          "steps": [
+            "Guards first: 4:6",
+            "Simplify by 2: 2:3"
+          ],
+          "answer": "2:3"
+        },
+        {
+          "prompt": "Same team: ratio of guards to all players?",
+          "steps": [
+            "Total = 4 + 6 = 10",
+            "4:10 = 2:5"
+          ],
+          "answer": "2:5"
+        },
+        {
+          "prompt": "Boys to girls is 2:3 with 25 students. How many boys?",
+          "steps": [
+            "Each group of 5 has 2 boys",
+            "25 ÷ 5 = 5 groups, 5 × 2 = 10"
+          ],
+          "answer": "10"
+        }
+      ]
+    },
+    {
+      "id": "rat-unit-rate",
+      "title": "Unit Rates",
+      "ccss": [
+        "6.RP.A.2"
+      ],
+      "lesson": "## Per One 1️⃣\nA **unit rate** tells how much for **one** unit: miles *per* hour, dollars *per* item.\n\nDivide the first amount by the second: 150 miles in 3 hours → 150 ÷ 3 = **50 miles per hour**.",
+      "examples": [
+        {
+          "prompt": "$18 for 6 pens. Cost per pen?",
+          "steps": [
+            "18 ÷ 6 = 3"
+          ],
+          "answer": "$3"
+        },
+        {
+          "prompt": "225 words in 5 minutes. Words per minute?",
+          "steps": [
+            "225 ÷ 5 = 45"
+          ],
+          "answer": "45"
+        },
+        {
+          "prompt": "1/2 cup oats per 1/4 cup milk. Oats per cup of milk?",
+          "steps": [
+            "1/2 ÷ 1/4 = 1/2 × 4",
+            "= 2"
+          ],
+          "answer": "2 cups"
+        }
+      ]
+    },
+    {
+      "id": "rat-tables",
+      "title": "Ratio Tables",
+      "ccss": [
+        "6.RP.A.3a"
+      ],
+      "lesson": "## Table Time 📋\nIn a **ratio table**, every row is an **equivalent ratio**. Multiply (or divide) **both** numbers by the same amount.\n\n| Blue | Yellow |\n|---|---|\n| 2 | 3 |\n| 4 | 6 |\n| 10 | 15 |",
+      "examples": [
+        {
+          "prompt": "3:4 = ?:20",
+          "steps": [
+            "4 × 5 = 20",
+            "3 × 5 = 15"
+          ],
+          "answer": "15"
+        },
+        {
+          "prompt": "4 muffins use 6 eggs. How many eggs for 10 muffins?",
+          "steps": [
+            "Unit rate: 6 ÷ 4 = 1.5 eggs per muffin",
+            "1.5 × 10 = 15"
+          ],
+          "answer": "15"
+        },
+        {
+          "prompt": "Is (8, 12) equivalent to 2:3?",
+          "steps": [
+            "2 × 4 = 8 and 3 × 4 = 12",
+            "Yes, both multiplied by 4"
+          ],
+          "answer": "Yes"
+        }
+      ]
+    },
+    {
+      "id": "rat-unit-pricing",
+      "title": "Unit Pricing & Best Buys",
+      "ccss": [
+        "6.RP.A.3b"
+      ],
+      "lesson": "## Smart Shopper 🛒\nTo compare deals, find the **unit price** (price ÷ quantity). The **lowest** unit price is the best buy!\n\nOnce you know the unit price, multiply to find the cost of any amount.",
+      "examples": [
+        {
+          "prompt": "A 4-pack of yogurt costs $3.00. Price per yogurt?",
+          "steps": [
+            "3.00 ÷ 4 = 0.75"
+          ],
+          "answer": "$0.75"
+        },
+        {
+          "prompt": "12 oz for $3.60 or 16 oz for $4.00. Better buy?",
+          "steps": [
+            "3.60 ÷ 12 = $0.30 per oz",
+            "4.00 ÷ 16 = $0.25 per oz"
+          ],
+          "answer": "16 oz for $4.00"
+        },
+        {
+          "prompt": "3 tickets cost $22.50. Cost of 8 tickets?",
+          "steps": [
+            "22.50 ÷ 3 = 7.50",
+            "7.50 × 8 = 60"
+          ],
+          "answer": "$60"
+        }
+      ]
+    },
+    {
+      "id": "rat-speed",
+      "title": "Constant Speed",
+      "ccss": [
+        "6.RP.A.3b"
+      ],
+      "lesson": "## Speed Racer 🏎️\n- **speed = distance ÷ time**\n- **distance = speed × time**\n- **time = distance ÷ speed**\n\nAt a *constant* speed, you cover the same distance every hour.",
+      "examples": [
+        {
+          "prompt": "120 miles in 2 hours. Speed?",
+          "steps": [
+            "120 ÷ 2 = 60"
+          ],
+          "answer": "60 mph"
+        },
+        {
+          "prompt": "At 45 mph, how far in 3 hours?",
+          "steps": [
+            "45 × 3 = 135"
+          ],
+          "answer": "135 miles"
+        },
+        {
+          "prompt": "At 8 km/h, how long to go 20 km?",
+          "steps": [
+            "20 ÷ 8 = 2.5"
+          ],
+          "answer": "2.5 hours"
+        }
+      ]
+    },
+    {
+      "id": "rat-percent",
+      "title": "Percents",
+      "ccss": [
+        "6.RP.A.3c"
+      ],
+      "lesson": "## Out of 100 💯\n**Percent** means *per hundred*: 35% = 35/100 = 0.35.\n\n- Percent of a number: 20% of 50 = 0.20 × 50 = **10**\n- Find the whole: if 12 is 25%, then 1% is 0.48, so 100% is **48**.",
+      "examples": [
+        {
+          "prompt": "What is 30% of 80?",
+          "steps": [
+            "30/100 × 80",
+            "= 24"
+          ],
+          "answer": "24"
+        },
+        {
+          "prompt": "Write 3/5 as a percent.",
+          "steps": [
+            "3/5 = 60/100"
+          ],
+          "answer": "60%"
+        },
+        {
+          "prompt": "15 is 25% of what number?",
+          "steps": [
+            "25% is 1/4",
+            "15 × 4 = 60"
+          ],
+          "answer": "60"
+        }
+      ]
+    },
+    {
+      "id": "rat-unit-conversion",
+      "title": "Converting Units",
+      "ccss": [
+        "6.RP.A.3d"
+      ],
+      "lesson": "## Unit Swap 🔁\nUse a conversion ratio like **1 foot = 12 inches**.\n\n- Big unit → small unit: **multiply** (3 feet = 36 inches)\n- Small unit → big unit: **divide** (180 minutes = 3 hours)",
+      "examples": [
+        {
+          "prompt": "How many inches are in 5 feet?",
+          "steps": [
+            "1 ft = 12 in",
+            "5 × 12 = 60"
+          ],
+          "answer": "60"
+        },
+        {
+          "prompt": "Convert 240 seconds to minutes.",
+          "steps": [
+            "1 min = 60 s",
+            "240 ÷ 60 = 4"
+          ],
+          "answer": "4"
+        },
+        {
+          "prompt": "Convert 350 centimeters to meters.",
+          "steps": [
+            "1 m = 100 cm",
+            "350 ÷ 100 = 3.5"
+          ],
+          "answer": "3.5"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "rat-001",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "There are 4 stars and 10 moons. What is the ratio of stars to moons?",
+      "choices": [
+        "14:10",
+        "4:10",
+        "10:4",
+        "4:14"
+      ],
+      "answer": 1,
+      "explanation": "\"stars to moons\" puts stars first: 4:10.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-002",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "Write the ratio 66:72 in simplest form.",
+      "choices": [
+        "12:11",
+        "33:36",
+        "11:13",
+        "11:12"
+      ],
+      "answer": 3,
+      "explanation": "Divide both parts by their GCF, 6: 66 ÷ 6 = 11, 72 ÷ 6 = 12. So 11:12.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-003",
+      "topicId": "rat-language",
+      "type": "numeric",
+      "prompt": "In Andrew's class, the ratio of boys to girls is 9:2. There are 66 students. How many girls are there?",
+      "answer": 12,
+      "explanation": "Each group of 9+2 = 11 students has 2 girls. 66 ÷ 11 = 6 groups, so 6 × 2 = 12 girls.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-004",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "There are 9 red marbles and 12 blue marbles. What is the ratio of red marbles to blue marbles?",
+      "choices": [
+        "9:21",
+        "12:9",
+        "9:12",
+        "21:12"
+      ],
+      "answer": 2,
+      "explanation": "\"red marbles to blue marbles\" puts red marbles first: 9:12.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-005",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "Write the ratio 9:15 in simplest form.",
+      "choices": [
+        "5:3",
+        "3:6",
+        "3:5",
+        "9:16"
+      ],
+      "answer": 2,
+      "explanation": "Divide both parts by their GCF, 3: 9 ÷ 3 = 3, 15 ÷ 3 = 5. So 3:5.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-006",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "There are 2 red marbles and 3 blue marbles. What is the ratio of red marbles to blue marbles?",
+      "choices": [
+        "2:3",
+        "2:5",
+        "5:3",
+        "3:2"
+      ],
+      "answer": 0,
+      "explanation": "\"red marbles to blue marbles\" puts red marbles first: 2:3.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-007",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "Write the ratio 39:18 in simplest form.",
+      "choices": [
+        "21:6",
+        "39:19",
+        "6:13",
+        "13:6"
+      ],
+      "answer": 3,
+      "explanation": "Divide both parts by their GCF, 3: 39 ÷ 3 = 13, 18 ÷ 3 = 6. So 13:6.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-008",
+      "topicId": "rat-language",
+      "type": "numeric",
+      "prompt": "In Andrew's class, the ratio of boys to girls is 6:7. There are 52 students. How many girls are there?",
+      "answer": 28,
+      "explanation": "Each group of 6+7 = 13 students has 7 girls. 52 ÷ 13 = 4 groups, so 4 × 7 = 28 girls.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-009",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "Write the ratio 18:60 in simplest form.",
+      "choices": [
+        "3:10",
+        "10:3",
+        "9:30",
+        "3:11"
+      ],
+      "answer": 0,
+      "explanation": "Divide both parts by their GCF, 6: 18 ÷ 6 = 3, 60 ÷ 6 = 10. So 3:10.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-010",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "There are 11 boys and 15 girls. What is the ratio of boys to girls?",
+      "choices": [
+        "11:15",
+        "26:15",
+        "11:26",
+        "15:11"
+      ],
+      "answer": 0,
+      "explanation": "\"boys to girls\" puts boys first: 11:15.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-011",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "Write the ratio 48:28 in simplest form.",
+      "choices": [
+        "7:12",
+        "20:7",
+        "24:14",
+        "12:7"
+      ],
+      "answer": 3,
+      "explanation": "Divide both parts by their GCF, 4: 48 ÷ 4 = 12, 28 ÷ 4 = 7. So 12:7.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-012",
+      "topicId": "rat-language",
+      "type": "numeric",
+      "prompt": "In Andrew's class, the ratio of boys to girls is 2:5. There are 35 students. How many girls are there?",
+      "answer": 25,
+      "explanation": "Each group of 2+5 = 7 students has 5 girls. 35 ÷ 7 = 5 groups, so 5 × 5 = 25 girls.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-013",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "There are 5 stars and 10 moons. What is the ratio of stars to moons?",
+      "choices": [
+        "5:10",
+        "15:10",
+        "10:5",
+        "5:15"
+      ],
+      "answer": 0,
+      "explanation": "\"stars to moons\" puts stars first: 5:10.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-014",
+      "topicId": "rat-language",
+      "type": "mc",
+      "prompt": "Write the ratio 48:44 in simplest form.",
+      "choices": [
+        "24:22",
+        "12:11",
+        "11:12",
+        "4:11"
+      ],
+      "answer": 1,
+      "explanation": "Divide both parts by their GCF, 4: 48 ÷ 4 = 12, 44 ÷ 4 = 11. So 12:11.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-015",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "A car travels 150 miles in 4 hours. How many miles per hour is that?",
+      "answer": 37.5,
+      "tolerance": 0.005,
+      "explanation": "150 ÷ 4 = 37.5 miles per hour.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-016",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "2 notebooks cost $12. What is the cost per notebook (in dollars)?",
+      "answer": 6,
+      "explanation": "Unit rate: $12 ÷ 2 = $6 per notebook.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-017",
+      "topicId": "rat-unit-rate",
+      "type": "mc",
+      "prompt": "A recipe uses 1/2 cup of sugar for every 1/3 cup of flour. How many cups of sugar per 1 cup of flour?",
+      "choices": [
+        "5/6",
+        "2/3",
+        "1 1/2",
+        "1/6"
+      ],
+      "answer": 2,
+      "explanation": "Unit rate = 1/2 ÷ 1/3 = 1/2 × 3 = 1 1/2 cups of sugar per cup of flour.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-018",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "A car travels 349 miles in 8 hours. How many miles per hour is that?",
+      "answer": 43.625,
+      "tolerance": 0.0005,
+      "explanation": "349 ÷ 8 = 43.625 miles per hour.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-019",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "6 notebooks cost $30. What is the cost per notebook (in dollars)?",
+      "answer": 5,
+      "explanation": "Unit rate: $30 ÷ 6 = $5 per notebook.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-020",
+      "topicId": "rat-unit-rate",
+      "type": "mc",
+      "prompt": "A recipe uses 1/2 cup of sugar for every 1/4 cup of flour. How many cups of sugar per 1 cup of flour?",
+      "choices": [
+        "1/8",
+        "1/2",
+        "3/4",
+        "2"
+      ],
+      "answer": 3,
+      "explanation": "Unit rate = 1/2 ÷ 1/4 = 1/2 × 4 = 2 cups of sugar per cup of flour.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-021",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "8 notebooks cost $24. What is the cost per notebook (in dollars)?",
+      "answer": 3,
+      "explanation": "Unit rate: $24 ÷ 8 = $3 per notebook.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-022",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "A car travels 219 miles in 5 hours. How many miles per hour is that?",
+      "answer": 43.8,
+      "tolerance": 0.005,
+      "explanation": "219 ÷ 5 = 43.8 miles per hour.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-023",
+      "topicId": "rat-unit-rate",
+      "type": "mc",
+      "prompt": "A recipe uses 1 1/2 cup of sugar for every 1/4 cup of flour. How many cups of sugar per 1 cup of flour?",
+      "choices": [
+        "3/8",
+        "6",
+        "1/6",
+        "1 3/4"
+      ],
+      "answer": 1,
+      "explanation": "Unit rate = 1 1/2 ÷ 1/4 = 1 1/2 × 4 = 6 cups of sugar per cup of flour.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-024",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "7 notebooks cost $42. What is the cost per notebook (in dollars)?",
+      "answer": 6,
+      "explanation": "Unit rate: $42 ÷ 7 = $6 per notebook.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-025",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "A car travels 93 miles in 8 hours. How many miles per hour is that?",
+      "answer": 11.625,
+      "tolerance": 0.0005,
+      "explanation": "93 ÷ 8 = 11.625 miles per hour.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-026",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "4 notebooks cost $24. What is the cost per notebook (in dollars)?",
+      "answer": 6,
+      "explanation": "Unit rate: $24 ÷ 4 = $6 per notebook.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-027",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "A car travels 270 miles in 8 hours. How many miles per hour is that?",
+      "answer": 33.75,
+      "tolerance": 0.005,
+      "explanation": "270 ÷ 8 = 33.75 miles per hour.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-028",
+      "topicId": "rat-unit-rate",
+      "type": "mc",
+      "prompt": "A recipe uses 3/4 cup of sugar for every 1/3 cup of flour. How many cups of sugar per 1 cup of flour?",
+      "choices": [
+        "2 1/4",
+        "1 1/12",
+        "1/4",
+        "4/9"
+      ],
+      "answer": 0,
+      "explanation": "Unit rate = 3/4 ÷ 1/3 = 3/4 × 3 = 2 1/4 cups of sugar per cup of flour.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-029",
+      "topicId": "rat-unit-rate",
+      "type": "numeric",
+      "prompt": "A car travels 94 miles in 4 hours. How many miles per hour is that?",
+      "answer": 23.5,
+      "tolerance": 0.005,
+      "explanation": "94 ÷ 4 = 23.5 miles per hour.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-030",
+      "topicId": "rat-tables",
+      "type": "numeric",
+      "prompt": "Complete the equivalent ratio: 5:8 = ?:32",
+      "answer": 20,
+      "explanation": "8 × 4 = 32, so multiply 5 by 4 too: 20.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-031",
+      "topicId": "rat-tables",
+      "type": "numeric",
+      "prompt": "A ratio table shows 15 lemons for 27 cups of water. How many lemons for 90 cups of water?",
+      "answer": 50,
+      "explanation": "Find the unit pattern: 5 lemons per 9 cups. 90 ÷ 9 = 10, so 5 × 10 = 50 lemons.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-032",
+      "topicId": "rat-tables",
+      "type": "mc",
+      "prompt": "Paint is mixed 9 cups blue to 5 cups yellow. Which pair (blue, yellow) makes the same color?",
+      "choices": [
+        "(81, 45)",
+        "(81, 46)",
+        "(45, 81)",
+        "(18, 14)"
+      ],
+      "answer": 0,
+      "explanation": "Equivalent ratios multiply both parts by the same number. 9 × 9 = 81 and 5 × 9 = 45. Adding the same amount to both does not keep the ratio!",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-033",
+      "topicId": "rat-tables",
+      "type": "numeric",
+      "prompt": "Complete the equivalent ratio: 5:6 = ?:18",
+      "answer": 15,
+      "explanation": "6 × 3 = 18, so multiply 5 by 3 too: 15.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-034",
+      "topicId": "rat-tables",
+      "type": "numeric",
+      "prompt": "A ratio table shows 6 lemons for 16 cups of water. How many lemons for 56 cups of water?",
+      "answer": 21,
+      "explanation": "Find the unit pattern: 3 lemons per 8 cups. 56 ÷ 8 = 7, so 3 × 7 = 21 lemons.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-035",
+      "topicId": "rat-tables",
+      "type": "numeric",
+      "prompt": "A ratio table shows 28 lemons for 20 cups of water. How many lemons for 55 cups of water?",
+      "answer": 77,
+      "explanation": "Find the unit pattern: 7 lemons per 5 cups. 55 ÷ 5 = 11, so 7 × 11 = 77 lemons.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-036",
+      "topicId": "rat-tables",
+      "type": "numeric",
+      "prompt": "Complete the equivalent ratio: 9:5 = ?:50",
+      "answer": 90,
+      "explanation": "5 × 10 = 50, so multiply 9 by 10 too: 90.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-037",
+      "topicId": "rat-tables",
+      "type": "mc",
+      "prompt": "Paint is mixed 8 cups blue to 9 cups yellow. Which pair (blue, yellow) makes the same color?",
+      "choices": [
+        "(40, 46)",
+        "(45, 40)",
+        "(40, 45)",
+        "(13, 14)"
+      ],
+      "answer": 2,
+      "explanation": "Equivalent ratios multiply both parts by the same number. 8 × 5 = 40 and 9 × 5 = 45. Adding the same amount to both does not keep the ratio!",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-038",
+      "topicId": "rat-tables",
+      "type": "numeric",
+      "prompt": "A ratio table shows 21 lemons for 18 cups of water. How many lemons for 48 cups of water?",
+      "answer": 56,
+      "explanation": "Find the unit pattern: 7 lemons per 6 cups. 48 ÷ 6 = 8, so 7 × 8 = 56 lemons.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-039",
+      "topicId": "rat-tables",
+      "type": "numeric",
+      "prompt": "Complete the equivalent ratio: 5:2 = ?:16",
+      "answer": 40,
+      "explanation": "2 × 8 = 16, so multiply 5 by 8 too: 40.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-040",
+      "topicId": "rat-tables",
+      "type": "mc",
+      "prompt": "Paint is mixed 4 cups blue to 7 cups yellow. Which pair (blue, yellow) makes the same color?",
+      "choices": [
+        "(56, 32)",
+        "(32, 56)",
+        "(12, 15)",
+        "(32, 57)"
+      ],
+      "answer": 1,
+      "explanation": "Equivalent ratios multiply both parts by the same number. 4 × 8 = 32 and 7 × 8 = 56. Adding the same amount to both does not keep the ratio!",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-041",
+      "topicId": "rat-tables",
+      "type": "numeric",
+      "prompt": "Complete the equivalent ratio: 7:4 = ?:28",
+      "answer": 49,
+      "explanation": "4 × 7 = 28, so multiply 7 by 7 too: 49.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-042",
+      "topicId": "rat-tables",
+      "type": "numeric",
+      "prompt": "A ratio table shows 8 lemons for 12 cups of water. How many lemons for 36 cups of water?",
+      "answer": 24,
+      "explanation": "Find the unit pattern: 2 lemons per 3 cups. 36 ÷ 3 = 12, so 2 × 12 = 24 lemons.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-043",
+      "topicId": "rat-tables",
+      "type": "mc",
+      "prompt": "Paint is mixed 3 cups blue to 2 cups yellow. Which pair (blue, yellow) makes the same color?",
+      "choices": [
+        "(12, 9)",
+        "(7, 6)",
+        "(12, 8)",
+        "(8, 12)"
+      ],
+      "answer": 2,
+      "explanation": "Equivalent ratios multiply both parts by the same number. 3 × 4 = 12 and 2 × 4 = 8. Adding the same amount to both does not keep the ratio!",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-044",
+      "topicId": "rat-unit-pricing",
+      "type": "numeric",
+      "prompt": "A 8-pack of juice boxes costs $16.96. What is the price per juice box (in dollars)?",
+      "answer": 2.12,
+      "tolerance": 0.005,
+      "explanation": "$16.96 ÷ 8 = $2.12 per juice box.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-045",
+      "topicId": "rat-unit-pricing",
+      "type": "mc",
+      "prompt": "Which is the best buy (lowest price per ounce)? Brand A: 24 oz for $1.44; Brand B: 10 oz for $1.50; Brand C: 12 oz for $1.08",
+      "choices": [
+        "Brand B",
+        "Brand A",
+        "They all cost the same per ounce",
+        "Brand C"
+      ],
+      "answer": 1,
+      "explanation": "Find each unit price: Brand A = 6¢ per oz, Brand B = 15¢ per oz, Brand C = 9¢ per oz. Brand A is cheapest per ounce!",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-046",
+      "topicId": "rat-unit-pricing",
+      "type": "numeric",
+      "prompt": "A 4-pack of juice boxes costs $3.36. What is the price per juice box (in dollars)?",
+      "answer": 0.84,
+      "tolerance": 0.005,
+      "explanation": "$3.36 ÷ 4 = $0.84 per juice box.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-047",
+      "topicId": "rat-unit-pricing",
+      "type": "mc",
+      "prompt": "Which is the best buy (lowest price per ounce)? Brand A: 32 oz for $2.56; Brand B: 20 oz for $1.40; Brand C: 12 oz for $1.80",
+      "choices": [
+        "Brand C",
+        "Brand A",
+        "They all cost the same per ounce",
+        "Brand B"
+      ],
+      "answer": 3,
+      "explanation": "Find each unit price: Brand A = 8¢ per oz, Brand B = 7¢ per oz, Brand C = 15¢ per oz. Brand B is cheapest per ounce!",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-048",
+      "topicId": "rat-unit-pricing",
+      "type": "numeric",
+      "prompt": "If 6 tickets cost $7.80, how much do 8 tickets cost (in dollars)?",
+      "answer": 10.4,
+      "tolerance": 0.005,
+      "explanation": "Unit price: $7.80 ÷ 6 = $1.30. Then $1.30 × 8 = $10.40.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-049",
+      "topicId": "rat-unit-pricing",
+      "type": "mc",
+      "prompt": "Which is the best buy (lowest price per ounce)? Brand A: 8 oz for $1.20; Brand B: 32 oz for $3.20; Brand C: 16 oz for $1.92",
+      "choices": [
+        "Brand A",
+        "They all cost the same per ounce",
+        "Brand C",
+        "Brand B"
+      ],
+      "answer": 3,
+      "explanation": "Find each unit price: Brand A = 15¢ per oz, Brand B = 10¢ per oz, Brand C = 12¢ per oz. Brand B is cheapest per ounce!",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-050",
+      "topicId": "rat-unit-pricing",
+      "type": "numeric",
+      "prompt": "A 2-pack of juice boxes costs $2.04. What is the price per juice box (in dollars)?",
+      "answer": 1.02,
+      "tolerance": 0.005,
+      "explanation": "$2.04 ÷ 2 = $1.02 per juice box.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-051",
+      "topicId": "rat-unit-pricing",
+      "type": "mc",
+      "prompt": "Which is the best buy (lowest price per ounce)? Brand A: 32 oz for $2.88; Brand B: 8 oz for $0.80; Brand C: 12 oz for $0.84",
+      "choices": [
+        "Brand B",
+        "Brand C",
+        "They all cost the same per ounce",
+        "Brand A"
+      ],
+      "answer": 1,
+      "explanation": "Find each unit price: Brand A = 9¢ per oz, Brand B = 10¢ per oz, Brand C = 7¢ per oz. Brand C is cheapest per ounce!",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-052",
+      "topicId": "rat-unit-pricing",
+      "type": "numeric",
+      "prompt": "If 4 tickets cost $9.12, how much do 13 tickets cost (in dollars)?",
+      "answer": 29.64,
+      "tolerance": 0.005,
+      "explanation": "Unit price: $9.12 ÷ 4 = $2.28. Then $2.28 × 13 = $29.64.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-053",
+      "topicId": "rat-unit-pricing",
+      "type": "numeric",
+      "prompt": "A 8-pack of juice boxes costs $10. What is the price per juice box (in dollars)?",
+      "answer": 1.25,
+      "tolerance": 0.005,
+      "explanation": "$10 ÷ 8 = $1.25 per juice box.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-054",
+      "topicId": "rat-unit-pricing",
+      "type": "mc",
+      "prompt": "Which is the best buy (lowest price per ounce)? Brand A: 24 oz for $2.40; Brand B: 12 oz for $1.44; Brand C: 32 oz for $4.80",
+      "choices": [
+        "They all cost the same per ounce",
+        "Brand C",
+        "Brand A",
+        "Brand B"
+      ],
+      "answer": 2,
+      "explanation": "Find each unit price: Brand A = 10¢ per oz, Brand B = 12¢ per oz, Brand C = 15¢ per oz. Brand A is cheapest per ounce!",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-055",
+      "topicId": "rat-unit-pricing",
+      "type": "mc",
+      "prompt": "Which is the best buy (lowest price per ounce)? Brand A: 20 oz for $1.20; Brand B: 16 oz for $1.44; Brand C: 24 oz for $1.92",
+      "choices": [
+        "Brand A",
+        "Brand C",
+        "They all cost the same per ounce",
+        "Brand B"
+      ],
+      "answer": 0,
+      "explanation": "Find each unit price: Brand A = 6¢ per oz, Brand B = 9¢ per oz, Brand C = 8¢ per oz. Brand A is cheapest per ounce!",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-056",
+      "topicId": "rat-unit-pricing",
+      "type": "numeric",
+      "prompt": "A 6-pack of juice boxes costs $6.60. What is the price per juice box (in dollars)?",
+      "answer": 1.1,
+      "tolerance": 0.005,
+      "explanation": "$6.60 ÷ 6 = $1.10 per juice box.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-057",
+      "topicId": "rat-unit-pricing",
+      "type": "numeric",
+      "prompt": "If 5 tickets cost $23.65, how much do 13 tickets cost (in dollars)?",
+      "answer": 61.49,
+      "tolerance": 0.005,
+      "explanation": "Unit price: $23.65 ÷ 5 = $4.73. Then $4.73 × 13 = $61.49.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-058",
+      "topicId": "rat-unit-pricing",
+      "type": "mc",
+      "prompt": "Which is the best buy (lowest price per ounce)? Brand A: 12 oz for $1.80; Brand B: 10 oz for $1.20; Brand C: 16 oz for $1.12",
+      "choices": [
+        "They all cost the same per ounce",
+        "Brand A",
+        "Brand B",
+        "Brand C"
+      ],
+      "answer": 3,
+      "explanation": "Find each unit price: Brand A = 15¢ per oz, Brand B = 12¢ per oz, Brand C = 7¢ per oz. Brand C is cheapest per ounce!",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-059",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "Andrew rides 250 miles in 5 hours at a constant speed. What is his speed in miles per hour?",
+      "answer": 50,
+      "explanation": "Speed = distance ÷ time = 250 ÷ 5 = 50 mph.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-060",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "Andrew's family travels at a steady 60 km per hour. How many hours will it take to go 195 km?",
+      "answer": 3.25,
+      "tolerance": 0.005,
+      "explanation": "Time = distance ÷ speed = 195 ÷ 60 = 3.25 hours.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-061",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "Andrew rides 81 miles in 3 hours at a constant speed. What is his speed in miles per hour?",
+      "answer": 27,
+      "explanation": "Speed = distance ÷ time = 81 ÷ 3 = 27 mph.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-062",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "A train goes 13 miles per hour. How far does it go in 3 hours?",
+      "answer": 39,
+      "explanation": "Distance = speed × time = 13 × 3 = 39 miles.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-063",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "Andrew's family travels at a steady 20 km per hour. How many hours will it take to go 65 km?",
+      "answer": 3.25,
+      "tolerance": 0.005,
+      "explanation": "Time = distance ÷ speed = 65 ÷ 20 = 3.25 hours.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-064",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "Andrew rides 171 miles in 3 hours at a constant speed. What is his speed in miles per hour?",
+      "answer": 57,
+      "explanation": "Speed = distance ÷ time = 171 ÷ 3 = 57 mph.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-065",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "A train goes 56 miles per hour. How far does it go in 4 hours?",
+      "answer": 224,
+      "explanation": "Distance = speed × time = 56 × 4 = 224 miles.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-066",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "Andrew rides 135 miles in 3 hours at a constant speed. What is his speed in miles per hour?",
+      "answer": 45,
+      "explanation": "Speed = distance ÷ time = 135 ÷ 3 = 45 mph.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-067",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "A train goes 67 miles per hour. How far does it go in 9 hours?",
+      "answer": 603,
+      "explanation": "Distance = speed × time = 67 × 9 = 603 miles.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-068",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "Andrew's family travels at a steady 60 km per hour. How many hours will it take to go 60 km?",
+      "answer": 1,
+      "explanation": "Time = distance ÷ speed = 60 ÷ 60 = 1 hours.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-069",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "A train goes 10 miles per hour. How far does it go in 6 hours?",
+      "answer": 60,
+      "explanation": "Distance = speed × time = 10 × 6 = 60 miles.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-070",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "Andrew rides 70 miles in 2 hours at a constant speed. What is his speed in miles per hour?",
+      "answer": 35,
+      "explanation": "Speed = distance ÷ time = 70 ÷ 2 = 35 mph.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-071",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "A train goes 45 miles per hour. How far does it go in 2 hours?",
+      "answer": 90,
+      "explanation": "Distance = speed × time = 45 × 2 = 90 miles.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-072",
+      "topicId": "rat-speed",
+      "type": "numeric",
+      "prompt": "Andrew's family travels at a steady 20 km per hour. How many hours will it take to go 45 km?",
+      "answer": 2.25,
+      "tolerance": 0.005,
+      "explanation": "Time = distance ÷ speed = 45 ÷ 20 = 2.25 hours.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-073",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "What is 40% of 350?",
+      "answer": 140,
+      "explanation": "40% = 40/100. 40/100 × 350 = 140.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-074",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "A video game costs $160. It is 12% off. How many dollars do you save?",
+      "answer": 19.2,
+      "tolerance": 0.005,
+      "explanation": "12% of 160 = 12/100 × 160 = 19.2 dollars saved.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-075",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "A video game costs $240. It is 45% off. How many dollars do you save?",
+      "answer": 108,
+      "explanation": "45% of 240 = 45/100 × 240 = 108 dollars saved.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-076",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "What is 20% of 20?",
+      "answer": 4,
+      "explanation": "20% = 20/100. 20/100 × 20 = 4.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-077",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "273 is 75% of what number?",
+      "answer": 364,
+      "explanation": "If 273 is 75%, then 1% is 3.64, and 100% is 3.64 × 100 = 364.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-078",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "Write 1/2 as a percent. (Type just the number.)",
+      "answer": 50,
+      "explanation": "Make the bottom 100: 1/2 = 50/100 = 50%.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-079",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "What is 80% of 370?",
+      "answer": 296,
+      "explanation": "80% = 80/100. 80/100 × 370 = 296.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-080",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "195 is 75% of what number?",
+      "answer": 260,
+      "explanation": "If 195 is 75%, then 1% is 2.6, and 100% is 2.6 × 100 = 260.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-081",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "What is 60% of 500?",
+      "answer": 300,
+      "explanation": "60% = 60/100. 60/100 × 500 = 300.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-082",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "A video game costs $20. It is 12% off. How many dollars do you save?",
+      "answer": 2.4,
+      "tolerance": 0.005,
+      "explanation": "12% of 20 = 12/100 × 20 = 2.4 dollars saved.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-083",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "24 is 30% of what number?",
+      "answer": 80,
+      "explanation": "If 24 is 30%, then 1% is 0.8, and 100% is 0.8 × 100 = 80.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-084",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "What is 50% of 430?",
+      "answer": 215,
+      "explanation": "50% = 50/100. 50/100 × 430 = 215.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-085",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "A video game costs $260. It is 45% off. How many dollars do you save?",
+      "answer": 117,
+      "explanation": "45% of 260 = 45/100 × 260 = 117 dollars saved.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-086",
+      "topicId": "rat-percent",
+      "type": "numeric",
+      "prompt": "What is 70% of 250?",
+      "answer": 175,
+      "explanation": "70% = 70/100. 70/100 × 250 = 175.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-087",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "Convert 42 feet to yards.",
+      "answer": 14,
+      "explanation": "Divide by 3: 42 ÷ 3 = 14 yards.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-088",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "How many seconds are in 6.5 minutes?",
+      "answer": 390,
+      "explanation": "Multiply by 60: 6.5 × 60 = 390 seconds.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-089",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "Convert 176 ounces to pounds.",
+      "answer": 11,
+      "explanation": "Divide by 16: 176 ÷ 16 = 11 pounds.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-090",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "How many minutes are in 5 hours?",
+      "answer": 300,
+      "explanation": "1 hour = 60 minutes, so 5 × 60 = 300 minutes.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-091",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "Convert 48 quarts to gallons.",
+      "answer": 12,
+      "explanation": "Divide by 4: 48 ÷ 4 = 12 gallons.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-092",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "Convert 760 centimeters to meters.",
+      "answer": 7.6,
+      "tolerance": 0.005,
+      "explanation": "Divide by 100: 760 ÷ 100 = 7.6 meters.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-093",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "How many quarts are in 3 gallons?",
+      "answer": 12,
+      "explanation": "1 gallon = 4 quarts, so 3 × 4 = 12 quarts.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-094",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "Convert 6 pints to quarts.",
+      "answer": 3,
+      "explanation": "Divide by 2: 6 ÷ 2 = 3 quarts.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-095",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "Convert 600 seconds to minutes.",
+      "answer": 10,
+      "explanation": "Divide by 60: 600 ÷ 60 = 10 minutes.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-096",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "How many pints are in 6 quarts?",
+      "answer": 12,
+      "explanation": "1 quart = 2 pints, so 6 × 2 = 12 pints.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-097",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "How many ounces are in 1.75 pounds?",
+      "answer": 28,
+      "explanation": "Multiply by 16: 1.75 × 16 = 28 ounces.",
+      "difficulty": 3
+    },
+    {
+      "id": "rat-098",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "Convert 1100 centimeters to meters.",
+      "answer": 11,
+      "explanation": "Divide by 100: 1100 ÷ 100 = 11 meters.",
+      "difficulty": 2
+    },
+    {
+      "id": "rat-099",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "How many feet are in 7 yards?",
+      "answer": 21,
+      "explanation": "1 yard = 3 feet, so 7 × 3 = 21 feet.",
+      "difficulty": 1
+    },
+    {
+      "id": "rat-100",
+      "topicId": "rat-unit-conversion",
+      "type": "numeric",
+      "prompt": "How many minutes are in 6.5 hours?",
+      "answer": 390,
+      "explanation": "Multiply by 60: 6.5 × 60 = 390 minutes.",
+      "difficulty": 3
+    }
+  ]
+}

@@ -1,0 +1,1341 @@
+{
+  "id": "number-system",
+  "title": "The Number System",
+  "masteryThreshold": 0.62,
+  "topics": [
+    {
+      "id": "ns-fraction-division",
+      "title": "Dividing Fractions",
+      "ccss": [
+        "6.NS.A.1"
+      ],
+      "lesson": "## Keep, Change, Flip 🔄\nTo divide by a fraction, multiply by its **reciprocal**.\n\n2/3 ÷ 1/4 → **keep** 2/3, **change** ÷ to ×, **flip** 1/4 to 4/1 → 2/3 × 4 = 8/3 = 2 2/3\n\nAsk yourself: *how many groups of the second number fit in the first?*",
+      "examples": [
+        {
+          "prompt": "3 ÷ 1/4",
+          "steps": [
+            "How many quarters fit in 3 wholes?",
+            "3 × 4 = 12"
+          ],
+          "answer": "12"
+        },
+        {
+          "prompt": "3/4 ÷ 1/2",
+          "steps": [
+            "Keep 3/4, change to ×, flip 1/2 to 2/1",
+            "3/4 × 2 = 6/4 = 1 1/2"
+          ],
+          "answer": "1 1/2"
+        },
+        {
+          "prompt": "How many 2/3-cup servings are in 4 cups?",
+          "steps": [
+            "4 ÷ 2/3 = 4 × 3/2",
+            "= 12/2 = 6"
+          ],
+          "answer": "6"
+        }
+      ]
+    },
+    {
+      "id": "ns-long-division",
+      "title": "Multi-Digit Division",
+      "ccss": [
+        "6.NS.B.2"
+      ],
+      "lesson": "## Long Division Steps 🪜\n**Divide → Multiply → Subtract → Bring down**, then repeat!\n\nAlways check: quotient × divisor = dividend.",
+      "examples": [
+        {
+          "prompt": "864 ÷ 4",
+          "steps": [
+            "8 ÷ 4 = 2, 6 ÷ 4 = 1 R2, bring down 4 → 24 ÷ 4 = 6",
+            "Answer 216; check 216 × 4 = 864"
+          ],
+          "answer": "216"
+        },
+        {
+          "prompt": "1,512 ÷ 24",
+          "steps": [
+            "151 ÷ 24 = 6 (144), remainder 7",
+            "Bring down 2: 72 ÷ 24 = 3",
+            "Answer 63"
+          ],
+          "answer": "63"
+        },
+        {
+          "prompt": "A 7,350-seat arena has 35 equal sections. How many seats per section?",
+          "steps": [
+            "7,350 ÷ 35",
+            "735 ÷ 35 = 21, so 7,350 ÷ 35 = 210"
+          ],
+          "answer": "210"
+        }
+      ]
+    },
+    {
+      "id": "ns-decimals",
+      "title": "Decimal Operations",
+      "ccss": [
+        "6.NS.B.3"
+      ],
+      "lesson": "## Decimal Power 💪\n- **Add/Subtract:** line up the decimal points.\n- **Multiply:** multiply like whole numbers, then count total decimal places.\n- **Divide:** move the decimal in the divisor to make it whole, and move the dividend's decimal the same amount.",
+      "examples": [
+        {
+          "prompt": "12.5 + 3.75",
+          "steps": [
+            "Line up: 12.50 + 3.75",
+            "= 16.25"
+          ],
+          "answer": "16.25"
+        },
+        {
+          "prompt": "2.4 × 0.3",
+          "steps": [
+            "24 × 3 = 72",
+            "1 + 1 = 2 decimal places → 0.72"
+          ],
+          "answer": "0.72"
+        },
+        {
+          "prompt": "6.3 ÷ 0.7",
+          "steps": [
+            "Move both decimals 1 place: 63 ÷ 7",
+            "= 9"
+          ],
+          "answer": "9"
+        }
+      ]
+    },
+    {
+      "id": "ns-gcf-lcm",
+      "title": "GCF & LCM",
+      "ccss": [
+        "6.NS.B.4"
+      ],
+      "lesson": "## Factor Friends 🤝\n- **GCF** (greatest common factor): the biggest number that divides both.\n- **LCM** (least common multiple): the smallest number both divide into.\n\nUse the GCF to factor sums: 24 + 36 = 12(2 + 3).",
+      "examples": [
+        {
+          "prompt": "GCF of 18 and 24",
+          "steps": [
+            "Factors of 18: 1, 2, 3, 6, 9, 18",
+            "Factors of 24: 1, 2, 3, 4, 6, 8, 12, 24",
+            "Biggest shared: 6"
+          ],
+          "answer": "6"
+        },
+        {
+          "prompt": "LCM of 6 and 8",
+          "steps": [
+            "Multiples of 8: 8, 16, 24",
+            "24 is also a multiple of 6"
+          ],
+          "answer": "24"
+        },
+        {
+          "prompt": "Rewrite 20 + 30 using the GCF.",
+          "steps": [
+            "GCF is 10",
+            "20 = 10 × 2, 30 = 10 × 3"
+          ],
+          "answer": "10(2 + 3)"
+        }
+      ]
+    },
+    {
+      "id": "ns-integers",
+      "title": "Integers & Opposites",
+      "ccss": [
+        "6.NS.C.5",
+        "6.NS.C.6a",
+        "6.NS.C.6c"
+      ],
+      "lesson": "## Below Zero 🥶\n**Integers** are whole numbers and their opposites: …, −2, −1, 0, 1, 2, …\n\n- Negatives describe loss, debt, below sea level, below zero.\n- **Opposites** are the same distance from 0: 5 and −5.\n- −(−5) = 5",
+      "examples": [
+        {
+          "prompt": "Write an integer for \"20 feet below sea level\".",
+          "steps": [
+            "Below sea level is negative"
+          ],
+          "answer": "-20"
+        },
+        {
+          "prompt": "What is the opposite of −8?",
+          "steps": [
+            "Same distance from 0, other side"
+          ],
+          "answer": "8"
+        },
+        {
+          "prompt": "What is −(−3)?",
+          "steps": [
+            "The opposite of −3 is 3"
+          ],
+          "answer": "3"
+        }
+      ]
+    },
+    {
+      "id": "ns-absolute-value",
+      "title": "Absolute Value & Ordering",
+      "ccss": [
+        "6.NS.C.7a",
+        "6.NS.C.7b",
+        "6.NS.C.7c",
+        "6.NS.C.7d"
+      ],
+      "lesson": "## Distance from Zero 📏\n**Absolute value** |x| is how far x is from 0: |−7| = 7.\n\nTo **order** numbers, picture a number line: left is less, right is greater. −5 < −2 even though |−5| > |−2|!",
+      "examples": [
+        {
+          "prompt": "|−12|",
+          "steps": [
+            "−12 is 12 units from 0"
+          ],
+          "answer": "12"
+        },
+        {
+          "prompt": "Which is greater: −3.5 or −1?",
+          "steps": [
+            "−1 is to the right of −3.5"
+          ],
+          "answer": "-1"
+        },
+        {
+          "prompt": "Order: 2, −4, 0.5, −1/2",
+          "steps": [
+            "Least is −4, then −1/2, then 0.5, then 2"
+          ],
+          "answer": "-4, -1/2, 0.5, 2"
+        }
+      ]
+    },
+    {
+      "id": "ns-coordinate-plane",
+      "title": "Coordinate Plane",
+      "ccss": [
+        "6.NS.C.6b",
+        "6.NS.C.6c",
+        "6.NS.C.8"
+      ],
+      "lesson": "## Map Quest 🗺️\nA point (x, y): move **x** left/right, then **y** up/down.\n\n- Quadrants I, II, III, IV go counterclockwise from top right.\n- Reflect across the x-axis: flip y's sign. Across the y-axis: flip x's sign.\n- Same x or same y? Distance = count the units (add absolute values if on opposite sides).",
+      "examples": [
+        {
+          "prompt": "Which quadrant is (−3, 4)?",
+          "steps": [
+            "x negative, y positive → top left"
+          ],
+          "answer": "Quadrant II"
+        },
+        {
+          "prompt": "Distance from (−2, 5) to (6, 5)",
+          "steps": [
+            "Same y",
+            "|−2| + |6| = 2 + 6 = 8"
+          ],
+          "answer": "8"
+        },
+        {
+          "prompt": "Reflect (3, −7) across the y-axis.",
+          "steps": [
+            "Flip the x sign"
+          ],
+          "answer": "(-3, -7)"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ns-001",
+      "topicId": "ns-fraction-division",
+      "type": "numeric",
+      "prompt": "How many 1/3s are in 8? (Find 8 ÷ 1/3.)",
+      "answer": 24,
+      "explanation": "Each whole has 3 pieces of size 1/3, so 8 × 3 = 24.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-002",
+      "topicId": "ns-fraction-division",
+      "type": "mc",
+      "prompt": "What is 7/9 ÷ 1/3?",
+      "choices": [
+        "2 1/3",
+        "3 6/7",
+        "7/27",
+        "3/7"
+      ],
+      "answer": 0,
+      "explanation": "Keep, change, flip: 7/9 × 3/1 = 2 1/3. Simplify if you can!",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-003",
+      "topicId": "ns-fraction-division",
+      "type": "mc",
+      "prompt": "A trail is 3 1/2 miles long. Andrew runs it in sections of 1/6 mile. How many sections is that? (3 1/2 ÷ 1/6)",
+      "choices": [
+        "7/12",
+        "1/21",
+        "21",
+        "22"
+      ],
+      "answer": 2,
+      "explanation": "Change 3 1/2 to 7/2. Then 7/2 × 6/1 = 21.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-004",
+      "topicId": "ns-fraction-division",
+      "type": "numeric",
+      "prompt": "How many 1/7s are in 8? (Find 8 ÷ 1/7.)",
+      "answer": 56,
+      "explanation": "Each whole has 7 pieces of size 1/7, so 8 × 7 = 56.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-005",
+      "topicId": "ns-fraction-division",
+      "type": "mc",
+      "prompt": "What is 1/3 ÷ 1/4?",
+      "choices": [
+        "12",
+        "1 1/3",
+        "1/12",
+        "3/4"
+      ],
+      "answer": 1,
+      "explanation": "Keep, change, flip: 1/3 × 4/1 = 1 1/3. Simplify if you can!",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-006",
+      "topicId": "ns-fraction-division",
+      "type": "numeric",
+      "prompt": "How many 1/8s are in 5? (Find 5 ÷ 1/8.)",
+      "answer": 40,
+      "explanation": "Each whole has 8 pieces of size 1/8, so 5 × 8 = 40.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-007",
+      "topicId": "ns-fraction-division",
+      "type": "mc",
+      "prompt": "What is 2/3 ÷ 2/7?",
+      "choices": [
+        "2 1/3",
+        "5 1/4",
+        "4/21",
+        "3/7"
+      ],
+      "answer": 0,
+      "explanation": "Keep, change, flip: 2/3 × 7/2 = 2 1/3. Simplify if you can!",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-008",
+      "topicId": "ns-fraction-division",
+      "type": "mc",
+      "prompt": "A trail is 2 1/3 miles long. Andrew runs it in sections of 1/2 mile. How many sections is that? (2 1/3 ÷ 1/2)",
+      "choices": [
+        "1 1/6",
+        "4 2/3",
+        "3/14",
+        "5 2/3"
+      ],
+      "answer": 1,
+      "explanation": "Change 2 1/3 to 7/3. Then 7/3 × 2/1 = 4 2/3.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-009",
+      "topicId": "ns-fraction-division",
+      "type": "mc",
+      "prompt": "What is 4/7 ÷ 5/8?",
+      "choices": [
+        "2 4/5",
+        "5/14",
+        "1 3/32",
+        "32/35"
+      ],
+      "answer": 3,
+      "explanation": "Keep, change, flip: 4/7 × 8/5 = 32/35. Simplify if you can!",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-010",
+      "topicId": "ns-fraction-division",
+      "type": "numeric",
+      "prompt": "How many 1/2s are in 9? (Find 9 ÷ 1/2.)",
+      "answer": 18,
+      "explanation": "Each whole has 2 pieces of size 1/2, so 9 × 2 = 18.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-011",
+      "topicId": "ns-fraction-division",
+      "type": "mc",
+      "prompt": "What is 4/5 ÷ 3/5?",
+      "choices": [
+        "1 1/3",
+        "12/25",
+        "3/4",
+        "2 1/12"
+      ],
+      "answer": 0,
+      "explanation": "Keep, change, flip: 4/5 × 5/3 = 1 1/3. Simplify if you can!",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-012",
+      "topicId": "ns-fraction-division",
+      "type": "numeric",
+      "prompt": "Andrew has 3 cups of trail mix. Each snack bag holds 1/3 cup. How many bags can he fill?",
+      "answer": 9,
+      "explanation": "Divide: 3 ÷ 1/3 = 3 × 3/1 = 9 bags.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-013",
+      "topicId": "ns-fraction-division",
+      "type": "numeric",
+      "prompt": "How many 1/3s are in 6? (Find 6 ÷ 1/3.)",
+      "answer": 18,
+      "explanation": "Each whole has 3 pieces of size 1/3, so 6 × 3 = 18.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-014",
+      "topicId": "ns-fraction-division",
+      "type": "mc",
+      "prompt": "What is 1/2 ÷ 4/5?",
+      "choices": [
+        "2 1/2",
+        "1 3/5",
+        "2/5",
+        "5/8"
+      ],
+      "answer": 3,
+      "explanation": "Keep, change, flip: 1/2 × 5/4 = 5/8. Simplify if you can!",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-015",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 10,481 ÷ 47",
+      "answer": 223,
+      "explanation": "Use long division: 10,481 ÷ 47 = 223. Check: 223 × 47 = 10,481. ✅",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-016",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 6,516 ÷ 9",
+      "answer": 724,
+      "explanation": "Use long division: 6,516 ÷ 9 = 724. Check: 724 × 9 = 6,516. ✅",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-017",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "A stadium has 8,136 seats split equally into 24 sections. How many seats are in each section?",
+      "answer": 339,
+      "explanation": "8,136 ÷ 24 = 339. Check: 339 × 24 = 8,136. ✅",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-018",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 2,790 ÷ 45",
+      "answer": 62,
+      "explanation": "Use long division: 2,790 ÷ 45 = 62. Check: 62 × 45 = 2,790. ✅",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-019",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 5,901 ÷ 7",
+      "answer": 843,
+      "explanation": "Use long division: 5,901 ÷ 7 = 843. Check: 843 × 7 = 5,901. ✅",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-020",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "A stadium has 51,681 seats split equally into 69 sections. How many seats are in each section?",
+      "answer": 749,
+      "explanation": "51,681 ÷ 69 = 749. Check: 749 × 69 = 51,681. ✅",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-021",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 846 ÷ 3",
+      "answer": 282,
+      "explanation": "Use long division: 846 ÷ 3 = 282. Check: 282 × 3 = 846. ✅",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-022",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 2,856 ÷ 17",
+      "answer": 168,
+      "explanation": "Use long division: 2,856 ÷ 17 = 168. Check: 168 × 17 = 2,856. ✅",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-023",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "A stadium has 67,689 seats split equally into 69 sections. How many seats are in each section?",
+      "answer": 981,
+      "explanation": "67,689 ÷ 69 = 981. Check: 981 × 69 = 67,689. ✅",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-024",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 1,776 ÷ 8",
+      "answer": 222,
+      "explanation": "Use long division: 1,776 ÷ 8 = 222. Check: 222 × 8 = 1,776. ✅",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-025",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 4,134 ÷ 26",
+      "answer": 159,
+      "explanation": "Use long division: 4,134 ÷ 26 = 159. Check: 159 × 26 = 4,134. ✅",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-026",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 492 ÷ 3",
+      "answer": 164,
+      "explanation": "Use long division: 492 ÷ 3 = 164. Check: 164 × 3 = 492. ✅",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-027",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 2,660 ÷ 19",
+      "answer": 140,
+      "explanation": "Use long division: 2,660 ÷ 19 = 140. Check: 140 × 19 = 2,660. ✅",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-028",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 30,634 ÷ 53",
+      "answer": 578,
+      "explanation": "Use long division: 30,634 ÷ 53 = 578. Check: 578 × 53 = 30,634. ✅",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-029",
+      "topicId": "ns-long-division",
+      "type": "numeric",
+      "prompt": "Divide: 1,128 ÷ 24",
+      "answer": 47,
+      "explanation": "Use long division: 1,128 ÷ 24 = 47. Check: 47 × 24 = 1,128. ✅",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-030",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Add: 12.85 + 99.79",
+      "answer": 112.64,
+      "tolerance": 0.005,
+      "explanation": "Line up the decimal points and add: 12.85 + 99.79 = 112.64.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-031",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Multiply: 1.2 × 0.75",
+      "answer": 0.9,
+      "tolerance": 0.005,
+      "explanation": "Multiply as whole numbers, then count the decimal places in both factors: 1.2 × 0.75 = 0.9.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-032",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Divide: 5.92 ÷ 0.4",
+      "answer": 14.8,
+      "tolerance": 0.005,
+      "explanation": "Move the decimal point in both numbers so you divide by a whole number. 5.92 ÷ 0.4 = 14.8.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-033",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Add: 26.64 + 90.99",
+      "answer": 117.63,
+      "tolerance": 0.005,
+      "explanation": "Line up the decimal points and add: 26.64 + 90.99 = 117.63.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-034",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Multiply: 1.6 × 9.8",
+      "answer": 15.68,
+      "tolerance": 0.005,
+      "explanation": "Multiply as whole numbers, then count the decimal places in both factors: 1.6 × 9.8 = 15.68.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-035",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Multiply: 4.7 × 0.78",
+      "answer": 3.666,
+      "tolerance": 0.0005,
+      "explanation": "Multiply as whole numbers, then count the decimal places in both factors: 4.7 × 0.78 = 3.666.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-036",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Subtract: 61.77 − 53.42",
+      "answer": 8.35,
+      "tolerance": 0.005,
+      "explanation": "Line up the decimal points and subtract: 61.77 − 53.42 = 8.35.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-037",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Divide: 0.12 ÷ 0.08",
+      "answer": 1.5,
+      "tolerance": 0.005,
+      "explanation": "Move the decimal point in both numbers so you divide by a whole number. 0.12 ÷ 0.08 = 1.5.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-038",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Multiply: 8.3 × 0.08",
+      "answer": 0.664,
+      "tolerance": 0.0005,
+      "explanation": "Multiply as whole numbers, then count the decimal places in both factors: 8.3 × 0.08 = 0.664.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-039",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Add: 17.37 + 90.35",
+      "answer": 107.72,
+      "tolerance": 0.005,
+      "explanation": "Line up the decimal points and add: 17.37 + 90.35 = 107.72.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-040",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Divide: 0.132 ÷ 0.04",
+      "answer": 3.3,
+      "tolerance": 0.005,
+      "explanation": "Move the decimal point in both numbers so you divide by a whole number. 0.132 ÷ 0.04 = 3.3.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-041",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Add: 25.38 + 4.54",
+      "answer": 29.92,
+      "tolerance": 0.005,
+      "explanation": "Line up the decimal points and add: 25.38 + 4.54 = 29.92.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-042",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Multiply: 4.9 × 0.41",
+      "answer": 2.009,
+      "tolerance": 0.0005,
+      "explanation": "Multiply as whole numbers, then count the decimal places in both factors: 4.9 × 0.41 = 2.009.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-043",
+      "topicId": "ns-decimals",
+      "type": "numeric",
+      "prompt": "Divide: 7.5 ÷ 0.5",
+      "answer": 15,
+      "explanation": "Move the decimal point in both numbers so you divide by a whole number. 7.5 ÷ 0.5 = 15.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-044",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the greatest common factor (GCF) of 35 and 42?",
+      "answer": 7,
+      "explanation": "35 = 7 × 5 and 42 = 7 × 6. 5 and 6 share no other factor, so the GCF is 7.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-045",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the least common multiple (LCM) of 2 and 3?",
+      "answer": 6,
+      "explanation": "List multiples of 3 until one is also a multiple of 2: the first is 6.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-046",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the greatest common factor (GCF) of 32 and 56?",
+      "answer": 8,
+      "explanation": "32 = 8 × 4 and 56 = 8 × 7. 4 and 7 share no other factor, so the GCF is 8.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-047",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the least common multiple (LCM) of 5 and 6?",
+      "answer": 30,
+      "explanation": "List multiples of 6 until one is also a multiple of 5: the first is 30.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-048",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "Hot dogs come in packs of 6 and buns in packs of 5. What is the smallest number of hot dogs Andrew can buy to have the same number of each?",
+      "answer": 30,
+      "explanation": "Find the LCM of 6 and 5, which is 30.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-049",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the least common multiple (LCM) of 4 and 11?",
+      "answer": 44,
+      "explanation": "List multiples of 11 until one is also a multiple of 4: the first is 44.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-050",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the greatest common factor (GCF) of 21 and 9?",
+      "answer": 3,
+      "explanation": "21 = 3 × 7 and 9 = 3 × 3. 7 and 3 share no other factor, so the GCF is 3.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-051",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the least common multiple (LCM) of 5 and 8?",
+      "answer": 40,
+      "explanation": "List multiples of 8 until one is also a multiple of 5: the first is 40.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-052",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "Hot dogs come in packs of 6 and buns in packs of 10. What is the smallest number of hot dogs Andrew can buy to have the same number of each?",
+      "answer": 30,
+      "explanation": "Find the LCM of 6 and 10, which is 30.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-053",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the greatest common factor (GCF) of 12 and 54?",
+      "answer": 6,
+      "explanation": "12 = 6 × 2 and 54 = 6 × 9. 2 and 9 share no other factor, so the GCF is 6.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-054",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the least common multiple (LCM) of 5 and 2?",
+      "answer": 10,
+      "explanation": "List multiples of 5 until one is also a multiple of 2: the first is 10.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-055",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the least common multiple (LCM) of 9 and 4?",
+      "answer": 36,
+      "explanation": "List multiples of 9 until one is also a multiple of 4: the first is 36.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-056",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the greatest common factor (GCF) of 36 and 48?",
+      "answer": 12,
+      "explanation": "36 = 12 × 3 and 48 = 12 × 4. 3 and 4 share no other factor, so the GCF is 12.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-057",
+      "topicId": "ns-gcf-lcm",
+      "type": "mc",
+      "prompt": "Use the GCF and the distributive property to rewrite 88 + 33.",
+      "choices": [
+        "12(8 + 3)",
+        "11(8 + 3)",
+        "11(88 + 3)",
+        "11(8 + 33)"
+      ],
+      "answer": 1,
+      "explanation": "The GCF of 88 and 33 is 11. 88 = 11 × 8 and 33 = 11 × 3, so 88 + 33 = 11(8 + 3).",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-058",
+      "topicId": "ns-gcf-lcm",
+      "type": "numeric",
+      "prompt": "What is the least common multiple (LCM) of 4 and 9?",
+      "answer": 36,
+      "explanation": "List multiples of 9 until one is also a multiple of 4: the first is 36.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-059",
+      "topicId": "ns-integers",
+      "type": "numeric",
+      "prompt": "What is the opposite of 16?",
+      "answer": -16,
+      "explanation": "Opposites are the same distance from 0 on opposite sides. The opposite of 16 is -16.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-060",
+      "topicId": "ns-integers",
+      "type": "numeric",
+      "prompt": "A fish swims at −3 feet (below sea level). A bird flies at 71 feet above sea level. How many feet apart are they?",
+      "answer": 74,
+      "explanation": "The fish is 3 feet below 0 and the bird is 71 feet above 0. Total distance: 3 + 71 = 74 feet.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-061",
+      "topicId": "ns-integers",
+      "type": "numeric",
+      "prompt": "What is the opposite of -29?",
+      "answer": 29,
+      "explanation": "Opposites are the same distance from 0 on opposite sides. The opposite of -29 is 29.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-062",
+      "topicId": "ns-integers",
+      "type": "numeric",
+      "prompt": "What is −(−20)?",
+      "answer": 20,
+      "explanation": "The opposite of −20 is 20. The opposite of the opposite brings you back!",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-063",
+      "topicId": "ns-integers",
+      "type": "numeric",
+      "prompt": "A fish swims at −12 feet (below sea level). A bird flies at 23 feet above sea level. How many feet apart are they?",
+      "answer": 35,
+      "explanation": "The fish is 12 feet below 0 and the bird is 23 feet above 0. Total distance: 12 + 23 = 35 feet.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-064",
+      "topicId": "ns-integers",
+      "type": "numeric",
+      "prompt": "What is the opposite of 15?",
+      "answer": -15,
+      "explanation": "Opposites are the same distance from 0 on opposite sides. The opposite of 15 is -15.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-065",
+      "topicId": "ns-integers",
+      "type": "mc",
+      "prompt": "Which temperature is colder: -11°F or -7°F?",
+      "choices": [
+        "-7°F",
+        "11°F",
+        "-11°F",
+        "They are equal"
+      ],
+      "answer": 2,
+      "explanation": "On a number line, -11 is farther left (below) than -7, so -11°F is colder.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-066",
+      "topicId": "ns-integers",
+      "type": "mc",
+      "prompt": "Which integer represents a withdrawal of $53?",
+      "choices": [
+        "53",
+        "-53",
+        "1",
+        "0"
+      ],
+      "answer": 1,
+      "explanation": "Words like loss, below, and withdrawal are negative; gain, above, and deposit are positive. So it's -53.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-067",
+      "topicId": "ns-integers",
+      "type": "mc",
+      "prompt": "Which temperature is colder: -19°F or -9°F?",
+      "choices": [
+        "-19°F",
+        "They are equal",
+        "19°F",
+        "-9°F"
+      ],
+      "answer": 0,
+      "explanation": "On a number line, -19 is farther left (below) than -9, so -19°F is colder.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-068",
+      "topicId": "ns-integers",
+      "type": "numeric",
+      "prompt": "A fish swims at −38 feet (below sea level). A bird flies at 79 feet above sea level. How many feet apart are they?",
+      "answer": 117,
+      "explanation": "The fish is 38 feet below 0 and the bird is 79 feet above 0. Total distance: 38 + 79 = 117 feet.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-069",
+      "topicId": "ns-integers",
+      "type": "mc",
+      "prompt": "Which temperature is colder: -7°F or -19°F?",
+      "choices": [
+        "-19°F",
+        "19°F",
+        "-7°F",
+        "They are equal"
+      ],
+      "answer": 0,
+      "explanation": "On a number line, -19 is farther left (below) than -7, so -19°F is colder.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-070",
+      "topicId": "ns-integers",
+      "type": "mc",
+      "prompt": "Which integer represents a deposit of $23?",
+      "choices": [
+        "23",
+        "-23",
+        "-1",
+        "0"
+      ],
+      "answer": 0,
+      "explanation": "Words like loss, below, and withdrawal are negative; gain, above, and deposit are positive. So it's 23.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-071",
+      "topicId": "ns-integers",
+      "type": "numeric",
+      "prompt": "What is −(−55)?",
+      "answer": 55,
+      "explanation": "The opposite of −55 is 55. The opposite of the opposite brings you back!",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-072",
+      "topicId": "ns-integers",
+      "type": "numeric",
+      "prompt": "A fish swims at −4 feet (below sea level). A bird flies at 87 feet above sea level. How many feet apart are they?",
+      "answer": 91,
+      "explanation": "The fish is 4 feet below 0 and the bird is 87 feet above 0. Total distance: 4 + 87 = 91 feet.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-073",
+      "topicId": "ns-absolute-value",
+      "type": "numeric",
+      "prompt": "What is |53|?",
+      "answer": 53,
+      "explanation": "Absolute value is the distance from 0, so it's never negative. |53| = 53.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-074",
+      "topicId": "ns-absolute-value",
+      "type": "mc",
+      "prompt": "Which number is the least: -4.1, 10, 2, -1?",
+      "choices": [
+        "-4.1",
+        "10",
+        "2",
+        "-1"
+      ],
+      "answer": 0,
+      "explanation": "Picture a number line: the number farthest left is least. That's -4.1.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-075",
+      "topicId": "ns-absolute-value",
+      "type": "mc",
+      "prompt": "Which number is the greatest: 0, 1/2, 2, 12?",
+      "choices": [
+        "2",
+        "12",
+        "0",
+        "1/2"
+      ],
+      "answer": 1,
+      "explanation": "Picture a number line: the number farthest right is greatest. That's 12.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-076",
+      "topicId": "ns-absolute-value",
+      "type": "numeric",
+      "prompt": "What is |-35|?",
+      "answer": 35,
+      "explanation": "Absolute value is the distance from 0, so it's never negative. |-35| = 35.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-077",
+      "topicId": "ns-absolute-value",
+      "type": "mc",
+      "prompt": "Order from least to greatest: 3 1/2, -3.9, -9.1, -3.2",
+      "choices": [
+        "-3.2, 3 1/2, -3.9, -9.1",
+        "-3.9, -9.1, -3.2, 3 1/2",
+        "-9.1, -3.9, -3.2, 3 1/2",
+        "3 1/2, -3.2, -3.9, -9.1"
+      ],
+      "answer": 2,
+      "explanation": "Negatives come first; the negative farthest from 0 is the smallest. In order: -9.1, -3.9, -3.2, 3 1/2.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-078",
+      "topicId": "ns-absolute-value",
+      "type": "mc",
+      "prompt": "Which number is the least: -4, -2 1/2, -8.7, -1 1/2?",
+      "choices": [
+        "-1 1/2",
+        "-4",
+        "-8.7",
+        "-2 1/2"
+      ],
+      "answer": 2,
+      "explanation": "Picture a number line: the number farthest left is least. That's -8.7.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-079",
+      "topicId": "ns-absolute-value",
+      "type": "numeric",
+      "prompt": "What is |-54|?",
+      "answer": 54,
+      "explanation": "Absolute value is the distance from 0, so it's never negative. |-54| = 54.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-080",
+      "topicId": "ns-absolute-value",
+      "type": "mc",
+      "prompt": "Order from least to greatest: 1/2, 0.7, 11, -2",
+      "choices": [
+        "1/2, 0.7, -2, 11",
+        "-2, 1/2, 0.7, 11",
+        "1/2, -2, 0.7, 11",
+        "11, 0.7, 1/2, -2"
+      ],
+      "answer": 1,
+      "explanation": "Negatives come first; the negative farthest from 0 is the smallest. In order: -2, 1/2, 0.7, 11.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-081",
+      "topicId": "ns-absolute-value",
+      "type": "numeric",
+      "prompt": "What is |16|?",
+      "answer": 16,
+      "explanation": "Absolute value is the distance from 0, so it's never negative. |16| = 16.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-082",
+      "topicId": "ns-absolute-value",
+      "type": "mc",
+      "prompt": "Which number is the least: -1/2, -1/4, -6, 2?",
+      "choices": [
+        "-1/4",
+        "2",
+        "-1/2",
+        "-6"
+      ],
+      "answer": 3,
+      "explanation": "Picture a number line: the number farthest left is least. That's -6.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-083",
+      "topicId": "ns-absolute-value",
+      "type": "mc",
+      "prompt": "Order from least to greatest: -3.9, -6, 1.7, -1 1/2",
+      "choices": [
+        "1.7, -1 1/2, -3.9, -6",
+        "-3.9, -6, -1 1/2, 1.7",
+        "-1 1/2, 1.7, -3.9, -6",
+        "-6, -3.9, -1 1/2, 1.7"
+      ],
+      "answer": 3,
+      "explanation": "Negatives come first; the negative farthest from 0 is the smallest. In order: -6, -3.9, -1 1/2, 1.7.",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-084",
+      "topicId": "ns-absolute-value",
+      "type": "numeric",
+      "prompt": "What is |86|?",
+      "answer": 86,
+      "explanation": "Absolute value is the distance from 0, so it's never negative. |86| = 86.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-085",
+      "topicId": "ns-absolute-value",
+      "type": "mc",
+      "prompt": "Which number is the greatest: -1/2, 2 1/2, 3, -1?",
+      "choices": [
+        "-1/2",
+        "-1",
+        "2 1/2",
+        "3"
+      ],
+      "answer": 3,
+      "explanation": "Picture a number line: the number farthest right is greatest. That's 3.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-086",
+      "topicId": "ns-absolute-value",
+      "type": "numeric",
+      "prompt": "What is |-68|?",
+      "answer": 68,
+      "explanation": "Absolute value is the distance from 0, so it's never negative. |-68| = 68.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-087",
+      "topicId": "ns-coordinate-plane",
+      "type": "numeric",
+      "prompt": "How far apart are the points (8, 5) and (8, -9)?",
+      "answer": 14,
+      "explanation": "Same x, so count up and down: |5| + |-9| = 5 + 9 = 14 units.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-088",
+      "topicId": "ns-coordinate-plane",
+      "type": "mc",
+      "prompt": "The point (-2, -6) is reflected across the x-axis. Where does it land?",
+      "choices": [
+        "(-2, 6)",
+        "(2, 6)",
+        "(-6, -2)",
+        "(2, -6)"
+      ],
+      "answer": 0,
+      "explanation": "Reflecting across the x-axis flips the sign of the y-coordinate: (-2, 6).",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-089",
+      "topicId": "ns-coordinate-plane",
+      "type": "numeric",
+      "prompt": "How far apart are the points (6, 5) and (6, -4)?",
+      "answer": 9,
+      "explanation": "Same x, so count up and down: |5| + |-4| = 5 + 4 = 9 units.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-090",
+      "topicId": "ns-coordinate-plane",
+      "type": "mc",
+      "prompt": "In which quadrant is the point (-8, -9)?",
+      "choices": [
+        "Quadrant III",
+        "Quadrant I",
+        "Quadrant IV",
+        "Quadrant II"
+      ],
+      "answer": 0,
+      "explanation": "x is negative and y is negative, so the point is in Quadrant III.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-091",
+      "topicId": "ns-coordinate-plane",
+      "type": "numeric",
+      "prompt": "How far apart are the points (1, 9) and (-1, 9)?",
+      "answer": 2,
+      "explanation": "Same y, so count across: |1| + |-1| = 1 + 1 = 2 units.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-092",
+      "topicId": "ns-coordinate-plane",
+      "type": "mc",
+      "prompt": "The point (3, 5) is reflected across the y-axis. Where does it land?",
+      "choices": [
+        "(3, -5)",
+        "(-3, 5)",
+        "(-3, -5)",
+        "(5, 3)"
+      ],
+      "answer": 1,
+      "explanation": "Reflecting across the y-axis flips the sign of the x-coordinate: (-3, 5).",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-093",
+      "topicId": "ns-coordinate-plane",
+      "type": "mc",
+      "prompt": "In which quadrant is the point (8, -6)?",
+      "choices": [
+        "Quadrant I",
+        "Quadrant IV",
+        "Quadrant II",
+        "Quadrant III"
+      ],
+      "answer": 1,
+      "explanation": "x is positive and y is negative, so the point is in Quadrant IV.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-094",
+      "topicId": "ns-coordinate-plane",
+      "type": "numeric",
+      "prompt": "How far apart are the points (9, 6) and (-4, 6)?",
+      "answer": 13,
+      "explanation": "Same y, so count across: |9| + |-4| = 9 + 4 = 13 units.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-095",
+      "topicId": "ns-coordinate-plane",
+      "type": "numeric",
+      "prompt": "How far apart are the points (4, 3) and (-8, 3)?",
+      "answer": 12,
+      "explanation": "Same y, so count across: |4| + |-8| = 4 + 8 = 12 units.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-096",
+      "topicId": "ns-coordinate-plane",
+      "type": "mc",
+      "prompt": "In which quadrant is the point (6, -2)?",
+      "choices": [
+        "Quadrant III",
+        "Quadrant II",
+        "Quadrant I",
+        "Quadrant IV"
+      ],
+      "answer": 3,
+      "explanation": "x is positive and y is negative, so the point is in Quadrant IV.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-097",
+      "topicId": "ns-coordinate-plane",
+      "type": "mc",
+      "prompt": "The point (-3, 7) is reflected across the y-axis. Where does it land?",
+      "choices": [
+        "(3, -7)",
+        "(3, 7)",
+        "(7, -3)",
+        "(-3, -7)"
+      ],
+      "answer": 1,
+      "explanation": "Reflecting across the y-axis flips the sign of the x-coordinate: (3, 7).",
+      "difficulty": 3
+    },
+    {
+      "id": "ns-098",
+      "topicId": "ns-coordinate-plane",
+      "type": "numeric",
+      "prompt": "How far apart are the points (-5, 1) and (-5, -1)?",
+      "answer": 2,
+      "explanation": "Same x, so count up and down: |1| + |-1| = 1 + 1 = 2 units.",
+      "difficulty": 2
+    },
+    {
+      "id": "ns-099",
+      "topicId": "ns-coordinate-plane",
+      "type": "mc",
+      "prompt": "In which quadrant is the point (8, 2)?",
+      "choices": [
+        "Quadrant IV",
+        "Quadrant III",
+        "Quadrant II",
+        "Quadrant I"
+      ],
+      "answer": 3,
+      "explanation": "x is positive and y is positive, so the point is in Quadrant I.",
+      "difficulty": 1
+    },
+    {
+      "id": "ns-100",
+      "topicId": "ns-coordinate-plane",
+      "type": "mc",
+      "prompt": "The point (6, 7) is reflected across the x-axis. Where does it land?",
+      "choices": [
+        "(-6, -7)",
+        "(6, -7)",
+        "(-6, 7)",
+        "(7, 6)"
+      ],
+      "answer": 1,
+      "explanation": "Reflecting across the x-axis flips the sign of the y-coordinate: (6, -7).",
+      "difficulty": 3
+    }
+  ]
+}

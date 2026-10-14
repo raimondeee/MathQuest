@@ -1,0 +1,1222 @@
+{
+  "id": "geometry",
+  "title": "Geometry Galaxy",
+  "topics": [
+    {
+      "id": "area-triangles",
+      "title": "Triangle Treasure: Area of Triangles",
+      "ccss": "6.G.A.1",
+      "lesson": "**Every triangle is half of a rectangle or parallelogram!**\n\n- Area = ½ × base × height\n- The *height* goes straight up from the base at a square corner (not along a slanted side).\n- For a right triangle, the two legs are the base and height.\n\nYou've got this! 🎯",
+      "examples": [
+        {
+          "prompt": "Right triangle with legs 6 cm and 4 cm. Area?",
+          "steps": [
+            "Picture a 6 × 4 rectangle: 24 cm².",
+            "The triangle is half of it.",
+            "24 ÷ 2 = 12"
+          ],
+          "answer": "12 cm²"
+        },
+        {
+          "prompt": "Triangle with base 10 in and height 5 in. Area?",
+          "steps": [
+            "A = ½ × b × h",
+            "½ × 10 × 5 = 25"
+          ],
+          "answer": "25 in²"
+        },
+        {
+          "prompt": "A triangle has area 24 m² and base 8 m. Height?",
+          "steps": [
+            "24 = ½ × 8 × h",
+            "24 = 4 × h",
+            "h = 6"
+          ],
+          "answer": "6 m"
+        }
+      ]
+    },
+    {
+      "id": "area-quadrilaterals-polygons",
+      "title": "Shape Shifter: Quadrilaterals & Polygons",
+      "ccss": "6.G.A.1",
+      "lesson": "**Break big shapes into rectangles and triangles!**\n\n- Rectangle: A = l × w\n- Parallelogram: A = b × h (slide a triangle over to make a rectangle)\n- Trapezoid: A = ½ × (b₁ + b₂) × h\n- Tricky shape? *Compose* (add pieces) or *decompose* (cut and subtract).",
+      "examples": [
+        {
+          "prompt": "Parallelogram, base 9 ft, height 4 ft.",
+          "steps": [
+            "Slide the end triangle to make a rectangle.",
+            "9 × 4 = 36"
+          ],
+          "answer": "36 ft²"
+        },
+        {
+          "prompt": "Trapezoid with parallel sides 4 cm and 8 cm, height 3 cm.",
+          "steps": [
+            "Add the bases: 4 + 8 = 12",
+            "½ × 12 × 3 = 18"
+          ],
+          "answer": "18 cm²"
+        },
+        {
+          "prompt": "L-shape: 10 by 6 rectangle with a 3 by 2 corner cut out.",
+          "steps": [
+            "Big: 10 × 6 = 60",
+            "Cut: 3 × 2 = 6",
+            "60 − 6 = 54"
+          ],
+          "answer": "54 square units"
+        }
+      ]
+    },
+    {
+      "id": "volume-prisms",
+      "title": "Box Builder: Volume of Prisms",
+      "ccss": "6.G.A.2",
+      "lesson": "**Volume = how many unit cubes fill a box.**\n\n- V = l × w × h\n- V = B × h, where B is the area of the base\n- Works with fractions too! A ½-inch cube has volume ⅛ in³.",
+      "examples": [
+        {
+          "prompt": "Box 4 by 3 by 2 unit cubes.",
+          "steps": [
+            "One layer: 4 × 3 = 12 cubes",
+            "2 layers: 12 × 2 = 24"
+          ],
+          "answer": "24 cubic units"
+        },
+        {
+          "prompt": "Prism 2½ ft by 2 ft by 3 ft.",
+          "steps": [
+            "2½ × 2 = 5",
+            "5 × 3 = 15"
+          ],
+          "answer": "15 ft³"
+        },
+        {
+          "prompt": "Base area 6 in², height 1½ in.",
+          "steps": [
+            "V = B × h",
+            "6 × 1½ = 9"
+          ],
+          "answer": "9 in³"
+        },
+        {
+          "prompt": "How many ½-in cubes fill a 1 × 1 × 2 in box?",
+          "steps": [
+            "Box: 2 in³",
+            "Each cube: ⅛ in³",
+            "2 ÷ ⅛ = 16"
+          ],
+          "answer": "16 cubes"
+        }
+      ]
+    },
+    {
+      "id": "coordinate-polygons",
+      "title": "Map Quest: Polygons on the Coordinate Plane",
+      "ccss": "6.G.A.3",
+      "lesson": "**Plot points, connect the dots, measure sides!**\n\n- Same x? Subtract the y's. Same y? Subtract the x's.\n- Opposite sides of an axis? *Add* the distances to the axis (−3 to 5 is 3 + 5 = 8).\n- Then use side lengths for perimeter and area.",
+      "examples": [
+        {
+          "prompt": "Distance from (2, 1) to (2, 7)?",
+          "steps": [
+            "x is the same (2)",
+            "7 − 1 = 6"
+          ],
+          "answer": "6 units"
+        },
+        {
+          "prompt": "Distance from (−4, 3) to (5, 3)?",
+          "steps": [
+            "y is the same",
+            "4 units to the axis + 5 units = 9"
+          ],
+          "answer": "9 units"
+        },
+        {
+          "prompt": "Rectangle (1,1), (5,1), (5,4), (1,4): area?",
+          "steps": [
+            "Width 5 − 1 = 4",
+            "Height 4 − 1 = 3",
+            "4 × 3 = 12"
+          ],
+          "answer": "12 square units"
+        }
+      ]
+    },
+    {
+      "id": "nets-surface-area",
+      "title": "Unfold It: Nets & Surface Area",
+      "ccss": "6.G.A.4",
+      "lesson": "**A net is a 3D shape unfolded flat.**\n\n- Surface area = total area of all faces in the net.\n- Rectangular prism: 6 rectangles in 3 matching pairs → 2(lw + lh + wh)\n- Square pyramid: 1 square + 4 triangles.\n- Triangular prism: 2 triangles + 3 rectangles.",
+      "examples": [
+        {
+          "prompt": "Cube with edge 2 cm.",
+          "steps": [
+            "One face: 2 × 2 = 4",
+            "6 faces: 6 × 4 = 24"
+          ],
+          "answer": "24 cm²"
+        },
+        {
+          "prompt": "Prism 3 × 2 × 1 in.",
+          "steps": [
+            "2(3×2) = 12",
+            "2(3×1) = 6",
+            "2(2×1) = 4",
+            "12 + 6 + 4 = 22"
+          ],
+          "answer": "22 in²"
+        },
+        {
+          "prompt": "Square pyramid: base 4 cm, triangle heights 3 cm.",
+          "steps": [
+            "Base 4 × 4 = 16",
+            "Each triangle ½ × 4 × 3 = 6; four = 24",
+            "16 + 24 = 40"
+          ],
+          "answer": "40 cm²"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "geo-001",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A right triangle has legs that are 4 cm and 6 cm long. The legs meet at the square corner. What is its area in square centimeters?",
+      "answer": 12,
+      "explanation": "A right triangle is half of a 4 × 6 rectangle. Rectangle = 24, so triangle = 24 ÷ 2 = 12 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-002",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A right triangle has legs that are 3 cm and 8 cm long. The legs meet at the square corner. What is its area in square centimeters?",
+      "answer": 12,
+      "explanation": "A right triangle is half of a 3 × 8 rectangle. Rectangle = 24, so triangle = 24 ÷ 2 = 12 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-003",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A right triangle has legs that are 5 cm and 10 cm long. The legs meet at the square corner. What is its area in square centimeters?",
+      "answer": 25,
+      "explanation": "A right triangle is half of a 5 × 10 rectangle. Rectangle = 50, so triangle = 50 ÷ 2 = 25 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-004",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A right triangle has legs that are 6 cm and 7 cm long. The legs meet at the square corner. What is its area in square centimeters?",
+      "answer": 21,
+      "explanation": "A right triangle is half of a 6 × 7 rectangle. Rectangle = 42, so triangle = 42 ÷ 2 = 21 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-005",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A right triangle has legs that are 2 cm and 9 cm long. The legs meet at the square corner. What is its area in square centimeters?",
+      "answer": 9,
+      "explanation": "A right triangle is half of a 2 × 9 rectangle. Rectangle = 18, so triangle = 18 ÷ 2 = 9 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-006",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A right triangle has legs that are 8 cm and 5 cm long. The legs meet at the square corner. What is its area in square centimeters?",
+      "answer": 20,
+      "explanation": "A right triangle is half of a 8 × 5 rectangle. Rectangle = 40, so triangle = 40 ÷ 2 = 20 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-007",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A right triangle has legs that are 10 cm and 3 cm long. The legs meet at the square corner. What is its area in square centimeters?",
+      "answer": 15,
+      "explanation": "A right triangle is half of a 10 × 3 rectangle. Rectangle = 30, so triangle = 30 ÷ 2 = 15 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-008",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A triangle has a base of 12 m and a height of 5 m (the height is measured straight up from the base). What is its area in square meters?",
+      "answer": 30,
+      "explanation": "A = ½ × b × h = ½ × 12 × 5 = 30 m².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-009",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A triangle has a base of 9 m and a height of 4 m (the height is measured straight up from the base). What is its area in square meters?",
+      "answer": 18,
+      "explanation": "A = ½ × b × h = ½ × 9 × 4 = 18 m².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-010",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A triangle has a base of 7.5 m and a height of 6 m (the height is measured straight up from the base). What is its area in square meters?",
+      "answer": 22.5,
+      "explanation": "A = ½ × b × h = ½ × 7.5 × 6 = 22.5 m².",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "geo-011",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A triangle has a base of 11 m and a height of 3 m (the height is measured straight up from the base). What is its area in square meters?",
+      "answer": 16.5,
+      "explanation": "A = ½ × b × h = ½ × 11 × 3 = 16.5 m².",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "geo-012",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A triangle has a base of 15 m and a height of 8 m (the height is measured straight up from the base). What is its area in square meters?",
+      "answer": 60,
+      "explanation": "A = ½ × b × h = ½ × 15 × 8 = 60 m².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-013",
+      "topicId": "area-triangles",
+      "type": "mc",
+      "prompt": "A tall, slanted triangle has base 10 in and height 7 in. What is its area?",
+      "choices": [
+        "35 in²",
+        "70 in²",
+        "17 in²",
+        "45 in²"
+      ],
+      "answer": 0,
+      "explanation": "Even slanted triangles use A = ½ × b × h = ½ × 10 × 7 = 35 in². 70 forgets the ½.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-014",
+      "topicId": "area-triangles",
+      "type": "mc",
+      "prompt": "A tall, slanted triangle has base 14 in and height 9 in. What is its area?",
+      "choices": [
+        "126 in²",
+        "23 in²",
+        "63 in²",
+        "77 in²"
+      ],
+      "answer": 2,
+      "explanation": "Even slanted triangles use A = ½ × b × h = ½ × 14 × 9 = 63 in². 126 forgets the ½.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-015",
+      "topicId": "area-triangles",
+      "type": "mc",
+      "prompt": "A tall, slanted triangle has base 8 in and height 11 in. What is its area?",
+      "choices": [
+        "88 in²",
+        "44 in²",
+        "19 in²",
+        "52 in²"
+      ],
+      "answer": 1,
+      "explanation": "Even slanted triangles use A = ½ × b × h = ½ × 8 × 11 = 44 in². 88 forgets the ½.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-016",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A triangle has an area of 30 square feet and a base of 12 ft. What is its height in feet?",
+      "answer": 5,
+      "explanation": "A = ½bh, so 30 = ½ × 12 × h → h = 2 × 30 ÷ 12 = 5 ft.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-017",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A triangle has an area of 42 square feet and a base of 7 ft. What is its height in feet?",
+      "answer": 12,
+      "explanation": "A = ½bh, so 42 = ½ × 7 × h → h = 2 × 42 ÷ 7 = 12 ft.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-018",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A triangle has an area of 27 square feet and a base of 6 ft. What is its height in feet?",
+      "answer": 9,
+      "explanation": "A = ½bh, so 27 = ½ × 6 × h → h = 2 × 27 ÷ 6 = 9 ft.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-019",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A house shape is a rectangle 10 ft wide and 6 ft tall with a triangle roof on top. The roof triangle has base 4 ft and height 6 ft. What is the total area in square feet?",
+      "answer": 72,
+      "explanation": "Rectangle: 10 × 6 = 60. Triangle: ½ × 4 × 6 = 12. Total = 72 ft².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-020",
+      "topicId": "area-triangles",
+      "type": "numeric",
+      "prompt": "A house shape is a rectangle 12 ft wide and 8 ft tall with a triangle roof on top. The roof triangle has base 12 ft and height 3 ft. What is the total area in square feet?",
+      "answer": 114,
+      "explanation": "Rectangle: 12 × 8 = 96. Triangle: ½ × 12 × 3 = 18. Total = 114 ft².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-021",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A rectangle is 7 cm long and 4 cm wide. What is its area in square centimeters?",
+      "answer": 28,
+      "explanation": "A = length × width = 7 × 4 = 28 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-022",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A rectangle is 9 cm long and 9 cm wide. What is its area in square centimeters?",
+      "answer": 81,
+      "explanation": "A = length × width = 9 × 9 = 81 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-023",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A rectangle is 12 cm long and 5 cm wide. What is its area in square centimeters?",
+      "answer": 60,
+      "explanation": "A = length × width = 12 × 5 = 60 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-024",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A rectangle is 6 cm long and 8 cm wide. What is its area in square centimeters?",
+      "answer": 48,
+      "explanation": "A = length × width = 6 × 8 = 48 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-025",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A parallelogram has base 8 m and height 5 m. What is its area in square meters?",
+      "answer": 40,
+      "explanation": "Cut the triangle off one side and slide it over to make a rectangle: A = b × h = 8 × 5 = 40 m².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-026",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A parallelogram has base 11 m and height 6 m. What is its area in square meters?",
+      "answer": 66,
+      "explanation": "Cut the triangle off one side and slide it over to make a rectangle: A = b × h = 11 × 6 = 66 m².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-027",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A parallelogram has base 13 m and height 4 m. What is its area in square meters?",
+      "answer": 52,
+      "explanation": "Cut the triangle off one side and slide it over to make a rectangle: A = b × h = 13 × 4 = 52 m².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-028",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A trapezoid has parallel sides of 6 in and 10 in, and a height of 4 in. What is its area in square inches?",
+      "answer": 32,
+      "explanation": "A = ½ × (b₁ + b₂) × h = ½ × (6 + 10) × 4 = 32 in².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-029",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A trapezoid has parallel sides of 5 in and 9 in, and a height of 6 in. What is its area in square inches?",
+      "answer": 42,
+      "explanation": "A = ½ × (b₁ + b₂) × h = ½ × (5 + 9) × 6 = 42 in².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-030",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A trapezoid has parallel sides of 3.5 in and 6.5 in, and a height of 4 in. What is its area in square inches?",
+      "answer": 20,
+      "explanation": "A = ½ × (b₁ + b₂) × h = ½ × (3.5 + 6.5) × 4 = 20 in².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-031",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A trapezoid has parallel sides of 8 in and 12 in, and a height of 5 in. What is its area in square inches?",
+      "answer": 50,
+      "explanation": "A = ½ × (b₁ + b₂) × h = ½ × (8 + 12) × 5 = 50 in².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-032",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "mc",
+      "prompt": "A parallelogram has a base of 9 ft, a slanted side of 5 ft, and a height of 4 ft. What is its area?",
+      "choices": [
+        "45 ft²",
+        "18 ft²",
+        "28 ft²",
+        "36 ft²"
+      ],
+      "answer": 3,
+      "explanation": "Use the height (straight up), not the slanted side: 9 × 4 = 36 ft². 45 uses the slanted side by mistake.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-033",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "mc",
+      "prompt": "A parallelogram has a base of 10 ft, a slanted side of 8 ft, and a height of 6 ft. What is its area?",
+      "choices": [
+        "80 ft²",
+        "30 ft²",
+        "36 ft²",
+        "60 ft²"
+      ],
+      "answer": 3,
+      "explanation": "Use the height (straight up), not the slanted side: 10 × 6 = 60 ft². 80 uses the slanted side by mistake.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-034",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "mc",
+      "prompt": "A parallelogram has a base of 7 ft, a slanted side of 4 ft, and a height of 3 ft. What is its area?",
+      "choices": [
+        "28 ft²",
+        "21 ft²",
+        "10.5 ft²",
+        "22 ft²"
+      ],
+      "answer": 1,
+      "explanation": "Use the height (straight up), not the slanted side: 7 × 3 = 21 ft². 28 uses the slanted side by mistake.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-035",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "mc",
+      "prompt": "A parallelogram has a base of 12 ft, a slanted side of 7 ft, and a height of 5 ft. What is its area?",
+      "choices": [
+        "84 ft²",
+        "30 ft²",
+        "60 ft²",
+        "38 ft²"
+      ],
+      "answer": 2,
+      "explanation": "Use the height (straight up), not the slanted side: 12 × 5 = 60 ft². 84 uses the slanted side by mistake.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-036",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "An L-shaped garden is made from a 10 m by 8 m rectangle with a 4 m by 3 m rectangle cut out of one corner. What is the area of the garden in square meters?",
+      "answer": 68,
+      "explanation": "Big rectangle 80 minus the missing corner 12 = 68 m².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-037",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "An L-shaped garden is made from a 12 m by 9 m rectangle with a 5 m by 4 m rectangle cut out of one corner. What is the area of the garden in square meters?",
+      "answer": 88,
+      "explanation": "Big rectangle 108 minus the missing corner 20 = 88 m².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-038",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "An L-shaped garden is made from a 15 m by 10 m rectangle with a 6 m by 6 m rectangle cut out of one corner. What is the area of the garden in square meters?",
+      "answer": 114,
+      "explanation": "Big rectangle 150 minus the missing corner 36 = 114 m².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-039",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A regular hexagon can be split into 6 identical triangles. Each triangle has base 6 cm and height 5.2 cm. What is the area of the hexagon in square centimeters?",
+      "answer": 93.6,
+      "explanation": "One triangle: ½ × 6 × 5.2 = 15.6. Six triangles: 6 × 15.6 = 93.6 cm².",
+      "difficulty": 3,
+      "tolerance": 0.01
+    },
+    {
+      "id": "geo-040",
+      "topicId": "area-quadrilaterals-polygons",
+      "type": "numeric",
+      "prompt": "A regular hexagon can be split into 6 identical triangles. Each triangle has base 4 cm and height 3.5 cm. What is the area of the hexagon in square centimeters?",
+      "answer": 42,
+      "explanation": "One triangle: ½ × 4 × 3.5 = 7. Six triangles: 6 × 7 = 42 cm².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-041",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A box is packed with 1-cm unit cubes: 3 cubes long, 2 cubes wide, and 2 cubes tall. How many cubic centimeters is its volume?",
+      "answer": 12,
+      "explanation": "Each layer has 3 × 2 = 6 cubes. 2 layers: 6 × 2 = 12 cm³.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-042",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A box is packed with 1-cm unit cubes: 4 cubes long, 3 cubes wide, and 2 cubes tall. How many cubic centimeters is its volume?",
+      "answer": 24,
+      "explanation": "Each layer has 4 × 3 = 12 cubes. 2 layers: 12 × 2 = 24 cm³.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-043",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A box is packed with 1-cm unit cubes: 5 cubes long, 2 cubes wide, and 3 cubes tall. How many cubic centimeters is its volume?",
+      "answer": 30,
+      "explanation": "Each layer has 5 × 2 = 10 cubes. 3 layers: 10 × 3 = 30 cm³.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-044",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A box is packed with 1-cm unit cubes: 2 cubes long, 2 cubes wide, and 6 cubes tall. How many cubic centimeters is its volume?",
+      "answer": 24,
+      "explanation": "Each layer has 2 × 2 = 4 cubes. 6 layers: 4 × 6 = 24 cm³.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-045",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A box is packed with 1-cm unit cubes: 4 cubes long, 4 cubes wide, and 1 cubes tall. How many cubic centimeters is its volume?",
+      "answer": 16,
+      "explanation": "Each layer has 4 × 4 = 16 cubes. 1 layers: 16 × 1 = 16 cm³.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-046",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A box is packed with 1-cm unit cubes: 3 cubes long, 3 cubes wide, and 3 cubes tall. How many cubic centimeters is its volume?",
+      "answer": 27,
+      "explanation": "Each layer has 3 × 3 = 9 cubes. 3 layers: 9 × 3 = 27 cm³.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-047",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A box is packed with 1-cm unit cubes: 6 cubes long, 2 cubes wide, and 2 cubes tall. How many cubic centimeters is its volume?",
+      "answer": 24,
+      "explanation": "Each layer has 6 × 2 = 12 cubes. 2 layers: 12 × 2 = 24 cm³.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-048",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A rectangular prism measures 2.5 ft by 2 ft by 4 ft. What is its volume in cubic feet?",
+      "answer": 20,
+      "explanation": "V = l × w × h = 2.5 × 2 × 4 = 20 ft³.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-049",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A rectangular prism measures 1.5 ft by 0.5 ft by 6 ft. What is its volume in cubic feet?",
+      "answer": 4.5,
+      "explanation": "V = l × w × h = 1.5 × 0.5 × 6 = 4.5 ft³.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "geo-050",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A rectangular prism measures 4.5 ft by 3 ft by 0.75 ft. What is its volume in cubic feet?",
+      "answer": 10.125,
+      "explanation": "V = l × w × h = 4.5 × 3 × 0.75 = 10.12 ft³.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "geo-051",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A rectangular prism measures 1.75 ft by 4 ft by 2 ft. What is its volume in cubic feet?",
+      "answer": 14,
+      "explanation": "V = l × w × h = 1.75 × 4 × 2 = 14 ft³.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-052",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A rectangular prism measures 2.5 ft by 2.5 ft by 2 ft. What is its volume in cubic feet?",
+      "answer": 12.5,
+      "explanation": "V = l × w × h = 2.5 × 2.5 × 2 = 12.5 ft³.",
+      "difficulty": 2,
+      "tolerance": 0.01
+    },
+    {
+      "id": "geo-053",
+      "topicId": "volume-prisms",
+      "type": "mc",
+      "prompt": "The base of a prism has an area of 12 square inches and the prism is 2.5 in tall. What is its volume?",
+      "choices": [
+        "30 in³",
+        "14.5 in³",
+        "60 in³",
+        "15 in³"
+      ],
+      "answer": 0,
+      "explanation": "V = B × h = 12 × 2.5 = 30 in³.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-054",
+      "topicId": "volume-prisms",
+      "type": "mc",
+      "prompt": "The base of a prism has an area of 20 square inches and the prism is 0.75 in tall. What is its volume?",
+      "choices": [
+        "15 in³",
+        "20.75 in³",
+        "30 in³",
+        "7.5 in³"
+      ],
+      "answer": 0,
+      "explanation": "V = B × h = 20 × 0.75 = 15 in³.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-055",
+      "topicId": "volume-prisms",
+      "type": "mc",
+      "prompt": "The base of a prism has an area of 7.5 square inches and the prism is 4 in tall. What is its volume?",
+      "choices": [
+        "11.5 in³",
+        "60 in³",
+        "30 in³",
+        "15 in³"
+      ],
+      "answer": 2,
+      "explanation": "V = B × h = 7.5 × 4 = 30 in³.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-056",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "How many cubes with edges of ½ inch fit exactly inside a box that is 2 in by 1 in by 1.5 in?",
+      "answer": 24,
+      "explanation": "Box volume = 3 in³. Each ½-inch cube has volume ½×½×½ = ⅛ in³. 3 ÷ ⅛ = 24 cubes.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-057",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "How many cubes with edges of ½ inch fit exactly inside a box that is 1.5 in by 1.5 in by 1 in?",
+      "answer": 18,
+      "explanation": "Box volume = 2.25 in³. Each ½-inch cube has volume ½×½×½ = ⅛ in³. 2.25 ÷ ⅛ = 18 cubes.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-058",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "How many cubes with edges of ½ inch fit exactly inside a box that is 3 in by 2.5 in by 1 in?",
+      "answer": 60,
+      "explanation": "Box volume = 7.5 in³. Each ½-inch cube has volume ½×½×½ = ⅛ in³. 7.5 ÷ ⅛ = 60 cubes.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-059",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A fish tank has a volume of 22.5 cubic feet. It is 3 ft long and 2.5 ft wide. How tall is it in feet?",
+      "answer": 3,
+      "explanation": "h = V ÷ (l × w) = 22.5 ÷ 7.5 = 3 ft.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-060",
+      "topicId": "volume-prisms",
+      "type": "numeric",
+      "prompt": "A fish tank has a volume of 30 cubic feet. It is 4 ft long and 1.5 ft wide. How tall is it in feet?",
+      "answer": 5,
+      "explanation": "h = V ÷ (l × w) = 30 ÷ 6 = 5 ft.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-061",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "On a coordinate grid where each unit is 1 block, how many blocks apart are the points (2, 3) and (2, 9)?",
+      "answer": 6,
+      "explanation": "One coordinate is the same, so subtract the other: |3 − 9| = 6 blocks.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-062",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "On a coordinate grid where each unit is 1 block, how many blocks apart are the points (1, 5) and (8, 5)?",
+      "answer": 7,
+      "explanation": "One coordinate is the same, so subtract the other: |1 − 8| = 7 blocks.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-063",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "On a coordinate grid where each unit is 1 block, how many blocks apart are the points (4, 1) and (4, 7)?",
+      "answer": 6,
+      "explanation": "One coordinate is the same, so subtract the other: |1 − 7| = 6 blocks.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-064",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "On a coordinate grid where each unit is 1 block, how many blocks apart are the points (3, 6) and (10, 6)?",
+      "answer": 7,
+      "explanation": "One coordinate is the same, so subtract the other: |3 − 10| = 7 blocks.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-065",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "On a coordinate grid where each unit is 1 block, how many blocks apart are the points (0, 2) and (0, 11)?",
+      "answer": 9,
+      "explanation": "One coordinate is the same, so subtract the other: |2 − 11| = 9 blocks.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-066",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "On a coordinate grid where each unit is 1 block, how many blocks apart are the points (5, 4) and (12, 4)?",
+      "answer": 7,
+      "explanation": "One coordinate is the same, so subtract the other: |5 − 12| = 7 blocks.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-067",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "On a coordinate grid where each unit is 1 block, how many blocks apart are the points (6, 2) and (6, 10)?",
+      "answer": 8,
+      "explanation": "One coordinate is the same, so subtract the other: |2 − 10| = 8 blocks.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-068",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "A rectangle has vertices at (1, 1), (6, 1), (6, 4), and (1, 4). Each grid unit is 1 meter. What is its perimeter in meters?",
+      "answer": 16,
+      "explanation": "Width = 6−1 = 5, height = 4−1 = 3. P = 2 × (5 + 3) = 16 m.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-069",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "A rectangle has vertices at (2, 3), (9, 3), (9, 8), and (2, 8). Each grid unit is 1 meter. What is its perimeter in meters?",
+      "answer": 24,
+      "explanation": "Width = 9−2 = 7, height = 8−3 = 5. P = 2 × (7 + 5) = 24 m.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-070",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "A rectangle has vertices at (0, 2), (5, 2), (5, 10), and (0, 10). Each grid unit is 1 meter. What is its perimeter in meters?",
+      "answer": 26,
+      "explanation": "Width = 5−0 = 5, height = 10−2 = 8. P = 2 × (5 + 8) = 26 m.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-071",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "A rectangle has vertices at (3, 1), (7, 1), (7, 7), and (3, 7). Each grid unit is 1 meter. What is its perimeter in meters?",
+      "answer": 20,
+      "explanation": "Width = 7−3 = 4, height = 7−1 = 6. P = 2 × (4 + 6) = 20 m.",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-072",
+      "topicId": "coordinate-polygons",
+      "type": "mc",
+      "prompt": "A rectangle has vertices (2, 1), (8, 1), (8, 5), (2, 5). Each unit is 1 foot. What is its area?",
+      "choices": [
+        "20 ft²",
+        "24 ft²",
+        "40 ft²",
+        "10 ft²"
+      ],
+      "answer": 1,
+      "explanation": "Width 6 ft × height 4 ft = 24 ft². (Don't multiply the coordinates themselves!)",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-073",
+      "topicId": "coordinate-polygons",
+      "type": "mc",
+      "prompt": "A rectangle has vertices (1, 2), (4, 2), (4, 9), (1, 9). Each unit is 1 foot. What is its area?",
+      "choices": [
+        "20 ft²",
+        "36 ft²",
+        "10 ft²",
+        "21 ft²"
+      ],
+      "answer": 3,
+      "explanation": "Width 3 ft × height 7 ft = 21 ft². (Don't multiply the coordinates themselves!)",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-074",
+      "topicId": "coordinate-polygons",
+      "type": "mc",
+      "prompt": "A rectangle has vertices (3, 3), (10, 3), (10, 6), (3, 6). Each unit is 1 foot. What is its area?",
+      "choices": [
+        "20 ft²",
+        "60 ft²",
+        "10 ft²",
+        "21 ft²"
+      ],
+      "answer": 3,
+      "explanation": "Width 7 ft × height 3 ft = 21 ft². (Don't multiply the coordinates themselves!)",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-075",
+      "topicId": "coordinate-polygons",
+      "type": "mc",
+      "prompt": "A rectangle has vertices (0, 1), (6, 1), (6, 7), (0, 7). Each unit is 1 foot. What is its area?",
+      "choices": [
+        "24 ft²",
+        "36 ft²",
+        "42 ft²",
+        "12 ft²"
+      ],
+      "answer": 1,
+      "explanation": "Width 6 ft × height 6 ft = 36 ft². (Don't multiply the coordinates themselves!)",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-076",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "How many units apart are (-3, 4) and (5, 4)? (Careful: they are on opposite sides of an axis.)",
+      "answer": 8,
+      "explanation": "Add the distances to the axis: the points are on opposite sides, so the distance is 8 units.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-077",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "How many units apart are (2, -6) and (2, 3)? (Careful: they are on opposite sides of an axis.)",
+      "answer": 9,
+      "explanation": "Add the distances to the axis: the points are on opposite sides, so the distance is 9 units.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-078",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "How many units apart are (-7, -2) and (4, -2)? (Careful: they are on opposite sides of an axis.)",
+      "answer": 11,
+      "explanation": "Add the distances to the axis: the points are on opposite sides, so the distance is 11 units.",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-079",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "A right triangle has vertices at (1, 1), (7, 1), and (1, 5). Each unit is 1 cm. What is its area in square centimeters?",
+      "answer": 12,
+      "explanation": "Legs: |7−(1)| = 6 and |5−(1)| = 4. A = ½ × 6 × 4 = 12 cm².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-080",
+      "topicId": "coordinate-polygons",
+      "type": "numeric",
+      "prompt": "A right triangle has vertices at (-2, 0), (4, 0), and (-2, -6). Each unit is 1 cm. What is its area in square centimeters?",
+      "answer": 18,
+      "explanation": "Legs: |4−(-2)| = 6 and |-6−(0)| = 6. A = ½ × 6 × 6 = 18 cm².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-081",
+      "topicId": "nets-surface-area",
+      "type": "mc",
+      "prompt": "How many faces will the net of a rectangular prism have?",
+      "choices": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 2,
+      "explanation": "A rectangular prism has 6 faces, so its net has 6 shapes.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-082",
+      "topicId": "nets-surface-area",
+      "type": "mc",
+      "prompt": "How many faces will the net of a triangular prism have?",
+      "choices": [
+        "5",
+        "4",
+        "6",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "A triangular prism has 5 faces, so its net has 5 shapes.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-083",
+      "topicId": "nets-surface-area",
+      "type": "mc",
+      "prompt": "How many faces will the net of a square pyramid have?",
+      "choices": [
+        "5",
+        "4",
+        "6",
+        "7"
+      ],
+      "answer": 0,
+      "explanation": "A square pyramid has 5 faces, so its net has 5 shapes.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-084",
+      "topicId": "nets-surface-area",
+      "type": "mc",
+      "prompt": "How many faces will the net of a triangular pyramid have?",
+      "choices": [
+        "5",
+        "6",
+        "4",
+        "7"
+      ],
+      "answer": 2,
+      "explanation": "A triangular pyramid has 4 faces, so its net has 4 shapes.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-085",
+      "topicId": "nets-surface-area",
+      "type": "mc",
+      "prompt": "How many faces will the net of a cube have?",
+      "choices": [
+        "4",
+        "6",
+        "5",
+        "7"
+      ],
+      "answer": 1,
+      "explanation": "A cube has 6 faces, so its net has 6 shapes.",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-086",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "A cube has edges of 3 cm. Its net is 6 squares. What is the surface area in square centimeters?",
+      "answer": 54,
+      "explanation": "Each square: 3 × 3 = 9. Six squares: 6 × 9 = 54 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-087",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "A cube has edges of 5 cm. Its net is 6 squares. What is the surface area in square centimeters?",
+      "answer": 150,
+      "explanation": "Each square: 5 × 5 = 25. Six squares: 6 × 25 = 150 cm².",
+      "difficulty": 1
+    },
+    {
+      "id": "geo-088",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "A rectangular prism is 4 in long, 3 in wide, and 2 in tall. What is its surface area in square inches?",
+      "answer": 52,
+      "explanation": "Three pairs of faces: 2×(4×3) + 2×(4×2) + 2×(3×2) = 24 + 16 + 12 = 52 in².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-089",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "A rectangular prism is 5 in long, 2 in wide, and 6 in tall. What is its surface area in square inches?",
+      "answer": 104,
+      "explanation": "Three pairs of faces: 2×(5×2) + 2×(5×6) + 2×(2×6) = 20 + 60 + 24 = 104 in².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-090",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "A rectangular prism is 8 in long, 4 in wide, and 3 in tall. What is its surface area in square inches?",
+      "answer": 136,
+      "explanation": "Three pairs of faces: 2×(8×4) + 2×(8×3) + 2×(4×3) = 64 + 48 + 24 = 136 in².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-091",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "A rectangular prism is 10 in long, 5 in wide, and 2 in tall. What is its surface area in square inches?",
+      "answer": 160,
+      "explanation": "Three pairs of faces: 2×(10×5) + 2×(10×2) + 2×(5×2) = 100 + 40 + 20 = 160 in².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-092",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "A rectangular prism is 7 in long, 3 in wide, and 0.5 in tall. What is its surface area in square inches?",
+      "answer": 52,
+      "explanation": "Three pairs of faces: 2×(7×3) + 2×(7×0.5) + 2×(3×0.5) = 42 + 7 + 3 = 52 in².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-093",
+      "topicId": "nets-surface-area",
+      "type": "mc",
+      "prompt": "A square pyramid has a base 6 cm on each side. Each triangle face has height (slant height) 5 cm. What is the total surface area?",
+      "choices": [
+        "156 cm²",
+        "60 cm²",
+        "51 cm²",
+        "96 cm²"
+      ],
+      "answer": 3,
+      "explanation": "Base 6×6 = 36. Four triangles: 4 × ½ × 6 × 5 = 60. Total = 96 cm².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-094",
+      "topicId": "nets-surface-area",
+      "type": "mc",
+      "prompt": "A square pyramid has a base 4 cm on each side. Each triangle face has height (slant height) 7 cm. What is the total surface area?",
+      "choices": [
+        "128 cm²",
+        "56 cm²",
+        "30 cm²",
+        "72 cm²"
+      ],
+      "answer": 3,
+      "explanation": "Base 4×4 = 16. Four triangles: 4 × ½ × 4 × 7 = 56. Total = 72 cm².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-095",
+      "topicId": "nets-surface-area",
+      "type": "mc",
+      "prompt": "A square pyramid has a base 10 cm on each side. Each triangle face has height (slant height) 12 cm. What is the total surface area?",
+      "choices": [
+        "580 cm²",
+        "340 cm²",
+        "240 cm²",
+        "160 cm²"
+      ],
+      "answer": 1,
+      "explanation": "Base 10×10 = 100. Four triangles: 4 × ½ × 10 × 12 = 240. Total = 340 cm².",
+      "difficulty": 2
+    },
+    {
+      "id": "geo-096",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "A triangular prism has two right-triangle ends with sides 3 cm, 4 cm, and 5 cm (legs 3 and 4). The prism is 10 cm long. What is its surface area in square centimeters?",
+      "answer": 132,
+      "explanation": "Two triangles: 2 × ½ × 3 × 4 = 12. Three rectangles: (3+4+5) × 10 = 120. Total = 132 cm².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-097",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "A triangular prism has two right-triangle ends with sides 6 cm, 8 cm, and 10 cm (legs 6 and 8). The prism is 6 cm long. What is its surface area in square centimeters?",
+      "answer": 192,
+      "explanation": "Two triangles: 2 × ½ × 6 × 8 = 48. Three rectangles: (6+8+10) × 6 = 144. Total = 192 cm².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-098",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "A triangular prism has two right-triangle ends with sides 3 cm, 4 cm, and 5 cm (legs 3 and 4). The prism is 7.5 cm long. What is its surface area in square centimeters?",
+      "answer": 102,
+      "explanation": "Two triangles: 2 × ½ × 3 × 4 = 12. Three rectangles: (3+4+5) × 7.5 = 90. Total = 102 cm².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-099",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "Andrew wraps a gift box that is 12 in by 9 in by 4 in with no overlap. How many square inches of paper does he need?",
+      "answer": 384,
+      "explanation": "Surface area = 2(lw + lh + wh) = 2(108 + 48 + 36) = 384 in².",
+      "difficulty": 3
+    },
+    {
+      "id": "geo-100",
+      "topicId": "nets-surface-area",
+      "type": "numeric",
+      "prompt": "Andrew wraps a gift box that is 7.5 in by 6 in by 3 in with no overlap. How many square inches of paper does he need?",
+      "answer": 171,
+      "explanation": "Surface area = 2(lw + lh + wh) = 2(45 + 22.5 + 18) = 171 in².",
+      "difficulty": 3
+    }
+  ]
+}
