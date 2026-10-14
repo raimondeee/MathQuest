@@ -36,6 +36,8 @@ export function validateQuestion(q, topicIds) {
   return null
 }
 
+const str = (v) => (typeof v === 'string' ? v : v === null || v === undefined ? '' : Array.isArray(v) ? v.join(', ') : String(v))
+
 export function validateSubject(raw) {
   const warnings = []
   if (!raw || typeof raw.id !== 'string' || !Array.isArray(raw.topics) || !Array.isArray(raw.questions)) {
@@ -45,13 +47,20 @@ export function validateSubject(raw) {
     const ok = t && typeof t.id === 'string' && typeof t.title === 'string'
     if (!ok) warnings.push(`topic #${i} malformed`)
     return ok
-  }).map((t) => ({ ...t, lesson: typeof t.lesson === 'string' ? t.lesson : '', examples: Array.isArray(t.examples) ? t.examples.filter((e) => e && typeof e.prompt === 'string' && Array.isArray(e.steps)) : [] }))
+  }).map((t) => ({
+    ...t,
+    ccss: str(t.ccss), // some files use an array of standards, e.g. ["6.RP.A.1"]
+    lesson: str(t.lesson),
+    examples: Array.isArray(t.examples)
+      ? t.examples.filter((e) => e && typeof e.prompt === 'string' && Array.isArray(e.steps)).map((e) => ({ ...e, steps: e.steps.map(str), answer: str(e.answer) }))
+      : [],
+  }))
   const ids = new Set(topics.map((t) => t.id))
   const questions = raw.questions.filter((q, i) => {
     const err = validateQuestion(q, ids)
     if (err) warnings.push(`question ${q?.id ?? '#' + i}: ${err}`)
     return !err
-  })
+  }).map((q) => ({ ...q, explanation: str(q.explanation), choices: q.choices ? q.choices.map(str) : undefined }))
   const mt = typeof raw.masteryThreshold === 'number' && raw.masteryThreshold > 0 && raw.masteryThreshold <= 1 ? raw.masteryThreshold : 0.8
   return { subject: { id: raw.id, title: raw.title || raw.id, masteryThreshold: mt, topics, questions }, warnings }
 }

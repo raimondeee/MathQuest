@@ -33,7 +33,7 @@ cd dist && touch .nojekyll && git init -q && git add -A && git commit -qm deploy
 ```
 Pages source: branch `gh-pages`, path `/`. Live at https://raimondeee.github.io/MathQuest/
 
-A small service worker (`public/sw.js`) caches the app after the first visit so it works offline. Bump `CACHE` in `sw.js` (and in `main.ts`) to force a refresh of old caches.
+A service worker (`public/sw.js`) makes the app work offline after the first visit. At build time a small Vite plugin stamps it with a build id (hash of all output files) and the list of files to precache, so each deploy gets a new cache name. The new worker installs, calls `skipWaiting` + `clients.claim`, deletes old caches, and the page reloads once onto the new build. `index.html` is served network-first and hashed assets cache-first. It is never registered on `file://`.
 
 ## Content schema
 
@@ -52,6 +52,20 @@ A small service worker (`public/sw.js`) caches the app after the first visit so 
   }]
 }
 ```
+Optional on questions and worked examples: `figure` — structured data for a generated SVG diagram (`src/figures.ts`), e.g.
+
+```jsonc
+{ "kind": "triangle", "base": 12, "height": 5, "unit": "m" }          // also right:true, obtuse:true, unknown:"height"
+{ "kind": "parallelogram", "base": 9, "height": 4, "side": 5, "unit": "ft" }
+{ "kind": "trapezoid", "top": 6, "bottom": 10, "height": 4, "unit": "in" }
+{ "kind": "rect" | "lshape" | "house" | "hexagon", ... }
+{ "kind": "prism", "l": 4, "w": 3, "h": 2, "unit": "cm", "cubes": 1 }  // cubes: draw unit-cube grid (1 or 0.5); unknown:"h"
+{ "kind": "prismBase", "area": 12, "h": 2.5 } | { "kind": "triPrism", "a": 3, "b": 4, "c": 5, "length": 10 }
+{ "kind": "cubeNet", "s": 3 } | { "kind": "pyramidNet", "base": 6, "slant": 5 }
+{ "kind": "coord", "points": [[1,1],[6,1],[6,4],[1,4]], "closed": true }
+```
+Diagrams are drawn roughly to scale; `"fmt": "frac"` shows halves/quarters as ½ ¼ ¾. **Every labeled number must appear in the prompt**: `npm run check` and the app (at load) verify this, and a figure that fails is dropped rather than shown wrong. Geometry figures are generated from the prompts by `node scripts/add-figures.js` (writes `../content/geometry.json` and `src/content/geometry.json`; idempotent).
+
 Files are validated at load; malformed topics/questions are skipped with `console.warn`. Numeric answers accept negatives, decimals and simple fractions (`3/4`); the Unicode minus `−` is normalized to `-`. Lesson markdown supports headings, bold/italic, lists and paragraphs. A topic is **mastered** at ≥ threshold correct over 10+ attempts; a subject is mastered when all its topics are.
 
 ## iPad tip: Add to Home Screen

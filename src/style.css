@@ -89,3 +89,25 @@ main { max-width: 980px; margin: 0 auto; padding: 16px max(16px, env(safe-area-i
 @media (prefers-reduced-motion: reduce) { * { animation-duration: .01s !important; transition: none !important; } }
 @media (max-width: 700px) { .topics, .map { grid-template-columns: 1fr; } .choices { grid-template-columns: 1fr; } }
 @media (max-width: 480px) { .row2 { grid-template-columns: 1fr; } }
+/* geometry figures */
+.figure-wrap { margin: 6px 0 16px; display: flex; justify-content: center; }
+.figure { width: 100%; height: auto; overflow: visible; font-family: inherit; }
+.figure .shape, .figure .front { fill: var(--soft); stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.figure .shape2 { fill: #fff6dc; stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.figure .top { fill: color-mix(in srgb, var(--soft) 60%, #fff); stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.figure .side { fill: color-mix(in srgb, var(--soft) 70%, var(--accent) 12%); stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.figure .base { fill: #fff0c2; stroke: none; }
+.figure .ghost { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 4 4; opacity: .6; }
+.figure .edge, .figure .none { fill: none; stroke: var(--accent); stroke-width: 2.5; }
+.figure .hidden, .figure .ext { fill: none; stroke: var(--accent); stroke-width: 1.5; stroke-dasharray: 5 5; opacity: .7; }
+.figure .dash { fill: none; stroke: #c26a1a; stroke-width: 2; stroke-dasharray: 6 5; }
+.figure .mark { fill: none; stroke: #c26a1a; stroke-width: 1.5; }
+.figure .thin { stroke: var(--accent); stroke-width: 1; opacity: .4; }
+.figure .grid { stroke: var(--accent); stroke-width: 1; opacity: .45; }
+.figure .gridline { stroke: #dcd7cb; stroke-width: 1; }
+.figure .axis { stroke: #7b8594; stroke-width: 2; }
+.figure .seg { fill: none; stroke: var(--accent); stroke-width: 3; }
+.figure .pt { fill: var(--accent); stroke: #fff; stroke-width: 2; }
+.figure text { font-size: 15px; font-weight: 700; fill: var(--ink); paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+.figure text.tick { font-size: 11px; font-weight: 500; fill: var(--muted); stroke-width: 3px; }
+.figure text.vlbl { font-size: 14px; fill: var(--accent); }

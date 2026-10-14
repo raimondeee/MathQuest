@@ -1,5 +1,6 @@
 import type { Subject } from './types'
 import { validateSubject } from './grader.js'
+import { checkFigure } from './figdata.js'
 import geometry from './content/geometry.json'
 import statistics from './content/statistics.json'
 import expressions from './content/expressions.json'
@@ -21,6 +22,15 @@ export const SUBJECTS: Subject[] = []
 for (const raw of [geometry, statistics, expressions, numberSystem, ratios] as unknown[]) {
   const { subject, warnings } = validateSubject(raw)
   warnings.forEach((w) => console.warn(`[content] ${(raw as { id?: string })?.id ?? '?'}: ${w}`))
-  if (subject) SUBJECTS.push(subject)
+  if (!subject) continue
+  // Drop figures whose labels don't match their prompt (never show a wrong diagram).
+  const fig = (o: { prompt: string; figure?: unknown }, where: string) => {
+    if (!o.figure) return
+    const err = checkFigure(o.figure, o.prompt)
+    if (err) { console.warn(`[content] ${subject.id} ${where}: figure dropped (${err})`); delete o.figure }
+  }
+  subject.questions.forEach((q) => fig(q, q.id))
+  subject.topics.forEach((t) => t.examples.forEach((e, i) => fig(e, `${t.id} example ${i + 1}`)))
+  SUBJECTS.push(subject)
 }
 export const subjectById = (id: string) => SUBJECTS.find((s) => s.id === id)

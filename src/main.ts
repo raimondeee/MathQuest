@@ -4,6 +4,7 @@ import { SUBJECTS, subjectById, meta } from './content'
 import { grade } from './grader.js'
 import { renderMarkdown, esc } from './markdown'
 import { icon } from './icons'
+import { renderFigure } from './figures'
 import * as G from './game'
 
 const app = document.getElementById('app')!
@@ -105,7 +106,7 @@ function examplesView(s: Subject, tid: string) {
   app.innerHTML = header('Worked Examples', `/s/${s.id}`, m.color) + `<main style="--accent:${m.color};--soft:${m.soft}">
     <p class="muted">${esc(t.title)} — tap to reveal each step.</p>
     ${t.examples.map((e, i) => `<article class="card example" data-i="${i}" data-shown="0">
-      <div class="ex-prompt"><b>Example ${i + 1}.</b> ${esc(e.prompt)}</div>
+      <div class="ex-prompt"><b>Example ${i + 1}.</b> ${esc(e.prompt)}</div>${renderFigure(e.figure)}
       <ol class="steps">${e.steps.map((st) => `<li hidden>${esc(st)}</li>`).join('')}</ol>
       <div class="ex-answer" hidden>Answer: <b>${esc(e.answer)}</b></div>
       <button class="btn reveal">Show step 1</button></article>`).join('') || '<p>No examples yet.</p>'}
@@ -146,7 +147,7 @@ function renderRun() {
     <div class="meter"><div style="width:${(r.i / r.qs.length) * 100}%"></div></div>
     <article class="card question">
       <div class="muted small">${esc(topic?.title ?? '')}</div>
-      <div class="q-prompt">${esc(q.prompt)}</div>
+      <div class="q-prompt">${esc(q.prompt)}</div>${renderFigure(q.figure)}
       ${q.type === 'mc'
         ? `<div class="choices">${(q.choices ?? []).map((c, i) => `<button class="choice" data-i="${i}"><span class="letter">${'ABCDEFGH'[i]}</span>${esc(c)}</button>`).join('')}</div>`
         : `<form class="num-form" autocomplete="off"><input class="num" type="text" inputmode="decimal" enterkeyhint="done" placeholder="Type your answer" aria-label="Answer" autocapitalize="off" spellcheck="false" />
@@ -262,6 +263,12 @@ function settingsView() {
 // ---------- router ----------
 function go(path: string) { location.hash = '#' + path }
 function route() {
+  try { routeInner() } catch (e) {
+    console.error('route failed', e)
+    app.innerHTML = header('MathQuest', '/') + `<main><article class="card"><h3>Oops — that page couldn't load.</h3><p class="muted">${esc((e as Error)?.message)}</p><a class="btn primary" href="#/" style="display:inline-grid;place-items:center">Back to the map</a></article></main>`
+  }
+}
+function routeInner() {
   const parts = (location.hash.replace(/^#\/?/, '') || '').split('/').filter(Boolean)
   window.scrollTo(0, 0)
   if (parts[0] === 's' && parts[1]) {
@@ -282,13 +289,20 @@ function route() {
 window.addEventListener('hashchange', route)
 route()
 
-// ---------- offline: service worker (production only) ----------
-// Skipped on file:// (double-click local build) — service workers can't run there.
+// ---------- offline: service worker (Pages/production only; never on file://) ----------
 if ('serviceWorker' in navigator && import.meta.env.PROD && location.protocol !== 'file:') {
-  window.addEventListener('load', () => navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch((e) => console.warn('SW failed', e)))
-  // Warm the cache with the hashed JS/CSS already loaded on this first visit.
-  navigator.serviceWorker.ready.then(() => caches.open('mathquest-v1')).then((c) => {
-    const urls = [location.href.split('#')[0], ...performance.getEntriesByType('resource').map((e) => e.name)].filter((u) => u.startsWith(location.origin))
-    return Promise.all(urls.map((u) => c.add(u).catch(() => undefined)))
-  }).catch(() => undefined)
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`, { updateViaCache: 'none' })
+      .then((reg) => reg.update())
+      .catch((e) => console.warn('SW failed', e))
+  })
+  // A new SW took over (new deploy): reload once so the page uses the new build.
+  // (Skipped on the very first install, when there was no previous controller.)
+  const hadController = !!navigator.serviceWorker.controller
+  let reloaded = false
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (reloaded || !hadController) return
+    reloaded = true
+    location.reload()
+  })
 }
