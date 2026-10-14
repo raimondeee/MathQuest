@@ -283,7 +283,8 @@ window.addEventListener('hashchange', route)
 route()
 
 // ---------- offline: service worker (production only) ----------
-if ('serviceWorker' in navigator && import.meta.env.PROD) {
+// Skipped on file:// (double-click local build) — service workers can't run there.
+if ('serviceWorker' in navigator && import.meta.env.PROD && location.protocol !== 'file:') {
   window.addEventListener('load', () => navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch((e) => console.warn('SW failed', e)))
   // Warm the cache with the hashed JS/CSS already loaded on this first visit.
   navigator.serviceWorker.ready.then(() => caches.open('mathquest-v1')).then((c) => {

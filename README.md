@@ -14,6 +14,16 @@ npm run check        # verify every question's answer is gradable by the app gra
 npm run build        # dist/ with relative base (./)
 ```
 
+## Double-click local version (no server)
+
+Opening `index.html` over `file://` shows a white screen (module scripts and hashed assets need a server). Instead:
+
+```bash
+npm run build:local   # → ../MathQuest.html (one self-contained file: JS, CSS, all 5 content files, icons inlined)
+```
+
+Double-click `MathQuest.html` on Windows or Mac to open it in your browser. It makes no network requests, and the service worker is skipped on `file://`. Progress is saved **per browser**. Progress in the `file://` copy is kept separately from the GitHub Pages site (and from the iPad Home Screen app). Use Settings → Export/Import to move it between them.
+
 ## Deploy (GitHub Pages)
 
 ```bash
