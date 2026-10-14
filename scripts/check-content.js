@@ -17,6 +17,9 @@ for (const f of readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
   const fig = (o, where) => { if (!o.figure) return; figs++; const e = checkFigure(o.figure, o.prompt); if (e) warnings.push(`${where}: figure ${e}`) }
   for (const q of subject?.questions ?? []) fig(q, q.id)
   for (const t of subject?.topics ?? []) t.examples.forEach((e, i) => fig(e, `${t.id} example ${i + 1}`))
+  const notes = warnings.filter((w) => w.startsWith('(v2 note)'))
+  warnings.splice(0, warnings.length, ...warnings.filter((w) => !w.startsWith('(v2 note)')))
+  if (notes.length) console.log(`  ${f}: ${notes.length} v2 content notes (non-blocking; see npm run wire-v2)`)
   bad += warnings.length + (total - gradable)
   console.log(`${f}: ${gradable}/${total} gradable, threshold ${subject?.masteryThreshold}${figs ? `, ${figs} figures match prompt numbers` : ''}`)
   warnings.forEach((w) => console.log('  WARN', w))

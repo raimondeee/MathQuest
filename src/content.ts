@@ -21,7 +21,7 @@ export const meta = (id: string) => META[id] ?? FALLBACK
 export const SUBJECTS: Subject[] = []
 for (const raw of [geometry, statistics, expressions, numberSystem, ratios] as unknown[]) {
   const { subject, warnings } = validateSubject(raw)
-  warnings.forEach((w) => console.warn(`[content] ${(raw as { id?: string })?.id ?? '?'}: ${w}`))
+  warnings.filter((w) => !w.startsWith('(v2 note)')).forEach((w) => console.warn(`[content] ${(raw as { id?: string })?.id ?? '?'}: ${w}`))
   if (!subject) continue
   // Drop figures whose labels don't match their prompt (never show a wrong diagram).
   const fig = (o: { prompt: string; figure?: unknown }, where: string) => {

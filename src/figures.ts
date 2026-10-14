@@ -4,7 +4,7 @@ import type { Figure } from './types'
 
 type Pt = [number, number]
 const FONT = 15
-const fmtNum = (x: number, frac?: boolean) => {
+export const fmtNum = (x: number, frac?: boolean) => {
   const r = Math.round(x * 100) / 100
   if (frac) {
     const w = Math.trunc(r), f = Math.round((Math.abs(r - w)) * 100) / 100
@@ -14,7 +14,7 @@ const fmtNum = (x: number, frac?: boolean) => {
   return String(r)
 }
 
-class Svg {
+export class Svg {
   parts: string[] = []
   minX = Infinity; minY = Infinity; maxX = -Infinity; maxY = -Infinity
   grow(x: number, y: number, pad = 0) { this.minX = Math.min(this.minX, x - pad); this.maxX = Math.max(this.maxX, x + pad); this.minY = Math.min(this.minY, y - pad); this.maxY = Math.max(this.maxY, y + pad) }

@@ -9,7 +9,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview --host",
     "check": "node scripts/check-content.js",
-    "build:local": "tsc && vite build --mode singlefile && cp dist-local/index.html ../MathQuest.html && echo 'Wrote ../MathQuest.html'"
+    "build:local": "tsc && vite build --mode singlefile && cp dist-local/index.html ../MathQuest.html && echo 'Wrote ../MathQuest.html'",
+    "wire-v2": "node scripts/wire-v2.js"
   },
   "devDependencies": {
     "typescript": "~6.0.2",

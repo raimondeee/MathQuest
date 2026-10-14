@@ -1,3 +1,4 @@
+import { isV2Topic, validateV2Topic } from './v2check.js'
 // Pure grading/validation logic (plain JS so the node check script can import it).
 export function parseNumber(raw) {
   if (raw === null || raw === undefined) return NaN
@@ -47,7 +48,7 @@ export function validateSubject(raw) {
     const ok = t && typeof t.id === 'string' && typeof t.title === 'string'
     if (!ok) warnings.push(`topic #${i} malformed`)
     return ok
-  }).map((t) => ({
+  }).map((t, i) => (isV2Topic(t) ? cleanV2(t, i, warnings) : {
     ...t,
     ccss: str(t.ccss), // some files use an array of standards, e.g. ["6.RP.A.1"]
     lesson: str(t.lesson),
@@ -55,6 +56,7 @@ export function validateSubject(raw) {
       ? t.examples.filter((e) => e && typeof e.prompt === 'string' && Array.isArray(e.steps)).map((e) => ({ ...e, steps: e.steps.map(str), answer: str(e.answer) }))
       : [],
   }))
+
   const ids = new Set(topics.map((t) => t.id))
   const questions = raw.questions.filter((q, i) => {
     const err = validateQuestion(q, ids)
@@ -63,4 +65,17 @@ export function validateSubject(raw) {
   }).map((q) => ({ ...q, explanation: str(q.explanation), choices: q.choices ? q.choices.map(str) : undefined }))
   const mt = typeof raw.masteryThreshold === 'number' && raw.masteryThreshold > 0 && raw.masteryThreshold <= 1 ? raw.masteryThreshold : 0.8
   return { subject: { id: raw.id, title: raw.title || raw.id, masteryThreshold: mt, topics, questions }, warnings }
+}
+
+/** Keep a v2 topic, dropping only the parts that fail validation (with console warnings). */
+function cleanV2(t, i, warnings) {
+  const { errors, warnings: w } = validateV2Topic(t, i)
+  w.forEach((x) => warnings.push(`(v2 note) ${x}`))
+  const bad = (re) => errors.some((e) => re.test(e))
+  const out = { ...t, ccss: str(t.ccss), lesson: '', v2: true }
+  if (bad(/\.learn\./) || !t.learn) { if (t.learn) warnings.push(`topic ${t.id}: learn dropped`); out.learn = undefined }
+  out.examples = (Array.isArray(t.examples) ? t.examples : []).filter((_, j) => !bad(new RegExp(`\\.examples\\[${j}\\]`)))
+  out.guided = (Array.isArray(t.guided) ? t.guided : []).filter((_, j) => !bad(new RegExp(`\\.guided\\[${j}\\]`)))
+  errors.forEach((e) => warnings.push(`(v2) ${e} → skipped`))
+  return out
 }

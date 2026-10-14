@@ -13,9 +13,11 @@ export interface Progress {
   perfectQuizzes: number
   tests: number
   totalCorrect: number
+  v2: Record<string, V2State> // key: subjectId/topicId
 }
+export interface V2State { level: 0 | 1 | 2; streak: number; learned?: boolean; watched?: boolean; guidedDone: number; guidedClean: number }
 const KEY = 'mathquest.progress.v1'
-export const blank = (): Progress => ({ version: 1, xp: 0, topics: {}, seen: {}, badges: {}, streak: { count: 0, best: 0, last: null }, quizzes: 0, perfectQuizzes: 0, tests: 0, totalCorrect: 0 })
+export const blank = (): Progress => ({ version: 1, xp: 0, topics: {}, seen: {}, badges: {}, streak: { count: 0, best: 0, last: null }, quizzes: 0, perfectQuizzes: 0, tests: 0, totalCorrect: 0, v2: {} })
 
 export let P: Progress = load()
 function load(): Progress {
@@ -27,7 +29,7 @@ export function sanitize(x: unknown): Progress {
   if (!x || typeof x !== 'object') throw new Error('Not a MathQuest progress file')
   const o = x as Partial<Progress>
   if (typeof o.xp !== 'number' || typeof o.topics !== 'object') throw new Error('Not a MathQuest progress file')
-  return { ...b, ...o, streak: { ...b.streak, ...(o.streak || {}) }, version: 1 }
+  return { ...b, ...o, streak: { ...b.streak, ...(o.streak || {}) }, v2: { ...(o.v2 || {}) }, version: 1 }
 }
 export function save() { try { localStorage.setItem(KEY, JSON.stringify(P)) } catch (e) { console.warn(e) } }
 export function replace(p: Progress) { P = p; save() }
@@ -83,8 +85,11 @@ export function allBadges(): Badge[] {
     ...[3, 7, 14, 30].map((n) => ({ id: `streak-${n}`, name: `${n}-Day Streak`, desc: `Practice ${n} days in a row`, icon: '🔥' })),
     ...[5, 10].map((n) => ({ id: `level-${n}`, name: `Level ${n}`, desc: `Reach level ${n}`, icon: '🚀' })),
     { id: 'first-topic', name: 'Topic Master', desc: 'Master any topic', icon: '🏅' },
+    { id: 'learn-watch', name: 'Ready to Try', desc: 'Finish Learn and Watch for a topic', icon: '👀' },
+    { id: 'first-guided', name: 'Guided Explorer', desc: 'Finish your first guided problem', icon: '🧭' },
     { id: 'explorer', name: 'Explorer', desc: 'Answer a question in every world', icon: '🗺️' },
   ]
+  for (const s of SUBJECTS) for (const t of s.topics) if (t.v2) b.push({ id: `topic-master:${s.id}/${t.id}`, name: `Topic Master: ${t.title}`, desc: `Score ${Math.round(s.masteryThreshold * 100)}%+ over 10+ practice questions in ${t.title}`, icon: '🏅' })
   for (const s of SUBJECTS) b.push({ id: `subject-${s.id}`, name: `${s.title} Master`, desc: `Master every topic in ${s.title}`, icon: '👑' })
   return b
 }
@@ -105,6 +110,9 @@ export function checkBadges(): Badge[] {
   has('first-topic', SUBJECTS.some((s) => s.topics.some((t) => topicMastered(s, t.id))))
   has('explorer', SUBJECTS.every((s) => s.topics.some((t) => topicStat(s.id, t.id).attempts > 0)))
   for (const s of SUBJECTS) has(`subject-${s.id}`, subjectMastered(s))
+  for (const s of SUBJECTS) for (const t of s.topics) if (t.v2) has(`topic-master:${s.id}/${t.id}`, topicMastered(s, t.id))
+  has('learn-watch', Object.values(P.v2).some((v) => v.learned && v.watched))
+  has('first-guided', Object.values(P.v2).some((v) => v.guidedDone > 0))
   return earned
 }
 
@@ -136,3 +144,36 @@ export function pick(sub: Subject, qs: Question[], n: number): Question[] {
   return qs.map((q) => ({ q, r: (P.seen[`${sub.id}/${q.id}`] ?? 0) + Math.random() * 1.5 }))
     .sort((a, b) => a.r - b.r).slice(0, n).map((x) => x.q).sort(() => Math.random() - 0.5)
 }
+
+// ---- v2 (Learn → Watch → Guided) ----
+export function v2State(s: string, t: string): V2State {
+  const k = tkey(s, t)
+  if (!P.v2[k]) P.v2[k] = { level: 0, streak: 0, guidedDone: 0, guidedClean: 0 }
+  return P.v2[k]
+}
+function v2Commit(before: number): AnswerResult {
+  const after = levelInfo().level
+  const badges = checkBadges(); save()
+  return { xp: 0, levelUp: after > before ? after : null, badges }
+}
+export function markLearned(s: string, t: string) { const b = levelInfo().level; v2State(s, t).learned = true; return v2Commit(b) }
+export function markWatched(s: string, t: string) { const b = levelInfo().level; v2State(s, t).watched = true; return v2Commit(b) }
+/** XP for a correct guided step: 10 first try without hint, 5 after a hint; final-answer-only mode doubles it. */
+export function recordGuidedStep(s: string, t: string, usedHint: boolean, finalOnly: boolean): AnswerResult {
+  const b = levelInfo().level
+  const xp = (usedHint ? 5 : 10) * (finalOnly ? 2 : 1)
+  P.xp += xp; touchStreak(); v2State(s, t)
+  const r = v2Commit(b); r.xp = xp; return r
+}
+/** Scaffolding fade: 2 clean problems in a row → less support; needing a worked step → more support. */
+export function finishGuidedProblem(s: string, t: string, clean: boolean, neededWorked: boolean): AnswerResult & { level: number; changed: -1 | 0 | 1 } {
+  const b = levelInfo().level
+  const st = v2State(s, t)
+  st.guidedDone++
+  let changed: -1 | 0 | 1 = 0
+  if (neededWorked) { st.streak = 0; if (st.level > 0) { st.level = (st.level - 1) as 0 | 1; changed = -1 } }
+  else if (clean) { st.guidedClean++; st.streak++; if (st.streak >= 2 && st.level < 2) { st.level = (st.level + 1) as 1 | 2; st.streak = 0; changed = 1 } }
+  else st.streak = 0
+  return { ...v2Commit(b), level: st.level, changed }
+}
+export function setLevel(s: string, t: string, level: 0 | 1 | 2) { v2State(s, t).level = level; v2State(s, t).streak = 0; save() }

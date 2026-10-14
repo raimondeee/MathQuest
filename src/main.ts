@@ -5,6 +5,7 @@ import { grade } from './grader.js'
 import { renderMarkdown, esc } from './markdown'
 import { icon } from './icons'
 import { renderFigure } from './figures'
+import { topicV2 } from './pilot'
 import * as G from './game'
 
 const app = document.getElementById('app')!
@@ -83,9 +84,12 @@ function subjectView(s: Subject) {
         <div class="topic-head"><div><div class="topic-title">${done ? icon('check', 20) : ''} ${esc(t.title)}</div>
         <div class="muted small">${t.ccss ? esc(t.ccss) + ' · ' : ''}${st.attempts} tries · ${n} questions</div></div>
         <div class="ring" style="--p:${p * 100}"><span>${pctTxt(p)}</span></div></div>
-        <div class="topic-actions">
+        <div class="topic-actions">${t.v2 ? `
+          <a class="pill solid" href="#/s/${s.id}/t/${t.id}/learn">${icon('book', 20)} ${G.v2State(s.id, t.id).learned ? 'Lesson' : 'Start lesson'}</a>
+          <a class="pill" href="#/s/${s.id}/t/${t.id}/watch">${icon('bulb', 20)} Watch</a>
+          <a class="pill" href="#/s/${s.id}/t/${t.id}/guided">${icon('target', 20)} Guided</a>` : `
           <a class="pill" href="#/s/${s.id}/t/${t.id}/lesson">${icon('book', 20)} Lesson</a>
-          <a class="pill" href="#/s/${s.id}/t/${t.id}/examples">${icon('bulb', 20)} Examples</a>
+          <a class="pill" href="#/s/${s.id}/t/${t.id}/examples">${icon('bulb', 20)} Examples</a>`}
           ${n ? `<a class="pill solid" href="#/run/practice/${s.id}/${t.id}">${icon('target', 20)} Practice</a>` : ''}
         </div></article>`
     }).join('')}</section></main>`
@@ -273,7 +277,14 @@ function routeInner() {
   window.scrollTo(0, 0)
   if (parts[0] === 's' && parts[1]) {
     const s = subjectById(parts[1]); if (!s) return go('/')
-    if (parts[2] === 't' && parts[3]) return parts[4] === 'examples' ? examplesView(s, parts[3]) : lessonView(s, parts[3])
+    if (parts[2] === 't' && parts[3]) {
+      const t = s.topics.find((x) => x.id === parts[3])
+      if (t?.v2) {
+        const tab = (['learn', 'watch', 'guided'] as const).find((x) => x === parts[4]) ?? (parts[4] === 'examples' ? 'watch' : 'learn')
+        return topicV2({ app, header, announceResult }, s, t, tab)
+      }
+      return parts[4] === 'examples' ? examplesView(s, parts[3]) : lessonView(s, parts[3])
+    }
     return subjectView(s)
   }
   if (parts[0] === 'run' && parts[2]) {
