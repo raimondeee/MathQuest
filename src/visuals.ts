@@ -1,6 +1,6 @@
 // Parametric SVG visuals for v2 lessons (fractionBars, numberLine, areaModel, placeValue, coordPlane).
 // Unknown kinds render nothing. Shares drawing helpers/style with figures.ts.
-import type { Visual } from './types'
+import type { Visual, Figure } from './types'
 import { Svg } from './figures'
 import { renderFigure } from './figures'
 
@@ -29,7 +29,11 @@ export function renderVisual(v: Visual | undefined): string {
   } catch (e) { console.warn('visual failed', v, e); return '' }
 }
 
+/** Geometry shapes from figures.ts usable as v2 visuals: {kind:'figure', figure:{...}} or the shape kind directly. */
+export const FIGURE_KINDS = ['triangle', 'rect', 'parallelogram', 'trapezoid', 'house', 'lshape', 'hexagon', 'prism', 'prismBase', 'triPrism', 'cubeNet', 'pyramidNet', 'coord']
 function draw(v: Visual): string | null {
+  if (v.kind === 'figure' && v.figure && typeof v.figure === 'object') return renderFigure(v.figure as Figure).replace(/^<div class="figure-wrap">|<\/div>$/g, '') || null
+  if (FIGURE_KINDS.includes(v.kind)) return renderFigure(v as unknown as Figure).replace(/^<div class="figure-wrap">|<\/div>$/g, '') || null
   const S = new Svg()
   switch (v.kind) {
     case 'fractionBars': {
@@ -79,9 +83,37 @@ function draw(v: Visual): string | null {
         S.line([X(x), -7], [X(x), 7], 'tickline')
         if (!marks.length && ticks <= 20) S.text([X(x), 22], nice(x), 'middle', 'tick')
       }
-      for (const m of marks) { S.line([X(n(m.at)), -11], [X(n(m.at)), 11], 'axis'); S.text([X(n(m.at)), 24], String(m.label ?? nice(n(m.at))), 'middle') }
+      // Mark labels: "○ 3"/"● 6" → open/closed inequality circle; "3 ●●●" → dot-plot stack; else text
+      // (staggered onto a second row when labels would collide).
+      let lastX = -1e9, row = 0
+      for (const m of [...marks].sort((a, b) => n(a.at) - n(b.at))) {
+        const x = X(n(m.at)), raw = String(m.label ?? nice(n(m.at))).trim()
+        let lab = raw, mm
+        if ((mm = raw.match(/^([○●])\s*(.*)$/))) {
+          lab = mm[2]
+          S.circle([x, 0], 7, mm[1] === '●' ? 'ineq-on' : 'ineq-off')
+        } else if ((mm = raw.match(/^(.*?)\s*(●+)$/))) {
+          lab = mm[1]
+          for (let k = 0; k < mm[2].length; k++) S.circle([x, -16 - k * 15], 6, 'dot')
+        } else S.line([x, -11], [x, 11], 'axis')
+        if (!lab) continue
+        const w = lab.length * 8.5
+        row = x - lastX < w + 6 && row === 0 ? 1 : 0
+        if (row === 0) lastX = x
+        S.text([x, 24 + row * 18], lab, 'middle')
+      }
       for (const j of (v.jumps as { from: number; to: number; label?: string }[] | undefined) ?? []) {
         const a = X(n(j.from)), b = X(n(j.to)), hgt = Math.min(46, 12 + Math.abs(b - a) * 0.35)
+        const edge = [min, max].some((e) => Math.abs(n(j.to) - e) < 1e-9) && marks.some((m) => /^[○●]/.test(String(m.label ?? '')))
+        if (edge) { // inequality solution ray: thick bar along the axis with an arrowhead at the edge
+          const dir = b > a ? 1 : -1
+          S.line([a, 0], [b + dir * 14, 0], 'ray')
+          S.poly([[b + dir * 14, -8], [b + dir * 26, 0], [b + dir * 14, 8]], 'ray-head')
+          const cm = marks.find((m) => Math.abs(n(m.at) - n(j.from)) < 1e-9 && /^[○●]/.test(String(m.label ?? '')))
+          if (cm) S.circle([a, 0], 7, String(cm.label).startsWith('●') ? 'ineq-on' : 'ineq-off') // keep circle on top
+          if (j.label) S.text([(a + b) / 2, -18], String(j.label), 'middle', 'grp')
+          continue
+        }
         S.parts.push(`<path class="jump" d="M${a.toFixed(1)},-2 Q${((a + b) / 2).toFixed(1)},${(-hgt * 2).toFixed(1)} ${b.toFixed(1)},-2"/>`)
         S.poly([[b - 5, -9], [b, -2], [b + 1, -10]], 'jump', false)
         S.grow(a, -hgt - 4); S.grow(b, -hgt - 4)
@@ -102,7 +134,9 @@ function draw(v: Visual): string | null {
       if (lab.cols && !lab.top) lab.top = lab.cols // Carl's format: {rows:'12', cols:'2 + 3'}
       if (lab.rows && !lab.left) lab.left = lab.rows
       if (Array.isArray(v.labels)) { lab.top = (v.labels as string[])[0]; lab.left = (v.labels as string[])[1] }
-      if (lab.top) S.text([(sc ? sc * c : cols * c) / 2, -14], String(lab.top))
+      const topParts = String(lab.top ?? '').split(/\s*\+\s*/).filter(Boolean)
+      if (topParts.length === cols && cols > 1) topParts.forEach((t, k) => S.text([(k + 0.5) * c, -14], t)) // e.g. 3(x + 4): "x" | "4"
+      else if (lab.top) S.text([(sc ? sc * c : cols * c) / 2, -14], String(lab.top))
       if (lab.left) S.text([-10, (sr ? sr * c : rows * c) / 2], String(lab.left), 'end')
       if (lab.right) S.text([cols * c + 10, (rows * c) / 2], String(lab.right), 'start')
       if (lab.bottom) S.text([(cols * c) / 2, rows * c + 16], String(lab.bottom))

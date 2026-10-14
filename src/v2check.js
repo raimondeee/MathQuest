@@ -1,15 +1,17 @@
 // v2 ("Learn → Watch → Guided") topic schema: validation + step-input grading.
 // Plain JS so scripts/ (node) and the app share it.
-import { parseNumber } from './grader.js'
+import { parseNumber, unglyph } from './grader.js'
+import { checkFigure } from './figdata.js'
 
-export const VISUAL_KINDS = ['fractionBars', 'numberLine', 'areaModel', 'placeValue', 'coordPlane']
+export const FIGURE_KINDS = ['triangle', 'rect', 'parallelogram', 'trapezoid', 'house', 'lshape', 'hexagon', 'prism', 'prismBase', 'triPrism', 'cubeNet', 'pyramidNet', 'coord']
+export const VISUAL_KINDS = ['fractionBars', 'numberLine', 'areaModel', 'placeValue', 'coordPlane', 'figure', ...FIGURE_KINDS]
 export const isV2Topic = (t) => !!t && (t.learn != null || t.guided != null)
 
 /** Parse "a/b", "-a/b", "1 1/2" (mixed), integers, decimals → {n, d, value} or null. */
 export function parseFraction(raw) {
   if (raw === null || raw === undefined) return null
   if (typeof raw === 'number') return Number.isFinite(raw) ? { n: raw, d: 1, value: raw, plain: true } : null
-  const s = String(raw).trim().replace(/[\u2212\u2012\u2013\u2014\uFE63\uFF0D]/g, '-').replace(/\u2044|÷/g, '/').replace(/\s+/g, ' ')
+  const s = unglyph(raw).trim().replace(/[\u2212\u2012\u2013\u2014\uFE63\uFF0D]/g, '-').replace(/\u2044|÷/g, '/').replace(/\s+/g, ' ')
   let m
   if ((m = s.match(/^(-?)(\d+) (\d+)\s*\/\s*(\d+)$/))) {
     const d = Number(m[4]); if (!d) return null
@@ -63,11 +65,18 @@ export function fmtFrac(f) {
 
 // ---------- validation ----------
 const isStr = (v) => typeof v === 'string' && v.trim().length > 0
-function checkVisual(v, at, errs, warns) {
+function checkVisual(v, at, errs, warns, ctx = '') {
   if (v == null) return
   if (typeof v !== 'object' || !isStr(v.kind)) { errs.push(`${at}.visual: missing kind`); return }
   if (!VISUAL_KINDS.includes(v.kind)) { warns.push(`${at}.visual: unknown kind "${v.kind}" (will not render)`); return }
   const num = (k, opt) => { if (v[k] === undefined) { if (!opt) errs.push(`${at}.visual(${v.kind}).${k} missing`) } else if (typeof v[k] !== 'number' || !Number.isFinite(v[k])) errs.push(`${at}.visual(${v.kind}).${k} not a number: ${JSON.stringify(v[k])}`) }
+  if (v.kind === 'figure' || FIGURE_KINDS.includes(v.kind)) {
+    const f = v.kind === 'figure' ? v.figure : v
+    if (!f || typeof f !== 'object' || !FIGURE_KINDS.includes(f.kind)) { errs.push(`${at}.visual(figure): figure.kind must be one of ${FIGURE_KINDS.join(', ')}`); return }
+    const e = checkFigure(f, ctx)
+    if (e) (e.startsWith('label') ? warns : errs).push(`${at}.visual(figure ${f.kind}): ${e}${e.startsWith('label') ? ' (not found in the surrounding text)' : ''}`)
+    return
+  }
   switch (v.kind) {
     case 'fractionBars':
       num('wholes'); num('parts'); num('shaded', true)
@@ -111,7 +120,7 @@ export function validateV2Topic(t, idx = 0) {
   if (!t?.ccss) warns.push(`${at}.ccss missing`)
   // learn
   if (!t.learn || !Array.isArray(t.learn.sections) || !t.learn.sections.length) errs.push(`${at}.learn.sections missing/empty`)
-  else t.learn.sections.forEach((s, i) => { if (!isStr(s?.text)) errs.push(`${at}.learn.sections[${i}].text missing`); checkVisual(s?.visual, `${at}.learn.sections[${i}]`, errs, warns) })
+  else t.learn.sections.forEach((s, i) => { if (!isStr(s?.text)) errs.push(`${at}.learn.sections[${i}].text missing`); checkVisual(s?.visual, `${at}.learn.sections[${i}]`, errs, warns, s?.text) })
   if (t.learn && !isStr(t.learn.keyIdea)) errs.push(`${at}.learn.keyIdea missing`)
   if (t.learn && !t.learn.sections?.some((s) => s?.visual)) warns.push(`${at}.learn has no visual`)
   // examples
@@ -120,13 +129,13 @@ export function validateV2Topic(t, idx = 0) {
     const p = `${at}.examples[${i}]`
     for (const k of ['title', 'prompt', 'check', 'answer']) if (!isStr(e?.[k]) && typeof e?.[k] !== 'number') errs.push(`${p}.${k} missing`)
     if (!e?.mistake) warns.push(`${p}.mistake missing`)
-    checkVisual(e?.visual, p, errs, warns)
+    checkVisual(e?.visual, p, errs, warns, [e?.prompt, ...(e?.steps ?? []).map((x) => x?.do)].join(' '))
     if (!Array.isArray(e?.steps) || !e.steps.length) errs.push(`${p}.steps missing/empty`)
     else e.steps.forEach((s, j) => {
       if (typeof s === 'string') { errs.push(`${p}.steps[${j}] is a string; v2 needs {do, why}`); return }
       if (!isStr(s?.do)) errs.push(`${p}.steps[${j}].do missing`)
       if (!isStr(s?.why)) errs.push(`${p}.steps[${j}].why missing`)
-      checkVisual(s?.visual, `${p}.steps[${j}]`, errs, warns)
+      checkVisual(s?.visual, `${p}.steps[${j}]`, errs, warns, `${s?.do} ${e?.prompt}`)
     })
   })
   // guided
@@ -135,7 +144,7 @@ export function validateV2Topic(t, idx = 0) {
     const p = `${at}.guided[${i}]`
     if (!isStr(g?.prompt)) errs.push(`${p}.prompt missing`)
     if (g?.answer === undefined || g?.answer === '') errs.push(`${p}.answer missing`)
-    checkVisual(g?.visual, p, errs, warns)
+    checkVisual(g?.visual, p, errs, warns, [g?.prompt, ...(g?.steps ?? []).map((x) => `${x?.do} ${x?.worked}`)].join(' '))
     if (!Array.isArray(g?.steps) || !g.steps.length) errs.push(`${p}.steps missing/empty`)
     else {
       g.steps.forEach((s, j) => {

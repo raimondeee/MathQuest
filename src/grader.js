@@ -1,9 +1,15 @@
 import { isV2Topic, validateV2Topic } from './v2check.js'
 // Pure grading/validation logic (plain JS so the node check script can import it).
+const VG = { '½': '1/2', '⅓': '1/3', '⅔': '2/3', '¼': '1/4', '¾': '3/4', '⅕': '1/5', '⅖': '2/5', '⅗': '3/5', '⅘': '4/5', '⅙': '1/6', '⅚': '5/6', '⅐': '1/7', '⅛': '1/8', '⅜': '3/8', '⅝': '5/8', '⅞': '7/8', '⅑': '1/9', '⅒': '1/10' }
+/** "2½" → "2 1/2", "½" → "1/2" */
+export const unglyph = (s) => String(s).replace(/(\d)?([½⅓⅔¼¾⅕⅖⅗⅘⅙⅚⅐⅛⅜⅝⅞⅑⅒])/g, (_, d, g) => (d ? d + ' ' : '') + VG[g])
+
 export function parseNumber(raw) {
   if (raw === null || raw === undefined) return NaN
-  let s = String(raw).trim().replace(/[\u2212\u2012\u2013\u2014\uFE63\uFF0D]/g, '-').replace(/,/g, '').replace(/\s+/g, '')
+  let s = unglyph(raw).trim().replace(/[\u2212\u2012\u2013\u2014\uFE63\uFF0D]/g, '-').replace(/,/g, '').replace(/\s+/g, '')
   if (s === '') return NaN
+  const mixed = String(unglyph(raw)).trim().replace(/[\u2212]/g, '-').match(/^(-?)(\d+)\s+(\d+)\/(\d+)$/)
+  if (mixed) return (mixed[1] ? -1 : 1) * (Number(mixed[2]) + Number(mixed[3]) / Number(mixed[4]))
   const frac = s.match(/^(-?)(\d+)\/(\d+)$/)
   if (frac) return (frac[1] ? -1 : 1) * Number(frac[2]) / Number(frac[3])
   if (!/^[-+]?(\d+\.?\d*|\.\d+)$/.test(s)) return NaN

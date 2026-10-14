@@ -6,53 +6,302 @@
       "id": "area-triangles",
       "title": "Triangle Treasure: Area of Triangles",
       "ccss": "6.G.A.1",
-      "lesson": "**Every triangle is half of a rectangle or parallelogram!**\n\n- Area = ½ × base × height\n- The *height* goes straight up from the base at a square corner (not along a slanted side).\n- For a right triangle, the two legs are the base and height.\n\nYou've got this! 🎯",
+      "learn": {
+        "sections": [
+          {
+            "text": "Every triangle is **half of a rectangle or parallelogram**.\n\nThis right triangle has legs 6 cm and 4 cm. It fits inside a 6 by 4 rectangle with area 24 cm², so the triangle's area is **12 cm²**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "triangle",
+                "base": 6,
+                "height": 4,
+                "right": true,
+                "unit": "cm"
+              }
+            }
+          },
+          {
+            "text": "For any triangle, use **A = ½ × b × h**.\n\nThe height goes straight up from the base at a square corner. A triangle with base 10 m and height 5 m has area ½ × 10 × 5 = **25 m²**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "triangle",
+                "base": 10,
+                "height": 5,
+                "unit": "m"
+              }
+            }
+          },
+          {
+            "text": "Some triangles lean so far that the height lands **outside** the triangle. That's okay!\n\nThis one has base 4 in and height 6 in, so its area is still ½ × 4 × 6 = **12 in²**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "triangle",
+                "base": 4,
+                "height": 6,
+                "obtuse": true,
+                "unit": "in"
+              }
+            }
+          }
+        ],
+        "keyIdea": "Triangle area = ½ × base × height, where the height is straight up from the base."
+      },
       "examples": [
         {
-          "prompt": "Right triangle with legs 6 cm and 4 cm. Area?",
+          "title": "Half of a rectangle",
+          "prompt": "A right triangle has legs 6 cm and 4 cm. What is its area in square centimeters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "triangle",
+              "base": 6,
+              "height": 4,
+              "right": true,
+              "unit": "cm"
+            }
+          },
           "steps": [
-            "Picture a 6 × 4 rectangle: 24 cm².",
-            "The triangle is half of it.",
-            "24 ÷ 2 = 12"
+            {
+              "do": "Picture a 6 cm by 4 cm rectangle around the triangle: 6 × 4 = 24.",
+              "why": "The two legs of a right triangle are the sides of a rectangle.",
+              "rule": "Rectangle: A = l × w"
+            },
+            {
+              "do": "Cut the rectangle in half along the slanted side: 24 ÷ 2 = 12.",
+              "why": "The slanted side splits the rectangle into two matching triangles.",
+              "rule": "Triangle: A = ½ × b × h"
+            }
           ],
-          "answer": "12 cm²",
-          "figure": {
-            "kind": "triangle",
-            "base": 6,
-            "height": 4,
-            "right": true,
-            "unit": "cm"
-          }
+          "check": "Two triangles of 12 make 24, the full rectangle. ✅",
+          "mistake": "Don't forget to divide by 2, or you get the rectangle's area instead.",
+          "answer": "12"
         },
         {
-          "prompt": "Triangle with base 10 in and height 5 in. Area?",
+          "title": "A leaning triangle",
+          "prompt": "An obtuse triangle has base 7 in and height 6 in (the height falls outside the triangle). What is its area in square inches?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "triangle",
+              "base": 7,
+              "height": 6,
+              "obtuse": true,
+              "unit": "in"
+            }
+          },
           "steps": [
-            "A = ½ × b × h",
-            "½ × 10 × 5 = 25"
+            {
+              "do": "Use the base 7 and the height 6, not a slanted side.",
+              "why": "The height must be straight up and down from the base line.",
+              "rule": "Height ⟂ base"
+            },
+            {
+              "do": "Multiply: 7 × 6 = 42.",
+              "why": "Base times height gives the area of the matching parallelogram.",
+              "rule": "A = b × h (parallelogram)"
+            },
+            {
+              "do": "Halve it: 42 ÷ 2 = 21.",
+              "why": "A triangle is half of that parallelogram.",
+              "rule": "Triangle: A = ½ × b × h"
+            }
           ],
-          "answer": "25 in²",
-          "figure": {
-            "kind": "triangle",
-            "base": 10,
-            "height": 5,
-            "unit": "in"
-          }
+          "check": "½ × 7 × 6 = 21. ✅",
+          "mistake": "Measuring along a slanted side instead of the straight-up height makes the answer too big.",
+          "answer": "21"
         },
         {
-          "prompt": "A triangle has area 24 m² and base 8 m. Height?",
+          "title": "Working backward",
+          "prompt": "A triangle has area 24 m² and base 8 m. What is its height in meters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "triangle",
+              "base": 8,
+              "height": 6,
+              "unknown": "height",
+              "unit": "m"
+            }
+          },
           "steps": [
-            "24 = ½ × 8 × h",
-            "24 = 4 × h",
-            "h = 6"
+            {
+              "do": "Write the formula with what you know: 24 = ½ × 8 × h.",
+              "why": "Filling in the formula shows exactly which number is missing.",
+              "rule": "A = ½ × b × h"
+            },
+            {
+              "do": "½ × 8 = 4, so 24 = 4 × h.",
+              "why": "Taking half of the base first makes the equation simpler.",
+              "rule": "½ × b first"
+            },
+            {
+              "do": "Divide: 24 ÷ 4 = 6.",
+              "why": "Division undoes multiplication.",
+              "rule": "Undo × with ÷"
+            }
           ],
-          "answer": "6 m",
-          "figure": {
-            "kind": "triangle",
-            "base": 8,
-            "height": 6,
-            "unknown": "height",
-            "unit": "m"
-          }
+          "check": "½ × 8 × 6 = 24. ✅",
+          "mistake": "Don't stop at 24 ÷ 8; that forgets the ½ and gives a height that is too small.",
+          "answer": "6"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "A right triangle has legs 8 ft and 5 ft. What is its area in square feet?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "triangle",
+              "base": 8,
+              "height": 5,
+              "right": true,
+              "unit": "ft"
+            }
+          },
+          "steps": [
+            {
+              "do": "Find the area of the 8 by 5 rectangle.",
+              "why": "The triangle is exactly half of this rectangle.",
+              "input": {
+                "type": "number",
+                "answer": 40
+              },
+              "hint": "Multiply 8 × 5.",
+              "worked": "8 × 5 = 40."
+            },
+            {
+              "do": "Take half of 40.",
+              "why": "The slanted side cuts the rectangle into two equal triangles.",
+              "input": {
+                "type": "number",
+                "answer": 20
+              },
+              "hint": "Divide 40 by 2.",
+              "worked": "40 ÷ 2 = 20."
+            }
+          ],
+          "answer": 20
+        },
+        {
+          "prompt": "A triangle has base 9 cm and height 7 cm. What is its area in square centimeters? Type it as an improper fraction.",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "triangle",
+              "base": 9,
+              "height": 7,
+              "unit": "cm"
+            }
+          },
+          "steps": [
+            {
+              "do": "Multiply base × height: 9 × 7.",
+              "why": "This is the area of the matching parallelogram.",
+              "input": {
+                "type": "number",
+                "answer": 63
+              },
+              "hint": "Multiply the two numbers.",
+              "worked": "9 × 7 = 63."
+            },
+            {
+              "do": "Take half of 63.",
+              "why": "A triangle is half of a parallelogram.",
+              "input": {
+                "type": "fraction",
+                "answer": "63/2"
+              },
+              "hint": "Write 63 ÷ 2 as a fraction.",
+              "worked": "63 ÷ 2 = 63/2 = 31½."
+            }
+          ],
+          "answer": "63/2"
+        },
+        {
+          "prompt": "A house shape is a 10 ft by 6 ft rectangle with a triangle roof on top. The roof has base 10 ft and height 4 ft. What is the total area in square feet?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "house",
+              "w": 10,
+              "h": 6,
+              "roofBase": 10,
+              "roofHeight": 4,
+              "unit": "ft"
+            }
+          },
+          "steps": [
+            {
+              "do": "Find the rectangle's area: 10 × 6.",
+              "why": "Split the shape into pieces you know.",
+              "input": {
+                "type": "number",
+                "answer": 60
+              },
+              "hint": "Length times width.",
+              "worked": "10 × 6 = 60."
+            },
+            {
+              "do": "Find the roof's area: ½ × 10 × 4.",
+              "why": "The roof is a triangle.",
+              "input": {
+                "type": "number",
+                "answer": 20
+              },
+              "hint": "Multiply, then halve.",
+              "worked": "½ × 10 × 4 = 20."
+            },
+            {
+              "do": "Add the pieces: 60 + 20.",
+              "why": "The whole area is the sum of its parts.",
+              "input": {
+                "type": "number",
+                "answer": 80
+              },
+              "hint": "Add the two areas.",
+              "worked": "60 + 20 = 80."
+            }
+          ],
+          "answer": 80
+        },
+        {
+          "prompt": "A triangle has area 35 in² and base 10 in. What is its height in inches?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "triangle",
+              "base": 10,
+              "height": 7,
+              "unknown": "height",
+              "unit": "in"
+            }
+          },
+          "steps": [
+            {
+              "do": "Double the area: 2 × 35.",
+              "why": "Doubling undoes the ½ in the formula.",
+              "input": {
+                "type": "number",
+                "answer": 70
+              },
+              "hint": "Multiply by 2.",
+              "worked": "2 × 35 = 70."
+            },
+            {
+              "do": "Divide by the base: 70 ÷ 10.",
+              "why": "Base times height equals the doubled area.",
+              "input": {
+                "type": "number",
+                "answer": 7
+              },
+              "hint": "How many 10s make 70?",
+              "worked": "70 ÷ 10 = 7."
+            }
+          ],
+          "answer": 7
         }
       ]
     },
@@ -60,52 +309,319 @@
       "id": "area-quadrilaterals-polygons",
       "title": "Shape Shifter: Quadrilaterals & Polygons",
       "ccss": "6.G.A.1",
-      "lesson": "**Break big shapes into rectangles and triangles!**\n\n- Rectangle: A = l × w\n- Parallelogram: A = b × h (slide a triangle over to make a rectangle)\n- Trapezoid: A = ½ × (b₁ + b₂) × h\n- Tricky shape? *Compose* (add pieces) or *decompose* (cut and subtract).",
+      "learn": {
+        "sections": [
+          {
+            "text": "A **parallelogram** can become a rectangle: cut a triangle off one end and slide it to the other.\n\nThis one has base 8 m, height 5 m, and slanted side 6 m. Its area is 8 × 5 = **40 m²**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "parallelogram",
+                "base": 8,
+                "height": 5,
+                "side": 6,
+                "unit": "m"
+              }
+            }
+          },
+          {
+            "text": "A **trapezoid** has two parallel sides. Use **A = ½ × (b₁ + b₂) × h**.\n\nWith sides 6 in and 10 in and height 4 in: ½ × 16 × 4 = **32 in²**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "trapezoid",
+                "top": 6,
+                "bottom": 10,
+                "height": 4,
+                "unit": "in"
+              }
+            }
+          },
+          {
+            "text": "Tricky shape? **Compose** (add pieces) or **decompose** (cut and subtract).\n\nThis L shape is a 10 by 8 rectangle with a 4 by 3 corner missing: 80 − 12 = **68 square units**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "lshape",
+                "W": 10,
+                "H": 8,
+                "cutW": 4,
+                "cutH": 3
+              }
+            }
+          }
+        ],
+        "keyIdea": "Break any polygon into rectangles and triangles, then add (or subtract) their areas."
+      },
       "examples": [
         {
-          "prompt": "Parallelogram, base 9 ft, height 4 ft.",
+          "title": "Slide a parallelogram",
+          "prompt": "A parallelogram has base 9 ft, slanted side 5 ft, and height 4 ft. What is its area in square feet?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "parallelogram",
+              "base": 9,
+              "height": 4,
+              "side": 5,
+              "unit": "ft"
+            }
+          },
           "steps": [
-            "Slide the end triangle to make a rectangle.",
-            "9 × 4 = 36"
+            {
+              "do": "Pick the base 9 and the height 4; ignore the slanted side 5.",
+              "why": "Area needs the straight-up height, not the slanted side.",
+              "rule": "Use height, not side"
+            },
+            {
+              "do": "Multiply: 9 × 4 = 36.",
+              "why": "Cutting off a triangle and sliding it over makes a 9 by 4 rectangle.",
+              "rule": "Parallelogram: A = b × h"
+            }
           ],
-          "answer": "36 ft²",
-          "figure": {
-            "kind": "parallelogram",
-            "base": 9,
-            "height": 4,
-            "unit": "ft"
-          }
+          "check": "The rectangle made by sliding is 9 × 4 = 36. ✅",
+          "mistake": "Using the slanted side gives 9 × 5 = 45, which is too big.",
+          "answer": "36"
         },
         {
-          "prompt": "Trapezoid with parallel sides 4 cm and 8 cm, height 3 cm.",
+          "title": "Trapezoid trick",
+          "prompt": "A trapezoid has parallel sides 5 cm and 9 cm and height 6 cm. What is its area in square centimeters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "trapezoid",
+              "top": 5,
+              "bottom": 9,
+              "height": 6,
+              "unit": "cm"
+            }
+          },
           "steps": [
-            "Add the bases: 4 + 8 = 12",
-            "½ × 12 × 3 = 18"
+            {
+              "do": "Add the parallel sides: 5 + 9 = 14.",
+              "why": "Two copies of the trapezoid make a parallelogram with this long base.",
+              "rule": "b₁ + b₂"
+            },
+            {
+              "do": "Multiply by the height: 14 × 6 = 84.",
+              "why": "That is the area of the double-size parallelogram.",
+              "rule": "× h"
+            },
+            {
+              "do": "Halve it: 84 ÷ 2 = 42.",
+              "why": "We only want one trapezoid, which is half.",
+              "rule": "Trapezoid: A = ½ × (b₁ + b₂) × h"
+            }
           ],
-          "answer": "18 cm²",
-          "figure": {
-            "kind": "trapezoid",
-            "top": 4,
-            "bottom": 8,
-            "height": 3,
-            "unit": "cm"
-          }
+          "check": "½ × (5 + 9) × 6 = 42. ✅",
+          "mistake": "Don't multiply the two parallel sides together; add them first.",
+          "answer": "42"
         },
         {
-          "prompt": "L-shape: 10 by 6 rectangle with a 3 by 2 corner cut out.",
+          "title": "Hexagon pieces",
+          "prompt": "A regular hexagon splits into 6 equal triangles, each with base 6 m and height 5.2 m. What is the hexagon's area in square meters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "hexagon",
+              "side": 6,
+              "apothem": 5.2,
+              "unit": "m"
+            }
+          },
           "steps": [
-            "Big: 10 × 6 = 60",
-            "Cut: 3 × 2 = 6",
-            "60 − 6 = 54"
+            {
+              "do": "Find one triangle: ½ × 6 × 5.2 = 15.6.",
+              "why": "Decomposing turns a hard shape into easy triangles.",
+              "rule": "Decompose into triangles"
+            },
+            {
+              "do": "Multiply by 6: 6 × 15.6 = 93.6.",
+              "why": "All 6 triangles are the same size.",
+              "rule": "Total = 6 × one piece"
+            }
           ],
-          "answer": "54 square units",
-          "figure": {
-            "kind": "lshape",
-            "W": 10,
-            "H": 6,
-            "cutW": 3,
-            "cutH": 2
-          }
+          "check": "15.6 added 6 times is 93.6. ✅",
+          "mistake": "Don't forget the ½ for each triangle, or the answer doubles.",
+          "answer": "93.6"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "A rectangle is 7 cm long and 4 cm wide. What is its area in square centimeters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "rect",
+              "l": 7,
+              "w": 4,
+              "unit": "cm"
+            }
+          },
+          "steps": [
+            {
+              "do": "Which formula finds the area of a rectangle?",
+              "why": "Choosing the right formula is the first step.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "A = l + w",
+                  "A = l × w",
+                  "A = 2 × (l + w)",
+                  "A = ½ × l × w"
+                ]
+              },
+              "hint": "Area counts squares in rows and columns.",
+              "worked": "A = l × w."
+            },
+            {
+              "do": "Multiply 7 × 4.",
+              "why": "There are 7 squares in each of 4 rows.",
+              "input": {
+                "type": "number",
+                "answer": 28
+              },
+              "hint": "Multiply the length by the width.",
+              "worked": "7 × 4 = 28."
+            }
+          ],
+          "answer": 28
+        },
+        {
+          "prompt": "A parallelogram has base 12 in, slanted side 7 in, and height 5 in. What is its area in square inches?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "parallelogram",
+              "base": 12,
+              "height": 5,
+              "side": 7,
+              "unit": "in"
+            }
+          },
+          "steps": [
+            {
+              "do": "Which length is the height?",
+              "why": "The height is the straight-up distance, not the slanted side.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "12 in",
+                  "5 in",
+                  "7 in",
+                  "19 in"
+                ]
+              },
+              "hint": "Look for the length that makes a square corner with the base.",
+              "worked": "The height is 5 in."
+            },
+            {
+              "do": "Multiply base × height: 12 × 5.",
+              "why": "Sliding a triangle over turns it into a 12 by 5 rectangle.",
+              "input": {
+                "type": "number",
+                "answer": 60
+              },
+              "hint": "Use 12 and 5.",
+              "worked": "12 × 5 = 60."
+            }
+          ],
+          "answer": 60
+        },
+        {
+          "prompt": "A trapezoid has parallel sides 7 m and 11 m and height 6 m. What is its area in square meters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "trapezoid",
+              "top": 7,
+              "bottom": 11,
+              "height": 6,
+              "unit": "m"
+            }
+          },
+          "steps": [
+            {
+              "do": "Add the parallel sides: 7 + 11.",
+              "why": "The two bases work together in the formula.",
+              "input": {
+                "type": "number",
+                "answer": 18
+              },
+              "hint": "Add the top and the bottom.",
+              "worked": "7 + 11 = 18."
+            },
+            {
+              "do": "Multiply by the height: 18 × 6.",
+              "why": "This is the area of two copies of the trapezoid.",
+              "input": {
+                "type": "number",
+                "answer": 108
+              },
+              "hint": "Multiply 18 by 6.",
+              "worked": "18 × 6 = 108."
+            },
+            {
+              "do": "Take half of 108.",
+              "why": "One trapezoid is half of the two copies.",
+              "input": {
+                "type": "number",
+                "answer": 54
+              },
+              "hint": "Divide by 2.",
+              "worked": "108 ÷ 2 = 54."
+            }
+          ],
+          "answer": 54
+        },
+        {
+          "prompt": "An L-shaped garden is a 12 ft by 9 ft rectangle with a 5 ft by 4 ft corner cut out. What is its area in square feet?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "lshape",
+              "W": 12,
+              "H": 9,
+              "cutW": 5,
+              "cutH": 4,
+              "unit": "ft"
+            }
+          },
+          "steps": [
+            {
+              "do": "Find the big rectangle: 12 × 9.",
+              "why": "Start with the full rectangle before the corner was cut.",
+              "input": {
+                "type": "number",
+                "answer": 108
+              },
+              "hint": "Multiply.",
+              "worked": "12 × 9 = 108."
+            },
+            {
+              "do": "Find the missing corner: 5 × 4.",
+              "why": "This piece is not part of the garden.",
+              "input": {
+                "type": "number",
+                "answer": 20
+              },
+              "hint": "Multiply.",
+              "worked": "5 × 4 = 20."
+            },
+            {
+              "do": "Subtract: 108 − 20.",
+              "why": "Taking away the cut corner leaves the L shape.",
+              "input": {
+                "type": "number",
+                "answer": 88
+              },
+              "hint": "Big minus small.",
+              "worked": "108 − 20 = 88."
+            }
+          ],
+          "answer": 88
         }
       ]
     },
@@ -113,71 +629,308 @@
       "id": "volume-prisms",
       "title": "Box Builder: Volume of Prisms",
       "ccss": "6.G.A.2",
-      "lesson": "**Volume = how many unit cubes fill a box.**\n\n- V = l × w × h\n- V = B × h, where B is the area of the base\n- Works with fractions too! A ½-inch cube has volume ⅛ in³.",
+      "learn": {
+        "sections": [
+          {
+            "text": "**Volume** counts how many unit cubes fill a box.\n\nThis box is 4 cubes long, 3 wide, and 2 tall. One layer has 4 × 3 = 12 cubes, and 2 layers make **24 cubic units**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "prism",
+                "l": 4,
+                "w": 3,
+                "h": 2,
+                "cubes": 1
+              }
+            }
+          },
+          {
+            "text": "Use **V = l × w × h**, even with fractions!\n\nA box 2½ ft by 2 ft by 3 ft holds 2½ × 2 × 3 = **15 ft³**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "prism",
+                "l": 2.5,
+                "w": 2,
+                "h": 3,
+                "unit": "ft",
+                "fmt": "frac"
+              }
+            }
+          },
+          {
+            "text": "Or use **V = B × h**, where B is the area of the base.\n\nA base of 6 in² and a height of 1½ in gives 6 × 1½ = **9 in³**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "prismBase",
+                "area": 6,
+                "h": 1.5,
+                "unit": "in",
+                "fmt": "frac"
+              }
+            }
+          }
+        ],
+        "keyIdea": "Volume = length × width × height = base area × height, and it works for fraction edges too."
+      },
       "examples": [
         {
-          "prompt": "Box 4 by 3 by 2 unit cubes.",
+          "title": "Counting cubes",
+          "prompt": "A box holds 1-cm cubes: 4 long, 3 wide, 2 tall. What is its volume in cubic centimeters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "prism",
+              "l": 4,
+              "w": 3,
+              "h": 2,
+              "cubes": 1,
+              "unit": "cm"
+            }
+          },
           "steps": [
-            "One layer: 4 × 3 = 12 cubes",
-            "2 layers: 12 × 2 = 24"
+            {
+              "do": "Count one layer: 4 × 3 = 12 cubes.",
+              "why": "The bottom layer is a rectangle of cubes.",
+              "rule": "Layer = l × w"
+            },
+            {
+              "do": "Stack 2 layers: 12 × 2 = 24.",
+              "why": "Every layer is the same, so multiply by the number of layers.",
+              "rule": "V = l × w × h"
+            }
           ],
-          "answer": "24 cubic units",
-          "figure": {
-            "kind": "prism",
-            "l": 4,
-            "w": 3,
-            "h": 2,
-            "cubes": 1
-          }
+          "check": "4 × 3 × 2 = 24. ✅",
+          "mistake": "Don't add the edges (4 + 3 + 2); volume multiplies them.",
+          "answer": "24"
         },
         {
-          "prompt": "Prism 2½ ft by 2 ft by 3 ft.",
+          "title": "Fraction edges",
+          "prompt": "A box is 2½ ft by 1½ ft by 2 ft. What is its volume in cubic feet? Write it as an improper fraction.",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "prism",
+              "l": 2.5,
+              "w": 1.5,
+              "h": 2,
+              "unit": "ft",
+              "fmt": "frac"
+            }
+          },
           "steps": [
-            "2½ × 2 = 5",
-            "5 × 3 = 15"
+            {
+              "do": "Write the mixed numbers as fractions: 2½ = 5/2 and 1½ = 3/2.",
+              "why": "Improper fractions are easier to multiply.",
+              "rule": "Mixed → improper"
+            },
+            {
+              "do": "Multiply the first two: 5/2 × 3/2 = 15/4.",
+              "why": "This is the area of the base.",
+              "rule": "Multiply tops, multiply bottoms"
+            },
+            {
+              "do": "Multiply by the height: 15/4 × 2 = 30/4 = 15/2 = 7½.",
+              "why": "Each foot of height adds another layer of the base.",
+              "rule": "V = l × w × h"
+            }
           ],
-          "answer": "15 ft³",
-          "figure": {
-            "kind": "prism",
-            "l": 2.5,
-            "w": 2,
-            "h": 3,
-            "unit": "ft",
-            "fmt": "frac"
-          }
+          "check": "7½ is about 2½ × 1½ = 3¾, times 2 = 7½. ✅",
+          "mistake": "Don't multiply only the whole numbers and drop the fractions.",
+          "answer": "15/2"
         },
         {
-          "prompt": "Base area 6 in², height 1½ in.",
+          "title": "Half-inch cubes",
+          "prompt": "How many ½-inch cubes fill a box that is 1 in by 1 in by 2 in?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "prism",
+              "l": 1,
+              "w": 1,
+              "h": 2,
+              "cubes": 0.5,
+              "unit": "in",
+              "fmt": "frac"
+            }
+          },
           "steps": [
-            "V = B × h",
-            "6 × 1½ = 9"
+            {
+              "do": "Find the box's volume: 1 × 1 × 2 = 2 cubic inches.",
+              "why": "We need the total space to fill.",
+              "rule": "V = l × w × h"
+            },
+            {
+              "do": "Find one small cube: ½ × ½ × ½ = ⅛ cubic inch.",
+              "why": "Each tiny cube has edges of ½ inch.",
+              "rule": "Cube: V = s × s × s"
+            },
+            {
+              "do": "Divide: 2 ÷ ⅛ = 16 cubes.",
+              "why": "Eight ½-inch cubes fit in each 1-inch cube, and there are 2 of those.",
+              "rule": "Count = V ÷ cube volume"
+            }
           ],
-          "answer": "9 in³",
-          "figure": {
-            "kind": "prismBase",
-            "area": 6,
-            "h": 1.5,
-            "unit": "in",
-            "fmt": "frac"
-          }
+          "check": "Along the edges: 2 × 2 × 4 = 16 cubes. ✅",
+          "mistake": "A ½-inch cube is ⅛ of a cubic inch, not ½, so the count is bigger than you might think.",
+          "answer": "16"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "A box holds 1-in cubes: 5 long, 2 wide, and 3 tall. What is its volume in cubic inches?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "prism",
+              "l": 5,
+              "w": 2,
+              "h": 3,
+              "cubes": 1,
+              "unit": "in"
+            }
+          },
+          "steps": [
+            {
+              "do": "How many cubes are in one layer? (5 × 2)",
+              "why": "The bottom layer is a rectangle of cubes.",
+              "input": {
+                "type": "number",
+                "answer": 10
+              },
+              "hint": "Multiply length by width.",
+              "worked": "5 × 2 = 10."
+            },
+            {
+              "do": "Multiply by the 3 layers: 10 × 3.",
+              "why": "Each layer has the same number of cubes.",
+              "input": {
+                "type": "number",
+                "answer": 30
+              },
+              "hint": "Stack the layers.",
+              "worked": "10 × 3 = 30."
+            }
+          ],
+          "answer": 30
         },
         {
-          "prompt": "How many ½-in cubes fill a 1 × 1 × 2 in box?",
+          "prompt": "A box is 3½ cm by 2 cm by 4 cm. What is its volume in cubic centimeters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "prism",
+              "l": 3.5,
+              "w": 2,
+              "h": 4,
+              "unit": "cm",
+              "fmt": "frac"
+            }
+          },
           "steps": [
-            "Box: 2 in³",
-            "Each cube: ⅛ in³",
-            "2 ÷ ⅛ = 16"
+            {
+              "do": "Multiply 3½ × 2.",
+              "why": "This gives the area of the base.",
+              "input": {
+                "type": "number",
+                "answer": 7
+              },
+              "hint": "Two halves make a whole.",
+              "worked": "3½ × 2 = 7."
+            },
+            {
+              "do": "Multiply by the height: 7 × 4.",
+              "why": "Height tells how many base layers stack up.",
+              "input": {
+                "type": "number",
+                "answer": 28
+              },
+              "hint": "Multiply.",
+              "worked": "7 × 4 = 28."
+            }
           ],
-          "answer": "16 cubes",
-          "figure": {
-            "kind": "prism",
-            "l": 1,
-            "w": 1,
-            "h": 2,
-            "cubes": 0.5,
-            "unit": "in",
-            "fmt": "frac"
-          }
+          "answer": 28
+        },
+        {
+          "prompt": "A prism has base area 12 in² and height 2¼ in. What is its volume in cubic inches?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "prismBase",
+              "area": 12,
+              "h": 2.25,
+              "unit": "in",
+              "fmt": "frac"
+            }
+          },
+          "steps": [
+            {
+              "do": "Which formula uses the base area?",
+              "why": "B already means length × width.",
+              "input": {
+                "type": "choice",
+                "answer": 2,
+                "choices": [
+                  "V = B + h",
+                  "V = ½ × B × h",
+                  "V = B × h",
+                  "V = 2B + h"
+                ]
+              },
+              "hint": "B stands for base area.",
+              "worked": "V = B × h."
+            },
+            {
+              "do": "Multiply 12 × 2¼.",
+              "why": "Each inch of height adds a layer with area B.",
+              "input": {
+                "type": "number",
+                "answer": 27
+              },
+              "hint": "12 × 2 = 24 and 12 × ¼ = 3.",
+              "worked": "12 × 2¼ = 27."
+            }
+          ],
+          "answer": 27
+        },
+        {
+          "prompt": "A fish tank has volume 22½ ft³. It is 3 ft long and 2½ ft wide. How tall is it in feet?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "prism",
+              "l": 3,
+              "w": 2.5,
+              "h": 3,
+              "unknown": "h",
+              "unit": "ft",
+              "fmt": "frac"
+            }
+          },
+          "steps": [
+            {
+              "do": "Find the base area: 3 × 2½. Type it as an improper fraction.",
+              "why": "Volume divided by base area gives the height.",
+              "input": {
+                "type": "fraction",
+                "answer": "15/2"
+              },
+              "hint": "3 × 5/2 = 15/2.",
+              "worked": "3 × 2½ = 15/2 = 7½."
+            },
+            {
+              "do": "Divide: 22½ ÷ 7½.",
+              "why": "V = B × h, so h = V ÷ B.",
+              "input": {
+                "type": "number",
+                "answer": 3
+              },
+              "hint": "45/2 ÷ 15/2 = 45 ÷ 15.",
+              "worked": "22½ ÷ 7½ = 3."
+            }
+          ],
+          "answer": 3
         }
       ]
     },
@@ -185,82 +938,421 @@
       "id": "coordinate-polygons",
       "title": "Map Quest: Polygons on the Coordinate Plane",
       "ccss": "6.G.A.3",
-      "lesson": "**Plot points, connect the dots, measure sides!**\n\n- Same x? Subtract the y's. Same y? Subtract the x's.\n- Opposite sides of an axis? *Add* the distances to the axis (−3 to 5 is 3 + 5 = 8).\n- Then use side lengths for perimeter and area.",
+      "learn": {
+        "sections": [
+          {
+            "text": "When two points share an **x-value**, subtract their y-values to find the distance.\n\nFrom (2, 1) to (2, 7) is 7 − 1 = **6 units**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "coord",
+                "points": [
+                  [
+                    2,
+                    1
+                  ],
+                  [
+                    2,
+                    7
+                  ]
+                ]
+              }
+            }
+          },
+          {
+            "text": "Points on **opposite sides of an axis**? Add their distances to the axis.\n\nFrom (−4, 3) to (5, 3) is 4 + 5 = **9 units**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "coord",
+                "points": [
+                  [
+                    -4,
+                    3
+                  ],
+                  [
+                    5,
+                    3
+                  ]
+                ]
+              }
+            }
+          },
+          {
+            "text": "Connect points to make a polygon, then measure its sides.\n\nThe rectangle (1, 1), (5, 1), (5, 4), (1, 4) is 4 wide and 3 tall, so its area is **12 square units**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "coord",
+                "points": [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    5,
+                    1
+                  ],
+                  [
+                    5,
+                    4
+                  ],
+                  [
+                    1,
+                    4
+                  ]
+                ],
+                "closed": true
+              }
+            }
+          }
+        ],
+        "keyIdea": "Same x? Subtract the y's. Same y? Subtract the x's. Opposite sides of an axis? Add the distances."
+      },
       "examples": [
         {
-          "prompt": "Distance from (2, 1) to (2, 7)?",
-          "steps": [
-            "x is the same (2)",
-            "7 − 1 = 6"
-          ],
-          "answer": "6 units",
-          "figure": {
-            "kind": "coord",
-            "points": [
-              [
-                2,
-                1
-              ],
-              [
-                2,
-                7
+          "title": "Same x, subtract y",
+          "prompt": "How many units apart are (3, 2) and (3, 8)?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "coord",
+              "points": [
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  8
+                ]
               ]
-            ],
-            "closed": false
-          }
+            }
+          },
+          "steps": [
+            {
+              "do": "Notice both points have x = 3.",
+              "why": "Matching x-values mean the points line up vertically.",
+              "rule": "Same x → vertical"
+            },
+            {
+              "do": "Subtract the y-values: 8 − 2 = 6.",
+              "why": "The distance is how far apart the y-values are.",
+              "rule": "Distance = |y₂ − y₁|"
+            }
+          ],
+          "check": "Count up from 2 to 8: 6 steps. ✅",
+          "mistake": "Don't subtract the matching x-values; that gives 0.",
+          "answer": "6"
         },
         {
-          "prompt": "Distance from (−4, 3) to (5, 3)?",
-          "steps": [
-            "y is the same",
-            "4 units to the axis + 5 units = 9"
-          ],
-          "answer": "9 units",
-          "figure": {
-            "kind": "coord",
-            "points": [
-              [
-                -4,
-                3
-              ],
-              [
-                5,
-                3
+          "title": "Across the axis",
+          "prompt": "How many units apart are (−3, 4) and (5, 4)?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "coord",
+              "points": [
+                [
+                  -3,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ]
               ]
-            ],
-            "closed": false
-          }
+            }
+          },
+          "steps": [
+            {
+              "do": "Both points have y = 4, so they line up across.",
+              "why": "Matching y-values mean a horizontal segment.",
+              "rule": "Same y → horizontal"
+            },
+            {
+              "do": "Find each distance to the y-axis: 3 and 5.",
+              "why": "The axis splits the segment into two parts.",
+              "rule": "Distance to axis = |x|"
+            },
+            {
+              "do": "Add: 3 + 5 = 8.",
+              "why": "Points on opposite sides of an axis are farther apart, so add.",
+              "rule": "Opposite sides → add"
+            }
+          ],
+          "check": "From −3 to 5 is 8 steps. ✅",
+          "mistake": "5 − 3 = 2 is wrong because −3 is on the other side of 0.",
+          "answer": "8"
         },
         {
-          "prompt": "Rectangle (1,1), (5,1), (5,4), (1,4): area?",
+          "title": "Rectangle perimeter",
+          "prompt": "A rectangle has vertices (2, 1), (8, 1), (8, 5), and (2, 5). What is its perimeter in units?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "coord",
+              "points": [
+                [
+                  2,
+                  1
+                ],
+                [
+                  8,
+                  1
+                ],
+                [
+                  8,
+                  5
+                ],
+                [
+                  2,
+                  5
+                ]
+              ],
+              "closed": true
+            }
+          },
           "steps": [
-            "Width 5 − 1 = 4",
-            "Height 4 − 1 = 3",
-            "4 × 3 = 12"
+            {
+              "do": "Width: 8 − 2 = 6.",
+              "why": "The bottom side runs between x = 2 and x = 8.",
+              "rule": "Same y → subtract x"
+            },
+            {
+              "do": "Height: 5 − 1 = 4.",
+              "why": "The left side runs between y = 1 and y = 5.",
+              "rule": "Same x → subtract y"
+            },
+            {
+              "do": "Perimeter: 2 × (6 + 4) = 20.",
+              "why": "A rectangle has two widths and two heights.",
+              "rule": "P = 2 × (l + w)"
+            }
           ],
-          "answer": "12 square units",
-          "figure": {
-            "kind": "coord",
-            "points": [
-              [
-                1,
-                1
-              ],
-              [
-                5,
-                1
-              ],
-              [
-                5,
-                4
-              ],
-              [
-                1,
-                4
+          "check": "6 + 4 + 6 + 4 = 20. ✅",
+          "mistake": "Don't use the coordinates (8 and 5) as side lengths; subtract to get lengths.",
+          "answer": "20"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "How many units apart are (1, 5) and (8, 5)?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "coord",
+              "points": [
+                [
+                  1,
+                  5
+                ],
+                [
+                  8,
+                  5
+                ]
               ]
-            ],
-            "closed": true
-          }
+            }
+          },
+          "steps": [
+            {
+              "do": "Which coordinate is the same for both points?",
+              "why": "The matching coordinate tells the direction of the segment.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "x",
+                  "y",
+                  "both",
+                  "neither"
+                ]
+              },
+              "hint": "Compare the second numbers.",
+              "worked": "Both have y = 5."
+            },
+            {
+              "do": "Subtract the x-values: 8 − 1.",
+              "why": "The distance is the gap between the x-values.",
+              "input": {
+                "type": "number",
+                "answer": 7
+              },
+              "hint": "Bigger minus smaller.",
+              "worked": "8 − 1 = 7."
+            }
+          ],
+          "answer": 7
+        },
+        {
+          "prompt": "How many units apart are (2, −6) and (2, 3)?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "coord",
+              "points": [
+                [
+                  2,
+                  -6
+                ],
+                [
+                  2,
+                  3
+                ]
+              ]
+            }
+          },
+          "steps": [
+            {
+              "do": "How far is (2, −6) from the x-axis?",
+              "why": "Distance to an axis is never negative.",
+              "input": {
+                "type": "number",
+                "answer": 6
+              },
+              "hint": "Drop the minus sign.",
+              "worked": "|−6| = 6."
+            },
+            {
+              "do": "How far is (2, 3) from the x-axis?",
+              "why": "This is the other part of the segment.",
+              "input": {
+                "type": "number",
+                "answer": 3
+              },
+              "hint": "Look at y.",
+              "worked": "|3| = 3."
+            },
+            {
+              "do": "Add the two parts: 6 + 3.",
+              "why": "The points are on opposite sides of the x-axis.",
+              "input": {
+                "type": "number",
+                "answer": 9
+              },
+              "hint": "Add, don't subtract.",
+              "worked": "6 + 3 = 9."
+            }
+          ],
+          "answer": 9
+        },
+        {
+          "prompt": "A rectangle has vertices (−2, 1), (4, 1), (4, 5), and (−2, 5). What is its area in square units?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "coord",
+              "points": [
+                [
+                  -2,
+                  1
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  -2,
+                  5
+                ]
+              ],
+              "closed": true
+            }
+          },
+          "steps": [
+            {
+              "do": "Find the width from (−2, 1) to (4, 1).",
+              "why": "Opposite sides of the y-axis means add 2 + 4.",
+              "input": {
+                "type": "number",
+                "answer": 6
+              },
+              "hint": "2 + 4.",
+              "worked": "2 + 4 = 6."
+            },
+            {
+              "do": "Find the height from (4, 1) to (4, 5).",
+              "why": "Subtract the y-values.",
+              "input": {
+                "type": "number",
+                "answer": 4
+              },
+              "hint": "5 − 1.",
+              "worked": "5 − 1 = 4."
+            },
+            {
+              "do": "Multiply width × height.",
+              "why": "Rectangle area is length times width.",
+              "input": {
+                "type": "number",
+                "answer": 24
+              },
+              "hint": "6 × 4.",
+              "worked": "6 × 4 = 24."
+            }
+          ],
+          "answer": 24
+        },
+        {
+          "prompt": "A right triangle has vertices (1, 1), (7, 1), and (1, 5). What is its area in square units?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "coord",
+              "points": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  7,
+                  1
+                ],
+                [
+                  1,
+                  5
+                ]
+              ],
+              "closed": true
+            }
+          },
+          "steps": [
+            {
+              "do": "Find the bottom leg from (1, 1) to (7, 1).",
+              "why": "The legs are the base and height.",
+              "input": {
+                "type": "number",
+                "answer": 6
+              },
+              "hint": "7 − 1.",
+              "worked": "7 − 1 = 6."
+            },
+            {
+              "do": "Find the left leg from (1, 1) to (1, 5).",
+              "why": "This leg is straight up, so it is the height.",
+              "input": {
+                "type": "number",
+                "answer": 4
+              },
+              "hint": "5 − 1.",
+              "worked": "5 − 1 = 4."
+            },
+            {
+              "do": "Use A = ½ × 6 × 4.",
+              "why": "A right triangle is half of a rectangle.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "6 × 4 = 24, then halve.",
+              "worked": "½ × 6 × 4 = 12."
+            }
+          ],
+          "answer": 12
         }
       ]
     },
@@ -268,52 +1360,350 @@
       "id": "nets-surface-area",
       "title": "Unfold It: Nets & Surface Area",
       "ccss": "6.G.A.4",
-      "lesson": "**A net is a 3D shape unfolded flat.**\n\n- Surface area = total area of all faces in the net.\n- Rectangular prism: 6 rectangles in 3 matching pairs → 2(lw + lh + wh)\n- Square pyramid: 1 square + 4 triangles.\n- Triangular prism: 2 triangles + 3 rectangles.",
+      "learn": {
+        "sections": [
+          {
+            "text": "A **net** is a 3D shape unfolded flat. **Surface area** is the total area of every face in the net.\n\nA cube with edge 2 cm unfolds into 6 squares of 4 cm², so its surface area is **24 cm²**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "cubeNet",
+                "s": 2,
+                "unit": "cm"
+              }
+            }
+          },
+          {
+            "text": "A **rectangular prism** has 3 pairs of matching faces: SA = 2(lw + lh + wh).\n\nFor 3 by 2 by 1: 2(6 + 3 + 2) = **22 square units**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "prism",
+                "l": 3,
+                "w": 2,
+                "h": 1
+              }
+            }
+          },
+          {
+            "text": "A **square pyramid** net is 1 square plus 4 triangles.\n\nWith base 4 cm and triangle height 3 cm: 16 + 4 × 6 = **40 cm²**.",
+            "visual": {
+              "kind": "figure",
+              "figure": {
+                "kind": "pyramidNet",
+                "base": 4,
+                "slant": 3,
+                "unit": "cm"
+              }
+            }
+          }
+        ],
+        "keyIdea": "Unfold the shape into its net, find the area of each face, and add them all up."
+      },
       "examples": [
         {
-          "prompt": "Cube with edge 2 cm.",
+          "title": "Cube net",
+          "prompt": "A cube has edges of 3 cm. What is its surface area in square centimeters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "cubeNet",
+              "s": 3,
+              "unit": "cm"
+            }
+          },
           "steps": [
-            "One face: 2 × 2 = 4",
-            "6 faces: 6 × 4 = 24"
+            {
+              "do": "Unfold the cube: its net is 6 squares.",
+              "why": "Every face of a cube is the same square.",
+              "rule": "Cube net = 6 squares"
+            },
+            {
+              "do": "One square: 3 × 3 = 9.",
+              "why": "Each face is 3 cm by 3 cm.",
+              "rule": "Square: A = s × s"
+            },
+            {
+              "do": "All six: 6 × 9 = 54.",
+              "why": "Surface area adds up every face.",
+              "rule": "SA = 6 × s × s"
+            }
           ],
-          "answer": "24 cm²",
-          "figure": {
-            "kind": "cubeNet",
-            "s": 2,
-            "unit": "cm"
-          }
+          "check": "9 + 9 + 9 + 9 + 9 + 9 = 54. ✅",
+          "mistake": "Don't find the volume (3 × 3 × 3 = 27); surface area covers the outside.",
+          "answer": "54"
         },
         {
-          "prompt": "Prism 3 × 2 × 1 in.",
+          "title": "Box surface",
+          "prompt": "A rectangular prism is 4 in by 3 in by 2 in. What is its surface area in square inches?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "prism",
+              "l": 4,
+              "w": 3,
+              "h": 2,
+              "unit": "in"
+            }
+          },
           "steps": [
-            "2(3×2) = 12",
-            "2(3×1) = 6",
-            "2(2×1) = 4",
-            "12 + 6 + 4 = 22"
+            {
+              "do": "Top and bottom: 2 × (4 × 3) = 24.",
+              "why": "Matching faces come in pairs.",
+              "rule": "2 × l × w"
+            },
+            {
+              "do": "Front and back: 2 × (4 × 2) = 16.",
+              "why": "These two faces are the same size.",
+              "rule": "2 × l × h"
+            },
+            {
+              "do": "Left and right: 2 × (3 × 2) = 12.",
+              "why": "The last pair of faces.",
+              "rule": "2 × w × h"
+            },
+            {
+              "do": "Add: 24 + 16 + 12 = 52.",
+              "why": "Surface area is the total of all 6 faces.",
+              "rule": "SA = 2(lw + lh + wh)"
+            }
           ],
-          "answer": "22 in²",
-          "figure": {
-            "kind": "prism",
-            "l": 3,
-            "w": 2,
-            "h": 1,
-            "unit": "in"
-          }
+          "check": "6 faces counted, total 52. ✅",
+          "mistake": "Count each face pair twice; forgetting the ×2 gives only half the surface.",
+          "answer": "52"
         },
         {
-          "prompt": "Square pyramid: base 4 cm, triangle heights 3 cm.",
+          "title": "Pyramid net",
+          "prompt": "A square pyramid has base 6 cm on a side, and each triangle face has height 5 cm. What is its surface area in square centimeters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "pyramidNet",
+              "base": 6,
+              "slant": 5,
+              "unit": "cm"
+            }
+          },
           "steps": [
-            "Base 4 × 4 = 16",
-            "Each triangle ½ × 4 × 3 = 6; four = 24",
-            "16 + 24 = 40"
+            {
+              "do": "Base: 6 × 6 = 36.",
+              "why": "The bottom of the net is a square.",
+              "rule": "Square: A = s × s"
+            },
+            {
+              "do": "One triangle: ½ × 6 × 5 = 15.",
+              "why": "Each side face is a triangle with base 6.",
+              "rule": "Triangle: A = ½ × b × h"
+            },
+            {
+              "do": "Total: 36 + 4 × 15 = 96.",
+              "why": "There is 1 square and 4 triangles in the net.",
+              "rule": "SA = base + 4 triangles"
+            }
           ],
-          "answer": "40 cm²",
-          "figure": {
-            "kind": "pyramidNet",
-            "base": 4,
-            "slant": 3,
-            "unit": "cm"
-          }
+          "check": "36 + 60 = 96. ✅",
+          "mistake": "Don't forget the ½ for each triangle face.",
+          "answer": "96"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "A cube has edges of 5 in. What is its surface area in square inches?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "cubeNet",
+              "s": 5,
+              "unit": "in"
+            }
+          },
+          "steps": [
+            {
+              "do": "How many squares are in the net of a cube?",
+              "why": "A net shows every face laid flat.",
+              "input": {
+                "type": "choice",
+                "answer": 2,
+                "choices": [
+                  "4",
+                  "5",
+                  "6",
+                  "8"
+                ]
+              },
+              "hint": "Think of a dice.",
+              "worked": "A cube has 6 faces."
+            },
+            {
+              "do": "Find the area of one face: 5 × 5.",
+              "why": "Every face is a 5 by 5 square.",
+              "input": {
+                "type": "number",
+                "answer": 25
+              },
+              "hint": "Square the edge.",
+              "worked": "5 × 5 = 25."
+            },
+            {
+              "do": "Multiply by 6: 6 × 25.",
+              "why": "All six faces are the same size.",
+              "input": {
+                "type": "number",
+                "answer": 150
+              },
+              "hint": "6 × 25.",
+              "worked": "6 × 25 = 150."
+            }
+          ],
+          "answer": 150
+        },
+        {
+          "prompt": "A rectangular prism is 5 m by 2 m by 6 m. What is its surface area in square meters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "prism",
+              "l": 5,
+              "w": 2,
+              "h": 6,
+              "unit": "m"
+            }
+          },
+          "steps": [
+            {
+              "do": "Find l × w: 5 × 2.",
+              "why": "This is the top face.",
+              "input": {
+                "type": "number",
+                "answer": 10
+              },
+              "hint": "Multiply.",
+              "worked": "5 × 2 = 10."
+            },
+            {
+              "do": "Find l × h: 5 × 6.",
+              "why": "This is the front face.",
+              "input": {
+                "type": "number",
+                "answer": 30
+              },
+              "hint": "Multiply.",
+              "worked": "5 × 6 = 30."
+            },
+            {
+              "do": "Find w × h: 2 × 6.",
+              "why": "This is a side face.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "Multiply.",
+              "worked": "2 × 6 = 12."
+            },
+            {
+              "do": "Add them and double: 2 × (10 + 30 + 12).",
+              "why": "Each face has a matching partner.",
+              "input": {
+                "type": "number",
+                "answer": 104
+              },
+              "hint": "52 × 2.",
+              "worked": "2 × 52 = 104."
+            }
+          ],
+          "answer": 104
+        },
+        {
+          "prompt": "A square pyramid has base 10 ft on a side, and each triangle face has height 12 ft. What is its surface area in square feet?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "pyramidNet",
+              "base": 10,
+              "slant": 12,
+              "unit": "ft"
+            }
+          },
+          "steps": [
+            {
+              "do": "Find the base area: 10 × 10.",
+              "why": "The base is a square.",
+              "input": {
+                "type": "number",
+                "answer": 100
+              },
+              "hint": "Square the side.",
+              "worked": "10 × 10 = 100."
+            },
+            {
+              "do": "Find one triangle: ½ × 10 × 12.",
+              "why": "Each side face is a triangle.",
+              "input": {
+                "type": "number",
+                "answer": 60
+              },
+              "hint": "Multiply, then halve.",
+              "worked": "½ × 10 × 12 = 60."
+            },
+            {
+              "do": "Add the base and 4 triangles: 100 + 4 × 60.",
+              "why": "The net has 1 square and 4 triangles.",
+              "input": {
+                "type": "number",
+                "answer": 340
+              },
+              "hint": "Multiply first, then add.",
+              "worked": "100 + 240 = 340."
+            }
+          ],
+          "answer": 340
+        },
+        {
+          "prompt": "A triangular prism has right-triangle ends with legs 3 cm and 4 cm and long side 5 cm. It is 10 cm long. What is its surface area in square centimeters?",
+          "visual": {
+            "kind": "figure",
+            "figure": {
+              "kind": "triPrism",
+              "a": 3,
+              "b": 4,
+              "c": 5,
+              "length": 10,
+              "unit": "cm"
+            }
+          },
+          "steps": [
+            {
+              "do": "Find both triangle ends: 2 × ½ × 3 × 4.",
+              "why": "The prism has two matching triangle faces.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "The 2 and the ½ cancel.",
+              "worked": "2 × ½ × 3 × 4 = 12."
+            },
+            {
+              "do": "Find the three rectangles: (3 + 4 + 5) × 10.",
+              "why": "Each side of the triangle makes a rectangle 10 cm long.",
+              "input": {
+                "type": "number",
+                "answer": 120
+              },
+              "hint": "Add the sides, then multiply.",
+              "worked": "12 × 10 = 120."
+            },
+            {
+              "do": "Add: 12 + 120.",
+              "why": "Surface area is all the faces together.",
+              "input": {
+                "type": "number",
+                "answer": 132
+              },
+              "hint": "Add the two parts.",
+              "worked": "12 + 120 = 132."
+            }
+          ],
+          "answer": 132
         }
       ]
     }

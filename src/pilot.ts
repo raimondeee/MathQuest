@@ -93,6 +93,12 @@ function watch(d: Deps, s: Subject, t: Topic, body: HTMLElement, p: typeof pos) 
 }
 
 // ---------------- Guided ----------------
+/** Display answer: if it's a number but the final step is a choice, show that choice's text. */
+function answerText(pr: Guided) {
+  const last = pr.steps[pr.steps.length - 1]?.input
+  if (typeof pr.answer === 'number' && last?.type === 'choice' && last.choices?.[pr.answer] !== undefined) return last.choices[pr.answer]
+  return String(pr.answer)
+}
 /** Step used in final-answer-only mode: the one whose answer equals the problem answer, else the last. */
 function finalStep(pr: Guided) {
   const want = parseFraction(pr.answer)
@@ -128,7 +134,7 @@ function guided(d: Deps, s: Subject, t: Topic, body: HTMLElement, p: typeof pos)
     body.innerHTML = `${levelSel}<div class="progress-row"><span>Problem ${p.gi + 1} of ${probs.length}</span><span>${finalOnly ? 'Final answer only' : `Step ${Math.min(g.si + 1, steps.length)} of ${steps.length}`}</span></div>
       <article class="card guided-card"><div class="q-prompt">${esc(pr.prompt)}</div>${vis(pr.visual)}
       <ol class="gsteps">${past}${curHtml}</ol>
-      ${done ? `${flash ?? ''}<div class="answer-line">Answer: <b>${esc(String(pr.answer))}</b></div>` : ''}</article>
+      ${done ? `${flash ?? ''}<div class="answer-line">Answer: <b>${esc(answerText(pr))}</b></div>` : ''}</article>
       <div class="nav-row"><span></span>${done ? `<button class="big-btn next-prob">${p.gi < probs.length - 1 ? 'Next problem' : 'Finish'}</button>` : g.locked ? '<button class="big-btn cont">Continue</button>' : ''}</div>`
     wire(cur?.input, steps, finalOnly)
     body.querySelectorAll<HTMLButtonElement>('.lvl').forEach((b) => b.addEventListener('click', () => { G.setLevel(s.id, t.id, Number(b.dataset.l) as 0 | 1 | 2); g = fresh(); draw() }))

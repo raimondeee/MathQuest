@@ -71,3 +71,17 @@ Files are validated at load; malformed topics/questions are skipped with `consol
 ## iPad tip: Add to Home Screen
 
 Open the Pages URL in **Safari** → Share button → **Add to Home Screen**. Launch MathQuest from the icon for a full-screen app that works offline. Progress is per-device/per-browser — use Settings → Export to back it up (the Home Screen app and Safari keep separate storage).
+
+## v2 topics: Learn → Watch → Guided → Practice
+
+Every subject now has `../content/<subject>.v2.json`. Check them with `python3 ../tools/validate_v2.py <subject>`, then run `npm run wire-v2`, which validates the files with `src/v2check.js` and merges them into `src/content/<subject>.json`. The merge keeps each subject's 100 practice questions. `npm run content` runs the merge too.
+
+A topic is shown with the v2 screens when it has `learn` or `guided`; otherwise the old Lesson/Examples view is used.
+
+Visuals (`src/visuals.ts`):
+- fractionBars, numberLine (dot-plot labels like `"3 ●●●"`, inequality circles `"○ 3"`/`"● 6"`, and a jump to the edge drawn as a solution ray), areaModel (`labels {rows, cols}`, where `"x + 4"` puts one label on each column), placeValue, coordPlane.
+- Geometry figures as `{kind:'figure', figure:{...}}` or as the shape kind directly. See `../tools/FIGURE-VISUALS.md`.
+
+Learn text supports markdown tables. Guided inputs accept typed `−`, a/b, mixed numbers and ½-style glyphs, and equivalent fractions (with a nudge to simplify).
+
+The support level fades per topic: 2 problems in a row without help → less support; needing a worked step → more support.

@@ -6,31 +6,291 @@
       "id": "statistical-questions",
       "title": "Question Quest: Statistical Questions",
       "ccss": "6.SP.A.1",
-      "lesson": "**A statistical question expects answers that vary.**\n\n- ✅ \"How many pets do kids in my class have?\" (lots of different answers)\n- ❌ \"How many pets do I have?\" (one answer)\n\nTip: ask *many people* or measure *many times*!",
+      "learn": {
+        "sections": [
+          {
+            "text": "A **statistical question** expects answers that **vary**.\n\n\"How many pets do kids in my class have?\" got these answers from 10 kids: 0, 1, 1, 2, 2, 2, 3, 3, 4, 5. Lots of different answers!",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 5,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 0,
+                  "label": "0 ●"
+                },
+                {
+                  "at": 1,
+                  "label": "1 ●●"
+                },
+                {
+                  "at": 2,
+                  "label": "2 ●●●"
+                },
+                {
+                  "at": 3,
+                  "label": "3 ●●"
+                },
+                {
+                  "at": 4,
+                  "label": "4 ●"
+                },
+                {
+                  "at": 5,
+                  "label": "5 ●"
+                }
+              ]
+            }
+          },
+          {
+            "text": "\"How many pets does Andrew have?\" is **not** statistical. It has just one answer: 2.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 5,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 2,
+                  "label": "2 ●"
+                }
+              ]
+            }
+          },
+          {
+            "text": "**Tip:** to make a question statistical, ask *many people* or measure *many times*."
+          }
+        ],
+        "keyIdea": "A statistical question collects many answers that vary."
+      },
       "examples": [
         {
-          "prompt": "Is \"How old is Andrew?\" statistical?",
+          "title": "Spot the statistical ones",
+          "prompt": "How many of these are statistical questions? (A) How old is Andrew? (B) How old are the students at Andrew's school? (C) How many minutes do sixth graders spend on homework? (D) What time does school start?",
           "steps": [
-            "Only one answer exists.",
-            "No variability → not statistical."
+            {
+              "do": "Check A: one person, one age.",
+              "why": "A question about one person cannot vary.",
+              "rule": "One answer → not statistical"
+            },
+            {
+              "do": "Check B and C: many people, many answers.",
+              "why": "Different people give different answers.",
+              "rule": "Variability → statistical"
+            },
+            {
+              "do": "Check D: school starts at one time.",
+              "why": "There is only one start time.",
+              "rule": "One answer → not statistical"
+            },
+            {
+              "do": "Count the statistical ones: B and C make 2.",
+              "why": "Only B and C expect variability.",
+              "rule": "Count what passes the test"
+            }
           ],
-          "answer": "No"
+          "check": "B and C ask groups, and A and D ask about one thing. ✅",
+          "mistake": "\"How old is Andrew?\" sounds like math, but one answer means it is not statistical.",
+          "answer": "2"
         },
         {
-          "prompt": "Is \"How old are the students at Andrew's school?\" statistical?",
+          "title": "How many data values?",
+          "prompt": "Andrew asks 25 classmates, \"How many pets do you have?\" How many data values will he collect?",
           "steps": [
-            "Many students, many ages.",
-            "The answers vary → statistical."
+            {
+              "do": "Each classmate gives one answer.",
+              "why": "One person gives one data value.",
+              "rule": "1 person → 1 value"
+            },
+            {
+              "do": "25 classmates give 25 data values.",
+              "why": "Count every answer, even repeats.",
+              "rule": "n = number of answers"
+            }
           ],
-          "answer": "Yes"
+          "check": "Even if 5 classmates say 0 pets, each one counts. ✅",
+          "mistake": "Don't count only the different answers; repeats are still data values.",
+          "answer": "25"
         },
         {
-          "prompt": "Fix \"What is my test score?\"",
+          "title": "Reading the answers",
+          "prompt": "Ten classmates said how many pets they have: 0, 1, 1, 2, 2, 2, 3, 3, 4, 5. How many different answers are there?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 5,
+            "step": 1,
+            "marks": [
+              {
+                "at": 0,
+                "label": "0 ●"
+              },
+              {
+                "at": 1,
+                "label": "1 ●●"
+              },
+              {
+                "at": 2,
+                "label": "2 ●●●"
+              },
+              {
+                "at": 3,
+                "label": "3 ●●"
+              },
+              {
+                "at": 4,
+                "label": "4 ●"
+              },
+              {
+                "at": 5,
+                "label": "5 ●"
+              }
+            ]
+          },
           "steps": [
-            "Ask about many people.",
-            "\"What were the test scores of my class?\""
+            {
+              "do": "List the values without repeats: 0, 1, 2, 3, 4, 5.",
+              "why": "We want the different answers only.",
+              "rule": "Remove repeats"
+            },
+            {
+              "do": "Count them: 6.",
+              "why": "Each value is one different answer.",
+              "rule": "Count the list"
+            }
           ],
-          "answer": "What were the test scores of the students in my class?"
+          "check": "The dot plot has stacks at 0, 1, 2, 3, 4, and 5. ✅",
+          "mistake": "Don't count all 10 answers; the question asks for different answers.",
+          "answer": "6"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Which question is a statistical question?",
+          "steps": [
+            {
+              "do": "Does this question expect many different answers: \"How many pets does Andrew have?\"",
+              "why": "A question about one person has only one answer.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "hint": "Andrew has just one number of pets.",
+              "worked": "No, it has a single answer."
+            },
+            {
+              "do": "Pick the statistical question.",
+              "why": "Asking many people gives answers that vary.",
+              "input": {
+                "type": "choice",
+                "answer": 2,
+                "choices": [
+                  "How many pets does Andrew have?",
+                  "How many legs does a dog have?",
+                  "How many pets do kids in Andrew's class have?",
+                  "What is Andrew's dog's name?"
+                ]
+              },
+              "hint": "Look for a question asked to a group.",
+              "worked": "\"How many pets do kids in Andrew's class have?\" is statistical."
+            }
+          ],
+          "answer": "How many pets do kids in Andrew's class have?"
+        },
+        {
+          "prompt": "Andrew asks all 24 students in his class, \"How many hours did you sleep last night?\" How many data values will he collect?",
+          "steps": [
+            {
+              "do": "Is this a statistical question?",
+              "why": "Each student may sleep a different number of hours.",
+              "input": {
+                "type": "choice",
+                "answer": 0,
+                "choices": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "hint": "Will everyone give the same answer?",
+              "worked": "Yes, the answers will vary."
+            },
+            {
+              "do": "How many answers will he get?",
+              "why": "Each student gives one data value.",
+              "input": {
+                "type": "number",
+                "answer": 24
+              },
+              "hint": "Count the students.",
+              "worked": "24 students give 24 data values."
+            }
+          ],
+          "answer": 24
+        },
+        {
+          "prompt": "Which question is NOT statistical?",
+          "steps": [
+            {
+              "do": "Which question has only one answer?",
+              "why": "A question with one answer has no variability.",
+              "input": {
+                "type": "choice",
+                "answer": 3,
+                "choices": [
+                  "How tall are the students in grade 6?",
+                  "How many minutes do kids read each night?",
+                  "How many goals did each player score?",
+                  "How tall is the school flagpole?"
+                ]
+              },
+              "hint": "Find the question about a single thing.",
+              "worked": "\"How tall is the school flagpole?\" has one answer."
+            }
+          ],
+          "answer": "How tall is the school flagpole?"
+        },
+        {
+          "prompt": "Change \"What is Andrew's math score?\" into a statistical question. Which version works?",
+          "steps": [
+            {
+              "do": "What needs to change to get answers that vary?",
+              "why": "Many people give many different answers.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "Ask it twice",
+                  "Ask a whole group",
+                  "Ask it louder",
+                  "Add a number"
+                ]
+              },
+              "hint": "Think about who is being asked.",
+              "worked": "Ask a whole group instead of one person."
+            },
+            {
+              "do": "Choose the statistical version.",
+              "why": "It collects a score from every student.",
+              "input": {
+                "type": "choice",
+                "answer": 0,
+                "choices": [
+                  "What are the math scores of the students in Andrew's class?",
+                  "What is Andrew's math score today?",
+                  "Is Andrew's math score above 80?",
+                  "What was Andrew's first math score?"
+                ]
+              },
+              "hint": "Look for a group of people.",
+              "worked": "\"What are the math scores of the students in Andrew's class?\""
+            }
+          ],
+          "answer": "What are the math scores of the students in Andrew's class?"
         }
       ]
     },
@@ -38,30 +298,460 @@
       "id": "distributions",
       "title": "Data Shapes: Center, Spread & Shape",
       "ccss": "6.SP.A.2",
-      "lesson": "**Every data set has a distribution.**\n\n- **Center**: where the middle is (median, mean)\n- **Spread**: how far apart values are (range, IQR)\n- **Shape**: symmetric, skewed left/right, peaks, clusters, gaps",
+      "learn": {
+        "sections": [
+          {
+            "text": "Every data set has a **center**, a **spread**, and a **shape**.\n\nThis dot plot is **symmetric**: 1, 2, 2, 3, 3, 3, 4, 4, 5. Its center is 3 and its range is 5 − 1 = 4.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 1,
+              "max": 5,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 1,
+                  "label": "1 ●"
+                },
+                {
+                  "at": 2,
+                  "label": "2 ●●"
+                },
+                {
+                  "at": 3,
+                  "label": "3 ●●●"
+                },
+                {
+                  "at": 4,
+                  "label": "4 ●●"
+                },
+                {
+                  "at": 5,
+                  "label": "5 ●"
+                }
+              ]
+            }
+          },
+          {
+            "text": "When the dots pile up on one side and a **tail** stretches out, the data is **skewed**.\n\nHere: 1, 1, 1, 1, 2, 2, 3, 6. The tail goes right, so it is **skewed right**.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 1,
+              "max": 6,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 1,
+                  "label": "1 ●●●●"
+                },
+                {
+                  "at": 2,
+                  "label": "2 ●●"
+                },
+                {
+                  "at": 3,
+                  "label": "3 ●"
+                },
+                {
+                  "at": 6,
+                  "label": "6 ●"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Look for **peaks** (tall stacks), **clusters** (bunches), and **gaps** (empty spots). In the plot above, there is a gap at 4 and 5."
+          }
+        ],
+        "keyIdea": "Describe data with its center, its spread, and its overall shape."
+      },
       "examples": [
         {
-          "prompt": "Dot plot: 1: 1 dot; 2: 3 dots; 3: 5 dots; 4: 3 dots; 5: 1 dot. Shape?",
+          "title": "Range from a dot plot",
+          "prompt": "A dot plot of quiz scores shows 1: 1 dot; 2: 2 dots; 3: 5 dots; 4: 3 dots; 6: 1 dot. What is the range?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "marks": [
+              {
+                "at": 1,
+                "label": "1 ●"
+              },
+              {
+                "at": 2,
+                "label": "2 ●●"
+              },
+              {
+                "at": 3,
+                "label": "3 ●●●●●"
+              },
+              {
+                "at": 4,
+                "label": "4 ●●●"
+              },
+              {
+                "at": 6,
+                "label": "6 ●"
+              }
+            ]
+          },
           "steps": [
-            "Tallest in the middle.",
-            "Both sides match."
+            {
+              "do": "Find the lowest value: 1.",
+              "why": "The range uses the smallest value.",
+              "rule": "Find the min"
+            },
+            {
+              "do": "Find the highest value: 6.",
+              "why": "The range uses the biggest value.",
+              "rule": "Find the max"
+            },
+            {
+              "do": "Subtract: 6 − 1 = 5.",
+              "why": "Range shows how spread out the data is.",
+              "rule": "Range = max − min"
+            }
           ],
-          "answer": "Symmetric"
+          "check": "From 1 up to 6 is 5 steps. ✅",
+          "mistake": "Don't subtract the counts of dots; use the values on the number line.",
+          "answer": "5"
         },
         {
-          "prompt": "Same dot plot: range?",
+          "title": "Find the peak",
+          "prompt": "A dot plot of hot lunches bought shows 1: 6 dots; 2: 4 dots; 3: 2 dots; 6: 1 dot. At which value is the peak?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "marks": [
+              {
+                "at": 1,
+                "label": "1 ●●●●●●"
+              },
+              {
+                "at": 2,
+                "label": "2 ●●●●"
+              },
+              {
+                "at": 3,
+                "label": "3 ●●"
+              },
+              {
+                "at": 6,
+                "label": "6 ●"
+              }
+            ]
+          },
           "steps": [
-            "5 − 1"
+            {
+              "do": "Find the tallest stack: 6 dots.",
+              "why": "The peak is where the most data piles up.",
+              "rule": "Peak = tallest stack"
+            },
+            {
+              "do": "The tallest stack sits at the value 1.",
+              "why": "The peak is a value, not a count of dots.",
+              "rule": "Report the value"
+            }
           ],
-          "answer": "4"
+          "check": "No other stack has 6 dots. ✅",
+          "mistake": "The answer is the value (1), not how many dots are in the stack (6).",
+          "answer": "1"
         },
         {
-          "prompt": "Dot plot: 1: 5 dots; 2: 3 dots; 3: 1 dot; 6: 1 dot. Shape?",
+          "title": "Median from a dot plot",
+          "prompt": "A dot plot of minutes of recess shows 4: 1 dot; 5: 7 dots; 6: 3 dots; 8: 1 dot. What is the median?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 4,
+            "max": 8,
+            "step": 1,
+            "marks": [
+              {
+                "at": 4,
+                "label": "4 ●"
+              },
+              {
+                "at": 5,
+                "label": "5 ●●●●●●●"
+              },
+              {
+                "at": 6,
+                "label": "6 ●●●"
+              },
+              {
+                "at": 8,
+                "label": "8 ●"
+              }
+            ]
+          },
           "steps": [
-            "Pile on the left.",
-            "Tail stretches right."
+            {
+              "do": "Count the dots: 12.",
+              "why": "We need to know where the middle is.",
+              "rule": "n = number of dots"
+            },
+            {
+              "do": "With 12 dots the middle is between the 6th and 7th dots.",
+              "why": "An even count has two middle values.",
+              "rule": "Even n → two middles"
+            },
+            {
+              "do": "Count from the left: the 6th and 7th dots are both 5, so the median is 5.",
+              "why": "Both middles are in the stack at 5.",
+              "rule": "Median = middle value"
+            }
           ],
-          "answer": "Skewed right"
+          "check": "6 dots are at 5 or below on the low side and 6 at 5 or above on the high side. ✅",
+          "mistake": "Don't pick the middle of the number line; count the dots.",
+          "answer": "5"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "A dot plot shows 10: 1 dot; 11: 3 dots; 12: 6 dots; 13: 2 dots; 15: 2 dots. What is the range?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 10,
+            "max": 15,
+            "step": 1,
+            "marks": [
+              {
+                "at": 10,
+                "label": "10 ●"
+              },
+              {
+                "at": 11,
+                "label": "11 ●●●"
+              },
+              {
+                "at": 12,
+                "label": "12 ●●●●●●"
+              },
+              {
+                "at": 13,
+                "label": "13 ●●"
+              },
+              {
+                "at": 15,
+                "label": "15 ●●"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "What is the smallest value?",
+              "why": "Range starts at the lowest data value.",
+              "input": {
+                "type": "number",
+                "answer": 10
+              },
+              "hint": "Look at the leftmost dot.",
+              "worked": "The smallest value is 10."
+            },
+            {
+              "do": "What is the largest value?",
+              "why": "Range ends at the highest data value.",
+              "input": {
+                "type": "number",
+                "answer": 15
+              },
+              "hint": "Look at the rightmost dot.",
+              "worked": "The largest value is 15."
+            },
+            {
+              "do": "Subtract to find the range.",
+              "why": "Range is max minus min.",
+              "input": {
+                "type": "number",
+                "answer": 5
+              },
+              "hint": "15 − 10.",
+              "worked": "15 − 10 = 5."
+            }
+          ],
+          "answer": 5
+        },
+        {
+          "prompt": "A dot plot shows 10: 1 dot; 11: 3 dots; 12: 6 dots; 13: 2 dots; 15: 2 dots. At which value is the peak?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 10,
+            "max": 15,
+            "step": 1,
+            "marks": [
+              {
+                "at": 10,
+                "label": "10 ●"
+              },
+              {
+                "at": 11,
+                "label": "11 ●●●"
+              },
+              {
+                "at": 12,
+                "label": "12 ●●●●●●"
+              },
+              {
+                "at": 13,
+                "label": "13 ●●"
+              },
+              {
+                "at": 15,
+                "label": "15 ●●"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "How many dots are in the tallest stack?",
+              "why": "The tallest stack is the peak.",
+              "input": {
+                "type": "number",
+                "answer": 6
+              },
+              "hint": "Find the biggest stack.",
+              "worked": "The tallest stack has 6 dots."
+            },
+            {
+              "do": "At which value is that stack?",
+              "why": "The peak is named by its value.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "Read the number under it.",
+              "worked": "The peak is at 12."
+            }
+          ],
+          "answer": 12
+        },
+        {
+          "prompt": "Dots pile up on the left (1: 6 dots; 2: 4 dots) and thin out to the right (3: 2 dots; 4: 1 dot; 5: 1 dot). What is the shape?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 1,
+            "max": 5,
+            "step": 1,
+            "marks": [
+              {
+                "at": 1,
+                "label": "1 ●●●●●●"
+              },
+              {
+                "at": 2,
+                "label": "2 ●●●●"
+              },
+              {
+                "at": 3,
+                "label": "3 ●●"
+              },
+              {
+                "at": 4,
+                "label": "4 ●"
+              },
+              {
+                "at": 5,
+                "label": "5 ●"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Which side has the long thin tail?",
+              "why": "Skew is named for the side with the tail.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "left",
+                  "right",
+                  "neither"
+                ]
+              },
+              "hint": "Where are there only 1 or 2 dots?",
+              "worked": "The tail is on the right."
+            },
+            {
+              "do": "Name the shape.",
+              "why": "A right tail means skewed right.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "symmetric",
+                  "skewed right",
+                  "skewed left",
+                  "uniform"
+                ]
+              },
+              "hint": "Name it for the tail.",
+              "worked": "Skewed right."
+            }
+          ],
+          "answer": "skewed right"
+        },
+        {
+          "prompt": "A dot plot shows 2: 1 dot; 3: 2 dots; 4: 2 dots; 6: 2 dots. What is the median?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 2,
+            "max": 6,
+            "step": 1,
+            "marks": [
+              {
+                "at": 2,
+                "label": "2 ●"
+              },
+              {
+                "at": 3,
+                "label": "3 ●●"
+              },
+              {
+                "at": 4,
+                "label": "4 ●●"
+              },
+              {
+                "at": 6,
+                "label": "6 ●●"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "How many dots are there?",
+              "why": "We need the count to find the middle.",
+              "input": {
+                "type": "number",
+                "answer": 7
+              },
+              "hint": "Count all the dots.",
+              "worked": "There are 7 dots."
+            },
+            {
+              "do": "Which dot is in the middle?",
+              "why": "With 7 dots, the 4th dot has 3 on each side.",
+              "input": {
+                "type": "number",
+                "answer": 4
+              },
+              "hint": "(7 + 1) ÷ 2.",
+              "worked": "The 4th dot."
+            },
+            {
+              "do": "What value is the 4th dot?",
+              "why": "The median is the value of the middle dot.",
+              "input": {
+                "type": "number",
+                "answer": 4
+              },
+              "hint": "Count from the left: 2, 3, 3, 4.",
+              "worked": "The 4th dot is 4."
+            }
+          ],
+          "answer": 4
         }
       ]
     },
@@ -69,31 +759,395 @@
       "id": "measures-center",
       "title": "Center Stage: Mean, Median, Mode & Range",
       "ccss": "6.SP.A.3",
-      "lesson": "**Measure of center = one number summary. Measure of variation = how spread out.**\n\n- Mean: add all, divide by how many\n- Median: middle value when in order (average the two middles if even)\n- Mode: most frequent\n- Range: max − min",
+      "learn": {
+        "sections": [
+          {
+            "text": "A **measure of center** sums up data with one number.\n\nThe **mean** is the fair share: for 2, 4, 9 the total is 15 and 15 ÷ 3 = **5**.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 10,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 2,
+                  "label": "2"
+                },
+                {
+                  "at": 4,
+                  "label": "4"
+                },
+                {
+                  "at": 5,
+                  "label": "mean 5"
+                },
+                {
+                  "at": 9,
+                  "label": "9"
+                }
+              ]
+            }
+          },
+          {
+            "text": "The **median** is the middle value in order. For 3, 5, 7, 9 the middles are 5 and 7, so the median is **6**.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 3,
+              "max": 9,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 3,
+                  "label": "3"
+                },
+                {
+                  "at": 5,
+                  "label": "5"
+                },
+                {
+                  "at": 6,
+                  "label": "median 6"
+                },
+                {
+                  "at": 7,
+                  "label": "7"
+                },
+                {
+                  "at": 9,
+                  "label": "9"
+                }
+              ]
+            }
+          },
+          {
+            "text": "The **mode** is the most common value, and the **range** (max − min) measures spread. For 4, 6, 6, 10 the mode is 6 and the range is 10 − 4 = 6.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 4,
+              "max": 10,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 4,
+                  "label": "4 ●"
+                },
+                {
+                  "at": 6,
+                  "label": "6 ●●"
+                },
+                {
+                  "at": 10,
+                  "label": "10 ●"
+                }
+              ]
+            }
+          }
+        ],
+        "keyIdea": "Center (mean, median, mode) tells what's typical, and variation (range) tells how spread out the data is."
+      },
       "examples": [
         {
-          "prompt": "Mean of 2, 4, 9",
+          "title": "Fair share mean",
+          "prompt": "Find the mean of 2, 4, and 9.",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "marks": [
+              {
+                "at": 2,
+                "label": "2"
+              },
+              {
+                "at": 4,
+                "label": "4"
+              },
+              {
+                "at": 5,
+                "label": "mean 5"
+              },
+              {
+                "at": 9,
+                "label": "9"
+              }
+            ]
+          },
           "steps": [
-            "2 + 4 + 9 = 15",
-            "15 ÷ 3 = 5"
+            {
+              "do": "Add: 2 + 4 + 9 = 15.",
+              "why": "The mean shares the total equally.",
+              "rule": "Sum all values"
+            },
+            {
+              "do": "Divide by 3: 15 ÷ 3 = 5.",
+              "why": "There are 3 values to share among.",
+              "rule": "Mean = sum ÷ count"
+            }
           ],
+          "check": "5 + 5 + 5 = 15, the same total. ✅",
+          "mistake": "Divide by how many values there are (3), not by the biggest value.",
           "answer": "5"
         },
         {
-          "prompt": "Median of 7, 3, 9, 5",
+          "title": "Median of an even list",
+          "prompt": "Find the median of 7, 3, 9, 5.",
+          "visual": {
+            "kind": "numberLine",
+            "min": 3,
+            "max": 9,
+            "step": 1,
+            "marks": [
+              {
+                "at": 3,
+                "label": "3"
+              },
+              {
+                "at": 5,
+                "label": "5"
+              },
+              {
+                "at": 6,
+                "label": "median 6"
+              },
+              {
+                "at": 7,
+                "label": "7"
+              },
+              {
+                "at": 9,
+                "label": "9"
+              }
+            ]
+          },
           "steps": [
-            "Order: 3, 5, 7, 9",
-            "(5 + 7) ÷ 2 = 6"
+            {
+              "do": "Put the values in order: 3, 5, 7, 9.",
+              "why": "The median is the middle of an ordered list.",
+              "rule": "Order first"
+            },
+            {
+              "do": "The two middle values are 5 and 7.",
+              "why": "An even count has two middles.",
+              "rule": "Even n → two middles"
+            },
+            {
+              "do": "Average them: (5 + 7) ÷ 2 = 6.",
+              "why": "The median sits halfway between the two middles.",
+              "rule": "Median = average of middles"
+            }
           ],
+          "check": "Two values are below 6 and two are above. ✅",
+          "mistake": "Don't take the middle of the unordered list (3 and 9); order first.",
           "answer": "6"
         },
         {
-          "prompt": "Mode and range of 4, 6, 6, 10",
+          "title": "Range",
+          "prompt": "Find the range of 4, 6, 6, 10.",
+          "visual": {
+            "kind": "numberLine",
+            "min": 4,
+            "max": 10,
+            "step": 1,
+            "marks": [
+              {
+                "at": 4,
+                "label": "4 ●"
+              },
+              {
+                "at": 6,
+                "label": "6 ●●"
+              },
+              {
+                "at": 10,
+                "label": "10 ●"
+              }
+            ]
+          },
           "steps": [
-            "6 appears twice → mode 6",
-            "10 − 4 = 6"
+            {
+              "do": "Find the max (10) and the min (4).",
+              "why": "Range compares the two ends.",
+              "rule": "Find max and min"
+            },
+            {
+              "do": "Subtract: 10 − 4 = 6.",
+              "why": "The difference shows the spread.",
+              "rule": "Range = max − min"
+            }
           ],
-          "answer": "Mode 6, range 6"
+          "check": "From 4 to 10 is 6 steps on a number line. ✅",
+          "mistake": "The mode is also 6 here, but range and mode mean different things.",
+          "answer": "6"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Find the mean of 4, 6, 8, and 10.",
+          "steps": [
+            {
+              "do": "Add the values.",
+              "why": "The mean starts with the total.",
+              "input": {
+                "type": "number",
+                "answer": 28
+              },
+              "hint": "4 + 6 + 8 + 10.",
+              "worked": "4 + 6 + 8 + 10 = 28."
+            },
+            {
+              "do": "Divide by the number of values.",
+              "why": "There are 4 values to share the total.",
+              "input": {
+                "type": "number",
+                "answer": 7
+              },
+              "hint": "28 ÷ 4.",
+              "worked": "28 ÷ 4 = 7."
+            }
+          ],
+          "answer": 7
+        },
+        {
+          "prompt": "Find the median of 15, 11, 20, 14, 13, 17.",
+          "visual": {
+            "kind": "numberLine",
+            "min": 11,
+            "max": 20,
+            "step": 1,
+            "marks": [
+              {
+                "at": 11,
+                "label": "11"
+              },
+              {
+                "at": 13,
+                "label": "13"
+              },
+              {
+                "at": 14,
+                "label": "14"
+              },
+              {
+                "at": 15,
+                "label": "15"
+              },
+              {
+                "at": 17,
+                "label": "17"
+              },
+              {
+                "at": 20,
+                "label": "20"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Order the values. Which value is 3rd?",
+              "why": "An ordered list shows the middle.",
+              "input": {
+                "type": "number",
+                "answer": 14
+              },
+              "hint": "11, 13, 14, 15, 17, 20.",
+              "worked": "The 3rd value is 14."
+            },
+            {
+              "do": "Which value is 4th?",
+              "why": "With 6 values, the 3rd and 4th are the middles.",
+              "input": {
+                "type": "number",
+                "answer": 15
+              },
+              "hint": "Keep counting.",
+              "worked": "The 4th value is 15."
+            },
+            {
+              "do": "Average the two middles.",
+              "why": "The median is halfway between them.",
+              "input": {
+                "type": "number",
+                "answer": 14.5,
+                "tolerance": 0.005
+              },
+              "hint": "(14 + 15) ÷ 2.",
+              "worked": "(14 + 15) ÷ 2 = 14.5."
+            }
+          ],
+          "answer": 14.5
+        },
+        {
+          "prompt": "Find the range of 45, 52, 38, 61, 49.",
+          "steps": [
+            {
+              "do": "What is the max?",
+              "why": "Range uses the biggest value.",
+              "input": {
+                "type": "number",
+                "answer": 61
+              },
+              "hint": "Find the largest.",
+              "worked": "The max is 61."
+            },
+            {
+              "do": "What is the min?",
+              "why": "Range uses the smallest value.",
+              "input": {
+                "type": "number",
+                "answer": 38
+              },
+              "hint": "Find the smallest.",
+              "worked": "The min is 38."
+            },
+            {
+              "do": "Subtract max − min.",
+              "why": "The gap shows how spread out the data is.",
+              "input": {
+                "type": "number",
+                "answer": 23
+              },
+              "hint": "61 − 38.",
+              "worked": "61 − 38 = 23."
+            }
+          ],
+          "answer": 23
+        },
+        {
+          "prompt": "Andrew's scores are 80, 90, and 85. What must his next score be so his mean is 86?",
+          "steps": [
+            {
+              "do": "What total do 4 scores need for a mean of 86?",
+              "why": "Mean × count = total.",
+              "input": {
+                "type": "number",
+                "answer": 344
+              },
+              "hint": "86 × 4.",
+              "worked": "86 × 4 = 344."
+            },
+            {
+              "do": "What is the total so far?",
+              "why": "Add his 3 scores.",
+              "input": {
+                "type": "number",
+                "answer": 255
+              },
+              "hint": "80 + 90 + 85.",
+              "worked": "80 + 90 + 85 = 255."
+            },
+            {
+              "do": "What score makes up the difference?",
+              "why": "The next score fills the gap.",
+              "input": {
+                "type": "number",
+                "answer": 89
+              },
+              "hint": "344 − 255.",
+              "worked": "344 − 255 = 89."
+            }
+          ],
+          "answer": 89
         }
       ]
     },
@@ -101,30 +1155,501 @@
       "id": "data-displays",
       "title": "Picture Power: Dot Plots, Histograms & Box Plots",
       "ccss": "6.SP.B.4",
-      "lesson": "**Show data on a number line!**\n\n- Dot plot: one dot per value\n- Histogram: bars for ranges of values (intervals)\n- Box plot: min, Q1, median, Q3, max\n- Q1 = median of the lower half, Q3 = median of the upper half (leave out the middle number if the count is odd)",
+      "learn": {
+        "sections": [
+          {
+            "text": "A **dot plot** puts one dot above the number line for each value.\n\nScores 2, 3, 3, 3, 4, 5 make a tall stack at 3.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 2,
+              "max": 5,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 2,
+                  "label": "2 ●"
+                },
+                {
+                  "at": 3,
+                  "label": "3 ●●●"
+                },
+                {
+                  "at": 4,
+                  "label": "4 ●"
+                },
+                {
+                  "at": 5,
+                  "label": "5 ●"
+                }
+              ]
+            }
+          },
+          {
+            "text": "A **histogram** groups values into intervals and draws a bar for each one. For the ages 3, 8, 12, 14, 19, the bar for 10 to 19 is 3 tall.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 20,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 3,
+                  "label": "3 ●"
+                },
+                {
+                  "at": 8,
+                  "label": "8 ●"
+                },
+                {
+                  "at": 12,
+                  "label": "12 ●"
+                },
+                {
+                  "at": 14,
+                  "label": "14 ●"
+                },
+                {
+                  "at": 19,
+                  "label": "19 ●"
+                }
+              ]
+            }
+          },
+          {
+            "text": "A **box plot** shows five numbers: min, Q₁, median, Q₃, max. For 1, 3, 4, 6, 8, 9, 11 they are 1, 3, 6, 9, 11. Each of the four sections holds about 25% of the data.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 12,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 1,
+                  "label": "min 1"
+                },
+                {
+                  "at": 3,
+                  "label": "Q₁ 3"
+                },
+                {
+                  "at": 6,
+                  "label": "median 6"
+                },
+                {
+                  "at": 9,
+                  "label": "Q₃ 9"
+                },
+                {
+                  "at": 11,
+                  "label": "max 11"
+                }
+              ]
+            }
+          }
+        ],
+        "keyIdea": "Dot plots show every value, histograms count values in intervals, and box plots show the five-number summary."
+      },
       "examples": [
         {
-          "prompt": "Histogram of 3, 8, 12, 14, 19: bar for 10–19?",
+          "title": "Histogram bar",
+          "prompt": "Ages at a party: 3, 8, 12, 14, 19. A histogram has a bar for ages 10 to 19. How tall is that bar?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 20,
+            "step": 1,
+            "marks": [
+              {
+                "at": 3,
+                "label": "3 ●"
+              },
+              {
+                "at": 8,
+                "label": "8 ●"
+              },
+              {
+                "at": 12,
+                "label": "12 ●"
+              },
+              {
+                "at": 14,
+                "label": "14 ●"
+              },
+              {
+                "at": 19,
+                "label": "19 ●"
+              }
+            ]
+          },
           "steps": [
-            "12, 14, 19"
+            {
+              "do": "Find the ages from 10 to 19: 12, 14, 19.",
+              "why": "A histogram bar counts values in its interval.",
+              "rule": "Bar = count in interval"
+            },
+            {
+              "do": "Count them: 3.",
+              "why": "The bar's height is how many values landed there.",
+              "rule": "Height = count"
+            }
           ],
+          "check": "3 and 8 belong in the 0 to 9 bar, so 2 + 3 = 5 ages total. ✅",
+          "mistake": "Don't make the bar's height the biggest age (19); bars show counts.",
           "answer": "3"
         },
         {
-          "prompt": "Five-number summary of 1, 3, 4, 6, 8, 9, 11",
+          "title": "Five-number summary",
+          "prompt": "Find Q₃ for the box plot of 1, 3, 4, 6, 8, 9, 11.",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 12,
+            "step": 1,
+            "marks": [
+              {
+                "at": 1,
+                "label": "min 1"
+              },
+              {
+                "at": 3,
+                "label": "Q₁ 3"
+              },
+              {
+                "at": 6,
+                "label": "median 6"
+              },
+              {
+                "at": 9,
+                "label": "Q₃ 9"
+              },
+              {
+                "at": 11,
+                "label": "max 11"
+              }
+            ]
+          },
           "steps": [
-            "Median 6",
-            "Lower half 1, 3, 4 → Q1 3",
-            "Upper half 8, 9, 11 → Q3 9"
+            {
+              "do": "The median of 7 values is the 4th: 6.",
+              "why": "The median splits the data in half.",
+              "rule": "Median = middle value"
+            },
+            {
+              "do": "The upper half (leave out the median) is 8, 9, 11.",
+              "why": "Q₃ is the middle of the upper half.",
+              "rule": "Upper half = values above the median"
+            },
+            {
+              "do": "The middle of 8, 9, 11 is 9.",
+              "why": "That value marks the right edge of the box.",
+              "rule": "Q₃ = median of upper half"
+            }
           ],
-          "answer": "1, 3, 6, 9, 11"
+          "check": "About a quarter of the data (11) is above 9. ✅",
+          "mistake": "Don't include the median itself in the upper half when the count is odd.",
+          "answer": "9"
         },
         {
-          "prompt": "IQR from box with Q1 = 3, Q3 = 9",
+          "title": "IQR from a box plot",
+          "prompt": "A box plot has min 1, Q₁ = 3, median 6, Q₃ = 9, and max 11. What is the IQR?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 12,
+            "step": 1,
+            "marks": [
+              {
+                "at": 1,
+                "label": "min 1"
+              },
+              {
+                "at": 3,
+                "label": "Q₁ 3"
+              },
+              {
+                "at": 6,
+                "label": "median 6"
+              },
+              {
+                "at": 9,
+                "label": "Q₃ 9"
+              },
+              {
+                "at": 11,
+                "label": "max 11"
+              }
+            ]
+          },
           "steps": [
-            "9 − 3"
+            {
+              "do": "Subtract: 9 − 3 = 6.",
+              "why": "The IQR is the width of the box.",
+              "rule": "IQR = Q₃ − Q₁"
+            }
           ],
+          "check": "The middle half of the data spans 6 units. ✅",
+          "mistake": "Don't use max − min; that is the range, not the IQR.",
           "answer": "6"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Ages at a party: 41, 45, 52, 58, 60, 63, 67, 71, 74. How many ages are in the 60 to 69 bar of a histogram?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 40,
+            "max": 75,
+            "step": 1,
+            "marks": [
+              {
+                "at": 41,
+                "label": "41 ●"
+              },
+              {
+                "at": 45,
+                "label": "45 ●"
+              },
+              {
+                "at": 52,
+                "label": "52 ●"
+              },
+              {
+                "at": 58,
+                "label": "58 ●"
+              },
+              {
+                "at": 60,
+                "label": "60 ●"
+              },
+              {
+                "at": 63,
+                "label": "63 ●"
+              },
+              {
+                "at": 67,
+                "label": "67 ●"
+              },
+              {
+                "at": 71,
+                "label": "71 ●"
+              },
+              {
+                "at": 74,
+                "label": "74 ●"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Which is the smallest age in that interval?",
+              "why": "The bar starts at 60.",
+              "input": {
+                "type": "number",
+                "answer": 60
+              },
+              "hint": "Look for ages from 60 up.",
+              "worked": "60 is the first one."
+            },
+            {
+              "do": "Count the ages from 60 to 69.",
+              "why": "The bar's height is this count.",
+              "input": {
+                "type": "number",
+                "answer": 3
+              },
+              "hint": "60, 63, 67.",
+              "worked": "3 ages."
+            }
+          ],
+          "answer": 3
+        },
+        {
+          "prompt": "A box plot shows min 10, Q₁ 14, median 18, Q₃ 25, max 30. What is the IQR?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 8,
+            "max": 32,
+            "step": 1,
+            "marks": [
+              {
+                "at": 10,
+                "label": "min 10"
+              },
+              {
+                "at": 14,
+                "label": "Q₁ 14"
+              },
+              {
+                "at": 18,
+                "label": "median 18"
+              },
+              {
+                "at": 25,
+                "label": "Q₃ 25"
+              },
+              {
+                "at": 30,
+                "label": "max 30"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Which two numbers make the box?",
+              "why": "The box runs from Q₁ to Q₃.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "10 and 30",
+                  "14 and 25",
+                  "14 and 18",
+                  "18 and 25"
+                ]
+              },
+              "hint": "The box edges are the quartiles.",
+              "worked": "Q₁ = 14 and Q₃ = 25."
+            },
+            {
+              "do": "Subtract Q₃ − Q₁.",
+              "why": "The IQR is the width of the box.",
+              "input": {
+                "type": "number",
+                "answer": 11
+              },
+              "hint": "25 − 14.",
+              "worked": "25 − 14 = 11."
+            }
+          ],
+          "answer": 11
+        },
+        {
+          "prompt": "A box plot has min 50, Q₁ = 55, median = 62, Q₃ = 70, and max 88. About what percent of the data is above 70?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 50,
+            "max": 90,
+            "step": 1,
+            "marks": [
+              {
+                "at": 50,
+                "label": "min 50"
+              },
+              {
+                "at": 55,
+                "label": "Q₁ 55"
+              },
+              {
+                "at": 62,
+                "label": "median 62"
+              },
+              {
+                "at": 70,
+                "label": "Q₃ 70"
+              },
+              {
+                "at": 88,
+                "label": "max 88"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "How many equal parts does a box plot split data into?",
+              "why": "Each section holds the same share.",
+              "input": {
+                "type": "number",
+                "answer": 4
+              },
+              "hint": "Min to Q₁, Q₁ to median, median to Q₃, Q₃ to max.",
+              "worked": "4 parts."
+            },
+            {
+              "do": "What percent is in the part above Q₃?",
+              "why": "Each of 4 equal parts is 100 ÷ 4 percent.",
+              "input": {
+                "type": "number",
+                "answer": 25
+              },
+              "hint": "100 ÷ 4.",
+              "worked": "25 percent."
+            }
+          ],
+          "answer": 25
+        },
+        {
+          "prompt": "For the data 2, 4, 4, 6, 9, 10, 13, 15, 17, what is the IQR?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 18,
+            "step": 1,
+            "marks": [
+              {
+                "at": 2,
+                "label": "min 2"
+              },
+              {
+                "at": 4,
+                "label": "Q₁ 4"
+              },
+              {
+                "at": 9,
+                "label": "median 9"
+              },
+              {
+                "at": 14,
+                "label": "Q₃ 14"
+              },
+              {
+                "at": 17,
+                "label": "max 17"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Find the median (the 5th of 9 values).",
+              "why": "The median splits the data in half.",
+              "input": {
+                "type": "number",
+                "answer": 9
+              },
+              "hint": "Count to the 5th value.",
+              "worked": "The median is 9."
+            },
+            {
+              "do": "Find Q₁, the median of 2, 4, 4, 6.",
+              "why": "Q₁ is the middle of the lower half.",
+              "input": {
+                "type": "number",
+                "answer": 4
+              },
+              "hint": "Average 4 and 4.",
+              "worked": "Q₁ = 4."
+            },
+            {
+              "do": "Find Q₃, the median of 10, 13, 15, 17.",
+              "why": "Q₃ is the middle of the upper half.",
+              "input": {
+                "type": "number",
+                "answer": 14
+              },
+              "hint": "Average 13 and 15.",
+              "worked": "Q₃ = 14."
+            },
+            {
+              "do": "Subtract Q₃ − Q₁.",
+              "why": "IQR is the spread of the middle half.",
+              "input": {
+                "type": "number",
+                "answer": 10
+              },
+              "hint": "14 − 4.",
+              "worked": "14 − 4 = 10."
+            }
+          ],
+          "answer": 10
         }
       ]
     },
@@ -132,34 +1657,436 @@
       "id": "summarizing-data",
       "title": "Data Detective: Summarizing & Choosing Measures",
       "ccss": "6.SP.B.5",
-      "lesson": "**Describe data like a pro.**\n\n- Say how many observations and what was measured.\n- MAD = average distance from the mean.\n- IQR = Q3 − Q1.\n- Outliers or skew? Use **median & IQR**. Symmetric? **Mean & MAD** work great.",
+      "learn": {
+        "sections": [
+          {
+            "text": "The **MAD** (mean absolute deviation) is the average distance from the mean.\n\nFor 2, 4, 6, 8 the mean is 5, the distances are 3, 1, 1, 3, and the MAD is 8 ÷ 4 = **2**.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 10,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 2,
+                  "label": "2"
+                },
+                {
+                  "at": 4,
+                  "label": "4"
+                },
+                {
+                  "at": 5,
+                  "label": "mean 5"
+                },
+                {
+                  "at": 6,
+                  "label": "6"
+                },
+                {
+                  "at": 8,
+                  "label": "8"
+                }
+              ]
+            }
+          },
+          {
+            "text": "An **outlier** is far from the rest. In 3, 4, 4, 5, 50 the mean is 13.2 but the median is 4. Use **median and IQR** when there are outliers or skew.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 3,
+              "max": 50,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 3,
+                  "label": "3 ●"
+                },
+                {
+                  "at": 4,
+                  "label": "4 ●●"
+                },
+                {
+                  "at": 5,
+                  "label": "5 ●"
+                },
+                {
+                  "at": 50,
+                  "label": "50 ●"
+                }
+              ]
+            }
+          },
+          {
+            "text": "For **symmetric** data with no outliers, the **mean and MAD** work great. Always say how many values you have and what was measured."
+          }
+        ],
+        "keyIdea": "Outliers or skew? Use median and IQR. Symmetric? Use mean and MAD."
+      },
       "examples": [
         {
-          "prompt": "MAD of 2, 4, 6, 8",
+          "title": "Mean absolute deviation",
+          "prompt": "Find the MAD of 2, 4, 6, 8.",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "marks": [
+              {
+                "at": 2,
+                "label": "2"
+              },
+              {
+                "at": 4,
+                "label": "4"
+              },
+              {
+                "at": 5,
+                "label": "mean 5"
+              },
+              {
+                "at": 6,
+                "label": "6"
+              },
+              {
+                "at": 8,
+                "label": "8"
+              }
+            ]
+          },
           "steps": [
-            "Mean = 5",
-            "Distances 3, 1, 1, 3",
-            "Sum 8 ÷ 4 = 2"
+            {
+              "do": "Find the mean: 20 ÷ 4 = 5.",
+              "why": "MAD measures distance from the mean.",
+              "rule": "Mean = sum ÷ count"
+            },
+            {
+              "do": "Find each distance from 5: 3, 1, 1, 3.",
+              "why": "Distances are never negative.",
+              "rule": "Distance = |value − mean|"
+            },
+            {
+              "do": "Average the distances: 8 ÷ 4 = 2.",
+              "why": "MAD is the typical distance from the mean.",
+              "rule": "MAD = sum of distances ÷ count"
+            }
           ],
+          "check": "On average, each value is 2 away from 5. ✅",
+          "mistake": "Don't stop at adding the distances (8); divide by the count too.",
           "answer": "2"
         },
         {
-          "prompt": "Best center for 3, 4, 4, 5, 50?",
+          "title": "Outlier alert",
+          "prompt": "For 3, 4, 4, 5, 50, which is more typical, the mean or the median? Find the median.",
+          "visual": {
+            "kind": "numberLine",
+            "min": 3,
+            "max": 50,
+            "step": 1,
+            "marks": [
+              {
+                "at": 3,
+                "label": "3 ●"
+              },
+              {
+                "at": 4,
+                "label": "4 ●●"
+              },
+              {
+                "at": 5,
+                "label": "5 ●"
+              },
+              {
+                "at": 50,
+                "label": "50 ●"
+              }
+            ]
+          },
           "steps": [
-            "50 is an outlier",
-            "Mean = 13.2 (not typical)",
-            "Median = 4"
+            {
+              "do": "Find the mean: 66 ÷ 5 = 13.2.",
+              "why": "The mean uses every value, even outliers.",
+              "rule": "Mean = sum ÷ count"
+            },
+            {
+              "do": "Find the median: the 3rd value is 4.",
+              "why": "The median only cares about the middle.",
+              "rule": "Median = middle value"
+            },
+            {
+              "do": "Pick the median, 4, as the typical value.",
+              "why": "The outlier 50 pulls the mean far from most data.",
+              "rule": "Outlier → use median"
+            }
           ],
-          "answer": "Median"
+          "check": "Four of the five values are near 4, not 13.2. ✅",
+          "mistake": "Don't trust the mean when there's an outlier; it gets pulled toward it.",
+          "answer": "4"
         },
         {
-          "prompt": "IQR of 1, 2, 4, 6, 7, 9",
+          "title": "IQR of a data set",
+          "prompt": "Find the IQR of 1, 2, 4, 6, 7, 9.",
+          "visual": {
+            "kind": "numberLine",
+            "min": 1,
+            "max": 9,
+            "step": 1,
+            "marks": [
+              {
+                "at": 1,
+                "label": "1 ●"
+              },
+              {
+                "at": 2,
+                "label": "2 ●"
+              },
+              {
+                "at": 4,
+                "label": "4 ●"
+              },
+              {
+                "at": 6,
+                "label": "6 ●"
+              },
+              {
+                "at": 7,
+                "label": "7 ●"
+              },
+              {
+                "at": 9,
+                "label": "9 ●"
+              }
+            ]
+          },
           "steps": [
-            "Lower half 1, 2, 4 → Q1 2",
-            "Upper half 6, 7, 9 → Q3 7",
-            "7 − 2 = 5"
+            {
+              "do": "Lower half: 1, 2, 4, so Q₁ = 2.",
+              "why": "Q₁ is the median of the lower half.",
+              "rule": "Q₁ = median of lower half"
+            },
+            {
+              "do": "Upper half: 6, 7, 9, so Q₃ = 7.",
+              "why": "Q₃ is the median of the upper half.",
+              "rule": "Q₃ = median of upper half"
+            },
+            {
+              "do": "Subtract: 7 − 2 = 5.",
+              "why": "The IQR is the spread of the middle half.",
+              "rule": "IQR = Q₃ − Q₁"
+            }
           ],
+          "check": "The middle half, from 2 to 7, spans 5. ✅",
+          "mistake": "Don't subtract the min from the max; that's the range (8).",
           "answer": "5"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Five friends earned $5, $6, $5, $7, and $90. Which measure of center best describes a typical amount?",
+          "steps": [
+            {
+              "do": "Is there an outlier?",
+              "why": "An outlier is far from the rest of the data.",
+              "input": {
+                "type": "choice",
+                "answer": 0,
+                "choices": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "hint": "Look at the $90.",
+              "worked": "Yes, $90 is an outlier."
+            },
+            {
+              "do": "Choose the best measure of center.",
+              "why": "The median is not pulled by outliers.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "mean",
+                  "median",
+                  "range",
+                  "MAD"
+                ]
+              },
+              "hint": "Which one ignores extreme values?",
+              "worked": "The median."
+            }
+          ],
+          "answer": "median"
+        },
+        {
+          "prompt": "Find the MAD of 3, 5, 7, 9, 11.",
+          "visual": {
+            "kind": "numberLine",
+            "min": 2,
+            "max": 12,
+            "step": 1,
+            "marks": [
+              {
+                "at": 3,
+                "label": "3"
+              },
+              {
+                "at": 5,
+                "label": "5"
+              },
+              {
+                "at": 7,
+                "label": "mean 7"
+              },
+              {
+                "at": 9,
+                "label": "9"
+              },
+              {
+                "at": 11,
+                "label": "11"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Find the mean.",
+              "why": "MAD measures distance from the mean.",
+              "input": {
+                "type": "number",
+                "answer": 7
+              },
+              "hint": "35 ÷ 5.",
+              "worked": "35 ÷ 5 = 7."
+            },
+            {
+              "do": "Add up the distances from 7.",
+              "why": "Distances are 4, 2, 0, 2, 4.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "4 + 2 + 0 + 2 + 4.",
+              "worked": "4 + 2 + 0 + 2 + 4 = 12."
+            },
+            {
+              "do": "Divide by the count.",
+              "why": "MAD is the average distance.",
+              "input": {
+                "type": "number",
+                "answer": 2.4,
+                "tolerance": 0.005
+              },
+              "hint": "12 ÷ 5.",
+              "worked": "12 ÷ 5 = 2.4."
+            }
+          ],
+          "answer": 2.4
+        },
+        {
+          "prompt": "Test scores were 78, 80, 82, 81, 79 with no outliers. Which pair of measures summarizes the data best?",
+          "steps": [
+            {
+              "do": "Is the data roughly symmetric with no outliers?",
+              "why": "Symmetric data lets the mean be typical.",
+              "input": {
+                "type": "choice",
+                "answer": 0,
+                "choices": [
+                  "Yes",
+                  "No"
+                ]
+              },
+              "hint": "All scores are close together.",
+              "worked": "Yes."
+            },
+            {
+              "do": "Choose the best pair.",
+              "why": "With no outliers, mean and MAD use every value well.",
+              "input": {
+                "type": "choice",
+                "answer": 2,
+                "choices": [
+                  "median and range",
+                  "mode and IQR",
+                  "mean and MAD",
+                  "max and min"
+                ]
+              },
+              "hint": "Center and spread that go together.",
+              "worked": "Mean and MAD."
+            }
+          ],
+          "answer": "mean and MAD"
+        },
+        {
+          "prompt": "Find the MAD of 2, 5, 6, 9, 13.",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 14,
+            "step": 1,
+            "marks": [
+              {
+                "at": 2,
+                "label": "2"
+              },
+              {
+                "at": 5,
+                "label": "5"
+              },
+              {
+                "at": 6,
+                "label": "6"
+              },
+              {
+                "at": 7,
+                "label": "mean 7"
+              },
+              {
+                "at": 9,
+                "label": "9"
+              },
+              {
+                "at": 13,
+                "label": "13"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Find the mean.",
+              "why": "MAD measures distance from the mean.",
+              "input": {
+                "type": "number",
+                "answer": 7
+              },
+              "hint": "35 ÷ 5.",
+              "worked": "35 ÷ 5 = 7."
+            },
+            {
+              "do": "Add up the distances from 7.",
+              "why": "Distances are 5, 2, 1, 2, 6.",
+              "input": {
+                "type": "number",
+                "answer": 16
+              },
+              "hint": "5 + 2 + 1 + 2 + 6.",
+              "worked": "5 + 2 + 1 + 2 + 6 = 16."
+            },
+            {
+              "do": "Divide by the count.",
+              "why": "MAD is the average distance.",
+              "input": {
+                "type": "number",
+                "answer": 3.2,
+                "tolerance": 0.005
+              },
+              "hint": "16 ÷ 5.",
+              "worked": "16 ÷ 5 = 3.2."
+            }
+          ],
+          "answer": 3.2
         }
       ]
     }

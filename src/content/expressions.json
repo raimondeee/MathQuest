@@ -6,252 +6,1890 @@
     {
       "id": "exp-exponents",
       "title": "Power Up: Exponents",
-      "ccss": [
-        "6.EE.A.1"
-      ],
-      "lesson": "## Power Up! ⚡\nAn **exponent** tells how many times to use the **base** as a factor.\n\n- 2³ = 2 × 2 × 2 = **8**\n- 5² = 5 × 5 = **25**\n\n⚠️ 2³ is *not* 2 × 3!",
+      "ccss": "6.EE.A.1",
+      "learn": {
+        "sections": [
+          {
+            "text": "An **exponent** tells how many times to use the **base** as a factor. 5² means 5 × 5. That's a 5-by-5 square with 25 little squares, which is why we say \"5 squared\"!",
+            "visual": {
+              "kind": "areaModel",
+              "rows": 5,
+              "cols": 5,
+              "shadeRows": 5,
+              "shadeCols": 5,
+              "labels": {
+                "rows": "5",
+                "cols": "5"
+              }
+            }
+          },
+          {
+            "text": "Powers of 10 are easy to spot: 10³ = 10 × 10 × 10 = 1000. The exponent 3 matches the 3 zeros.",
+            "visual": {
+              "kind": "placeValue",
+              "digits": "1000"
+            }
+          },
+          {
+            "text": "⚠️ 2³ is **not** 2 × 3. It's 2 × 2 × 2 = 8."
+          }
+        ],
+        "keyIdea": "bᵉ = b used as a factor e times."
+      },
       "examples": [
         {
+          "title": "Squares make squares",
+          "prompt": "Evaluate 4².",
+          "steps": [
+            {
+              "do": "Draw a 4-by-4 grid.",
+              "why": "4² means 4 rows of 4.",
+              "rule": "b² = b × b",
+              "visual": {
+                "kind": "areaModel",
+                "rows": 4,
+                "cols": 4,
+                "shadeRows": 4,
+                "shadeCols": 4,
+                "labels": {
+                  "rows": "4",
+                  "cols": "4"
+                }
+              }
+            },
+            {
+              "do": "Count the squares: 4 × 4 = 16.",
+              "why": "Multiplying rows by columns counts the whole grid.",
+              "rule": "b² = b × b"
+            }
+          ],
+          "check": "16 ÷ 4 = 4, so 16 is 4 groups of 4. ✅",
+          "mistake": "4² is not 4 × 2 = 8; the exponent means repeated multiplication.",
+          "answer": "16"
+        },
+        {
+          "title": "Repeated factors",
           "prompt": "Evaluate 3⁴.",
           "steps": [
-            "3⁴ = 3 × 3 × 3 × 3",
-            "3 × 3 = 9, 9 × 3 = 27, 27 × 3 = 81"
+            {
+              "do": "Write it out: 3 × 3 × 3 × 3.",
+              "why": "The exponent 4 says use four 3s as factors.",
+              "rule": "bᵉ = b × b × … (e times)"
+            },
+            {
+              "do": "Multiply step by step: 3 × 3 = 9, 9 × 3 = 27, 27 × 3 = 81.",
+              "why": "Multiplying one factor at a time keeps it neat.",
+              "rule": "Multiply left to right"
+            }
           ],
+          "check": "81 ÷ 3 = 27, which is 3³, so it fits the pattern. ✅",
+          "mistake": "3⁴ is not 3 × 4 = 12.",
           "answer": "81"
         },
         {
-          "prompt": "Write 7 × 7 × 7 using an exponent.",
+          "title": "Fractions can have exponents too",
+          "prompt": "Evaluate (½)³.",
           "steps": [
-            "7 is used as a factor 3 times",
-            "So the exponent is 3"
+            {
+              "do": "Write it out: ½ × ½ × ½.",
+              "why": "The whole fraction is the base, so all of it repeats.",
+              "rule": "(a/b)ᵉ = aᵉ/bᵉ"
+            },
+            {
+              "do": "Multiply the tops: 1 × 1 × 1 = 1. Multiply the bottoms: 2 × 2 × 2 = 8. So the answer is ⅛.",
+              "why": "Fraction times fraction means tops times tops and bottoms times bottoms.",
+              "rule": "(a/b)ᵉ = aᵉ/bᵉ",
+              "visual": {
+                "kind": "fractionBars",
+                "wholes": 1,
+                "parts": 8,
+                "shaded": 1
+              }
+            }
           ],
-          "answer": "7³"
+          "check": "Half of a half of a half is a small piece, and ⅛ is small. ✅",
+          "mistake": "Don't cube only the top or only the bottom — both get the exponent.",
+          "answer": "⅛"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Evaluate 6².",
+          "visual": {
+            "kind": "areaModel",
+            "rows": 6,
+            "cols": 6,
+            "shadeRows": 6,
+            "shadeCols": 6,
+            "labels": {
+              "rows": "6",
+              "cols": "6"
+            }
+          },
+          "steps": [
+            {
+              "do": "Multiply 6 × 6.",
+              "why": "The exponent 2 means two 6s multiplied.",
+              "input": {
+                "type": "number",
+                "answer": 36
+              },
+              "hint": "Think of a 6-by-6 grid.",
+              "worked": "6 × 6 = 36."
+            }
+          ],
+          "answer": 36
         },
         {
-          "prompt": "Evaluate (1/2)³.",
+          "prompt": "Evaluate 2⁵.",
           "steps": [
-            "(1/2) × (1/2) × (1/2)",
-            "Tops: 1 × 1 × 1 = 1; bottoms: 2 × 2 × 2 = 8"
+            {
+              "do": "How many 2s are multiplied?",
+              "why": "The exponent tells how many factors to use.",
+              "input": {
+                "type": "number",
+                "answer": 5
+              },
+              "hint": "Look at the small raised number.",
+              "worked": "There are 5 twos."
+            },
+            {
+              "do": "Multiply 2 × 2 × 2 × 2 × 2.",
+              "why": "Doubling five times from 1 gives the answer.",
+              "input": {
+                "type": "number",
+                "answer": 32
+              },
+              "hint": "2, 4, 8, 16, …",
+              "worked": "2⁵ = 32."
+            }
           ],
-          "answer": "1/8"
+          "answer": 32
+        },
+        {
+          "prompt": "Evaluate 10⁴.",
+          "visual": {
+            "kind": "placeValue",
+            "digits": "10000"
+          },
+          "steps": [
+            {
+              "do": "Multiply 10 × 10 × 10 × 10.",
+              "why": "Each factor of 10 adds one zero.",
+              "input": {
+                "type": "number",
+                "answer": 10000
+              },
+              "hint": "Write 1 followed by 4 zeros.",
+              "worked": "10⁴ = 10000."
+            }
+          ],
+          "answer": 10000
+        },
+        {
+          "prompt": "Evaluate (⅔)².",
+          "steps": [
+            {
+              "do": "Multiply the fraction by itself: ⅔ × ⅔.",
+              "why": "The exponent 2 means the fraction is used twice.",
+              "input": {
+                "type": "fraction",
+                "answer": "4/9"
+              },
+              "hint": "Tops: 2 × 2. Bottoms: 3 × 3.",
+              "worked": "⅔ × ⅔ = 4/9."
+            }
+          ],
+          "answer": "4/9"
+        },
+        {
+          "prompt": "Evaluate 3² + 2³.",
+          "steps": [
+            {
+              "do": "What is 3²?",
+              "why": "Exponents get evaluated before adding.",
+              "input": {
+                "type": "number",
+                "answer": 9
+              },
+              "hint": "3 × 3",
+              "worked": "3² = 9."
+            },
+            {
+              "do": "What is 2³?",
+              "why": "Each power is worked out on its own.",
+              "input": {
+                "type": "number",
+                "answer": 8
+              },
+              "hint": "2 × 2 × 2",
+              "worked": "2³ = 8."
+            },
+            {
+              "do": "Add the results: 9 + 8.",
+              "why": "Now only addition is left.",
+              "input": {
+                "type": "number",
+                "answer": 17
+              },
+              "hint": "9 + 8",
+              "worked": "3² + 2³ = 17."
+            }
+          ],
+          "answer": 17
         }
       ]
     },
     {
       "id": "exp-writing",
       "title": "Words to Expressions",
-      "ccss": [
-        "6.EE.A.2a",
-        "6.EE.A.2b"
-      ],
-      "lesson": "## Translate Words into Math 🗣️➡️🔢\n- **sum / more than** → +\n- **difference / less than** → −\n- **product / times** → ×\n- **quotient / divided by** → ÷\n\n\"5 less than n\" is **n − 5** (careful with the order!). A **term** is a part separated by + or −; a **coefficient** is the number in front of a variable.",
+      "ccss": "6.EE.A.2a, 6.EE.A.2b",
+      "learn": {
+        "sections": [
+          {
+            "text": "Math words are clues: **sum / more than** → +, **difference / less than** → −, **product / times** → ×, **quotient / divided by** → ÷.\n\nIf n = 6, then \"3 more than n\" is n + 3 = 9: a jump of 3 from 6.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 10,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 6,
+                  "label": "n = 6"
+                },
+                {
+                  "at": 9,
+                  "label": "9"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 6,
+                  "to": 9,
+                  "label": "+3"
+                }
+              ]
+            }
+          },
+          {
+            "text": "\"3 times n\" is written **3n**. Picture 3 rows with n in each row. If n = 4, that's 3 × 4 = 12 squares.",
+            "visual": {
+              "kind": "areaModel",
+              "rows": 3,
+              "cols": 4,
+              "shadeRows": 3,
+              "shadeCols": 4,
+              "labels": {
+                "rows": "3",
+                "cols": "4"
+              }
+            }
+          },
+          {
+            "text": "A **term** is a part separated by + or −. In 4a + 7b + 2 there are 3 terms. The **coefficient** is the number stuck to a variable: in 7b, it's 7."
+          }
+        ],
+        "keyIdea": "Turn clue words into symbols, and watch the order for − and ÷."
+      },
       "examples": [
         {
+          "title": "More than",
           "prompt": "Write \"8 more than n\".",
           "steps": [
-            "\"more than\" means add",
-            "n + 8"
+            {
+              "do": "\"More than\" means add.",
+              "why": "Something that is more than n is bigger, so we add.",
+              "rule": "more than → +"
+            },
+            {
+              "do": "Start with n and add 8: n + 8. If n = 5, that lands on 13.",
+              "why": "8 is being added onto n.",
+              "rule": "more than → +",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 15,
+                "step": 1,
+                "marks": [
+                  {
+                    "at": 5,
+                    "label": "n = 5"
+                  },
+                  {
+                    "at": 13,
+                    "label": "13"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 5,
+                    "to": 13,
+                    "label": "+8"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "If n = 5, then n + 8 = 13, which is 8 more than 5. ✅",
+          "mistake": "Either n + 8 or 8 + n is fine for adding, but order matters for subtracting!",
           "answer": "n + 8"
         },
         {
+          "title": "Less than flips the order",
           "prompt": "Write \"3 less than twice a number x\".",
           "steps": [
-            "Twice x is 2x",
-            "3 less than that: subtract 3"
+            {
+              "do": "\"Twice x\" means 2 × x, written 2x.",
+              "why": "Twice means two times.",
+              "rule": "times → ×"
+            },
+            {
+              "do": "\"3 less than\" means take 3 away from 2x: 2x − 3.",
+              "why": "We start with 2x and then make it 3 smaller.",
+              "rule": "a less than b → b − a"
+            }
           ],
-          "answer": "2x - 3"
+          "check": "If x = 5: 2 × 5 − 3 = 7, which is 3 less than 10. ✅",
+          "mistake": "\"3 less than 2x\" is 2x − 3, not 3 − 2x.",
+          "answer": "2x − 3"
         },
         {
+          "title": "Terms and coefficients",
           "prompt": "How many terms are in 4a + 7b + 2, and what is the coefficient of b?",
           "steps": [
-            "Terms: 4a, 7b, 2 → 3 terms",
-            "The number in front of b is 7"
+            {
+              "do": "Split at each + sign: 4a | 7b | 2.",
+              "why": "Plus and minus signs separate the terms.",
+              "rule": "Terms are separated by + or −"
+            },
+            {
+              "do": "Count them: 3 terms. The number on b is 7.",
+              "why": "A coefficient is the number multiplying a variable.",
+              "rule": "Coefficient = number × variable"
+            }
           ],
+          "check": "4a, 7b and 2 are three separate pieces. ✅",
+          "mistake": "The 2 is a term too (a constant), even without a variable.",
           "answer": "3 terms; coefficient 7"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Which expression means \"the sum of n and 9\"?",
+          "steps": [
+            {
+              "do": "Choose the expression.",
+              "why": "Sum means add.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "9n",
+                  "n + 9",
+                  "n − 9",
+                  "n ÷ 9"
+                ]
+              },
+              "hint": "Sum is the answer to an addition.",
+              "worked": "The sum of n and 9 is n + 9."
+            }
+          ],
+          "answer": "n + 9"
+        },
+        {
+          "prompt": "Which expression means \"7 less than y\"?",
+          "steps": [
+            {
+              "do": "Choose the expression.",
+              "why": "We start with y and take 7 away.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "7 − y",
+                  "y − 7",
+                  "7y",
+                  "y + 7"
+                ]
+              },
+              "hint": "Less than flips the order.",
+              "worked": "7 less than y is y − 7."
+            }
+          ],
+          "answer": "y − 7"
+        },
+        {
+          "prompt": "What is the coefficient of x in 5x + 3y + 8?",
+          "steps": [
+            {
+              "do": "Type the coefficient of x.",
+              "why": "The coefficient is the number multiplying the variable.",
+              "input": {
+                "type": "number",
+                "answer": 5
+              },
+              "hint": "Look right in front of x.",
+              "worked": "The coefficient of x is 5."
+            }
+          ],
+          "answer": 5
+        },
+        {
+          "prompt": "Which expression means \"4 times the sum of n and 2\"?",
+          "steps": [
+            {
+              "do": "First, write \"the sum of n and 2\". Choose it.",
+              "why": "The sum has to be found before multiplying.",
+              "input": {
+                "type": "choice",
+                "answer": 0,
+                "choices": [
+                  "n + 2",
+                  "2n",
+                  "n − 2",
+                  "4 + n"
+                ]
+              },
+              "hint": "Sum means add.",
+              "worked": "The sum is n + 2."
+            },
+            {
+              "do": "Now multiply that sum by 4. Choose the expression.",
+              "why": "Parentheses keep the sum together so all of it gets multiplied.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "4n + 2",
+                  "4(n + 2)",
+                  "4 + n + 2",
+                  "n + 8"
+                ]
+              },
+              "hint": "Wrap the sum in parentheses.",
+              "worked": "4 times the sum is 4(n + 2)."
+            }
+          ],
+          "answer": "4(n + 2)"
         }
       ]
     },
     {
       "id": "exp-evaluating",
       "title": "Evaluate & Order of Operations",
-      "ccss": [
-        "6.EE.A.2c"
-      ],
-      "lesson": "## Order of Operations 🧭\n1. **P**arentheses\n2. **E**xponents\n3. **M**ultiply / **D**ivide (left to right)\n4. **A**dd / **S**ubtract (left to right)\n\nTo **evaluate** an expression, replace the variable with its value, then follow the order!",
+      "ccss": "6.EE.A.2c",
+      "learn": {
+        "sections": [
+          {
+            "text": "Order matters! Do **P**arentheses, **E**xponents, **M**ultiply/**D**ivide (left to right), then **A**dd/**S**ubtract (left to right).\n\nIn 6 + 4 × 3, the 4 × 3 is a block of 12 squares. Add the 6 after.",
+            "visual": {
+              "kind": "areaModel",
+              "rows": 4,
+              "cols": 3,
+              "shadeRows": 4,
+              "shadeCols": 3,
+              "labels": {
+                "rows": "4",
+                "cols": "3"
+              }
+            }
+          },
+          {
+            "text": "Then add: 6 + 12 = 18. On a number line, start at 12 and jump 6.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 20,
+              "step": 2,
+              "marks": [
+                {
+                  "at": 12,
+                  "label": "12"
+                },
+                {
+                  "at": 18,
+                  "label": "18"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 12,
+                  "to": 18,
+                  "label": "+6"
+                }
+              ]
+            }
+          },
+          {
+            "text": "To **evaluate** an expression, swap each variable for its number, then follow the order."
+          }
+        ],
+        "keyIdea": "PEMDAS: Parentheses, Exponents, Multiply/Divide, Add/Subtract."
+      },
       "examples": [
         {
+          "title": "Multiply before adding",
           "prompt": "Evaluate 6 + 4 × 3.",
           "steps": [
-            "Multiply first: 4 × 3 = 12",
-            "Add: 6 + 12 = 18"
+            {
+              "do": "Multiply first: 4 × 3 = 12.",
+              "why": "Multiplication comes before addition in the order of operations.",
+              "rule": "M before A",
+              "visual": {
+                "kind": "areaModel",
+                "rows": 4,
+                "cols": 3,
+                "shadeRows": 4,
+                "shadeCols": 3,
+                "labels": {
+                  "rows": "4",
+                  "cols": "3"
+                }
+              }
+            },
+            {
+              "do": "Add: 6 + 12 = 18.",
+              "why": "Only addition is left now.",
+              "rule": "Add/Subtract last"
+            }
           ],
+          "check": "If you added first you'd get 10 × 3 = 30, which breaks the rules. ✅",
+          "mistake": "Going left to right without PEMDAS gives 30, which is wrong.",
           "answer": "18"
         },
         {
+          "title": "Parentheses first",
           "prompt": "Evaluate (2 + 5) × 3 − 1.",
           "steps": [
-            "Parentheses: 2 + 5 = 7",
-            "Multiply: 7 × 3 = 21",
-            "Subtract: 21 − 1 = 20"
+            {
+              "do": "Parentheses: 2 + 5 = 7.",
+              "why": "Parentheses are always done first.",
+              "rule": "P first"
+            },
+            {
+              "do": "Multiply: 7 × 3 = 21.",
+              "why": "Multiplication comes before subtraction.",
+              "rule": "M before S"
+            },
+            {
+              "do": "Subtract: 21 − 1 = 20.",
+              "why": "Subtraction is last.",
+              "rule": "Add/Subtract last"
+            }
           ],
+          "check": "Redo it: 7, then 21, then 20. ✅",
+          "mistake": "Don't multiply 5 × 3 first — the parentheses group 2 + 5 together.",
           "answer": "20"
         },
         {
+          "title": "Plug in, then solve",
           "prompt": "Evaluate 2x² + 3 when x = 4.",
           "steps": [
-            "x² = 4² = 16",
-            "2 × 16 = 32",
-            "32 + 3 = 35"
+            {
+              "do": "Replace x with 4: 2 × 4² + 3.",
+              "why": "Evaluating means using the given number for the variable.",
+              "rule": "Substitute first"
+            },
+            {
+              "do": "Exponent: 4² = 16.",
+              "why": "Exponents come before multiplying.",
+              "rule": "E before M",
+              "visual": {
+                "kind": "areaModel",
+                "rows": 4,
+                "cols": 4,
+                "shadeRows": 4,
+                "shadeCols": 4,
+                "labels": {
+                  "rows": "4",
+                  "cols": "4"
+                }
+              }
+            },
+            {
+              "do": "Multiply: 2 × 16 = 32. Add: 32 + 3 = 35.",
+              "why": "Multiply, then add last.",
+              "rule": "M before A"
+            }
           ],
+          "check": "Estimate: 2 × 16 is 32, plus a little is about 35. ✅",
+          "mistake": "2x² means 2 × (x²), not (2x)². Square only the x.",
           "answer": "35"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Evaluate 5 + 2 × 6.",
+          "steps": [
+            {
+              "do": "Multiply first: 2 × 6.",
+              "why": "Multiplication comes before addition.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "2 groups of 6.",
+              "worked": "2 × 6 = 12."
+            },
+            {
+              "do": "Add 5.",
+              "why": "Addition is last.",
+              "input": {
+                "type": "number",
+                "answer": 17
+              },
+              "hint": "5 + 12",
+              "worked": "5 + 12 = 17."
+            }
+          ],
+          "answer": 17
+        },
+        {
+          "prompt": "Evaluate (8 − 3) × 4.",
+          "steps": [
+            {
+              "do": "Do the parentheses: 8 − 3.",
+              "why": "Parentheses come first.",
+              "input": {
+                "type": "number",
+                "answer": 5
+              },
+              "hint": "Subtract inside.",
+              "worked": "8 − 3 = 5."
+            },
+            {
+              "do": "Multiply by 4.",
+              "why": "Now multiply the result.",
+              "input": {
+                "type": "number",
+                "answer": 20
+              },
+              "hint": "5 × 4",
+              "worked": "5 × 4 = 20."
+            }
+          ],
+          "answer": 20
+        },
+        {
+          "prompt": "Evaluate 3x + 7 when x = 5.",
+          "steps": [
+            {
+              "do": "Multiply 3 × 5.",
+              "why": "3x means 3 times x, and x is 5.",
+              "input": {
+                "type": "number",
+                "answer": 15
+              },
+              "hint": "Replace x with 5.",
+              "worked": "3 × 5 = 15."
+            },
+            {
+              "do": "Add 7.",
+              "why": "Addition is last.",
+              "input": {
+                "type": "number",
+                "answer": 22
+              },
+              "hint": "15 + 7",
+              "worked": "15 + 7 = 22."
+            }
+          ],
+          "answer": 22
+        },
+        {
+          "prompt": "Evaluate 20 − 2³ + 12 ÷ 4.",
+          "steps": [
+            {
+              "do": "Exponent: 2³.",
+              "why": "Exponents come before multiplying, dividing, adding or subtracting.",
+              "input": {
+                "type": "number",
+                "answer": 8
+              },
+              "hint": "2 × 2 × 2",
+              "worked": "2³ = 8."
+            },
+            {
+              "do": "Divide: 12 ÷ 4.",
+              "why": "Division comes before adding and subtracting.",
+              "input": {
+                "type": "number",
+                "answer": 3
+              },
+              "hint": "12 ÷ 4",
+              "worked": "12 ÷ 4 = 3."
+            },
+            {
+              "do": "Now do 20 − 8 + 3 from left to right.",
+              "why": "Adding and subtracting go left to right.",
+              "input": {
+                "type": "number",
+                "answer": 15
+              },
+              "hint": "20 − 8 first.",
+              "worked": "20 − 8 = 12, then 12 + 3 = 15."
+            }
+          ],
+          "answer": 15
         }
       ]
     },
     {
       "id": "exp-equivalent",
       "title": "Equivalent Expressions & Properties",
-      "ccss": [
-        "6.EE.A.3",
-        "6.EE.A.4"
-      ],
-      "lesson": "## Same Value, Different Look 🪞\n**Equivalent expressions** are equal for every value of the variable.\n\n- **Distributive property:** 3(x + 2) = 3x + 6\n- **Combine like terms:** 4y + 2y = 6y\n- y + y + y = 3y",
+      "ccss": "6.EE.A.3, 6.EE.A.4",
+      "learn": {
+        "sections": [
+          {
+            "text": "**Equivalent expressions** are equal for every value of the variable. The **distributive property** says 3(x + 4) = 3x + 12. Picture a rectangle 3 tall with one part x wide and another part 4 wide: the areas are 3x and 12.",
+            "visual": {
+              "kind": "areaModel",
+              "rows": 3,
+              "cols": 2,
+              "shadeCols": 1,
+              "labels": {
+                "rows": "3",
+                "cols": "x + 4"
+              }
+            }
+          },
+          {
+            "text": "**Like terms** have the same variable part. 4y + 2y = 6y, like 4 apples + 2 apples = 6 apples. 🍎 A rectangle 2 tall with parts 3x and 1 shows 2(3x + 1) = 6x + 2.",
+            "visual": {
+              "kind": "areaModel",
+              "rows": 2,
+              "cols": 2,
+              "shadeCols": 1,
+              "labels": {
+                "rows": "2",
+                "cols": "3x + 1"
+              }
+            }
+          },
+          {
+            "text": "Test equivalence by plugging in a number. If x = 1: 3(1 + 4) = 15 and 3(1) + 12 = 15. ✅"
+          }
+        ],
+        "keyIdea": "Distribute to every term inside; combine only like terms."
+      },
       "examples": [
         {
-          "prompt": "Rewrite 4(x + 5).",
+          "title": "Distribute with an area model",
+          "prompt": "Rewrite 4(x + 5) without parentheses.",
           "steps": [
-            "Multiply 4 × x = 4x",
-            "Multiply 4 × 5 = 20"
+            {
+              "do": "Draw a rectangle 4 tall, split into a part x wide and a part 5 wide.",
+              "why": "The total area is 4 times the whole width x + 5.",
+              "rule": "a(b + c) = ab + ac",
+              "visual": {
+                "kind": "areaModel",
+                "rows": 4,
+                "cols": 2,
+                "shadeCols": 1,
+                "labels": {
+                  "rows": "4",
+                  "cols": "x + 5"
+                }
+              }
+            },
+            {
+              "do": "Find each area: 4 × x = 4x and 4 × 5 = 20.",
+              "why": "Each part is a smaller rectangle.",
+              "rule": "a(b + c) = ab + ac"
+            },
+            {
+              "do": "Add the parts: 4x + 20.",
+              "why": "The whole area is both parts together.",
+              "rule": "a(b + c) = ab + ac"
+            }
           ],
+          "check": "Try x = 1: 4(1 + 5) = 24 and 4 + 20 = 24. ✅",
+          "mistake": "Multiply the 4 by both terms — 4x + 5 forgets the 5.",
           "answer": "4x + 20"
         },
         {
+          "title": "Combine like terms",
           "prompt": "Simplify 3n + 5n + 2.",
           "steps": [
-            "3n and 5n are like terms: 8n",
-            "2 stays"
+            {
+              "do": "Find like terms: 3n and 5n both have n.",
+              "why": "Only terms with the same variable can join.",
+              "rule": "Like terms share a variable"
+            },
+            {
+              "do": "Add them: 3n + 5n = 8n.",
+              "why": "3 n's plus 5 n's makes 8 n's.",
+              "rule": "Add the coefficients"
+            },
+            {
+              "do": "The 2 has no n, so it stays: 8n + 2.",
+              "why": "A plain number is not a like term with n.",
+              "rule": "Constants stay separate"
+            }
           ],
+          "check": "Try n = 1: 3 + 5 + 2 = 10 and 8 + 2 = 10. ✅",
+          "mistake": "Don't add the 2 into the n's — 10n is not equivalent.",
           "answer": "8n + 2"
         },
         {
+          "title": "Distribute, then combine",
           "prompt": "Simplify 2(3x + 1) + x.",
           "steps": [
-            "Distribute: 6x + 2",
-            "Add x: 6x + x = 7x"
+            {
+              "do": "Distribute: 2 × 3x = 6x and 2 × 1 = 2.",
+              "why": "The 2 multiplies everything inside the parentheses.",
+              "rule": "a(b + c) = ab + ac",
+              "visual": {
+                "kind": "areaModel",
+                "rows": 2,
+                "cols": 2,
+                "shadeCols": 1,
+                "labels": {
+                  "rows": "2",
+                  "cols": "3x + 1"
+                }
+              }
+            },
+            {
+              "do": "Now we have 6x + 2 + x.",
+              "why": "Writing it out helps you see the like terms.",
+              "rule": "Like terms share a variable"
+            },
+            {
+              "do": "Combine 6x + x = 7x. Answer: 7x + 2.",
+              "why": "x is the same as 1x.",
+              "rule": "Add the coefficients"
+            }
           ],
+          "check": "Try x = 2: 2(6 + 1) + 2 = 16 and 14 + 2 = 16. ✅",
+          "mistake": "x has a coefficient of 1, so 6x + x is 7x, not 6x.",
           "answer": "7x + 2"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Which is equivalent to y + y + y?",
+          "steps": [
+            {
+              "do": "Choose the expression.",
+              "why": "Adding y three times is the same as 3 times y.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "y³",
+                  "3y",
+                  "y + 3",
+                  "3 + y"
+                ]
+              },
+              "hint": "Count the y's.",
+              "worked": "y + y + y = 3y."
+            }
+          ],
+          "answer": "3y"
+        },
+        {
+          "prompt": "Rewrite 5(x + 3) without parentheses.",
+          "visual": {
+            "kind": "areaModel",
+            "rows": 5,
+            "cols": 2,
+            "shadeCols": 1,
+            "labels": {
+              "rows": "5",
+              "cols": "x + 3"
+            }
+          },
+          "steps": [
+            {
+              "do": "What is 5 × 3?",
+              "why": "The 5 multiplies each term inside.",
+              "input": {
+                "type": "number",
+                "answer": 15
+              },
+              "hint": "5 groups of 3.",
+              "worked": "5 × 3 = 15."
+            },
+            {
+              "do": "Choose the equivalent expression.",
+              "why": "Both terms inside get multiplied by 5.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "5x + 3",
+                  "5x + 15",
+                  "x + 15",
+                  "8x"
+                ]
+              },
+              "hint": "5 × x and 5 × 3.",
+              "worked": "5(x + 3) = 5x + 15."
+            }
+          ],
+          "answer": "5x + 15"
+        },
+        {
+          "prompt": "Simplify 7a + 2a + 4.",
+          "steps": [
+            {
+              "do": "Add the coefficients of the like terms: 7 + 2.",
+              "why": "7a and 2a are like terms.",
+              "input": {
+                "type": "number",
+                "answer": 9
+              },
+              "hint": "7 + 2",
+              "worked": "7a + 2a = 9a."
+            },
+            {
+              "do": "Choose the simplified expression.",
+              "why": "The 4 has no a, so it stays separate.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "13a",
+                  "9a + 4",
+                  "9 + 4a",
+                  "14a + 4"
+                ]
+              },
+              "hint": "Keep the 4 by itself.",
+              "worked": "7a + 2a + 4 = 9a + 4."
+            }
+          ],
+          "answer": "9a + 4"
+        },
+        {
+          "prompt": "Simplify 3(2x + 4) + 5x.",
+          "visual": {
+            "kind": "areaModel",
+            "rows": 3,
+            "cols": 2,
+            "shadeCols": 1,
+            "labels": {
+              "rows": "3",
+              "cols": "2x + 4"
+            }
+          },
+          "steps": [
+            {
+              "do": "Distribute: what is 3 × 2x? Type the coefficient of x.",
+              "why": "The 3 multiplies the 2x.",
+              "input": {
+                "type": "number",
+                "answer": 6
+              },
+              "hint": "3 × 2",
+              "worked": "3 × 2x = 6x."
+            },
+            {
+              "do": "What is 3 × 4?",
+              "why": "The 3 also multiplies the 4.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "3 × 4",
+              "worked": "3 × 4 = 12."
+            },
+            {
+              "do": "Combine 6x + 5x and choose the simplified expression.",
+              "why": "6x and 5x are like terms.",
+              "input": {
+                "type": "choice",
+                "answer": 0,
+                "choices": [
+                  "11x + 12",
+                  "6x + 17",
+                  "11x + 4",
+                  "18x + 5"
+                ]
+              },
+              "hint": "6 + 5 = 11.",
+              "worked": "3(2x + 4) + 5x = 11x + 12."
+            }
+          ],
+          "answer": "11x + 12"
         }
       ]
     },
     {
       "id": "exp-equations",
       "title": "Solve One-Step Equations",
-      "ccss": [
-        "6.EE.B.5",
-        "6.EE.B.6",
-        "6.EE.B.7"
-      ],
-      "lesson": "## Balance the Scale ⚖️\nAn equation is like a balanced scale. Do the **opposite operation** to both sides:\n\n- x + 7 = 12 → subtract 7 → x = 5\n- 4x = 28 → divide by 4 → x = 7\n- x ÷ 3 = 6 → multiply by 3 → x = 18\n\nCheck your answer by plugging it back in!",
+      "ccss": "6.EE.B.5, 6.EE.B.6, 6.EE.B.7",
+      "learn": {
+        "sections": [
+          {
+            "text": "An equation is a balanced scale ⚖️. Whatever you do to one side, do to the other.\n\nx + 9 = 15 asks: what number plus 9 makes 15? Start at 9 and jump to 15: that's 6.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 16,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 9,
+                  "label": "9"
+                },
+                {
+                  "at": 15,
+                  "label": "15"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 9,
+                  "to": 15,
+                  "label": "x = 6"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Undo with the **opposite operation**: + ↔ −, × ↔ ÷.\n\n6x = 42 means 6 rows of x make 42, so each row has 42 ÷ 6 = 7.",
+            "visual": {
+              "kind": "areaModel",
+              "rows": 6,
+              "cols": 7,
+              "labels": {
+                "rows": "6",
+                "cols": "7"
+              }
+            }
+          },
+          {
+            "text": "Always check by plugging your answer back in!"
+          }
+        ],
+        "keyIdea": "Use the opposite operation on both sides to get x alone."
+      },
       "examples": [
         {
+          "title": "Undo adding",
           "prompt": "Solve x + 9 = 15.",
           "steps": [
-            "Subtract 9 from both sides",
-            "x = 15 − 9 = 6"
+            {
+              "do": "9 is added to x, so subtract 9 from both sides.",
+              "why": "Subtracting undoes adding and keeps the scale balanced.",
+              "rule": "Undo + with −",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 16,
+                "step": 1,
+                "marks": [
+                  {
+                    "at": 9,
+                    "label": "9"
+                  },
+                  {
+                    "at": 15,
+                    "label": "15"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 9,
+                    "to": 15,
+                    "label": "6"
+                  }
+                ]
+              }
+            },
+            {
+              "do": "x = 15 − 9 = 6.",
+              "why": "Now x is alone on one side.",
+              "rule": "Do the same to both sides"
+            }
           ],
+          "check": "6 + 9 = 15. ✅",
+          "mistake": "Don't add 9 to 15 — that makes the scale unbalanced.",
           "answer": "6"
         },
         {
+          "title": "Undo multiplying",
           "prompt": "Solve 6x = 42.",
           "steps": [
-            "Divide both sides by 6",
-            "x = 42 ÷ 6 = 7"
+            {
+              "do": "x is multiplied by 6, so divide both sides by 6.",
+              "why": "Dividing undoes multiplying.",
+              "rule": "Undo × with ÷",
+              "visual": {
+                "kind": "areaModel",
+                "rows": 6,
+                "cols": 7,
+                "labels": {
+                  "rows": "6",
+                  "cols": "7"
+                }
+              }
+            },
+            {
+              "do": "x = 42 ÷ 6 = 7.",
+              "why": "Each of the 6 rows holds 7.",
+              "rule": "Do the same to both sides"
+            }
           ],
+          "check": "6 × 7 = 42. ✅",
+          "mistake": "Don't subtract 6 — 6x means 6 times x.",
           "answer": "7"
         },
         {
-          "prompt": "Solve (3/4)x = 12.",
+          "title": "Fraction coefficient",
+          "prompt": "Solve (¾)x = 12.",
           "steps": [
-            "Multiply both sides by 4/3",
-            "x = 12 × 4/3 = 16"
+            {
+              "do": "Multiply both sides by 4/3, the reciprocal of ¾.",
+              "why": "A number times its reciprocal is 1, which leaves x alone.",
+              "rule": "Undo × fraction with × reciprocal"
+            },
+            {
+              "do": "x = 12 × 4/3 = 48/3 = 16.",
+              "why": "¾ of 16 is 12, so 16 makes sense.",
+              "rule": "Do the same to both sides",
+              "visual": {
+                "kind": "fractionBars",
+                "wholes": 1,
+                "parts": 4,
+                "shaded": 3
+              }
+            }
           ],
+          "check": "¾ × 16 = 12. ✅",
+          "mistake": "Multiplying by ¾ again would give 9, not 16.",
           "answer": "16"
         },
         {
+          "title": "Decimals work too",
           "prompt": "Solve x − 2.5 = 4.75.",
           "steps": [
-            "Add 2.5 to both sides",
-            "x = 4.75 + 2.5 = 7.25"
+            {
+              "do": "Add 2.5 to both sides.",
+              "why": "Adding undoes subtracting.",
+              "rule": "Undo − with +"
+            },
+            {
+              "do": "x = 4.75 + 2.5 = 7.25.",
+              "why": "Line up the decimal points to add.",
+              "rule": "Line up the decimal points",
+              "visual": {
+                "kind": "placeValue",
+                "digits": "7.25"
+              }
+            }
           ],
+          "check": "7.25 − 2.5 = 4.75. ✅",
+          "mistake": "Subtracting 2.5 again gives 2.25, which doesn't check.",
           "answer": "7.25"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Solve x + 12 = 30.",
+          "steps": [
+            {
+              "do": "What should you subtract from both sides?",
+              "why": "Subtracting 12 undoes adding 12.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "What's being added to x?",
+              "worked": "Subtract 12."
+            },
+            {
+              "do": "Find x.",
+              "why": "30 − 12 tells the missing number.",
+              "input": {
+                "type": "number",
+                "answer": 18
+              },
+              "hint": "30 − 12",
+              "worked": "x = 18."
+            }
+          ],
+          "answer": 18
+        },
+        {
+          "prompt": "Solve 8x = 56.",
+          "visual": {
+            "kind": "areaModel",
+            "rows": 8,
+            "cols": 7,
+            "labels": {
+              "rows": "8",
+              "cols": "7"
+            }
+          },
+          "steps": [
+            {
+              "do": "Divide 56 by 8.",
+              "why": "Dividing undoes multiplying by 8.",
+              "input": {
+                "type": "number",
+                "answer": 7
+              },
+              "hint": "8 × ? = 56",
+              "worked": "x = 7."
+            }
+          ],
+          "answer": 7
+        },
+        {
+          "prompt": "Solve x ÷ 5 = 9.",
+          "steps": [
+            {
+              "do": "Multiply both sides by 5. What is x?",
+              "why": "Multiplying undoes dividing.",
+              "input": {
+                "type": "number",
+                "answer": 45
+              },
+              "hint": "9 × 5",
+              "worked": "x = 45."
+            }
+          ],
+          "answer": 45
+        },
+        {
+          "prompt": "Solve (⅔)x = 10.",
+          "steps": [
+            {
+              "do": "What is the reciprocal of ⅔?",
+              "why": "Multiplying by the reciprocal leaves x alone.",
+              "input": {
+                "type": "fraction",
+                "answer": "3/2"
+              },
+              "hint": "Flip it.",
+              "worked": "The reciprocal is 3/2."
+            },
+            {
+              "do": "Multiply 10 × 3/2.",
+              "why": "This gives the value of x.",
+              "input": {
+                "type": "number",
+                "answer": 15
+              },
+              "hint": "30 ÷ 2",
+              "worked": "x = 15."
+            }
+          ],
+          "answer": 15
         }
       ]
     },
     {
       "id": "exp-inequalities",
       "title": "Inequalities",
-      "ccss": [
-        "6.EE.B.5",
-        "6.EE.B.8"
-      ],
-      "lesson": "## More or Less? 🐊\n- **>** greater than   - **<** less than\n- **≥** at least (greater than *or equal*)   - **≤** at most (less than *or equal*)\n\nAn inequality like x > 3 has **infinitely many** solutions: 4, 5, 3.5, 100…",
+      "ccss": "6.EE.B.5, 6.EE.B.8",
+      "learn": {
+        "sections": [
+          {
+            "text": "Symbols: **>** greater than, **<** less than, **≥** at least, **≤** at most.\n\nx > 3 has lots of solutions. On a number line, draw an open circle (○) at 3 and an arrow to the right: 4, 5, 3.5 and more all work.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 10,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 3,
+                  "label": "○ 3"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 3,
+                  "to": 10,
+                  "label": "x > 3"
+                }
+              ]
+            }
+          },
+          {
+            "text": "A **closed** circle (●) means the number itself counts. x ≤ 6 shades 6 and everything to the left.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 10,
+              "step": 1,
+              "marks": [
+                {
+                  "at": 6,
+                  "label": "● 6"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 6,
+                  "to": 0,
+                  "label": "x ≤ 6"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Test a value by plugging it in: is 7 a solution of x > 3? 7 > 3 is true, so yes!"
+          }
+        ],
+        "keyIdea": "Open circle for > or <, closed circle for ≥ or ≤."
+      },
       "examples": [
         {
-          "prompt": "Write \"x is at least 10\".",
+          "title": "At least",
+          "prompt": "Write \"x is at least 10\" and graph it.",
           "steps": [
-            "\"at least\" means 10 or more",
-            "Use ≥"
+            {
+              "do": "\"At least 10\" means 10 or more, so use ≥: x ≥ 10.",
+              "why": "10 itself counts, plus anything bigger.",
+              "rule": "at least → ≥"
+            },
+            {
+              "do": "Draw a closed circle at 10 and an arrow to the right.",
+              "why": "Closed means 10 is included.",
+              "rule": "≥ or ≤ → closed circle",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 20,
+                "step": 2,
+                "marks": [
+                  {
+                    "at": 10,
+                    "label": "● 10"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 10,
+                    "to": 20,
+                    "label": "x ≥ 10"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "Try 10: 10 ≥ 10 is true. ✅",
+          "mistake": "At least means ≥, not >.",
           "answer": "x ≥ 10"
         },
         {
+          "title": "Testing a value",
           "prompt": "Is 6 a solution of x < 6?",
           "steps": [
-            "6 < 6 is false (6 equals 6)"
+            {
+              "do": "Plug in 6: is 6 < 6?",
+              "why": "A solution must make the inequality true.",
+              "rule": "Test by substituting"
+            },
+            {
+              "do": "No — 6 is equal to 6, not less than it.",
+              "why": "< does not include the number itself.",
+              "rule": "< or > → open circle",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 10,
+                "step": 1,
+                "marks": [
+                  {
+                    "at": 6,
+                    "label": "○ 6"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 6,
+                    "to": 0,
+                    "label": "x < 6"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "5 works (5 < 6) but 6 does not. ✅",
+          "mistake": "The open circle at 6 means 6 is NOT a solution.",
           "answer": "No"
         },
         {
+          "title": "Real-life inequality",
           "prompt": "You must be older than 12 to join. Write an inequality for age a.",
           "steps": [
-            "\"older than\" means greater than, not equal",
-            "a > 12"
+            {
+              "do": "\"Older than\" means greater than: a > 12.",
+              "why": "12 itself doesn't count.",
+              "rule": "more than → >"
+            },
+            {
+              "do": "Graph: open circle at 12, arrow right.",
+              "why": "An open circle leaves 12 out.",
+              "rule": "< or > → open circle",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 20,
+                "step": 2,
+                "marks": [
+                  {
+                    "at": 12,
+                    "label": "○ 12"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 12,
+                    "to": 20,
+                    "label": "a > 12"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "13 > 12 is true and 12 > 12 is false. ✅",
+          "mistake": "Older than 12 is a > 12, not a ≥ 12.",
           "answer": "a > 12"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Which inequality means \"x is less than 8\"?",
+          "steps": [
+            {
+              "do": "Choose the inequality.",
+              "why": "Less than uses the < symbol.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "x > 8",
+                  "x < 8",
+                  "x ≥ 8",
+                  "x ≤ 8"
+                ]
+              },
+              "hint": "The symbol points at the smaller side.",
+              "worked": "x < 8."
+            }
+          ],
+          "answer": "x < 8"
+        },
+        {
+          "prompt": "Which value is a solution of x ≥ 5?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "marks": [
+              {
+                "at": 5,
+                "label": "● 5"
+              }
+            ],
+            "jumps": [
+              {
+                "from": 5,
+                "to": 10,
+                "label": "x ≥ 5"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Choose the value.",
+              "why": "≥ includes the number 5 itself.",
+              "input": {
+                "type": "choice",
+                "answer": 2,
+                "choices": [
+                  "4",
+                  "3",
+                  "5",
+                  "0"
+                ]
+              },
+              "hint": "Test each one.",
+              "worked": "5 ≥ 5 is true."
+            }
+          ],
+          "answer": "5"
+        },
+        {
+          "prompt": "An elevator holds at most 12 people. Which inequality shows the number of people n?",
+          "steps": [
+            {
+              "do": "Which symbol means \"at most\"?",
+              "why": "At most means that number or fewer.",
+              "input": {
+                "type": "choice",
+                "answer": 3,
+                "choices": [
+                  ">",
+                  "<",
+                  "≥",
+                  "≤"
+                ]
+              },
+              "hint": "12 is allowed.",
+              "worked": "At most → ≤."
+            },
+            {
+              "do": "Choose the inequality.",
+              "why": "Put n on the left and 12 on the right.",
+              "input": {
+                "type": "choice",
+                "answer": 0,
+                "choices": [
+                  "n ≤ 12",
+                  "n < 12",
+                  "n ≥ 12",
+                  "n > 12"
+                ]
+              },
+              "hint": "Use the symbol you chose.",
+              "worked": "n ≤ 12."
+            }
+          ],
+          "answer": "n ≤ 12"
+        },
+        {
+          "prompt": "You are graphing x > 4 on a number line. Which way should the arrow point?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 10,
+            "step": 1,
+            "marks": [
+              {
+                "at": 4,
+                "label": "○ 4"
+              }
+            ],
+            "jumps": [
+              {
+                "from": 4,
+                "to": 10,
+                "label": "x > 4"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Open or closed circle at 4? Choose.",
+              "why": "> doesn't include 4.",
+              "input": {
+                "type": "choice",
+                "answer": 0,
+                "choices": [
+                  "open",
+                  "closed"
+                ]
+              },
+              "hint": "Is 4 a solution?",
+              "worked": "Open circle."
+            },
+            {
+              "do": "Which way does the arrow go?",
+              "why": "Greater numbers are to the right.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "left",
+                  "right"
+                ]
+              },
+              "hint": "Bigger numbers are to the right.",
+              "worked": "Right."
+            }
+          ],
+          "answer": "right"
         }
       ]
     },
     {
       "id": "exp-variables",
       "title": "Dependent & Independent Variables",
-      "ccss": [
-        "6.EE.C.9"
-      ],
-      "lesson": "## Inputs and Outputs 🔁\nThe **independent variable** is the input you choose (like hours worked). The **dependent variable** depends on it (like money earned).\n\nWe can show the relationship with an **equation** (y = 5x), a **table**, or a **graph**.",
+      "ccss": "6.EE.C.9",
+      "learn": {
+        "sections": [
+          {
+            "text": "The **independent variable** is the input you choose (like hours worked). The **dependent variable** depends on it (like money earned).\n\n| hours h | 1 | 2 | 3 |\n|---|---|---|---|\n| money m | 8 | 16 | 24 |\n\nRule: m = 8h."
+          },
+          {
+            "text": "Graph the pairs as (h, m): (1, 8), (2, 16), (3, 24). The points line up!",
+            "visual": {
+              "kind": "coordPlane",
+              "points": [
+                {
+                  "x": 1,
+                  "y": 8,
+                  "label": "(1, 8)"
+                },
+                {
+                  "x": 2,
+                  "y": 16,
+                  "label": "(2, 16)"
+                },
+                {
+                  "x": 3,
+                  "y": 24,
+                  "label": "(3, 24)"
+                }
+              ]
+            }
+          },
+          {
+            "text": "A table for y = 3x + 1 gives (0, 1), (1, 4), (2, 7). Each step right goes up 3.",
+            "visual": {
+              "kind": "coordPlane",
+              "points": [
+                {
+                  "x": 0,
+                  "y": 1,
+                  "label": "(0, 1)"
+                },
+                {
+                  "x": 1,
+                  "y": 4,
+                  "label": "(1, 4)"
+                },
+                {
+                  "x": 2,
+                  "y": 7,
+                  "label": "(2, 7)"
+                }
+              ]
+            }
+          }
+        ],
+        "keyIdea": "Input (independent) → rule → output (dependent)."
+      },
       "examples": [
         {
+          "title": "Writing the rule",
           "prompt": "Andrew earns $8 per hour. Write an equation for money m after h hours.",
           "steps": [
-            "Each hour adds $8",
-            "m = 8h"
+            {
+              "do": "Make a table: h = 1, 2, 3 gives m = 8, 16, 24.",
+              "why": "A table shows the pattern.",
+              "rule": "Look for the pattern"
+            },
+            {
+              "do": "Each hour adds 8, so m = 8h. Plot (1, 8), (2, 16), (3, 24).",
+              "why": "Money depends on hours, so m is the dependent variable.",
+              "rule": "Dependent = output",
+              "visual": {
+                "kind": "coordPlane",
+                "points": [
+                  {
+                    "x": 1,
+                    "y": 8,
+                    "label": "(1, 8)"
+                  },
+                  {
+                    "x": 2,
+                    "y": 16,
+                    "label": "(2, 16)"
+                  },
+                  {
+                    "x": 3,
+                    "y": 24,
+                    "label": "(3, 24)"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "h = 3: 8 × 3 = 24. ✅",
+          "mistake": "Don't write h = 8m — hours don't depend on money.",
           "answer": "m = 8h"
         },
         {
+          "title": "Using the rule",
           "prompt": "For y = 3x + 1, find y when x = 4.",
           "steps": [
-            "3 × 4 = 12",
-            "12 + 1 = 13"
+            {
+              "do": "Replace x with 4: y = 3 × 4 + 1.",
+              "why": "x is the input we plug in.",
+              "rule": "Substitute the input"
+            },
+            {
+              "do": "y = 12 + 1 = 13, so the point (4, 13) is on the graph.",
+              "why": "Multiply, then add.",
+              "rule": "M before A",
+              "visual": {
+                "kind": "coordPlane",
+                "points": [
+                  {
+                    "x": 4,
+                    "y": 13,
+                    "label": "(4, 13)"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "3 × 4 + 1 = 13. ✅",
+          "mistake": "Add the 1 after multiplying, not before (that would give 15).",
           "answer": "13"
         },
         {
+          "title": "Find the rule from a table",
           "prompt": "A table has (1, 4), (2, 8), (3, 12). What is the rule?",
           "steps": [
-            "y is always 4 times x",
-            "y = 4x"
+            {
+              "do": "Compare: 4 = 4 × 1, 8 = 4 × 2, 12 = 4 × 3.",
+              "why": "Checking each pair shows the same multiplier.",
+              "rule": "Look for the pattern",
+              "visual": {
+                "kind": "coordPlane",
+                "points": [
+                  {
+                    "x": 1,
+                    "y": 4,
+                    "label": "(1, 4)"
+                  },
+                  {
+                    "x": 2,
+                    "y": 8,
+                    "label": "(2, 8)"
+                  },
+                  {
+                    "x": 3,
+                    "y": 12,
+                    "label": "(3, 12)"
+                  }
+                ]
+              }
+            },
+            {
+              "do": "So y = 4x.",
+              "why": "y is always 4 times x.",
+              "rule": "Dependent = rule(input)"
+            }
           ],
+          "check": "x = 3: 4 × 3 = 12. ✅",
+          "mistake": "y = x + 3 works for (1, 4) only — check every pair.",
           "answer": "y = 4x"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "The rule is y = 5x. What is y when x = 6?",
+          "steps": [
+            {
+              "do": "Multiply 5 × 6.",
+              "why": "y is 5 times the input x.",
+              "input": {
+                "type": "number",
+                "answer": 30
+              },
+              "hint": "5 × 6",
+              "worked": "y = 30."
+            }
+          ],
+          "answer": 30
+        },
+        {
+          "prompt": "Andrew earns $10 for each lawn he mows. Which is the independent variable?",
+          "steps": [
+            {
+              "do": "Choose the independent variable.",
+              "why": "The number of lawns is what changes the money.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "money earned",
+                  "number of lawns mowed",
+                  "$10",
+                  "the lawn mower"
+                ]
+              },
+              "hint": "Which one do you choose first?",
+              "worked": "Number of lawns mowed."
+            }
+          ],
+          "answer": "number of lawns mowed"
+        },
+        {
+          "prompt": "Points (1, 3), (2, 6), (3, 9) are on a graph. What is y when x = 5?",
+          "visual": {
+            "kind": "coordPlane",
+            "points": [
+              {
+                "x": 1,
+                "y": 3,
+                "label": "(1, 3)"
+              },
+              {
+                "x": 2,
+                "y": 6,
+                "label": "(2, 6)"
+              },
+              {
+                "x": 3,
+                "y": 9,
+                "label": "(3, 9)"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "By how much does y go up each time x goes up 1?",
+              "why": "The pattern tells the rule.",
+              "input": {
+                "type": "number",
+                "answer": 3
+              },
+              "hint": "6 − 3",
+              "worked": "y goes up 3."
+            },
+            {
+              "do": "Use y = 3x to find y when x = 5.",
+              "why": "Multiply the input by 3.",
+              "input": {
+                "type": "number",
+                "answer": 15
+              },
+              "hint": "3 × 5",
+              "worked": "y = 15."
+            }
+          ],
+          "answer": 15
+        },
+        {
+          "prompt": "A shop charges $5 to join plus $3 per pack: c = 3p + 5. What is c when p = 4?",
+          "steps": [
+            {
+              "do": "Multiply 3 × 4.",
+              "why": "Each pack costs 3.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "3 × 4",
+              "worked": "3 × 4 = 12."
+            },
+            {
+              "do": "Add the $5 joining fee.",
+              "why": "The fee is added once.",
+              "input": {
+                "type": "number",
+                "answer": 17
+              },
+              "hint": "12 + 5",
+              "worked": "c = 17."
+            }
+          ],
+          "answer": 17
         }
       ]
     }

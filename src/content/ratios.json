@@ -6,231 +6,2022 @@
     {
       "id": "rat-language",
       "title": "Ratio Language",
-      "ccss": [
-        "6.RP.A.1"
-      ],
-      "lesson": "## What's a Ratio? 🍎:🍊\nA **ratio** compares two amounts. 3 apples to 5 oranges can be written **3:5**, **3 to 5**, or **3/5**.\n\nOrder matters! \"Apples to oranges\" puts apples first. Ratios can compare **part to part** or **part to whole**.",
+      "ccss": "6.RP.A.1",
+      "learn": {
+        "sections": [
+          {
+            "text": "A **ratio** compares two amounts. 2 red marbles to 3 blue marbles is **2:3**, \"2 to 3\", or ⅔. A bar cut into 5 parts with 2 shaded shows the red part out of the whole.",
+            "visual": {
+              "kind": "fractionBars",
+              "wholes": 1,
+              "parts": 5,
+              "shaded": 2
+            }
+          },
+          {
+            "text": "**Order matters!** \"Red to blue\" is 2:3, but \"blue to red\" is 3:2."
+          },
+          {
+            "text": "Ratios can compare **part to part** (2:3) or **part to whole** (2:5, since 2 + 3 = 5). For 4 guards and 6 forwards, guards to all players is 4:10.",
+            "visual": {
+              "kind": "fractionBars",
+              "wholes": 1,
+              "parts": 10,
+              "shaded": 4
+            }
+          }
+        ],
+        "keyIdea": "Ratio a:b compares a to b — say it in the same order as the words."
+      },
       "examples": [
         {
-          "prompt": "A team has 4 guards and 6 forwards. Ratio of guards to forwards?",
+          "title": "Part to part",
+          "prompt": "A team has 4 guards and 6 forwards. What is the ratio of guards to forwards in simplest form?",
           "steps": [
-            "Guards first: 4:6",
-            "Simplify by 2: 2:3"
+            {
+              "do": "Guards come first: 4:6.",
+              "why": "The words say guards, then forwards.",
+              "rule": "Order follows the words"
+            },
+            {
+              "do": "Divide both by 2: 2:3, which is 5 parts in all (2 + 3 = 5).",
+              "why": "Dividing both parts by the same number keeps the same comparison.",
+              "rule": "Simplify by the GCF",
+              "visual": {
+                "kind": "fractionBars",
+                "wholes": 1,
+                "parts": 5,
+                "shaded": 2
+              }
+            }
+          ],
+          "check": "2 × 2 = 4 and 3 × 2 = 6. ✅",
+          "mistake": "6:4 is forwards to guards — the order is backwards.",
+          "answer": "2:3"
+        },
+        {
+          "title": "Part to whole",
+          "prompt": "Same team (4 guards, 6 forwards): what is the ratio of guards to all players?",
+          "steps": [
+            {
+              "do": "Total players: 4 + 6 = 10.",
+              "why": "Whole means everyone together.",
+              "rule": "Whole = sum of parts"
+            },
+            {
+              "do": "Guards to whole: 4:10 = 2:5.",
+              "why": "Divide both by 2 to simplify.",
+              "rule": "Simplify by the GCF",
+              "visual": {
+                "kind": "fractionBars",
+                "wholes": 1,
+                "parts": 10,
+                "shaded": 4
+              }
+            }
+          ],
+          "check": "2 of every 5 players are guards, and 4 of 10 matches. ✅",
+          "mistake": "Don't use 4:6 — that compares guards to forwards, not to everyone.",
+          "answer": "2:5"
+        },
+        {
+          "title": "Sharing by a ratio",
+          "prompt": "Boys to girls is 2:3 in a class of 25 students. How many boys are there?",
+          "steps": [
+            {
+              "do": "Each group has 2 + 3 = 5 students.",
+              "why": "A ratio describes repeating groups.",
+              "rule": "Group size = sum of parts",
+              "visual": {
+                "kind": "fractionBars",
+                "wholes": 5,
+                "parts": 5,
+                "shaded": 10
+              }
+            },
+            {
+              "do": "25 ÷ 5 = 5 groups.",
+              "why": "Count how many groups fit in the class.",
+              "rule": "Groups = total ÷ group size"
+            },
+            {
+              "do": "5 groups × 2 boys = 10 boys.",
+              "why": "Each group has 2 boys.",
+              "rule": "Part = groups × ratio part"
+            }
+          ],
+          "check": "10 boys + 15 girls = 25, and 10:15 = 2:3. ✅",
+          "mistake": "Don't just divide 25 by 2 — the ratio is out of 5, not 2.",
+          "answer": "10"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "There are 7 cats and 4 dogs. What is the ratio of dogs to cats?",
+          "steps": [
+            {
+              "do": "Choose the ratio.",
+              "why": "Dogs are named first, so they go first.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "7:4",
+                  "4:7",
+                  "4:11",
+                  "11:7"
+                ]
+              },
+              "hint": "Read the order in the question.",
+              "worked": "Dogs to cats is 4:7."
+            }
+          ],
+          "answer": "4:7"
+        },
+        {
+          "prompt": "Write 12:18 in simplest form.",
+          "steps": [
+            {
+              "do": "What is the GCF of 12 and 18?",
+              "why": "Dividing by the GCF gives simplest form.",
+              "input": {
+                "type": "number",
+                "answer": 6
+              },
+              "hint": "Both are in the 6 times table.",
+              "worked": "The GCF is 6."
+            },
+            {
+              "do": "Choose the simplest form.",
+              "why": "12 ÷ 6 = 2 and 18 ÷ 6 = 3.",
+              "input": {
+                "type": "choice",
+                "answer": 0,
+                "choices": [
+                  "2:3",
+                  "4:6",
+                  "3:2",
+                  "6:9"
+                ]
+              },
+              "hint": "Divide both parts by 6.",
+              "worked": "12:18 = 2:3."
+            }
           ],
           "answer": "2:3"
         },
         {
-          "prompt": "Same team: ratio of guards to all players?",
+          "prompt": "A bag has 3 red and 5 blue marbles. What fraction of all the marbles are red?",
+          "visual": {
+            "kind": "fractionBars",
+            "wholes": 1,
+            "parts": 8,
+            "shaded": 3
+          },
           "steps": [
-            "Total = 4 + 6 = 10",
-            "4:10 = 2:5"
+            {
+              "do": "How many marbles are there in all?",
+              "why": "Part to whole needs the total.",
+              "input": {
+                "type": "number",
+                "answer": 8
+              },
+              "hint": "3 + 5",
+              "worked": "8 marbles."
+            },
+            {
+              "do": "Write red out of all as a fraction.",
+              "why": "Red is the part and 8 is the whole.",
+              "input": {
+                "type": "fraction",
+                "answer": "3/8"
+              },
+              "hint": "Part over whole.",
+              "worked": "⅜ of the marbles are red."
+            }
           ],
-          "answer": "2:5"
+          "answer": "3/8"
         },
         {
-          "prompt": "Boys to girls is 2:3 with 25 students. How many boys?",
+          "prompt": "Boys to girls is 3:4. There are 28 students. How many girls are there?",
+          "visual": {
+            "kind": "fractionBars",
+            "wholes": 4,
+            "parts": 7,
+            "shaded": 16
+          },
           "steps": [
-            "Each group of 5 has 2 boys",
-            "25 ÷ 5 = 5 groups, 5 × 2 = 10"
+            {
+              "do": "How many students are in each 3 + 4 group?",
+              "why": "A ratio describes repeating groups.",
+              "input": {
+                "type": "number",
+                "answer": 7
+              },
+              "hint": "3 + 4",
+              "worked": "7 students per group."
+            },
+            {
+              "do": "How many groups are in 28?",
+              "why": "Divide the total by the group size.",
+              "input": {
+                "type": "number",
+                "answer": 4
+              },
+              "hint": "28 ÷ 7",
+              "worked": "4 groups."
+            },
+            {
+              "do": "How many girls are there?",
+              "why": "Each group has 4 girls.",
+              "input": {
+                "type": "number",
+                "answer": 16
+              },
+              "hint": "4 groups × 4",
+              "worked": "16 girls."
+            }
           ],
-          "answer": "10"
+          "answer": 16
         }
       ]
     },
     {
       "id": "rat-unit-rate",
       "title": "Unit Rates",
-      "ccss": [
-        "6.RP.A.2"
-      ],
-      "lesson": "## Per One 1️⃣\nA **unit rate** tells how much for **one** unit: miles *per* hour, dollars *per* item.\n\nDivide the first amount by the second: 150 miles in 3 hours → 150 ÷ 3 = **50 miles per hour**.",
+      "ccss": "6.RP.A.2",
+      "learn": {
+        "sections": [
+          {
+            "text": "A **unit rate** tells how much for **one**: miles *per* hour, dollars *per* item. 150 miles in 3 hours means 50 miles each hour: 50, 100, 150.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 150,
+              "step": 50,
+              "marks": [
+                {
+                  "at": 50,
+                  "label": "50"
+                },
+                {
+                  "at": 100,
+                  "label": "100"
+                },
+                {
+                  "at": 150,
+                  "label": "150"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 0,
+                  "to": 50,
+                  "label": "1 h"
+                },
+                {
+                  "from": 50,
+                  "to": 100,
+                  "label": "1 h"
+                },
+                {
+                  "from": 100,
+                  "to": 150,
+                  "label": "1 h"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Find it by dividing: 150 ÷ 3 = **50 miles per hour**."
+          },
+          {
+            "text": "Unit rates work with fractions too. ½ cup oats for ¼ cup milk: two ¼s fit in ½, so there are 2 cups of oats per cup of milk.",
+            "visual": {
+              "kind": "fractionBars",
+              "wholes": 1,
+              "parts": 4,
+              "shaded": 2,
+              "groupSize": {
+                "num": 1,
+                "den": 4
+              }
+            }
+          }
+        ],
+        "keyIdea": "Unit rate = first amount ÷ second amount (how much per 1)."
+      },
       "examples": [
         {
-          "prompt": "$18 for 6 pens. Cost per pen?",
+          "title": "Price per item",
+          "prompt": "$18 for 6 pens. What is the cost per pen?",
           "steps": [
-            "18 ÷ 6 = 3"
+            {
+              "do": "Divide the cost by the number of pens: 18 ÷ 6.",
+              "why": "Per pen means for 1 pen.",
+              "rule": "Unit rate = total ÷ count"
+            },
+            {
+              "do": "18 ÷ 6 = 3, so $3 per pen.",
+              "why": "Each of the 6 pens gets an equal share.",
+              "rule": "Unit rate = total ÷ count",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 18,
+                "step": 3,
+                "marks": [
+                  {
+                    "at": 3,
+                    "label": "3"
+                  },
+                  {
+                    "at": 18,
+                    "label": "18"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 0,
+                    "to": 3,
+                    "label": "1 pen"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "6 × $3 = $18. ✅",
+          "mistake": "6 ÷ 18 gives pens per dollar, not dollars per pen.",
           "answer": "$3"
         },
         {
-          "prompt": "225 words in 5 minutes. Words per minute?",
+          "title": "Speed of typing",
+          "prompt": "225 words in 5 minutes. How many words per minute?",
           "steps": [
-            "225 ÷ 5 = 45"
+            {
+              "do": "Divide words by minutes: 225 ÷ 5.",
+              "why": "Per minute means for 1 minute.",
+              "rule": "Unit rate = total ÷ count"
+            },
+            {
+              "do": "225 ÷ 5 = 45 words per minute.",
+              "why": "Each minute gets an equal share of words.",
+              "rule": "Unit rate = total ÷ count",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 225,
+                "step": 45,
+                "marks": [
+                  {
+                    "at": 45,
+                    "label": "45"
+                  },
+                  {
+                    "at": 225,
+                    "label": "225"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 0,
+                    "to": 45,
+                    "label": "1 min"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "45 × 5 = 225. ✅",
+          "mistake": "Make sure the 'per' quantity is the one you divide by.",
           "answer": "45"
         },
         {
-          "prompt": "1/2 cup oats per 1/4 cup milk. Oats per cup of milk?",
+          "title": "Fraction unit rate",
+          "prompt": "½ cup oats for every ¼ cup milk. How many cups of oats per cup of milk?",
           "steps": [
-            "1/2 ÷ 1/4 = 1/2 × 4",
-            "= 2"
+            {
+              "do": "Divide: ½ ÷ ¼.",
+              "why": "We want the amount of oats for 1 whole cup of milk.",
+              "rule": "Unit rate = a ÷ b"
+            },
+            {
+              "do": "½ × 4 = 2.",
+              "why": "Keep, change, flip turns division into multiplication.",
+              "rule": "Keep, change, flip",
+              "visual": {
+                "kind": "fractionBars",
+                "wholes": 1,
+                "parts": 4,
+                "shaded": 2,
+                "groupSize": {
+                  "num": 1,
+                  "den": 4
+                }
+              }
+            }
           ],
-          "answer": "2 cups"
+          "check": "2 × ¼ = ½. ✅",
+          "mistake": "½ × ¼ = ⅛ multiplies instead of dividing.",
+          "answer": "2"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "5 apples cost $10. What is the cost of 1 apple in dollars?",
+          "steps": [
+            {
+              "do": "Divide 10 by 5.",
+              "why": "Per apple means for 1 apple.",
+              "input": {
+                "type": "number",
+                "answer": 2
+              },
+              "hint": "10 ÷ 5",
+              "worked": "$2 per apple."
+            }
+          ],
+          "answer": 2
+        },
+        {
+          "prompt": "A car travels 180 miles in 4 hours. How many miles per hour is that?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 180,
+            "step": 45,
+            "marks": [
+              {
+                "at": 45,
+                "label": "45"
+              },
+              {
+                "at": 180,
+                "label": "180"
+              }
+            ],
+            "jumps": [
+              {
+                "from": 0,
+                "to": 45,
+                "label": "1 h"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Divide 180 by 4.",
+              "why": "Miles per hour means miles for 1 hour.",
+              "input": {
+                "type": "number",
+                "answer": 45
+              },
+              "hint": "180 ÷ 4",
+              "worked": "45 mph."
+            }
+          ],
+          "answer": 45
+        },
+        {
+          "prompt": "A runner goes 3 miles in ½ hour. How many miles per hour is that?",
+          "steps": [
+            {
+              "do": "What is the reciprocal of ½?",
+              "why": "Dividing by ½ is multiplying by its flip.",
+              "input": {
+                "type": "number",
+                "answer": 2
+              },
+              "hint": "Flip ½.",
+              "worked": "The reciprocal is 2."
+            },
+            {
+              "do": "Multiply 3 × 2.",
+              "why": "This gives the miles for 1 whole hour.",
+              "input": {
+                "type": "number",
+                "answer": 6
+              },
+              "hint": "3 × 2",
+              "worked": "6 mph."
+            }
+          ],
+          "answer": 6
+        },
+        {
+          "prompt": "¾ cup sugar for every ½ cup flour. How many cups of sugar per cup of flour?",
+          "visual": {
+            "kind": "fractionBars",
+            "wholes": 1,
+            "parts": 4,
+            "shaded": 3,
+            "groupSize": {
+              "num": 1,
+              "den": 2
+            }
+          },
+          "steps": [
+            {
+              "do": "Divide ¾ ÷ ½. Type the answer as a fraction.",
+              "why": "Per cup of flour means divide by the flour amount.",
+              "input": {
+                "type": "fraction",
+                "answer": "3/2"
+              },
+              "hint": "¾ × 2",
+              "worked": "¾ ÷ ½ = 3/2."
+            }
+          ],
+          "answer": "3/2"
         }
       ]
     },
     {
       "id": "rat-tables",
       "title": "Ratio Tables",
-      "ccss": [
-        "6.RP.A.3a"
-      ],
-      "lesson": "## Table Time 📋\nIn a **ratio table**, every row is an **equivalent ratio**. Multiply (or divide) **both** numbers by the same amount.\n\n| Blue | Yellow |\n|---|---|\n| 2 | 3 |\n| 4 | 6 |\n| 10 | 15 |",
+      "ccss": "6.RP.A.3a",
+      "learn": {
+        "sections": [
+          {
+            "text": "In a **ratio table**, every row is an **equivalent ratio**. Multiply both numbers by the same amount.\n\n| Blue | Yellow |\n|---|---|\n| 2 | 3 |\n| 4 | 6 |\n| 6 | 9 |"
+          },
+          {
+            "text": "Plot the rows as points (2, 3), (4, 6), (6, 9). Equivalent ratios make a straight line through (0, 0)!",
+            "visual": {
+              "kind": "coordPlane",
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0,
+                  "label": "(0, 0)"
+                },
+                {
+                  "x": 2,
+                  "y": 3,
+                  "label": "(2, 3)"
+                },
+                {
+                  "x": 4,
+                  "y": 6,
+                  "label": "(4, 6)"
+                },
+                {
+                  "x": 6,
+                  "y": 9,
+                  "label": "(6, 9)"
+                }
+              ]
+            }
+          },
+          {
+            "text": "To fill a missing value, find what you multiplied by. 3:4 = ?:20: 4 × 5 = 20, so 3 × 5 = 15.",
+            "visual": {
+              "kind": "fractionBars",
+              "wholes": 4,
+              "parts": 5,
+              "shaded": 15
+            }
+          }
+        ],
+        "keyIdea": "Multiply or divide both parts by the same number."
+      },
       "examples": [
         {
+          "title": "Missing value",
           "prompt": "3:4 = ?:20",
           "steps": [
-            "4 × 5 = 20",
-            "3 × 5 = 15"
+            {
+              "do": "4 × 5 = 20, so the scale factor is 5.",
+              "why": "Find how the known parts are related.",
+              "rule": "Same factor for both parts"
+            },
+            {
+              "do": "3 × 5 = 15. Plot (4, 3) and (20, 15).",
+              "why": "The other part must be multiplied by the same 5.",
+              "rule": "Same factor for both parts",
+              "visual": {
+                "kind": "coordPlane",
+                "points": [
+                  {
+                    "x": 4,
+                    "y": 3,
+                    "label": "(4, 3)"
+                  },
+                  {
+                    "x": 20,
+                    "y": 15,
+                    "label": "(20, 15)"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "15:20 ÷ 5 = 3:4. ✅",
+          "mistake": "Adding 16 to both parts (19:20) doesn't keep the ratio.",
           "answer": "15"
         },
         {
+          "title": "Using a unit rate",
           "prompt": "4 muffins use 6 eggs. How many eggs for 10 muffins?",
           "steps": [
-            "Unit rate: 6 ÷ 4 = 1.5 eggs per muffin",
-            "1.5 × 10 = 15"
+            {
+              "do": "Unit rate: 6 ÷ 4 = 1.5 eggs per muffin.",
+              "why": "Finding the amount for 1 muffin makes any amount easy.",
+              "rule": "Find the unit rate"
+            },
+            {
+              "do": "1.5 × 10 = 15 eggs. Plot (4, 6) and (10, 15).",
+              "why": "Each of the 10 muffins needs 1.5 eggs.",
+              "rule": "Amount = unit rate × count",
+              "visual": {
+                "kind": "coordPlane",
+                "points": [
+                  {
+                    "x": 4,
+                    "y": 6,
+                    "label": "(4, 6)"
+                  },
+                  {
+                    "x": 10,
+                    "y": 15,
+                    "label": "(10, 15)"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "10:15 and 4:6 both simplify to 2:3. ✅",
+          "mistake": "10 + 2 = 12 adds instead of scaling.",
           "answer": "15"
         },
         {
-          "prompt": "Is (8, 12) equivalent to 2:3?",
+          "title": "Is it equivalent?",
+          "prompt": "Is (8, 12) equivalent to the ratio 2:3?",
           "steps": [
-            "2 × 4 = 8 and 3 × 4 = 12",
-            "Yes, both multiplied by 4"
+            {
+              "do": "2 × 4 = 8 and 3 × 4 = 12.",
+              "why": "Check if one factor works for both parts.",
+              "rule": "Same factor for both parts"
+            },
+            {
+              "do": "Both use 4, so yes: (2, 3) and (8, 12) line up.",
+              "why": "Equivalent ratios scale both parts the same.",
+              "rule": "Same factor for both parts",
+              "visual": {
+                "kind": "coordPlane",
+                "points": [
+                  {
+                    "x": 2,
+                    "y": 3,
+                    "label": "(2, 3)"
+                  },
+                  {
+                    "x": 8,
+                    "y": 12,
+                    "label": "(8, 12)"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "8:12 ÷ 4 = 2:3. ✅",
+          "mistake": "(8, 13) would not work — the factors must match exactly.",
           "answer": "Yes"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "Complete: 2:5 = ?:30",
+          "steps": [
+            {
+              "do": "What do you multiply 5 by to get 30?",
+              "why": "Find the scale factor first.",
+              "input": {
+                "type": "number",
+                "answer": 6
+              },
+              "hint": "5 × ? = 30",
+              "worked": "The factor is 6."
+            },
+            {
+              "do": "Multiply 2 by that factor.",
+              "why": "Both parts use the same factor.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "2 × 6",
+              "worked": "2:5 = 12:30."
+            }
+          ],
+          "answer": 12
+        },
+        {
+          "prompt": "A recipe uses 3 cups flour for 2 cups milk. How many cups of flour for 8 cups milk?",
+          "visual": {
+            "kind": "coordPlane",
+            "points": [
+              {
+                "x": 2,
+                "y": 3,
+                "label": "(2, 3)"
+              },
+              {
+                "x": 8,
+                "y": 12,
+                "label": "(8, 12)"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "What do you multiply 2 by to get 8?",
+              "why": "Find the scale factor.",
+              "input": {
+                "type": "number",
+                "answer": 4
+              },
+              "hint": "2 × ? = 8",
+              "worked": "The factor is 4."
+            },
+            {
+              "do": "Multiply 3 by 4.",
+              "why": "Flour scales by the same factor.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "3 × 4",
+              "worked": "12 cups flour. The points (2, 3) and (8, 12) are on the same line."
+            }
+          ],
+          "answer": 12
+        },
+        {
+          "prompt": "Paint is 4 cups blue to 7 cups yellow. Which pair (blue, yellow) makes the same color?",
+          "steps": [
+            {
+              "do": "Choose the pair.",
+              "why": "Equivalent ratios multiply both parts by the same number.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "(8, 11)",
+                  "(12, 21)",
+                  "(7, 4)",
+                  "(14, 24)"
+                ]
+              },
+              "hint": "Try multiplying 4 and 7 by 3.",
+              "worked": "4 × 3 = 12 and 7 × 3 = 21."
+            }
+          ],
+          "answer": "(12, 21)"
+        },
+        {
+          "prompt": "6 lemons make 9 cups of lemonade. How many lemons for 15 cups?",
+          "visual": {
+            "kind": "coordPlane",
+            "points": [
+              {
+                "x": 9,
+                "y": 6,
+                "label": "(9, 6)"
+              },
+              {
+                "x": 15,
+                "y": 10,
+                "label": "(15, 10)"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Unit rate: how many lemons per cup? Type as a fraction.",
+              "why": "Lemons for 1 cup helps scale to any amount.",
+              "input": {
+                "type": "fraction",
+                "answer": "2/3"
+              },
+              "hint": "6 ÷ 9, simplified.",
+              "worked": "6/9 = ⅔ lemon per cup."
+            },
+            {
+              "do": "Multiply ⅔ × 15.",
+              "why": "15 cups each need ⅔ lemon.",
+              "input": {
+                "type": "number",
+                "answer": 10
+              },
+              "hint": "15 ÷ 3 × 2",
+              "worked": "10 lemons. As points (cups, lemons): (9, 6) and (15, 10)."
+            }
+          ],
+          "answer": 10
         }
       ]
     },
     {
       "id": "rat-unit-pricing",
       "title": "Unit Pricing & Best Buys",
-      "ccss": [
-        "6.RP.A.3b"
-      ],
-      "lesson": "## Smart Shopper 🛒\nTo compare deals, find the **unit price** (price ÷ quantity). The **lowest** unit price is the best buy!\n\nOnce you know the unit price, multiply to find the cost of any amount.",
+      "ccss": "6.RP.A.3b",
+      "learn": {
+        "sections": [
+          {
+            "text": "The **unit price** is the price for one unit: price ÷ quantity. A 4-pack of yogurt for $3.00 costs 3.00 ÷ 4 = $0.75 each.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 3,
+              "step": 0.75,
+              "marks": [
+                {
+                  "at": 0.75,
+                  "label": "0.75"
+                },
+                {
+                  "at": 3,
+                  "label": "3"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 0,
+                  "to": 0.75,
+                  "label": "1 yogurt"
+                }
+              ]
+            }
+          },
+          {
+            "text": "To compare deals, find each unit price. **Lowest unit price = best buy!** 12 oz for $3.60 is $0.30 per oz; 16 oz for $4.00 is $0.25 per oz.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 0.4,
+              "step": 0.05,
+              "marks": [
+                {
+                  "at": 0.25,
+                  "label": "0.25"
+                },
+                {
+                  "at": 0.3,
+                  "label": "0.30"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Once you know the unit price, multiply to price any amount. 💰"
+          }
+        ],
+        "keyIdea": "Unit price = price ÷ quantity; lowest unit price wins."
+      },
       "examples": [
         {
-          "prompt": "A 4-pack of yogurt costs $3.00. Price per yogurt?",
+          "title": "Price for one",
+          "prompt": "A 4-pack of yogurt costs $3.00. What is the price per yogurt?",
           "steps": [
-            "3.00 ÷ 4 = 0.75"
+            {
+              "do": "Divide: 3.00 ÷ 4.",
+              "why": "Per yogurt means for 1 yogurt.",
+              "rule": "Unit price = price ÷ quantity"
+            },
+            {
+              "do": "3.00 ÷ 4 = 0.75, so $0.75 each.",
+              "why": "Four equal shares of $3.00.",
+              "rule": "Unit price = price ÷ quantity",
+              "visual": {
+                "kind": "placeValue",
+                "digits": "0.75"
+              }
+            }
           ],
+          "check": "4 × 0.75 = 3.00. ✅",
+          "mistake": "4 ÷ 3.00 gives yogurts per dollar instead.",
           "answer": "$0.75"
         },
         {
-          "prompt": "12 oz for $3.60 or 16 oz for $4.00. Better buy?",
+          "title": "Best buy",
+          "prompt": "A smaller size is 12 oz for $3.60 and a bigger size is 16 oz for $4.00. Which size is the better buy?",
           "steps": [
-            "3.60 ÷ 12 = $0.30 per oz",
-            "4.00 ÷ 16 = $0.25 per oz"
+            {
+              "do": "3.60 ÷ 12 = 0.30 per oz.",
+              "why": "Unit prices put both deals on the same scale.",
+              "rule": "Unit price = price ÷ quantity"
+            },
+            {
+              "do": "4.00 ÷ 16 = 0.25 per oz.",
+              "why": "Now we can compare fairly.",
+              "rule": "Unit price = price ÷ quantity"
+            },
+            {
+              "do": "0.25 < 0.30, so the 16 oz size is the better buy.",
+              "why": "Lower price per ounce saves money.",
+              "rule": "Lowest unit price wins",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 0.4,
+                "step": 0.05,
+                "marks": [
+                  {
+                    "at": 0.25,
+                    "label": "0.25"
+                  },
+                  {
+                    "at": 0.3,
+                    "label": "0.30"
+                  }
+                ]
+              }
+            }
           ],
-          "answer": "16 oz for $4.00"
+          "check": "16 oz at $0.30 would cost $4.80, more than $4.00. ✅",
+          "mistake": "The cheaper total price isn't always the better buy.",
+          "answer": "The bigger size"
         },
         {
-          "prompt": "3 tickets cost $22.50. Cost of 8 tickets?",
+          "title": "Scaling up",
+          "prompt": "3 tickets cost $22.50. What do 8 tickets cost?",
           "steps": [
-            "22.50 ÷ 3 = 7.50",
-            "7.50 × 8 = 60"
+            {
+              "do": "Unit price: 22.50 ÷ 3 = 7.50.",
+              "why": "Find the price of 1 ticket first.",
+              "rule": "Unit price = price ÷ quantity"
+            },
+            {
+              "do": "7.50 × 8 = 60.",
+              "why": "Multiply the unit price by the number of tickets.",
+              "rule": "Total = unit price × quantity",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 60,
+                "step": 7.5,
+                "marks": [
+                  {
+                    "at": 7.5,
+                    "label": "7.5"
+                  },
+                  {
+                    "at": 60,
+                    "label": "60"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 0,
+                    "to": 7.5,
+                    "label": "1 ticket"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "60 ÷ 8 = 7.50. ✅",
+          "mistake": "Don't multiply 22.50 × 8 — that's the price of 24 tickets.",
           "answer": "$60"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "6 granola bars cost $3.00. What is the price of 1 bar in dollars?",
+          "steps": [
+            {
+              "do": "Divide 3.00 by 6.",
+              "why": "Per bar means for 1 bar.",
+              "input": {
+                "type": "number",
+                "answer": 0.5,
+                "tolerance": 0.005
+              },
+              "hint": "3 ÷ 6",
+              "worked": "$0.50 per bar."
+            }
+          ],
+          "answer": 0.5
+        },
+        {
+          "prompt": "A 5-pack of pens costs $4.25. What is the price per pen in dollars?",
+          "visual": {
+            "kind": "placeValue",
+            "digits": "4.25"
+          },
+          "steps": [
+            {
+              "do": "Divide 4.25 by 5.",
+              "why": "Each pen gets an equal share.",
+              "input": {
+                "type": "number",
+                "answer": 0.85,
+                "tolerance": 0.005
+              },
+              "hint": "4.25 ÷ 5",
+              "worked": "$0.85 per pen."
+            }
+          ],
+          "answer": 0.85
+        },
+        {
+          "prompt": "Brand A: 10 oz for $2.50. Brand B: 16 oz for $3.20. Which is the better buy?",
+          "steps": [
+            {
+              "do": "Brand A price per oz in dollars?",
+              "why": "Unit prices let us compare.",
+              "input": {
+                "type": "number",
+                "answer": 0.25,
+                "tolerance": 0.005
+              },
+              "hint": "2.50 ÷ 10",
+              "worked": "$0.25 per oz."
+            },
+            {
+              "do": "Brand B price per oz in dollars?",
+              "why": "Same units for a fair comparison.",
+              "input": {
+                "type": "number",
+                "answer": 0.2,
+                "tolerance": 0.005
+              },
+              "hint": "3.20 ÷ 16",
+              "worked": "$0.20 per oz."
+            },
+            {
+              "do": "Choose the better buy.",
+              "why": "Lower unit price is better.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "Brand A",
+                  "Brand B",
+                  "Same"
+                ]
+              },
+              "hint": "0.20 < 0.25",
+              "worked": "Brand B."
+            }
+          ],
+          "answer": "Brand B"
+        },
+        {
+          "prompt": "4 notebooks cost $7.00. How many dollars do 10 notebooks cost?",
+          "steps": [
+            {
+              "do": "Find the price of 1 notebook in dollars.",
+              "why": "The unit price helps you scale.",
+              "input": {
+                "type": "number",
+                "answer": 1.75,
+                "tolerance": 0.005
+              },
+              "hint": "7.00 ÷ 4",
+              "worked": "$1.75 each."
+            },
+            {
+              "do": "Multiply by 10.",
+              "why": "10 notebooks at $1.75 each.",
+              "input": {
+                "type": "number",
+                "answer": 17.5,
+                "tolerance": 0.005
+              },
+              "hint": "1.75 × 10",
+              "worked": "$17.50."
+            }
+          ],
+          "answer": 17.5
         }
       ]
     },
     {
       "id": "rat-speed",
       "title": "Constant Speed",
-      "ccss": [
-        "6.RP.A.3b"
-      ],
-      "lesson": "## Speed Racer 🏎️\n- **speed = distance ÷ time**\n- **distance = speed × time**\n- **time = distance ÷ speed**\n\nAt a *constant* speed, you cover the same distance every hour.",
+      "ccss": "6.RP.A.3b",
+      "learn": {
+        "sections": [
+          {
+            "text": "**speed = distance ÷ time.** 120 miles in 2 hours is 60 miles each hour.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 120,
+              "step": 20,
+              "marks": [
+                {
+                  "at": 60,
+                  "label": "60"
+                },
+                {
+                  "at": 120,
+                  "label": "120"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 0,
+                  "to": 60,
+                  "label": "hour 1"
+                },
+                {
+                  "from": 60,
+                  "to": 120,
+                  "label": "hour 2"
+                }
+              ]
+            }
+          },
+          {
+            "text": "**distance = speed × time.** At 45 mph for 3 hours: 45, 90, 135 miles.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 135,
+              "step": 45,
+              "marks": [
+                {
+                  "at": 45,
+                  "label": "45"
+                },
+                {
+                  "at": 90,
+                  "label": "90"
+                },
+                {
+                  "at": 135,
+                  "label": "135"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 0,
+                  "to": 45,
+                  "label": "1 h"
+                },
+                {
+                  "from": 45,
+                  "to": 90,
+                  "label": "1 h"
+                },
+                {
+                  "from": 90,
+                  "to": 135,
+                  "label": "1 h"
+                }
+              ]
+            }
+          },
+          {
+            "text": "**time = distance ÷ speed.** Constant speed means the same distance every hour. 🚴"
+          }
+        ],
+        "keyIdea": "d = s × t (cover one to find it!)."
+      },
       "examples": [
         {
-          "prompt": "120 miles in 2 hours. Speed?",
+          "title": "Find speed",
+          "prompt": "120 miles in 2 hours. What is the speed in miles per hour?",
           "steps": [
-            "120 ÷ 2 = 60"
+            {
+              "do": "speed = distance ÷ time = 120 ÷ 2.",
+              "why": "Speed is distance per 1 hour.",
+              "rule": "s = d ÷ t"
+            },
+            {
+              "do": "120 ÷ 2 = 60 mph.",
+              "why": "Each hour covers the same 60 miles.",
+              "rule": "s = d ÷ t",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 120,
+                "step": 20,
+                "marks": [
+                  {
+                    "at": 60,
+                    "label": "60"
+                  },
+                  {
+                    "at": 120,
+                    "label": "120"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 0,
+                    "to": 60,
+                    "label": "1 h"
+                  },
+                  {
+                    "from": 60,
+                    "to": 120,
+                    "label": "1 h"
+                  }
+                ]
+              }
+            }
           ],
-          "answer": "60 mph"
+          "check": "60 × 2 = 120. ✅",
+          "mistake": "2 ÷ 120 is hours per mile, not miles per hour.",
+          "answer": "60"
         },
         {
-          "prompt": "At 45 mph, how far in 3 hours?",
+          "title": "Find distance",
+          "prompt": "At 45 mph, how far do you go in 3 hours?",
           "steps": [
-            "45 × 3 = 135"
+            {
+              "do": "distance = speed × time = 45 × 3.",
+              "why": "Each hour adds 45 miles.",
+              "rule": "d = s × t"
+            },
+            {
+              "do": "45 × 3 = 135 miles.",
+              "why": "Three equal jumps of 45.",
+              "rule": "d = s × t",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 135,
+                "step": 45,
+                "marks": [
+                  {
+                    "at": 45,
+                    "label": "45"
+                  },
+                  {
+                    "at": 135,
+                    "label": "135"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 0,
+                    "to": 45,
+                    "label": "1 h"
+                  },
+                  {
+                    "from": 45,
+                    "to": 90,
+                    "label": "1 h"
+                  },
+                  {
+                    "from": 90,
+                    "to": 135,
+                    "label": "1 h"
+                  }
+                ]
+              }
+            }
           ],
-          "answer": "135 miles"
+          "check": "135 ÷ 3 = 45. ✅",
+          "mistake": "Don't divide 45 by 3 — more hours means more distance.",
+          "answer": "135"
         },
         {
-          "prompt": "At 8 km/h, how long to go 20 km?",
+          "title": "Find time",
+          "prompt": "At 8 km per hour, how long to go 20 km?",
           "steps": [
-            "20 ÷ 8 = 2.5"
+            {
+              "do": "time = distance ÷ speed = 20 ÷ 8.",
+              "why": "Count how many 8-km hours fit in 20 km.",
+              "rule": "t = d ÷ s"
+            },
+            {
+              "do": "20 ÷ 8 = 2.5 hours: 8 km, 16 km, then 4 more km in half an hour.",
+              "why": "Two full hours make 16 km, and half an hour makes 4 more.",
+              "rule": "t = d ÷ s",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 20,
+                "step": 4,
+                "marks": [
+                  {
+                    "at": 8,
+                    "label": "8"
+                  },
+                  {
+                    "at": 16,
+                    "label": "16"
+                  },
+                  {
+                    "at": 20,
+                    "label": "20"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 0,
+                    "to": 8,
+                    "label": "1 h"
+                  },
+                  {
+                    "from": 8,
+                    "to": 16,
+                    "label": "1 h"
+                  },
+                  {
+                    "from": 16,
+                    "to": 20,
+                    "label": "½ h"
+                  }
+                ]
+              }
+            }
           ],
-          "answer": "2.5 hours"
+          "check": "8 × 2.5 = 20. ✅",
+          "mistake": "Don't multiply 20 × 8 — that's not a time.",
+          "answer": "2.5"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "A cyclist rides 36 miles in 3 hours. What is the speed in miles per hour?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 36,
+            "step": 12,
+            "marks": [
+              {
+                "at": 12,
+                "label": "12"
+              },
+              {
+                "at": 36,
+                "label": "36"
+              }
+            ],
+            "jumps": [
+              {
+                "from": 0,
+                "to": 12,
+                "label": "1 h"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "Divide 36 by 3.",
+              "why": "Speed is distance per hour.",
+              "input": {
+                "type": "number",
+                "answer": 12
+              },
+              "hint": "36 ÷ 3",
+              "worked": "12 mph."
+            }
+          ],
+          "answer": 12
+        },
+        {
+          "prompt": "A train goes 70 miles per hour. How many miles does it go in 4 hours?",
+          "steps": [
+            {
+              "do": "Multiply 70 × 4.",
+              "why": "Each hour adds 70 miles.",
+              "input": {
+                "type": "number",
+                "answer": 280
+              },
+              "hint": "70 × 4",
+              "worked": "280 miles."
+            }
+          ],
+          "answer": 280
+        },
+        {
+          "prompt": "At 50 miles per hour, how many hours to go 175 miles?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 175,
+            "step": 25,
+            "marks": [
+              {
+                "at": 50,
+                "label": "50"
+              },
+              {
+                "at": 150,
+                "label": "150"
+              },
+              {
+                "at": 175,
+                "label": "175"
+              }
+            ],
+            "jumps": [
+              {
+                "from": 0,
+                "to": 50,
+                "label": "1 h"
+              },
+              {
+                "from": 150,
+                "to": 175,
+                "label": "½ h"
+              }
+            ]
+          },
+          "steps": [
+            {
+              "do": "How many full hours fit (50 × ? ≤ 175)? Remember 50 × 3 = 150.",
+              "why": "Count whole hours first.",
+              "input": {
+                "type": "number",
+                "answer": 3
+              },
+              "hint": "50 × 3 = 150",
+              "worked": "3 full hours."
+            },
+            {
+              "do": "Divide 175 ÷ 50 for the exact time in hours.",
+              "why": "The leftover 25 miles is half an hour.",
+              "input": {
+                "type": "number",
+                "answer": 3.5,
+                "tolerance": 0.005
+              },
+              "hint": "175 ÷ 50",
+              "worked": "3.5 hours."
+            }
+          ],
+          "answer": 3.5
+        },
+        {
+          "prompt": "Andrew walks 2 miles in 40 minutes at a steady pace. How many miles does he walk in 1 hour?",
+          "steps": [
+            {
+              "do": "How many 20-minute blocks are in 40 minutes?",
+              "why": "Breaking time into blocks helps find the rate.",
+              "input": {
+                "type": "number",
+                "answer": 2
+              },
+              "hint": "40 ÷ 20",
+              "worked": "2 blocks."
+            },
+            {
+              "do": "Miles per 20-minute block?",
+              "why": "2 miles over 2 blocks.",
+              "input": {
+                "type": "number",
+                "answer": 1
+              },
+              "hint": "2 ÷ 2",
+              "worked": "1 mile per block."
+            },
+            {
+              "do": "1 hour = 3 blocks of 20 minutes. Miles in 1 hour?",
+              "why": "Each block adds 1 mile.",
+              "input": {
+                "type": "number",
+                "answer": 3
+              },
+              "hint": "1 × 3",
+              "worked": "3 miles per hour."
+            }
+          ],
+          "answer": 3
         }
       ]
     },
     {
       "id": "rat-percent",
       "title": "Percents",
-      "ccss": [
-        "6.RP.A.3c"
-      ],
-      "lesson": "## Out of 100 💯\n**Percent** means *per hundred*: 35% = 35/100 = 0.35.\n\n- Percent of a number: 20% of 50 = 0.20 × 50 = **10**\n- Find the whole: if 12 is 25%, then 1% is 0.48, so 100% is **48**.",
+      "ccss": "6.RP.A.3c",
+      "learn": {
+        "sections": [
+          {
+            "text": "**Percent** means *per hundred*. 35% is 35 out of 100 squares on a 10-by-10 grid: 7 rows of 5 is 35.",
+            "visual": {
+              "kind": "areaModel",
+              "rows": 10,
+              "cols": 10,
+              "shadeRows": 7,
+              "shadeCols": 5
+            }
+          },
+          {
+            "text": "To find a percent of a number, multiply. 30% of 80 = 30/100 × 80 = **24**. On a number line from 0 to 80, 30% lands at 24.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 80,
+              "step": 8,
+              "marks": [
+                {
+                  "at": 24,
+                  "label": "24"
+                },
+                {
+                  "at": 80,
+                  "label": "80"
+                }
+              ]
+            }
+          },
+          {
+            "text": "To find the whole: if 15 is 25%, then 100% is 4 times as much: **60**."
+          }
+        ],
+        "keyIdea": "Percent = out of 100: part = percent/100 × whole."
+      },
       "examples": [
         {
+          "title": "Percent of a number",
           "prompt": "What is 30% of 80?",
           "steps": [
-            "30/100 × 80",
-            "= 24"
+            {
+              "do": "Write 30% as 30/100 = 0.3.",
+              "why": "Percent means out of 100.",
+              "rule": "p% = p/100"
+            },
+            {
+              "do": "0.3 × 80 = 24.",
+              "why": "Finding a part of a number means multiplying.",
+              "rule": "part = p/100 × whole",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 80,
+                "step": 8,
+                "marks": [
+                  {
+                    "at": 24,
+                    "label": "24"
+                  },
+                  {
+                    "at": 80,
+                    "label": "80"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "10% of 80 is 8, and 3 × 8 = 24. ✅",
+          "mistake": "30% of 80 is not 80 − 30 = 50.",
           "answer": "24"
         },
         {
-          "prompt": "Write 3/5 as a percent.",
+          "title": "Fraction to percent",
+          "prompt": "Write ⅗ as a percent.",
           "steps": [
-            "3/5 = 60/100"
+            {
+              "do": "Make the bottom 100: multiply top and bottom by 20.",
+              "why": "Percent means out of 100.",
+              "rule": "p% = p/100"
+            },
+            {
+              "do": "⅗ = 60/100 = 60%.",
+              "why": "60 out of 100 is 60%.",
+              "rule": "Equivalent fractions",
+              "visual": {
+                "kind": "areaModel",
+                "rows": 10,
+                "cols": 10,
+                "shadeRows": 6,
+                "shadeCols": 10
+              }
+            }
           ],
+          "check": "60 of the 100 squares are shaded. ✅",
+          "mistake": "⅗ is not 35% — don't just write the digits next to each other.",
           "answer": "60%"
         },
         {
+          "title": "Find the whole",
           "prompt": "15 is 25% of what number?",
           "steps": [
-            "25% is 1/4",
-            "15 × 4 = 60"
+            {
+              "do": "25% is ¼ of the whole.",
+              "why": "25 out of 100 is one quarter.",
+              "rule": "25% = ¼",
+              "visual": {
+                "kind": "fractionBars",
+                "wholes": 1,
+                "parts": 4,
+                "shaded": 1
+              }
+            },
+            {
+              "do": "So the whole is 15 × 4 = 60.",
+              "why": "Four quarters make the whole.",
+              "rule": "whole = part ÷ (p/100)"
+            }
           ],
+          "check": "25% of 60 = 15. ✅",
+          "mistake": "25% of 15 (3.75) answers a different question.",
           "answer": "60"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "What is 50% of 64?",
+          "steps": [
+            {
+              "do": "Multiply 64 × ½.",
+              "why": "50% is one half.",
+              "input": {
+                "type": "number",
+                "answer": 32
+              },
+              "hint": "Half of 64",
+              "worked": "32."
+            }
+          ],
+          "answer": 32
+        },
+        {
+          "prompt": "Write 7/20 as a percent (just the number).",
+          "visual": {
+            "kind": "areaModel",
+            "rows": 10,
+            "cols": 10,
+            "shadeRows": 7,
+            "shadeCols": 5
+          },
+          "steps": [
+            {
+              "do": "What do you multiply 20 by to get 100?",
+              "why": "Percent is out of 100.",
+              "input": {
+                "type": "number",
+                "answer": 5
+              },
+              "hint": "20 × ? = 100",
+              "worked": "5."
+            },
+            {
+              "do": "Multiply 7 by 5.",
+              "why": "Top and bottom both get multiplied by 5.",
+              "input": {
+                "type": "number",
+                "answer": 35
+              },
+              "hint": "7 × 5",
+              "worked": "35%."
+            }
+          ],
+          "answer": 35
+        },
+        {
+          "prompt": "A $60 game is 15% off. How many dollars do you save?",
+          "steps": [
+            {
+              "do": "Find 10% of 60.",
+              "why": "10% is easy: divide by 10.",
+              "input": {
+                "type": "number",
+                "answer": 6
+              },
+              "hint": "60 ÷ 10",
+              "worked": "6."
+            },
+            {
+              "do": "Find 5% of 60.",
+              "why": "5% is half of 10%.",
+              "input": {
+                "type": "number",
+                "answer": 3
+              },
+              "hint": "6 ÷ 2",
+              "worked": "3."
+            },
+            {
+              "do": "Add them to get 15%.",
+              "why": "10% + 5% = 15%.",
+              "input": {
+                "type": "number",
+                "answer": 9
+              },
+              "hint": "6 + 3",
+              "worked": "$9 saved."
+            }
+          ],
+          "answer": 9
+        },
+        {
+          "prompt": "18 is 30% of what number?",
+          "steps": [
+            {
+              "do": "What is 10% of the number?",
+              "why": "30% is 3 groups of 10%.",
+              "input": {
+                "type": "number",
+                "answer": 6
+              },
+              "hint": "18 ÷ 3",
+              "worked": "10% = 6."
+            },
+            {
+              "do": "What is 100%?",
+              "why": "100% is 10 groups of 10%.",
+              "input": {
+                "type": "number",
+                "answer": 60
+              },
+              "hint": "6 × 10",
+              "worked": "60."
+            }
+          ],
+          "answer": 60
         }
       ]
     },
     {
       "id": "rat-unit-conversion",
       "title": "Converting Units",
-      "ccss": [
-        "6.RP.A.3d"
-      ],
-      "lesson": "## Unit Swap 🔁\nUse a conversion ratio like **1 foot = 12 inches**.\n\n- Big unit → small unit: **multiply** (3 feet = 36 inches)\n- Small unit → big unit: **divide** (180 minutes = 3 hours)",
+      "ccss": "6.RP.A.3d",
+      "learn": {
+        "sections": [
+          {
+            "text": "Use a conversion ratio like **1 foot = 12 inches**. 5 feet is 5 jumps of 12: 12, 24, 36, 48, 60 inches.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 60,
+              "step": 12,
+              "marks": [
+                {
+                  "at": 12,
+                  "label": "12"
+                },
+                {
+                  "at": 24,
+                  "label": "24"
+                },
+                {
+                  "at": 36,
+                  "label": "36"
+                },
+                {
+                  "at": 48,
+                  "label": "48"
+                },
+                {
+                  "at": 60,
+                  "label": "60"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 0,
+                  "to": 12,
+                  "label": "1 ft"
+                },
+                {
+                  "from": 12,
+                  "to": 24,
+                  "label": "1 ft"
+                },
+                {
+                  "from": 24,
+                  "to": 36,
+                  "label": "1 ft"
+                },
+                {
+                  "from": 36,
+                  "to": 48,
+                  "label": "1 ft"
+                },
+                {
+                  "from": 48,
+                  "to": 60,
+                  "label": "1 ft"
+                }
+              ]
+            }
+          },
+          {
+            "text": "Big unit → small unit: **multiply**. Small unit → big unit: **divide**. 240 seconds ÷ 60 = 4 minutes."
+          },
+          {
+            "text": "1 meter = 100 centimeters, so 350 cm = 3.5 m. On 4 meter-bars cut in halves, 7 halves are shaded: three full meters and half of another.",
+            "visual": {
+              "kind": "fractionBars",
+              "wholes": 4,
+              "parts": 2,
+              "shaded": 7
+            }
+          }
+        ],
+        "keyIdea": "Big → small: multiply. Small → big: divide."
+      },
       "examples": [
         {
+          "title": "Feet to inches",
           "prompt": "How many inches are in 5 feet?",
           "steps": [
-            "1 ft = 12 in",
-            "5 × 12 = 60"
+            {
+              "do": "1 foot = 12 inches.",
+              "why": "We need the conversion ratio.",
+              "rule": "Know the conversion"
+            },
+            {
+              "do": "5 × 12 = 60 inches.",
+              "why": "Big unit to small unit means more of them, so multiply.",
+              "rule": "Big → small: multiply",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 60,
+                "step": 12,
+                "marks": [
+                  {
+                    "at": 12,
+                    "label": "12"
+                  },
+                  {
+                    "at": 60,
+                    "label": "60"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 0,
+                    "to": 12,
+                    "label": "1 ft"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "60 ÷ 12 = 5. ✅",
+          "mistake": "Dividing 5 ÷ 12 gives a tiny number — inches should be more than feet.",
           "answer": "60"
         },
         {
+          "title": "Seconds to minutes",
           "prompt": "Convert 240 seconds to minutes.",
           "steps": [
-            "1 min = 60 s",
-            "240 ÷ 60 = 4"
+            {
+              "do": "1 minute = 60 seconds.",
+              "why": "We need the conversion ratio.",
+              "rule": "Know the conversion"
+            },
+            {
+              "do": "240 ÷ 60 = 4 minutes.",
+              "why": "Small unit to big unit means fewer, so divide.",
+              "rule": "Small → big: divide",
+              "visual": {
+                "kind": "numberLine",
+                "min": 0,
+                "max": 240,
+                "step": 60,
+                "marks": [
+                  {
+                    "at": 60,
+                    "label": "60"
+                  },
+                  {
+                    "at": 240,
+                    "label": "240"
+                  }
+                ],
+                "jumps": [
+                  {
+                    "from": 0,
+                    "to": 60,
+                    "label": "1 min"
+                  }
+                ]
+              }
+            }
           ],
+          "check": "4 × 60 = 240. ✅",
+          "mistake": "240 × 60 makes the number bigger — minutes should be fewer.",
           "answer": "4"
         },
         {
+          "title": "Centimeters to meters",
           "prompt": "Convert 350 centimeters to meters.",
           "steps": [
-            "1 m = 100 cm",
-            "350 ÷ 100 = 3.5"
+            {
+              "do": "1 m = 100 cm.",
+              "why": "We need the conversion ratio.",
+              "rule": "Know the conversion"
+            },
+            {
+              "do": "350 ÷ 100 = 3.5 m.",
+              "why": "Dividing by 100 moves the decimal point 2 places left.",
+              "rule": "Small → big: divide",
+              "visual": {
+                "kind": "placeValue",
+                "digits": "3.5"
+              }
+            }
           ],
+          "check": "3.5 × 100 = 350. ✅",
+          "mistake": "35 m would be 3,500 cm — move the decimal 2 places, not 1.",
           "answer": "3.5"
+        }
+      ],
+      "guided": [
+        {
+          "prompt": "How many inches are in 3 feet?",
+          "steps": [
+            {
+              "do": "Multiply 3 × 12.",
+              "why": "Each foot has 12 inches.",
+              "input": {
+                "type": "number",
+                "answer": 36
+              },
+              "hint": "3 × 12",
+              "worked": "36 inches."
+            }
+          ],
+          "answer": 36
+        },
+        {
+          "prompt": "Convert 8 quarts to gallons. (1 gallon = 4 quarts)",
+          "visual": {
+            "kind": "fractionBars",
+            "wholes": 2,
+            "parts": 4,
+            "shaded": 8
+          },
+          "steps": [
+            {
+              "do": "Divide 8 by 4.",
+              "why": "Small unit to big unit, so divide.",
+              "input": {
+                "type": "number",
+                "answer": 2
+              },
+              "hint": "8 ÷ 4",
+              "worked": "2 gallons."
+            }
+          ],
+          "answer": 2
+        },
+        {
+          "prompt": "How many ounces are in 2.5 pounds? (1 pound = 16 ounces)",
+          "visual": {
+            "kind": "fractionBars",
+            "wholes": 3,
+            "parts": 2,
+            "shaded": 5
+          },
+          "steps": [
+            {
+              "do": "Ounces in 2 pounds?",
+              "why": "Whole pounds first.",
+              "input": {
+                "type": "number",
+                "answer": 32
+              },
+              "hint": "2 × 16",
+              "worked": "32 ounces."
+            },
+            {
+              "do": "Ounces in 0.5 pound?",
+              "why": "Half of 16.",
+              "input": {
+                "type": "number",
+                "answer": 8
+              },
+              "hint": "16 ÷ 2",
+              "worked": "8 ounces."
+            },
+            {
+              "do": "Total ounces? (On 3 pound-bars cut in halves, 5 halves make 2.5 pounds.)",
+              "why": "Add the parts.",
+              "input": {
+                "type": "number",
+                "answer": 40
+              },
+              "hint": "32 + 8",
+              "worked": "40 ounces."
+            }
+          ],
+          "answer": 40
+        },
+        {
+          "prompt": "A 1.2 km trail: how many meters long is it? (1 km = 1000 m)",
+          "visual": {
+            "kind": "placeValue",
+            "digits": "1200"
+          },
+          "steps": [
+            {
+              "do": "Multiply 1.2 × 1000.",
+              "why": "Big unit to small unit, so multiply.",
+              "input": {
+                "type": "number",
+                "answer": 1200
+              },
+              "hint": "Move the decimal 3 places right.",
+              "worked": "1200 m."
+            }
+          ],
+          "answer": 1200
         }
       ]
     }

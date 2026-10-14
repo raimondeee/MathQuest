@@ -165,3 +165,13 @@ main { max-width: 980px; margin: 0 auto; padding: 16px max(16px, env(safe-area-i
 .fb.ok { background: #e7f6ed; font-weight: 700; } .fb.hint { background: #fff7dc; } .fb.worked { background: #fdf0ea; }
 .nudge { display: block; font-weight: 500; margin-top: 4px; }
 @media (max-width: 600px) { .stepper { grid-template-columns: repeat(2, 1fr); } .nav-row .big-btn { min-width: 0; flex: 1; } }
+.figure .ineq-on { fill: var(--accent); stroke: var(--accent); stroke-width: 2.5; }
+.figure .ineq-off { fill: #fff; stroke: var(--accent); stroke-width: 2.5; }
+.figure .dot { fill: var(--accent); stroke: #fff; stroke-width: 1.5; }
+.md-table-wrap { overflow-x: auto; margin: 10px 0; }
+.md-table { border-collapse: collapse; min-width: 50%; font-size: 1.05rem; }
+.md-table th, .md-table td { border: 1px solid var(--line); padding: 8px 14px; text-align: center; }
+.md-table th { background: var(--soft); color: var(--accent); }
+.md-table tr:nth-child(even) td { background: #faf8f3; }
+.figure .ray { stroke: var(--accent); stroke-width: 7; stroke-linecap: round; opacity: .75; }
+.figure .ray-head { fill: var(--accent); opacity: .75; stroke: none; }

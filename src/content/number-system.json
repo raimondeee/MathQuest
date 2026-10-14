@@ -10,7 +10,7 @@
       "learn": {
         "sections": [
           {
-            "text": "Division asks a question: **how many groups of this size fit?** 3 ÷ 1/4 asks, \"How many 1/4s fit in 3?\"\n\nLook at 3 wholes, each cut into 4 parts. Count the parts: 3 × 4 = **12**.",
+            "text": "Division asks a question: **how many groups of this size fit?** 3 ÷ ¼ asks, \"How many ¼s fit in 3?\"\n\nLook at 3 wholes, each cut into 4 parts. Count the parts: 3 × 4 = **12**.",
             "visual": {
               "kind": "fractionBars",
               "wholes": 3,
@@ -23,7 +23,93 @@
             }
           },
           {
-            "text": "Here is the shortcut: **keep, change, flip.** Keep the first number, change ÷ to ×, and flip the second number.\n\n3 ÷ 1/4 → 3 × 4/1 = 12. Same answer as counting!"
+            "text": "Here is the shortcut: **keep, change, flip.** Keep the first number, change ÷ to ×, and flip the second number.\n\n3 ÷ ¼ → 3 × 4/1 = 12. Same answer as counting! On a number line from 0 to 3 (passing 1 and 2), twelve jumps of ¼ land on 3.",
+            "visual": {
+              "kind": "numberLine",
+              "min": 0,
+              "max": 3,
+              "step": 0.25,
+              "marks": [
+                {
+                  "at": 0,
+                  "label": "0"
+                },
+                {
+                  "at": 1,
+                  "label": "1"
+                },
+                {
+                  "at": 2,
+                  "label": "2"
+                },
+                {
+                  "at": 3,
+                  "label": "3"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 0,
+                  "to": 0.25,
+                  "label": "¼"
+                },
+                {
+                  "from": 0.25,
+                  "to": 0.5,
+                  "label": "¼"
+                },
+                {
+                  "from": 0.5,
+                  "to": 0.75,
+                  "label": "¼"
+                },
+                {
+                  "from": 0.75,
+                  "to": 1,
+                  "label": "¼"
+                },
+                {
+                  "from": 1,
+                  "to": 1.25,
+                  "label": "¼"
+                },
+                {
+                  "from": 1.25,
+                  "to": 1.5,
+                  "label": "¼"
+                },
+                {
+                  "from": 1.5,
+                  "to": 1.75,
+                  "label": "¼"
+                },
+                {
+                  "from": 1.75,
+                  "to": 2,
+                  "label": "¼"
+                },
+                {
+                  "from": 2,
+                  "to": 2.25,
+                  "label": "¼"
+                },
+                {
+                  "from": 2.25,
+                  "to": 2.5,
+                  "label": "¼"
+                },
+                {
+                  "from": 2.5,
+                  "to": 2.75,
+                  "label": "¼"
+                },
+                {
+                  "from": 2.75,
+                  "to": 3,
+                  "label": "¼"
+                }
+              ]
+            }
           },
           {
             "text": "Why does flipping work? Each whole holds 4 quarters, so multiplying by 4 counts all of them at once. When the answer isn't whole, part of a group is left over. That's OK!"
@@ -34,7 +120,7 @@
       "examples": [
         {
           "title": "Counting quarters",
-          "prompt": "How many 1/4s are in 3? (3 ÷ 1/4)",
+          "prompt": "How many ¼s are in 3? (3 ÷ ¼)",
           "visual": {
             "kind": "fractionBars",
             "wholes": 3,
@@ -47,7 +133,7 @@
           "steps": [
             {
               "do": "Draw 3 whole bars and cut each into 4 equal parts.",
-              "why": "Each part is 1/4, so the question becomes counting parts.",
+              "why": "Each part is ¼, so the question becomes counting parts.",
               "visual": {
                 "kind": "fractionBars",
                 "wholes": 3,
@@ -57,25 +143,27 @@
                   "num": 1,
                   "den": 4
                 }
-              }
+              },
+              "rule": "a ÷ (1/b) = a × b"
             },
             {
               "do": "Count: 4 parts in each whole, and there are 3 wholes, so 3 × 4 = 12.",
-              "why": "Multiplying is a fast way to count equal groups."
+              "why": "Multiplying is a fast way to count equal groups.",
+              "rule": "a ÷ (1/b) = a × b"
             },
             {
               "do": "Keep, change, flip: 3 × 4/1 = 12.",
-              "why": "Flipping 1/4 to 4/1 is just the shortcut for 'how many quarters in each whole'.",
+              "why": "Flipping ¼ to 4/1 is just the shortcut for 'how many quarters in each whole'.",
               "rule": "a ÷ (1/b) = a × b"
             }
           ],
-          "check": "Multiply back: 12 × 1/4 = 3. ✅",
+          "check": "Multiply back: 12 × ¼ = 3. ✅",
           "mistake": "Don't flip the first number! Only flip the number you are dividing by.",
           "answer": "12"
         },
         {
           "title": "Jumping on a number line",
-          "prompt": "3/4 ÷ 1/8",
+          "prompt": "¾ ÷ ⅛",
           "visual": {
             "kind": "numberLine",
             "min": 0,
@@ -88,7 +176,7 @@
               },
               {
                 "at": 0.75,
-                "label": "3/4"
+                "label": "¾"
               },
               {
                 "at": 1,
@@ -99,11 +187,12 @@
           "steps": [
             {
               "do": "Draw a number line from 0 to 1 marked in eighths.",
-              "why": "Eighths are the size of each jump we want to count."
+              "why": "Eighths are the size of each jump we want to count.",
+              "rule": "Division = how many groups fit"
             },
             {
-              "do": "On the line from 0 to 1, jump by 1/8 from 0 to 3/4 and count the jumps: 6.",
-              "why": "3/4 is the same as 6/8, so six 1/8-jumps land exactly on it.",
+              "do": "On the line from 0 to 1, jump by ⅛ from 0 to ¾ and count the jumps: 6.",
+              "why": "¾ is the same as 6/8, so six ⅛-jumps land exactly on it.",
               "visual": {
                 "kind": "numberLine",
                 "min": 0,
@@ -116,7 +205,7 @@
                   },
                   {
                     "at": 0.75,
-                    "label": "3/4"
+                    "label": "¾"
                   },
                   {
                     "at": 1,
@@ -127,51 +216,53 @@
                   {
                     "from": 0,
                     "to": 0.125,
-                    "label": "1/8"
+                    "label": "⅛"
                   },
                   {
                     "from": 0.125,
                     "to": 0.25,
-                    "label": "1/8"
+                    "label": "⅛"
                   },
                   {
                     "from": 0.25,
                     "to": 0.375,
-                    "label": "1/8"
+                    "label": "⅛"
                   },
                   {
                     "from": 0.375,
                     "to": 0.5,
-                    "label": "1/8"
+                    "label": "⅛"
                   },
                   {
                     "from": 0.5,
                     "to": 0.625,
-                    "label": "1/8"
+                    "label": "⅛"
                   },
                   {
                     "from": 0.625,
                     "to": 0.75,
-                    "label": "1/8"
+                    "label": "⅛"
                   }
                 ]
-              }
+              },
+              "rule": "Division = how many groups fit"
             },
             {
-              "do": "Check with keep, change, flip: 3/4 × 8/1 = 24/4 = 6.",
+              "do": "Check with keep, change, flip: ¾ × 8/1 = 24/4 = 6.",
               "why": "The shortcut and the jumps must agree.",
               "rule": "Keep, change, flip"
             }
           ],
-          "check": "6 × 1/8 = 6/8 = 3/4. ✅",
+          "check": "6 × ⅛ = 6/8 = ¾. ✅",
+          "mistake": "Count the jumps, not the tick marks — the 0 mark isn't a jump.",
           "answer": "6"
         },
         {
           "title": "When it doesn't fit evenly",
-          "prompt": "3/4 ÷ 2/3",
+          "prompt": "¾ ÷ ⅔",
           "steps": [
             {
-              "do": "Rename both with a common denominator: 3/4 = 9/12 and 2/3 = 8/12.",
+              "do": "Rename both with a common denominator: ¾ = 9/12 and ⅔ = 8/12.",
               "why": "Same-size pieces make them easy to compare.",
               "visual": {
                 "kind": "fractionBars",
@@ -182,29 +273,31 @@
                   "num": 2,
                   "den": 3
                 }
-              }
+              },
+              "rule": "a/b ÷ c/d = a/b × d/c"
             },
             {
               "do": "Ask: how many groups of 8 twelfths fit in 9 twelfths? 9 ÷ 8 = 9/8.",
-              "why": "One full group fits, plus 1/8 of another group."
+              "why": "One full group fits, plus ⅛ of another group.",
+              "rule": "a/b ÷ c/d = a/b × d/c"
             },
             {
-              "do": "Keep, change, flip: 3/4 × 3/2 = 9/8 = 1 1/8.",
+              "do": "Keep, change, flip: ¾ × 3/2 = 9/8 = 1⅛.",
               "why": "Both ways give the same answer, so the shortcut works.",
               "rule": "a/b ÷ c/d = a/b × d/c"
             }
           ],
-          "check": "1 1/8 × 2/3 = 9/8 × 2/3 = 18/24 = 3/4. ✅",
-          "mistake": "An answer bigger than 1 is fine here: 2/3 fits into 3/4 a bit more than once.",
-          "answer": "1 1/8"
+          "check": "1⅛ × ⅔ = 9/8 × ⅔ = 18/24 = ¾. ✅",
+          "mistake": "An answer bigger than 1 is fine here: ⅔ fits into ¾ a bit more than once.",
+          "answer": "1⅛"
         },
         {
           "title": "Snack bags",
-          "prompt": "Andrew has 4 cups of trail mix. Each bag holds 2/3 cup. How many bags can he fill?",
+          "prompt": "Andrew has 4 cups of trail mix. Each bag holds ⅔ cup. How many bags can he fill?",
           "steps": [
             {
-              "do": "Write the division: 4 ÷ 2/3.",
-              "why": "We want to know how many 2/3-cup groups fit in 4 cups.",
+              "do": "Write the division: 4 ÷ ⅔.",
+              "why": "We want to know how many ⅔-cup groups fit in 4 cups.",
               "visual": {
                 "kind": "fractionBars",
                 "wholes": 4,
@@ -214,24 +307,28 @@
                   "num": 2,
                   "den": 3
                 }
-              }
+              },
+              "rule": "Keep, change, flip"
             },
             {
               "do": "Each cup has 3 thirds, so 4 cups have 12 thirds. Each bag uses 2 thirds: 12 ÷ 2 = 6.",
-              "why": "Counting thirds shows the reasoning behind the shortcut."
+              "why": "Counting thirds shows the reasoning behind the shortcut.",
+              "rule": "Keep, change, flip"
             },
             {
               "do": "Keep, change, flip: 4 × 3/2 = 12/2 = 6.",
-              "why": "The shortcut gives the same 6 bags."
+              "why": "The shortcut gives the same 6 bags.",
+              "rule": "Keep, change, flip"
             }
           ],
-          "check": "6 × 2/3 = 12/3 = 4 cups. ✅",
-          "answer": "6 bags"
+          "check": "6 × ⅔ = 12/3 = 4 cups. ✅",
+          "mistake": "Don't divide ⅔ by 4 — the question is how many ⅔s fit in 4.",
+          "answer": "6"
         }
       ],
       "guided": [
         {
-          "prompt": "How many 1/3s are in 2? Find 2 ÷ 1/3.",
+          "prompt": "How many ⅓s are in 2? Find 2 ÷ ⅓.",
           "visual": {
             "kind": "fractionBars",
             "wholes": 2,
@@ -244,18 +341,18 @@
           },
           "steps": [
             {
-              "do": "Write the reciprocal of 1/3 (flip it).",
+              "do": "Write the reciprocal of ⅓ (flip it).",
               "why": "Dividing by a number is the same as multiplying by its flip.",
               "input": {
                 "type": "number",
                 "answer": 3
               },
-              "hint": "Swap the top and bottom of 1/3.",
-              "worked": "The reciprocal of 1/3 is 3."
+              "hint": "Swap the top and bottom of ⅓.",
+              "worked": "The reciprocal of ⅓ is 3."
             },
             {
               "do": "Multiply 2 × 3. Simplify your answer.",
-              "why": "This tells how many 1/3s fit into 2.",
+              "why": "This tells how many ⅓s fit into 2.",
               "input": {
                 "type": "number",
                 "answer": 6
@@ -264,10 +361,10 @@
               "worked": "2 × 3 = 6."
             }
           ],
-          "answer": "6"
+          "answer": 6
         },
         {
-          "prompt": "Find 3/4 ÷ 1/4.",
+          "prompt": "Find ¾ ÷ ¼.",
           "visual": {
             "kind": "fractionBars",
             "wholes": 1,
@@ -280,115 +377,115 @@
           },
           "steps": [
             {
-              "do": "Write the reciprocal of 1/4 (flip it).",
+              "do": "Write the reciprocal of ¼ (flip it).",
               "why": "Dividing by a number is the same as multiplying by its flip.",
               "input": {
                 "type": "number",
                 "answer": 4
               },
-              "hint": "Swap the top and bottom of 1/4.",
-              "worked": "The reciprocal of 1/4 is 4."
+              "hint": "Swap the top and bottom of ¼.",
+              "worked": "The reciprocal of ¼ is 4."
             },
             {
-              "do": "Multiply 3/4 × 4. Simplify your answer.",
-              "why": "This tells how many 1/4s fit into 3/4.",
+              "do": "Multiply ¾ × 4. Simplify your answer.",
+              "why": "This tells how many ¼s fit into ¾.",
               "input": {
                 "type": "number",
                 "answer": 3
               },
               "hint": "Multiply tops together and bottoms together, then simplify.",
-              "worked": "3/4 × 4 = 3."
+              "worked": "¾ × 4 = 3."
             }
           ],
-          "answer": "3"
+          "answer": 3
         },
         {
-          "prompt": "Find 2/3 ÷ 1/4.",
+          "prompt": "Find ⅔ ÷ ¼.",
           "steps": [
             {
-              "do": "Write the reciprocal of 1/4 (flip it).",
+              "do": "Write the reciprocal of ¼ (flip it).",
               "why": "Dividing by a number is the same as multiplying by its flip.",
               "input": {
                 "type": "number",
                 "answer": 4
               },
-              "hint": "Swap the top and bottom of 1/4.",
-              "worked": "The reciprocal of 1/4 is 4."
+              "hint": "Swap the top and bottom of ¼.",
+              "worked": "The reciprocal of ¼ is 4."
             },
             {
-              "do": "Multiply 2/3 × 4. Simplify your answer.",
-              "why": "This tells how many 1/4s fit into 2/3.",
+              "do": "Multiply ⅔ × 4. Simplify your answer.",
+              "why": "This tells how many ¼s fit into ⅔.",
               "input": {
                 "type": "fraction",
                 "answer": "8/3"
               },
               "hint": "Multiply tops together and bottoms together, then simplify.",
-              "worked": "2/3 × 4 = 8/3 = 2 2/3."
+              "worked": "⅔ × 4 = 8/3 = 2⅔."
             }
           ],
-          "answer": "2 2/3"
+          "answer": "8/3"
         },
         {
-          "prompt": "Find 5/6 ÷ 2/3.",
+          "prompt": "Find ⅚ ÷ ⅔.",
           "steps": [
             {
-              "do": "Write the reciprocal of 2/3 (flip it).",
+              "do": "Write the reciprocal of ⅔ (flip it).",
               "why": "Dividing by a number is the same as multiplying by its flip.",
               "input": {
                 "type": "fraction",
                 "answer": "3/2"
               },
-              "hint": "Swap the top and bottom of 2/3.",
-              "worked": "The reciprocal of 2/3 is 3/2."
+              "hint": "Swap the top and bottom of ⅔.",
+              "worked": "The reciprocal of ⅔ is 3/2."
             },
             {
-              "do": "Multiply 5/6 × 3/2. Simplify your answer.",
-              "why": "This tells how many 2/3s fit into 5/6.",
+              "do": "Multiply ⅚ × 3/2. Simplify your answer.",
+              "why": "This tells how many ⅔s fit into ⅚.",
               "input": {
                 "type": "fraction",
                 "answer": "5/4"
               },
               "hint": "Multiply tops together and bottoms together, then simplify.",
-              "worked": "5/6 × 3/2 = 5/4 = 1 1/4."
+              "worked": "⅚ × 3/2 = 5/4 = 1¼."
             }
           ],
-          "answer": "1 1/4"
+          "answer": "5/4"
         },
         {
-          "prompt": "A ribbon is 3 1/2 feet long. How many 3/4-foot pieces can be cut from it? Find 3 1/2 ÷ 3/4.",
+          "prompt": "A ribbon is 3½ feet long. How many ¾-foot pieces can be cut from it? Find 3½ ÷ ¾.",
           "steps": [
             {
-              "do": "Rewrite 3 1/2 as an improper fraction.",
+              "do": "Rewrite 3½ as an improper fraction.",
               "why": "Fractions are easier to multiply when there is no whole-number part.",
               "input": {
                 "type": "fraction",
                 "answer": "7/2"
               },
               "hint": "Multiply the whole number by 2, then add the top.",
-              "worked": "3 1/2 = 7/2."
+              "worked": "3½ = 7/2."
             },
             {
-              "do": "Write the reciprocal of 3/4 (flip it).",
+              "do": "Write the reciprocal of ¾ (flip it).",
               "why": "Dividing by a number is the same as multiplying by its flip.",
               "input": {
                 "type": "fraction",
                 "answer": "4/3"
               },
-              "hint": "Swap the top and bottom of 3/4.",
-              "worked": "The reciprocal of 3/4 is 4/3."
+              "hint": "Swap the top and bottom of ¾.",
+              "worked": "The reciprocal of ¾ is 4/3."
             },
             {
               "do": "Multiply 7/2 × 4/3. Simplify your answer.",
-              "why": "This tells how many 3/4s fit into 3 1/2.",
+              "why": "This tells how many ¾s fit into 3½.",
               "input": {
                 "type": "fraction",
                 "answer": "14/3"
               },
               "hint": "Multiply tops together and bottoms together, then simplify.",
-              "worked": "3 1/2 × 4/3 = 14/3 = 4 2/3."
+              "worked": "3½ × 4/3 = 14/3 = 4⅔."
             }
           ],
-          "answer": "4 2/3"
+          "answer": "14/3"
         }
       ]
     },
@@ -409,7 +506,11 @@
             "text": "Repeat four moves: **Divide, Multiply, Subtract, Bring down.** A silly way to remember: *Does McDonald's Sell Burgers?* 🍔"
           },
           {
-            "text": "Always check by multiplying: quotient × divisor should give you the number you started with."
+            "text": "Always check by multiplying: quotient × divisor should give you the number you started with. For 864 ÷ 4, the answer 216 means 2 hundreds, 1 ten and 6 ones, and 216 × 4 = 864.",
+            "visual": {
+              "kind": "placeValue",
+              "digits": "216"
+            }
           }
         ],
         "keyIdea": "Divide → Multiply → Subtract → Bring down, then check by multiplying."
@@ -457,7 +558,8 @@
           "steps": [
             {
               "do": "24 does not fit in 1 or 15, so start with 151.",
-              "why": "We need a number at least as big as 24 to make a group."
+              "why": "We need a number at least as big as 24 to make a group.",
+              "rule": "Divide → Multiply → Subtract → Bring down"
             },
             {
               "do": "How many 24s fit in 151? 6. Write 6, multiply 6 × 24 = 144, subtract: 151 − 144 = 7.",
@@ -471,7 +573,8 @@
             },
             {
               "do": "The quotient is 63.",
-              "why": "6 tens and 3 ones make 63."
+              "why": "6 tens and 3 ones make 63.",
+              "rule": "Divide → Multiply → Subtract → Bring down"
             }
           ],
           "check": "63 × 24 = 1,512. ✅",
@@ -560,7 +663,7 @@
               "worked": "852 ÷ 6 = 142. Check: 142 × 6 = 852."
             }
           ],
-          "answer": "142"
+          "answer": 142
         },
         {
           "prompt": "Find 1,344 ÷ 12.",
@@ -610,7 +713,7 @@
               "worked": "1,344 ÷ 12 = 112. Check: 112 × 12 = 1,344."
             }
           ],
-          "answer": "112"
+          "answer": 112
         },
         {
           "prompt": "Find 2,592 ÷ 36.",
@@ -650,7 +753,7 @@
               "worked": "2,592 ÷ 36 = 72. Check: 72 × 36 = 2,592."
             }
           ],
-          "answer": "72"
+          "answer": 72
         },
         {
           "prompt": "A school collected 8,250 cans in 25 equal boxes. How many cans are in each box? (8,250 ÷ 25)",
@@ -700,7 +803,7 @@
               "worked": "8,250 ÷ 25 = 330. Check: 330 × 25 = 8,250."
             }
           ],
-          "answer": "330"
+          "answer": 330
         }
       ]
     },
@@ -747,7 +850,8 @@
           "steps": [
             {
               "do": "Write 12.5 as 12.50.",
-              "why": "Adding a zero at the end doesn't change the value, and it lines up the hundredths."
+              "why": "Adding a zero at the end doesn't change the value, and it lines up the hundredths.",
+              "rule": "Line up the decimal points"
             },
             {
               "do": "Line up the decimal points and add: 12.50 + 3.75 = 16.25.",
@@ -780,11 +884,13 @@
                   "rows": "0.3",
                   "cols": "0.4"
                 }
-              }
+              },
+              "rule": "tenths × tenths = hundredths"
             },
             {
               "do": "Count the overlap: 3 × 4 = 12 small squares.",
-              "why": "The overlap shows 0.3 of 0.4."
+              "why": "The overlap shows 0.3 of 0.4.",
+              "rule": "tenths × tenths = hundredths"
             },
             {
               "do": "Each small square is 1/100, so 12 squares = 0.12.",
@@ -806,14 +912,17 @@
               "visual": {
                 "kind": "placeValue",
                 "digits": "63"
-              }
+              },
+              "rule": "Make the divisor a whole number"
             },
             {
               "do": "63 ÷ 7 = 9.",
-              "why": "Now it's a whole-number fact you know."
+              "why": "Now it's a whole-number fact you know.",
+              "rule": "Make the divisor a whole number"
             }
           ],
           "check": "9 × 0.7 = 6.3. ✅",
+          "mistake": "Move the decimal in both numbers, not just the divisor.",
           "answer": "9"
         },
         {
@@ -822,7 +931,8 @@
           "steps": [
             {
               "do": "Multiply as whole numbers: 24 × 15 = 360.",
-              "why": "Ignore the decimals for now, then put them back."
+              "why": "Ignore the decimals for now, then put them back.",
+              "rule": "Count decimal places"
             },
             {
               "do": "Count decimal places: 2.4 has 1 and 1.5 has 1, so the answer has 2: 3.60 = 3.6.",
@@ -835,6 +945,7 @@
             }
           ],
           "check": "Estimate: 2 × 1.5 = 3, and 3.6 is close. ✅",
+          "mistake": "Don't line up decimal points to multiply — count decimal places instead.",
           "answer": "3.6"
         }
       ],
@@ -869,7 +980,7 @@
               "worked": "4.60 + 2.38 = 6.98."
             }
           ],
-          "answer": "6.98"
+          "answer": 6.98
         },
         {
           "prompt": "Find 9.2 − 3.45.",
@@ -890,7 +1001,7 @@
               "worked": "9.20 − 3.45 = 5.75."
             }
           ],
-          "answer": "5.75"
+          "answer": 5.75
         },
         {
           "prompt": "Find 0.6 × 0.7.",
@@ -938,7 +1049,7 @@
               "worked": "0.6 × 0.7 = 0.42."
             }
           ],
-          "answer": "0.42"
+          "answer": 0.42
         },
         {
           "prompt": "Find 4.8 ÷ 0.6.",
@@ -964,7 +1075,7 @@
               "worked": "48 ÷ 6 = 8."
             }
           ],
-          "answer": "8"
+          "answer": 8
         },
         {
           "prompt": "Find 3.6 × 2.5.",
@@ -990,7 +1101,7 @@
               "worked": "3.6 × 2.5 = 9.00 = 9."
             }
           ],
-          "answer": "9"
+          "answer": 9
         }
       ]
     },
@@ -1061,11 +1172,13 @@
           "steps": [
             {
               "do": "List factors of 18: 1, 2, 3, 6, 9, 18.",
-              "why": "Factors are numbers that divide evenly."
+              "why": "Factors are numbers that divide evenly.",
+              "rule": "Factors divide evenly"
             },
             {
               "do": "List factors of 24: 1, 2, 3, 4, 6, 8, 12, 24.",
-              "why": "We need both lists to find the shared ones."
+              "why": "We need both lists to find the shared ones.",
+              "rule": "Factors divide evenly"
             },
             {
               "do": "Shared factors: 1, 2, 3, 6. The greatest is 6.",
@@ -1083,7 +1196,8 @@
           "steps": [
             {
               "do": "Count by 6s: 6, 12, 18, 24.",
-              "why": "Multiples are the numbers you say when skip-counting."
+              "why": "Multiples are the numbers you say when skip-counting.",
+              "rule": "Multiples come from skip-counting"
             },
             {
               "do": "Count by 8s: 8, 16, 24. (The 6s were 6, 12, 18, 24.)",
@@ -1136,7 +1250,8 @@
                     "label": "+8"
                   }
                 ]
-              }
+              },
+              "rule": "Multiples come from skip-counting"
             },
             {
               "do": "24 is the first number on both lists.",
@@ -1154,7 +1269,8 @@
           "steps": [
             {
               "do": "The GCF of 20 and 30 is 10.",
-              "why": "10 is the biggest number that divides both."
+              "why": "10 is the biggest number that divides both.",
+              "rule": "a·b + a·c = a(b + c)"
             },
             {
               "do": "Write 20 = 10 × 2 and 30 = 10 × 3.",
@@ -1168,7 +1284,8 @@
                   "rows": "10",
                   "cols": "2 + 3"
                 }
-              }
+              },
+              "rule": "a·b + a·c = a(b + c)"
             },
             {
               "do": "So 20 + 30 = 10(2 + 3).",
@@ -1177,6 +1294,7 @@
             }
           ],
           "check": "10(2 + 3) = 10 × 5 = 50 and 20 + 30 = 50. ✅",
+          "mistake": "Don't use a smaller common factor like 5 — the GCF must be the greatest.",
           "answer": "10(2 + 3)"
         }
       ],
@@ -1241,7 +1359,7 @@
               "worked": "4 × 3 = 12 and 6 × 2 = 12, so the LCM is 12."
             }
           ],
-          "answer": "12"
+          "answer": 12
         },
         {
           "prompt": "Use the GCF to rewrite 16 + 40.",
@@ -1284,23 +1402,71 @@
                 "answer": 5
               },
               "hint": "Divide 40 by the GCF.",
-              "worked": "40 ÷ 8 = 5, so 16 + 40 = 8(2 + 5)."
+              "worked": "40 ÷ 8 = 5."
+            },
+            {
+              "do": "Choose the rewritten expression.",
+              "why": "Pulling out the GCF leaves 2 and 5 inside the parentheses.",
+              "input": {
+                "type": "choice",
+                "answer": 1,
+                "choices": [
+                  "8(2 + 40)",
+                  "8(2 + 5)",
+                  "4(4 + 40)",
+                  "16(1 + 5)"
+                ]
+              },
+              "hint": "Use the GCF outside and your two quotients inside.",
+              "worked": "16 + 40 = 8(2 + 5)."
             }
           ],
           "answer": "8(2 + 5)"
         },
         {
-          "prompt": "Hot dogs come in packs of 9 and buns in packs of 12. What's the smallest number of each so they match?",
+          "prompt": "Hot dogs come in packs of 9 and buns come in packs of 12. Andrew wants exactly the same number of hot dogs and buns, using as few as possible. How many packs of hot dogs should he buy?",
+          "visual": {
+            "kind": "numberLine",
+            "min": 0,
+            "max": 36,
+            "step": 3,
+            "marks": [
+              {
+                "at": 9,
+                "label": "9"
+              },
+              {
+                "at": 12,
+                "label": "12"
+              },
+              {
+                "at": 18,
+                "label": "18"
+              },
+              {
+                "at": 24,
+                "label": "24"
+              },
+              {
+                "at": 27,
+                "label": "27"
+              },
+              {
+                "at": 36,
+                "label": "36"
+              }
+            ]
+          },
           "steps": [
             {
-              "do": "List multiples of 12: 12, 24, 36… Which is the first that 9 also divides?",
-              "why": "Matching counts means a common multiple, and smallest means least.",
+              "do": "List multiples of 12: 12, 24, 36 (and of 9: 9, 18, 27, 36). Which is the first that 9 also divides? That's how many hot dogs he needs.",
+              "why": "Matching counts means a common multiple, and as few as possible means the least one.",
               "input": {
                 "type": "number",
                 "answer": 36
               },
               "hint": "Check 36 ÷ 9.",
-              "worked": "36 ÷ 9 = 4 and 36 ÷ 12 = 3, so the LCM is 36."
+              "worked": "36 ÷ 9 = 4 and 36 ÷ 12 = 3, so the LCM is 36 hot dogs."
             },
             {
               "do": "How many packs of hot dogs is that?",
@@ -1313,7 +1479,7 @@
               "worked": "36 ÷ 9 = 4 packs."
             }
           ],
-          "answer": "36"
+          "answer": 4
         }
       ]
     },
@@ -1350,7 +1516,39 @@
             "text": "**Opposites** are the same distance from 0 but on different sides, like 8 and −8."
           },
           {
-            "text": "The opposite of an opposite is the number you started with: −(−3) = 3. Two flips bring you back! 🔁"
+            "text": "The opposite of an opposite is the number you started with: −(−3) = 3. Two flips bring you back! 🔁",
+            "visual": {
+              "kind": "numberLine",
+              "min": -5,
+              "max": 5,
+              "step": 1,
+              "marks": [
+                {
+                  "at": -3,
+                  "label": "−3"
+                },
+                {
+                  "at": 0,
+                  "label": "0"
+                },
+                {
+                  "at": 3,
+                  "label": "3"
+                }
+              ],
+              "jumps": [
+                {
+                  "from": 3,
+                  "to": -3,
+                  "label": "flip"
+                },
+                {
+                  "from": -3,
+                  "to": 3,
+                  "label": "flip back"
+                }
+              ]
+            }
           }
         ],
         "keyIdea": "Negative = below zero; opposites mirror each other across 0."
@@ -1362,7 +1560,8 @@
           "steps": [
             {
               "do": "Sea level is 0.",
-              "why": "We measure up and down from sea level."
+              "why": "We measure up and down from sea level.",
+              "rule": "Below zero = negative"
             },
             {
               "do": "Below means negative, so it's −20.",
@@ -1389,7 +1588,8 @@
                     "label": "20 ft down"
                   }
                 ]
-              }
+              },
+              "rule": "Below zero = negative"
             }
           ],
           "check": "−20 is 20 units from 0 on the negative side. ✅",
@@ -1434,7 +1634,8 @@
                     "label": "8"
                   }
                 ]
-              }
+              },
+              "rule": "Opposites mirror across 0"
             },
             {
               "do": "Go 8 units right of 0: 8.",
@@ -1443,6 +1644,7 @@
             }
           ],
           "check": "−8 and 8 are both 8 units from 0. ✅",
+          "mistake": "The opposite of a negative is positive, not the same negative.",
           "answer": "8"
         },
         {
@@ -1451,7 +1653,8 @@
           "steps": [
             {
               "do": "−3 is the opposite of 3.",
-              "why": "The minus sign means 'the opposite of'."
+              "why": "The minus sign means 'the opposite of'.",
+              "rule": "−(−a) = a"
             },
             {
               "do": "The opposite of −3 is 3.",
@@ -1565,7 +1768,7 @@
               "worked": "The opposite of 6 is −6."
             }
           ],
-          "answer": "−6"
+          "answer": -6
         },
         {
           "prompt": "What is −(−9)?",
@@ -1597,10 +1800,10 @@
               "worked": "The opposite of −9 is 9."
             }
           ],
-          "answer": "9"
+          "answer": 9
         },
         {
-          "prompt": "A fish is at −12 feet and a bird is at 7 feet. How far apart are they?",
+          "prompt": "A fish is at −12 feet and a bird is at 7 feet. How many feet apart are they?",
           "visual": {
             "kind": "numberLine",
             "min": -15,
@@ -1665,7 +1868,7 @@
               "worked": "12 + 7 = 19 feet apart."
             }
           ],
-          "answer": "19 feet"
+          "answer": 19
         }
       ]
     },
@@ -1764,7 +1967,8 @@
                     "label": "12"
                   }
                 ]
-              }
+              },
+              "rule": "|x| = distance from 0"
             },
             {
               "do": "Count the distance to 0: 12 units.",
@@ -1773,6 +1977,7 @@
             }
           ],
           "check": "12 is also |12|, the same distance on the other side. ✅",
+          "mistake": "Absolute value is never negative, so |−12| is not −12.",
           "answer": "12"
         },
         {
@@ -1801,7 +2006,8 @@
                     "label": "0"
                   }
                 ]
-              }
+              },
+              "rule": "Right = greater"
             },
             {
               "do": "−1 is to the right of −3.5, so −1 > −3.5.",
@@ -1815,7 +2021,7 @@
         },
         {
           "title": "Putting numbers in order",
-          "prompt": "Order from least to greatest: 2, −4, 0.5, −1/2",
+          "prompt": "Order from least to greatest: 2, −4, 0.5, −½",
           "steps": [
             {
               "do": "Plot all four numbers.",
@@ -1832,7 +2038,7 @@
                   },
                   {
                     "at": -0.5,
-                    "label": "−1/2"
+                    "label": "−½"
                   },
                   {
                     "at": 0.5,
@@ -1843,15 +2049,18 @@
                     "label": "2"
                   }
                 ]
-              }
+              },
+              "rule": "Left to right = least to greatest"
             },
             {
-              "do": "Read from left to right: −4, −1/2, 0.5, 2.",
-              "why": "Left to right is least to greatest."
+              "do": "Read from left to right: −4, −½, 0.5, 2.",
+              "why": "Left to right is least to greatest.",
+              "rule": "Left to right = least to greatest"
             }
           ],
-          "check": "Negatives come first, and −4 is farther left than −1/2. ✅",
-          "answer": "−4, −1/2, 0.5, 2"
+          "check": "Negatives come first, and −4 is farther left than −½. ✅",
+          "mistake": "Don't order negatives by their digits — −4 is less than −½.",
+          "answer": "−4, −½, 0.5, 2"
         },
         {
           "title": "Bigger debt",
@@ -1859,7 +2068,8 @@
           "steps": [
             {
               "do": "Find the absolute values: |−30| = 30 and |−45| = 45.",
-              "why": "The size of a debt is how far below 0 the balance is."
+              "why": "The size of a debt is how far below 0 the balance is.",
+              "rule": "Size of debt = absolute value"
             },
             {
               "do": "45 > 30, so Account B owes more; on the line, −45 is farther left of 0 than −30.",
@@ -1883,10 +2093,12 @@
                     "label": "0"
                   }
                 ]
-              }
+              },
+              "rule": "Size of debt = absolute value"
             }
           ],
           "check": "Even though −45 < −30, the debt of $45 is bigger. ✅",
+          "mistake": "A lower balance means a bigger debt, even though the number is less.",
           "answer": "Account B"
         }
       ],
@@ -1921,7 +2133,7 @@
               "worked": "|−7| = 7."
             }
           ],
-          "answer": "7"
+          "answer": 7
         },
         {
           "prompt": "Which is greater: −6 or −2?",
@@ -2135,7 +2347,8 @@
           "steps": [
             {
               "do": "x = −3 is negative, so go left.",
-              "why": "Negative x means left of the y-axis."
+              "why": "Negative x means left of the y-axis.",
+              "rule": "Quadrants: I (+,+), II (−,+), III (−,−), IV (+,−)"
             },
             {
               "do": "y = 4 is positive, so go up.",
@@ -2149,7 +2362,8 @@
                     "label": "(−3, 4)"
                   }
                 ]
-              }
+              },
+              "rule": "Quadrants: I (+,+), II (−,+), III (−,−), IV (+,−)"
             },
             {
               "do": "Left and up is Quadrant II.",
@@ -2158,6 +2372,7 @@
             }
           ],
           "check": "Plot it: the point sits in the top-left. ✅",
+          "mistake": "x comes first! (−3, 4) is not the same as (4, −3).",
           "answer": "Quadrant II"
         },
         {
@@ -2181,7 +2396,8 @@
                     "label": "(6, 5)"
                   }
                 ]
-              }
+              },
+              "rule": "Same y → count across"
             },
             {
               "do": "From −2 to 0 is 2 units; from 0 to 6 is 6 units.",
@@ -2190,12 +2406,13 @@
             },
             {
               "do": "2 + 6 = 8.",
-              "why": "Adding the two parts gives the whole distance."
+              "why": "Adding the two parts gives the whole distance.",
+              "rule": "Same y → count across"
             }
           ],
           "check": "Count the grid squares from −2 to 6: 8. ✅",
           "mistake": "Don't subtract 6 − 2 = 4; the points are on opposite sides of 0.",
-          "answer": "8 units"
+          "answer": "8"
         },
         {
           "title": "Reflection",
@@ -2203,7 +2420,8 @@
           "steps": [
             {
               "do": "The y-axis is the vertical line, so the point flips left/right.",
-              "why": "A mirror on the y-axis swaps left and right."
+              "why": "A mirror on the y-axis swaps left and right.",
+              "rule": "Across y-axis: (x, y) → (−x, y)"
             },
             {
               "do": "Flip the sign of x: (−3, −7).",
@@ -2227,6 +2445,7 @@
             }
           ],
           "check": "Both points are 3 units from the y-axis, on opposite sides. ✅",
+          "mistake": "Across the y-axis flips x, not y.",
           "answer": "(−3, −7)"
         }
       ],
@@ -2264,7 +2483,7 @@
           "answer": "Quadrant IV"
         },
         {
-          "prompt": "Find the distance from (1, −3) to (1, 5).",
+          "prompt": "How many units apart are (1, −3) and (1, 5)?",
           "visual": {
             "kind": "coordPlane",
             "points": [
@@ -2302,7 +2521,7 @@
               "worked": "3 + 5 = 8 units."
             }
           ],
-          "answer": "8 units"
+          "answer": 8
         },
         {
           "prompt": "Reflect (−5, 2) across the x-axis. Where does it land?",
@@ -2381,7 +2600,7 @@
               "worked": "4 + 3 = 7 blocks."
             }
           ],
-          "answer": "7 blocks"
+          "answer": 7
         }
       ]
     }
